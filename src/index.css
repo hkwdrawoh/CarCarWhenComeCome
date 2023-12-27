@@ -39,6 +39,7 @@ body {
   background-color: var(--BackColor1);
   color: var(--IconColor2);
   top: 0;
+  z-index: 2;
 }
 
 .nav {
@@ -67,9 +68,10 @@ button.RefreshButton {
   font-size: 1.2rem;
   color: var(--IconColor1);
   background-color: var(--BackColor3);
+  width: 5rem;
   padding: 0.4rem 0;
   border-radius: 0.6rem;
-  margin: 0 1.5rem 0 0;
+  margin: auto 1.55rem auto auto;
 }
 
 button.RefreshButton:hover {
@@ -89,7 +91,7 @@ button.RefreshButton:hover {
 
 .eta {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(4rem , 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(3.7rem , 1fr));
   grid-gap: 0 0.5rem;
   align-items: center;
   margin: auto;
@@ -112,8 +114,8 @@ button.RefreshButton:hover {
 
 .button_base {
   display: grid;
-  width: 6rem;
-  font-size: 1.5rem;
+  width: 5rem;
+  font-size: 1.2rem;
   font-weight: bolder;
   padding: 0.3rem 0;
   border-radius: 0.6rem;
@@ -396,4 +398,28 @@ button.RefreshButton:hover {
   align-items: center;
   margin: auto;
   color: var(--MainColor4);
+}
+
+
+.flash-animation {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+  z-index: 1;
+}
+
+.flash-animation.show {
+  opacity: 1;
+  animation: flash 1s ease-in-out infinite;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

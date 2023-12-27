@@ -1,55 +1,79 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
+import EventEmitter from 'eventemitter3';
 
-function Header(props) {
+export const eventEmitter = new EventEmitter();
 
-    const [timenow, setTimenow] = useState(new Date());
-    const [timeref, setTimeref] = useState(new Date());
+class Header extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            time_now: new Date(),
+            time_ref: new Date(),
+            animation: false
+        }
+        this.intervalID1 = null;
+        this.intervalID2 = null;
+    }
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setTimenow(new Date());
-        }, 1000);
+    componentDidMount() {
+        this.intervalID1 = setInterval(this.refreshTimeNow, 1000);
+        this.intervalID2 = setInterval(this.refreshPage, 40000);
+    }
 
-        return () => {
-            clearInterval(interval);
-        };
-    }, []);
+    componentWillUnmount() {
+        clearInterval(this.intervalID1);
+    }
 
-    const getTimeString = (time) => {
+    refreshTimeNow = () => {
+        this.setState({time_now: new Date()})
+    }
+
+    refreshPage = () => {
+        this.setState({time_ref: new Date()})
+        this.setState({ animation: true }, () => {
+            setTimeout(() => {
+                this.setState({animation: false});
+            }, 500)
+        });
+        eventEmitter.emit('refreshETA');
+    }
+
+    getTimeString = (time) => {
         const options = {
             hour: '2-digit',
             minute: '2-digit',
             second: '2-digit',
             hour12: false,
         };
-
         return time.toLocaleTimeString(undefined, options);
     };
 
-    return (
-        <div className="component menu">
-            <div className="menu">
-                <div className="nav">
-                    <h2>{props.text}</h2>
-                    <button className="button_base back_index">主頁</button>
-                </div>
-                <div className="clock">
-                    <div style={{verticalAlign: 'center'}}>
-                        <h3>{getTimeString(timenow)}</h3>
-                        <p>現在時間</p>
+    render() {
+        return (
+            <div className="component menu">
+                <div className="menu">
+                    <div className="nav">
+                        <h2>{this.props.text}</h2>
+                        <button className="button_base back_index">主頁</button>
                     </div>
-                    <div>
-                        <h3>{getTimeString(timeref)}</h3>
-                        <p>更新時間</p>
+                    <div className="clock">
+                        <div style={{verticalAlign: 'center'}}>
+                            <h3>{this.getTimeString(this.state.time_now)}</h3>
+                            <p>現在時間</p>
+                        </div>
+                        <div>
+                            <h3 className={`flash-animation ${this.state.animation ? "show" : ""}`}>{this.getTimeString(this.state.time_ref)}</h3>
+                            <p>更新時間</p>
+                        </div>
+                        <button className="RefreshButton"
+                                onClick = {this.refreshPage}
+                        >更新</button>
                     </div>
-                    <button className="RefreshButton"
-                            onClick = {() => setTimeref(new Date())}
-                    >更新</button>
+                    <hr/>
                 </div>
-                <hr/>
             </div>
-        </div>
-    );
+        )
+    }
 }
 
 export default Header;

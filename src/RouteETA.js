@@ -50,7 +50,8 @@ class RouteETA extends React.Component{
                 await this.setState({route_num: terminus[2]})
             }
             // console.log(this.state.route_num)
-            let stop_id = await FetchRouteStop(this.state.route_num, this.props.route.direction, this.props.route.service_type, this.props.route.seq, this.props.route.company);
+            let temp = (this.props.route.company.substring(0, 3) === "gmb") ? terminus[2] : this.props.route.route;
+            let stop_id = await FetchRouteStop(temp, this.props.route.direction, this.props.route.service_type, this.props.route.seq, this.props.route.company).catch();
             let stop_name;
             if (this.props.route.company.substring(0, 3) === "gmb") {
                 stop_name = [stop_id[1], stop_id[2]];
@@ -77,6 +78,7 @@ class RouteETA extends React.Component{
                 </div>
             </div>
             <hr />
+            {Math.floor(this.props.route.style / 100) === 1 && <hr />}
         </>
     }
 }

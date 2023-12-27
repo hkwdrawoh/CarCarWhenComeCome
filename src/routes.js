@@ -21,7 +21,7 @@ export const OnTaiTerm = [
         "service_type": 1,
         "seq": 19,
         "company": "kmb",
-        "style": 1
+        "style": 101
     },
     {
         "route": "88",
@@ -53,7 +53,7 @@ export const OnTaiTerm = [
         "service_type": 1,
         "seq": 1,
         "company": "kmb",
-        "style": 1
+        "style": 101
     },
     {
         "route": "11X",
@@ -61,7 +61,7 @@ export const OnTaiTerm = [
         "service_type": 1,
         "seq": 1,
         "company": "kmb",
-        "style": 1
+        "style": 101
     },
     {
         "route": "89A",
@@ -77,7 +77,7 @@ export const OnTaiTerm = [
         "service_type": 1,
         "seq": 1,
         "company": "gmb_kln",
-        "style": 3
+        "style": 103
     },
     {
         "route": "A28",
