@@ -19,17 +19,17 @@
   box-sizing: border-box;
 }
 
+.component {
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 5px 10px 0 10px;
+}
+
 body {
   background: var(--BackColor1);
   font-family: "Nunito", sans-serif;
-  font-size: 1rem;
-}
-
-main {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0.5rem;
-  text-align: center;
+  font-size: 0.9rem;
 }
 
 .menu {
@@ -39,10 +39,9 @@ main {
   background-color: var(--BackColor1);
   color: var(--IconColor2);
   top: 0;
-  padding: 10px 0 0;
 }
 
-nav {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,6 +56,7 @@ nav {
   grid-gap: 1rem;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin: auto;
   padding: 1rem 0;
   color: var(--AuxColor1);
