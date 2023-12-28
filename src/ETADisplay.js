@@ -1,6 +1,6 @@
 import React from "react";
 import { FetchETA } from "./fetch_api";
-import {eventEmitter} from "./Header";
+import {eventEmitter} from "./App";
 
 
 class ETADisplay extends React.Component {
@@ -44,6 +44,7 @@ class ETADisplay extends React.Component {
 
     fetchETA = async () => {
         if (this.props.stop_id !== null) {
+            console.log('fetch!');
             let temp_eta = this.state.eta.slice();
             let temp_ani = this.state.animation.slice();
             let output = await FetchETA(this.props.route_num, this.props.route.direction, this.props.route.service_type, this.props.route.seq, this.props.stop_id, this.props.route.company).catch();
@@ -52,12 +53,13 @@ class ETADisplay extends React.Component {
             for (let i = 0; i < 3; i++) {
                 let record = output[i];
                 if (i === 0 && (record === undefined || record.eta === null)) {
-                    temp_ani[0][1] = (temp_eta[0][1] !== '未來60分鐘一架車都冇' || temp_ani[0][1]);
-                    temp_eta[0][1] = '未來60分鐘一架車都冇';
+                    temp_ani[0][1] = (temp_eta[0][1] !== '未來1個鐘都冇車' || temp_ani[0][1]);
+                    temp_eta = [['', '未來1個鐘都冇車', ''], ['', '', ''], ['', '', '']];
                 } else if (record === undefined) {
+                    temp_eta[i] = ['', '', ''];
                 } else if (record.eta === null) {
                     temp_ani[i][0] = (temp_eta[i][0] !== 'null' || temp_ani[i][0]);
-                    temp_eta[i][0] = 'null';
+                    temp_eta[i] = ['null', '', ''];
                 } else {
                     temp_ani[i][0] = (temp_eta[i][0] !== this.CompareTime(record.eta) + " min" || temp_ani[i][0]);
                     temp_eta[i][0] = this.CompareTime(record.eta) + " min";
@@ -67,6 +69,8 @@ class ETADisplay extends React.Component {
                 if (record !== undefined && (record.rmk_tc !== "" && record.rmk_tc !== null)) {
                     temp_ani[i][2] = (temp_eta[i][2] !== record.rmk_tc || temp_ani[i][2]);
                     temp_eta[i][2] = record.rmk_tc;
+                } else {
+                    temp_eta[i][2] = '';
                 }
             }
             // console.log(this.props.route_num, temp_ani)

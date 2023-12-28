@@ -59,7 +59,8 @@ body {
   align-items: center;
   text-align: center;
   margin: auto;
-  padding: 1rem 0;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
   color: var(--AuxColor1);
 }
 
@@ -91,7 +92,7 @@ button.RefreshButton:hover {
 
 .eta {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(3.7rem , 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(3.5rem , 1fr));
   grid-gap: 0 0.5rem;
   align-items: center;
   margin: auto;
@@ -101,7 +102,7 @@ button.RefreshButton:hover {
   display: grid;
   grid-column: span 6 / auto;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 0.5rem 0 0.5rem 0 ;
+  padding: 0.3rem 0 0.3rem 0 ;
   color: var(--AuxColor1);
 }
 
@@ -220,7 +221,7 @@ button.RefreshButton:hover {
 
 .location {
   display: grid;
-  grid-template-columns: repeat(auto-fit , minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fit , minmax(9rem, 1fr));
   grid-gap: 0.2rem 1rem;
   justify-content: center;
   margin: auto;
@@ -228,11 +229,16 @@ button.RefreshButton:hover {
 }
 
 .location_button {
-  width: 10rem;
+  width: 8rem;
 }
 
 .back_index {
   margin-right: 25px;
+}
+
+.weather_div {
+  grid-column: span 2 / auto;
+  text-align: left
 }
 
 .weather {
@@ -254,7 +260,7 @@ button.RefreshButton:hover {
   color: var(--AuxColor1);
   background-color: var(--MainColor1);
   border-radius: 0.6rem;
-  width: 8rem;
+  width: 7.5rem;
   margin: 0 auto 0 auto;
   /*text-align: right;*/
 }
@@ -265,7 +271,7 @@ button.RefreshButton:hover {
   color: var(--AuxColor2);
   background-color: var(--MainColor2);
   border-radius: 0.6rem;
-  width: 8rem;
+  width: 7.5rem;
   margin: 0 auto 0 auto;
 }
 
@@ -275,7 +281,7 @@ button.RefreshButton:hover {
   color: var(--AuxColor1);
   background-color: var(--MainColor3);
   border-radius: 5rem;
-  width: 7rem;
+  width: 6.5rem;
   margin: 0 auto 0 auto;
 }
 
@@ -286,7 +292,7 @@ button.RefreshButton:hover {
   /*background-color: var(--MainColor2);*/
   background: radial-gradient(farthest-corner at 0% -25%, var(--MainColor2) 0%, var(--MainColor2) 60%, var(--MainColor4) 60%, var(--MainColor4) 70%, #990000 70%);
   border-radius: 0.6rem;
-  width: 8rem;
+  width: 7.5rem;
   margin: 0 auto 0 auto;
 }
 
@@ -299,7 +305,7 @@ button.RefreshButton:hover {
   border-width: thin;
   border-style: solid;
   border-color: var(--MainColor4);
-  width: 8rem;
+  width: 7.5rem;
   margin: 0 auto 0 auto;
   /*text-align: right;*/
 }
@@ -308,7 +314,7 @@ button.RefreshButton:hover {
   display: grid;
   grid-column: span 3 / auto;
   text-align: left;
-  padding: 0.5rem 0 0.5rem 1rem ;
+  padding: 0.2rem 0 0.2rem 0.8rem ;
   color: var(--MainColor1);
 }
 
@@ -316,7 +322,7 @@ button.RefreshButton:hover {
   display: grid;
   grid-column: span 3 / auto;
   text-align: left;
-  padding: 0.5rem 0 0.5rem 1rem ;
+  padding: 0.2rem 0 0.2rem 0.8rem ;
   color: var(--MainColor2);
 }
 
@@ -324,7 +330,7 @@ button.RefreshButton:hover {
   display: grid;
   grid-column: span 3 / auto;
   text-align: left;
-  padding: 0.5rem 0 0.5rem 1rem ;
+  padding: 0.2rem 0 0.2rem 0.8rem ;
   color: var(--MainColor3);
 }
 
@@ -332,7 +338,7 @@ button.RefreshButton:hover {
   display: grid;
   grid-column: span 3 / auto;
   text-align: left;
-  padding: 0.5rem 0 0.5rem 1rem ;
+  padding: 0.2rem 0 0.2rem 0.8rem ;
   color: var(--MainColor2);
 }
 
@@ -340,7 +346,7 @@ button.RefreshButton:hover {
   display: grid;
   grid-column: span 3 / auto;
   text-align: left;
-  padding: 0.5rem 0 0.5rem 1rem ;
+  padding: 0.2rem 0 0.2rem 0.8rem ;
   color: var(--MainColor4);
 }
 

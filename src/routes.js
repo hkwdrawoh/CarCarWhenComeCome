@@ -1,4 +1,4 @@
-export const OnTaiTerm = [
+export const OnTai = [
     {
         "route": "213M",
         "direction": "O",
@@ -88,17 +88,15 @@ export const OnTaiTerm = [
         "style": 4
     }];
 
-const LaiTak108 = [
+export const HomeFrom108 = [
     {
         "route": "108",
         "direction": "I",
         "service_type": 1,
         "seq": 10,
         "company": "kmb",
-        "style": 1
-    }];
-
-const Valley108 = [
+        "style": 101
+    },
     {
         "route": "108",
         "direction": "I",
@@ -113,10 +111,8 @@ const Valley108 = [
         "service_type": 1,
         "seq": 26,
         "company": "kmb",
-        "style": 11
-    }];
-
-const Regal108 = [
+        "style": 111
+    },
     {
         "route": "108",
         "direction": "I",
@@ -166,17 +162,15 @@ const Regal108 = [
         "style": 1
     }];
 
-const RhythmGarden1 = [
+export const Rhythm = [
     {
         "route": "213D",
         "direction": "O",
         "service_type": 1,
         "seq": 30,
         "company": "kmb",
-        "style": 11
-    }];
-
-const RhythmGarden2 = [
+        "style": 111
+    },
     {
         "route": "26",
         "direction": "I",
@@ -207,10 +201,8 @@ const RhythmGarden2 = [
         "service_type": 1,
         "seq": 11,
         "company": "kmb",
-        "style": 11
-    }];
-
-const RhythmGarden3 = [
+        "style": 111
+    },
     {
         "route": "214",
         "direction": "I",
@@ -220,7 +212,7 @@ const RhythmGarden3 = [
         "style": 1
     }];
 
-const LaiTakTsuen1 = [
+export const LaiTakTsuen = [
     {
         "route": "21A",
         "direction": "I",
@@ -235,10 +227,8 @@ const LaiTakTsuen1 = [
         "service_type": 1,
         "seq": 6,
         "company": "gmb_hki",
-        "style": 3
-    }];
-
-const LaiTakTsuen2 = [
+        "style": 103
+    },
     {
         "route": "25A",
         "direction": "I",
@@ -277,10 +267,8 @@ const LaiTakTsuen2 = [
         "service_type": 1,
         "seq": 10,
         "company": "kmb",
-        "style": 1
-    }];
-
-const LaiTakTsuen3 = [
+        "style": 101
+    },
     {
         "route": "41A",
         "direction": "O",

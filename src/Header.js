@@ -1,7 +1,5 @@
 import React from 'react';
-import EventEmitter from 'eventemitter3';
-
-export const eventEmitter = new EventEmitter();
+import {eventEmitter} from "./App";
 
 class Header extends React.Component {
     constructor(props) {
@@ -22,6 +20,7 @@ class Header extends React.Component {
 
     componentWillUnmount() {
         clearInterval(this.intervalID1);
+        clearInterval(this.intervalID2);
     }
 
     refreshTimeNow = () => {
@@ -36,6 +35,10 @@ class Header extends React.Component {
             }, 500)
         });
         eventEmitter.emit('refreshETA');
+    }
+
+    backToHome = () => {
+        eventEmitter.emit('backToHome');
     }
 
     getTimeString = (time) => {
@@ -54,7 +57,7 @@ class Header extends React.Component {
                 <div className="menu">
                     <div className="nav">
                         <h2>{this.props.text}</h2>
-                        <button className="button_base back_index">主頁</button>
+                        <button className="button_base back_index" onClick={this.backToHome}>主頁</button>
                     </div>
                     <div className="clock">
                         <div style={{verticalAlign: 'center'}}>
@@ -65,9 +68,7 @@ class Header extends React.Component {
                             <h3 className={`flash-animation ${this.state.animation ? "show" : ""}`}>{this.getTimeString(this.state.time_ref)}</h3>
                             <p>更新時間</p>
                         </div>
-                        <button className="RefreshButton"
-                                onClick = {this.refreshPage}
-                        >更新</button>
+                        <button className="RefreshButton" onClick={this.refreshPage}>更新</button>
                     </div>
                     <hr/>
                 </div>

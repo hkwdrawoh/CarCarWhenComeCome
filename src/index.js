@@ -2,14 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Header from './Header';
-import RouteETAContainer from "./RouteETAContainer";
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header text="安泰邨 幾時先有車？？？" />
-    <RouteETAContainer key="1" routeset='OnTai' />
+      <App />
   </React.StrictMode>
 );
 

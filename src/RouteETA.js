@@ -41,7 +41,7 @@ class RouteETA extends React.Component{
     fetchNames = async () => {
         try {
             let terminus = await FetchRoute(this.props.route.route, this.props.route.direction, this.props.route.service_type, this.props.route.company);
-            if (Math.floor(this.props.route.style / 10) === 1) {
+            if (Math.floor(this.props.route.style % 100 / 10) === 1) {
                 this.setState({terminal: terminus[1]})
             } else {
                 this.setState({terminal: terminus[0]})
@@ -70,8 +70,8 @@ class RouteETA extends React.Component{
                     <h1>{this.props.route.route}</h1>
                 </div>
                 <div className={this.state.classes[1]}>
-                    <h3>{this.state.station}</h3>
-                    <p>往：{this.state.terminal}</p>
+                    <h3>往：{this.state.terminal}</h3>
+                    <p>{this.state.station}</p>
                 </div>
                 <div className='time'>
                     <ETADisplay route={this.props.route} route_num={this.state.route_num} stop_id={this.state.stop_id} />

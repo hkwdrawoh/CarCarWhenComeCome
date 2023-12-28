@@ -4,7 +4,7 @@ const api_kmb = "https://data.etabus.gov.hk/v1/transport/kmb"
 const api_ctb = "https://rt.data.gov.hk/v2/transport/citybus"
 const api_gmb = "https://data.etagmb.gov.hk"
 
-async function GetJSON(url) {
+export async function GetJSON(url) {
     let json_data;
     const response = await fetch(url);
     json_data = await response.json();
