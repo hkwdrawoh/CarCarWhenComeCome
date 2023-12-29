@@ -1,46 +1,37 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import RouteETA from "./RouteETA";
 import * as routesData from "./routes";
-import {LaiTakTsuen} from "./routes";
 
-class RouteETAContainer extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            routes: []
-        }
-    }
+export default function RouteETAContainer(props) {
 
-    componentDidMount() {
-        switch (this.props.routeset) {
+    const [routes, setRoutes] = useState([]);
+
+    useEffect(() => {
+        switch (props.routeset) {
             case "OnTai":
-                this.setState({routes: routesData.OnTai});
+                setRoutes(routesData.OnTai);
                 break;
             case "HomeFrom108":
-                this.setState({routes: routesData.HomeFrom108});
+                setRoutes(routesData.HomeFrom108);
                 break;
             case "LaiTakTsuen":
-                this.setState({routes: routesData.LaiTakTsuen});
+                setRoutes(routesData.LaiTakTsuen);
                 break;
             case "Rhythm":
-                this.setState({routes: routesData.Rhythm});
+                setRoutes(routesData.Rhythm);
                 break;
             default:
-                this.setState({routes: routesData.OnTai});
+                setRoutes(routesData.OnTai);
                 break;
         }
-    }
+    })
 
-    render() {
-        return (
-            <div className='component'>
-                {this.state.routes.map((route) => (
-                    <RouteETA key={route.route + route.seq} route={route} />
-                ))}
-            </div>
-        )
-    }
+    return (
+        <div className='component'>
+            {routes.map((route) => (
+                <RouteETA key={route.route + route.seq} route={route} />
+            ))}
+        </div>
+    )
 
 }
-
-export default RouteETAContainer;

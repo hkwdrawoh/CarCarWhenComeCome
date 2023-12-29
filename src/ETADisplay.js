@@ -1,19 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FetchETA } from "./fetch_api";
 import {eventEmitter} from "./App";
 
 
-class ETADisplay extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            eta: [['', '', ''], ['', '更新中...', ''], ['', '', '']],
-            animation: [[false, false, false], [false, false, false], [false, false, false]]
-        };
-        this.animation = [[false, false, false], [false, false, false], [false, false, false]];
+export default function ETADisplay(props) {
+
+    const initState = {
+        eta: [['', '', ''], ['', '更新中...', ''], ['', '', '']],
+        animation: [[false, false, false], [false, false, false], [false, false, false]]
     }
 
-    CompareTime(eta) {
+    const [state, setState] = useState(initState);
+
+    const CompareTime = (eta) => {
         const curr_time = new Date();
         const eta_time = new Date(eta);
 
@@ -26,28 +25,29 @@ class ETADisplay extends React.Component {
         if (curr_time > eta_time) {return 0}
         else if (MinuteDiff === 0) {return "<1"}
         else {return MinuteDiff}
-    }
+    };
 
-    componentDidMount() {
-        eventEmitter.on('refreshETA', this.fetchETA);
-    }
+    useEffect(() => {
+        eventEmitter.on('refreshETA', fetchETA);
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        if (prevProps !== this.props && this.props.stop_id !== null) {
-            this.fetchETA().then().catch();
+        return (() => {
+            eventEmitter.off('refreshETA', fetchETA);
+        });
+    }, [props, state]);
+
+    useEffect(() => {
+        if (props.stop_id !== null) {
+            fetchETA().then();
         }
-    }
+    }, [props]);
 
-    componentWillUnmount() {
-        eventEmitter.off('refreshETA', this.fetchETA);
-    }
-
-    fetchETA = async () => {
-        if (this.props.stop_id !== null) {
+    const fetchETA = async () => {
+        // console.log('ETA!', props.stop_id);
+        if (props.stop_id !== null) {
             console.log('fetch!');
-            let temp_eta = this.state.eta.slice();
-            let temp_ani = this.state.animation.slice();
-            let output = await FetchETA(this.props.route_num, this.props.route.direction, this.props.route.service_type, this.props.route.seq, this.props.stop_id, this.props.route.company).catch();
+            let temp_eta = state.eta.slice();
+            let temp_ani = state.animation.slice();
+            let output = await FetchETA(props.route_num, props.route.direction, props.route.service_type, props.route.seq, props.stop_id, props.route.company);
             // console.log(output);
             temp_eta[1][1] = (temp_eta[1][1] === '更新中...') ? '' : temp_eta[1][1];
             for (let i = 0; i < 3; i++) {
@@ -61,8 +61,8 @@ class ETADisplay extends React.Component {
                     temp_ani[i][0] = (temp_eta[i][0] !== 'null' || temp_ani[i][0]);
                     temp_eta[i] = ['null', '', ''];
                 } else {
-                    temp_ani[i][0] = (temp_eta[i][0] !== this.CompareTime(record.eta) + " min" || temp_ani[i][0]);
-                    temp_eta[i][0] = this.CompareTime(record.eta) + " min";
+                    temp_ani[i][0] = (temp_eta[i][0] !== CompareTime(record.eta) + " min" || temp_ani[i][0]);
+                    temp_eta[i][0] = CompareTime(record.eta) + " min";
                     temp_ani[i][1] = (temp_eta[i][1] !== record.eta.slice(11, 19) || temp_ani[i][1]);
                     temp_eta[i][1] = record.eta.slice(11, 19);
                 }
@@ -74,36 +74,29 @@ class ETADisplay extends React.Component {
                 }
             }
             // console.log(this.props.route_num, temp_ani)
-            if (this.state.eta !== temp_eta) {
-                this.setState({eta: temp_eta, animation: temp_ani});
-                setTimeout(() => {
-                    this.setState({animation: [[false, false, false], [false, false, false], [false, false, false]]});
-                }, 500);
-            }
+            setState({eta: temp_eta, animation: temp_ani});
+            setTimeout(() => {
+                setState({...state, animation: initState.animation});
+            }, 500);
         }
     }
 
-
-    render() {
-        return <>
-            <div>
-                <h2 className={`flash-animation ${this.state.animation[0][0] ? "show" : ""}`}>{this.state.eta[0][0] || `\u00A0`}</h2>
-                <h3 className={`flash-animation ${this.state.animation[0][1] ? "show" : ""}`}>{this.state.eta[0][1] || `\u00A0`}</h3>
-                <p className={`rmk flash-animation ${this.state.animation[0][2] ? "show" : ""}`}>{this.state.eta[0][2] || `\u00A0`}</p>
-            </div>
-            <div>
-                <h2 className={`flash-animation ${this.state.animation[1][0] ? "show" : ""}`}>{this.state.eta[1][0] || `\u00A0`}</h2>
-                <h3 className={`flash-animation ${this.state.animation[1][1] ? "show" : ""}`}>{this.state.eta[1][1] || `\u00A0`}</h3>
-                <p className={`rmk flash-animation ${this.state.animation[1][2] ? "show" : ""}`}>{this.state.eta[1][2] || `\u00A0`}</p>
-            </div>
-            <div>
-                <h2 className={`flash-animation ${this.state.animation[2][0] ? "show" : ""}`}>{this.state.eta[2][0] || `\u00A0`}</h2>
-                <h3 className={`flash-animation ${this.state.animation[2][1] ? "show" : ""}`}>{this.state.eta[2][1] || `\u00A0`}</h3>
-                <p className={`rmk flash-animation ${this.state.animation[2][2] ? "show" : ""}`}>{this.state.eta[2][2] || `\u00A0`}</p>
-            </div>
-        </>
-    }
+    return <>
+        <div>
+            <h2 className={`flash-animation ${state.animation[0][0] ? "show" : ""}`}>{state.eta[0][0] || `\u00A0`}</h2>
+            <h3 className={`flash-animation ${state.animation[0][1] ? "show" : ""}`}>{state.eta[0][1] || `\u00A0`}</h3>
+            <p className={`rmk flash-animation ${state.animation[0][2] ? "show" : ""}`}>{state.eta[0][2] || `\u00A0`}</p>
+        </div>
+        <div>
+            <h2 className={`flash-animation ${state.animation[1][0] ? "show" : ""}`}>{state.eta[1][0] || `\u00A0`}</h2>
+            <h3 className={`flash-animation ${state.animation[1][1] ? "show" : ""}`}>{state.eta[1][1] || `\u00A0`}</h3>
+            <p className={`rmk flash-animation ${state.animation[1][2] ? "show" : ""}`}>{state.eta[1][2] || `\u00A0`}</p>
+        </div>
+        <div>
+            <h2 className={`flash-animation ${state.animation[2][0] ? "show" : ""}`}>{state.eta[2][0] || `\u00A0`}</h2>
+            <h3 className={`flash-animation ${state.animation[2][1] ? "show" : ""}`}>{state.eta[2][1] || `\u00A0`}</h3>
+            <p className={`rmk flash-animation ${state.animation[2][2] ? "show" : ""}`}>{state.eta[2][2] || `\u00A0`}</p>
+        </div>
+    </>
 
 }
-
-export default ETADisplay;

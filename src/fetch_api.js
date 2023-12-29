@@ -80,7 +80,7 @@ export async function FetchRouteStop(route, direction, service_type, seq, compan
         }
     } else if (seq === "-1") {
         if (data.data.length !== 0) {
-            output = data.data.map(item => item.stop);
+            output.push(data.data[0].stop, data.data[0].stop);
         }
     } else {
         for (let i = 0; i < data.data.length; i++) {

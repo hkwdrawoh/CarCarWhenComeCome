@@ -1,86 +1,80 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import ETADisplay from "./ETADisplay";
 import { FetchRoute, FetchRouteStop, FetchStop } from "./fetch_api";
 
-class RouteETA extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            route_num: props.route.route,
-            station: '---',
-            terminal: '---',
-            stop_id: null,
-            classes: ['KMB_route_num', 'KMB_route_info']
-        }
-    }
+export default function RouteETA(props) {
 
-    componentDidMount() {
-        switch (this.props.route.style % 10) {
+    const [route_num, setRouteNum] = useState(props.route.route);
+    const [station, setStation] = useState('---');
+    const [terminal, setTerminal] = useState('---');
+    const [stop_id, setStopID] = useState(null);
+    const [classes, setClasses]  = useState(['KMB_route_num', 'KMB_route_info']);
+
+    useEffect(() => {
+        switch (props.route.style % 10) {
             case 1:
-                this.setState({classes: ['KMB_route_num', 'KMB_route_info']});
+                setClasses(['KMB_route_num', 'KMB_route_info']);
                 break;
             case 2:
-                this.setState({classes: ['CTB_route_num', 'CTB_route_info']});
+                setClasses(['CTB_route_num', 'CTB_route_info']);
                 break;
             case 3:
-                this.setState({classes: ['GMB_route_num', 'GMB_route_info']});
+                setClasses(['GMB_route_num', 'GMB_route_info']);
                 break;
             case 4:
-                this.setState({classes: ['CTY_route_num', 'CTY_route_info']});
+                setClasses(['CTY_route_num', 'CTY_route_info']);
                 break;
             case 5:
-                this.setState({classes: ['LWB_route_num', 'LWB_route_info']});
+                setClasses(['LWB_route_num', 'LWB_route_info']);
                 break;
             default:
-                this.setState({classes: ['KMB_route_num', 'KMB_route_info']});
+                setClasses(['KMB_route_num', 'KMB_route_info']);
                 break;
         }
-        this.fetchNames();
-    }
+        fetchNames().then();
+    }, []);
 
-    fetchNames = async () => {
+    const fetchNames = async () => {
         try {
-            let terminus = await FetchRoute(this.props.route.route, this.props.route.direction, this.props.route.service_type, this.props.route.company);
-            if (Math.floor(this.props.route.style % 100 / 10) === 1) {
-                this.setState({terminal: terminus[1]})
+            let terminus = await FetchRoute(props.route.route, props.route.direction, props.route.service_type, props.route.company);
+            if (Math.floor(props.route.style % 100 / 10) === 1) {
+                setTerminal(terminus[1]);
             } else {
-                this.setState({terminal: terminus[0]})
+                setTerminal(terminus[0]);
             }
-            if (this.props.route.company.substring(0, 3) === "gmb") {
-                await this.setState({route_num: terminus[2]})
+            if (props.route.company.substring(0, 3) === "gmb") {
+                await setRouteNum(terminus[2]);
             }
-            // console.log(this.state.route_num)
-            let temp = (this.props.route.company.substring(0, 3) === "gmb") ? terminus[2] : this.props.route.route;
-            let stop_id = await FetchRouteStop(temp, this.props.route.direction, this.props.route.service_type, this.props.route.seq, this.props.route.company).catch();
+            // console.log(state.route_num)
+            let temp = (props.route.company.substring(0, 3) === "gmb") ? terminus[2] : props.route.route;
+            let stop_id = await FetchRouteStop(temp, props.route.direction, props.route.service_type, props.route.seq, props.route.company).catch();
             let stop_name;
-            if (this.props.route.company.substring(0, 3) === "gmb") {
+            if (props.route.company.substring(0, 3) === "gmb") {
                 stop_name = [stop_id[1], stop_id[2]];
             } else {
-                stop_name = await FetchStop(stop_id[0], this.props.route.company);
+                stop_name = await FetchStop(stop_id[0], props.route.company);
             }
-            this.setState({station: stop_name[0], stop_id: stop_id[0]});
+            setStation(stop_name[0]);
+            setStopID(stop_id[0]);
         } catch (error) {
         }
     }
 
-    render() {
-        return <>
-            <div className="eta">
-                <div className={this.state.classes[0]}>
-                    <h1>{this.props.route.route}</h1>
-                </div>
-                <div className={this.state.classes[1]}>
-                    <h3>往：{this.state.terminal}</h3>
-                    <p>{this.state.station}</p>
-                </div>
-                <div className='time'>
-                    <ETADisplay route={this.props.route} route_num={this.state.route_num} stop_id={this.state.stop_id} />
-                </div>
+    return <>
+        <div className="eta">
+            <div className={classes[0]}>
+                <h1>{props.route.route}</h1>
             </div>
-            <hr />
-            {Math.floor(this.props.route.style / 100) === 1 && <hr />}
-        </>
-    }
+            <div className={classes[1]}>
+                <h3>往：{terminal}</h3>
+                <p>{station}</p>
+            </div>
+            <div className='time'>
+                <ETADisplay route={props.route} route_num={route_num} stop_id={stop_id} />
+            </div>
+        </div>
+        <hr />
+        {Math.floor(props.route.style / 100) === 1 && <hr />}
+    </>
 }
 
-export default RouteETA;
