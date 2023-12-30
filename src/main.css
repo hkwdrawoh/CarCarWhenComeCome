@@ -7,7 +7,11 @@
   --AuxColor1: #e0e0e0;
   --AuxColor2: #101010;
   --BackColor1: #303030;
+  --BackColor1a: #404040;
+  --BackColor1b: #505050;
   --BackColor2: #606060;
+  --BackColor2a: #808080;
+  --BackColor2b: #A0A0A0;
   --BackColor3: #D2D2D2;
   --IconColor1: #006699;
   --IconColor2: #40A6C9;
@@ -109,7 +113,7 @@ button.RefreshButton:hover {
 
 /* Search Page */
 .section_title {
-  padding: 0.5rem 0;
+  padding: 0.2rem 0 0.3rem 0;
   color: var(--AuxColor1);
 }
 
@@ -125,6 +129,14 @@ button.RefreshButton:hover {
   background-color: var(--BackColor3);
 }
 
+.button_icon {
+  width: 2.3rem;
+}
+
+.button_thin {
+  width: 4rem;
+}
+
 .choose_company {
   display: grid;
   grid-template-columns: repeat(auto-fit , minmax(6rem, 1fr));
@@ -138,23 +150,39 @@ button.RefreshButton:hover {
 .route_fill {
   background-color: var(--AuxColor1);
   color: var(--IconColor1);
-  width: 14rem;
+  width: 90%;
+  max-width: 14rem;
+  margin: 0.2rem auto 1rem auto;
 }
 
 .num_pad {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 0 0;
+  grid-template-columns: 4fr 4fr 4fr 5fr;
+  grid-gap: 0 0.2rem;
   align-items: center;
+  background-color: var(--BackColor1b);
+  max-width: 800px;
+  margin: 0 auto 0.5rem auto;
+
 }
 
-#letter_pad {
-  display: flex;
-  grid-gap: 0 0.5rem;
-  align-items: center;
-  overflow-x: auto;
-  overflow-y: hidden;
+.letter_pad {
+  /*display: grid;*/
+  grid-row: span 4 / auto;
+  align-items: start;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 12rem;
+  background-color: var(--BackColor1a);
+}
 
+.letter_pad::-webkit-scrollbar {
+  background: var(--BackColor1a);
+  width: 5px;
+}
+
+.letter_pad::-webkit-scrollbar-thumb {
+  background: var(--BackColor2b);
 }
 
 .numbers {
@@ -165,7 +193,7 @@ button.RefreshButton:hover {
   border-radius: 0.6rem;
   margin: 0.3rem auto;
   width: 90%;
-  min-width: 4rem;
+  min-width: 3rem;
   background-color: var(--BackColor3);
   color: var(--IconColor1);
 }
@@ -176,10 +204,9 @@ button.RefreshButton:hover {
   font-weight: bolder;
   padding: 0.3rem 0;
   border-radius: 0.6rem;
-  margin: 0.5rem auto;
-  min-width: 4rem;
-  width: 100%;
-  max-width: 4rem;
+  margin: 0.4rem auto 0.6rem auto;
+  min-width: 3rem;
+  width: 80%;
   background-color: var(--BackColor3);
   color: var(--IconColor1);
 }

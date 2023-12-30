@@ -47,7 +47,7 @@ export default function SearchContainer() {
             updateAvail("").then();
             setCompany("ctb");
         } else if (selected_company === "jor") {
-            selected_routes_list = [...kmb_route_list, ...ctb_route_list]
+            selected_routes_list = [...kmb_route_list, ...ctb_route_list];
             updateAvail("").then();
             setCompany("jor");
         } else {
@@ -91,7 +91,11 @@ export default function SearchContainer() {
             if (company === "ctb" || (company === "jor" && !joint_routes.includes(newRouteNum))) {
                 let dir = ctb_routes.filter(item => item.route === newRouteNum);
                 if (dir.length !== 0) {
-                    setDirection(prevDir => [...prevDir, dir[0]]);
+                    if (company === "jor") {
+                        setDirection(prevDir => [...prevDir, dir[0]]);
+                    } else {
+                        setDirection([dir[0]]);
+                    }
                     if (!ctb_circular_routes.includes(newRouteNum)) {
                         setDirectionSpecial([dir[0]]);
                     }
@@ -124,13 +128,13 @@ export default function SearchContainer() {
             <div className="component">
                 <h2 className="section_title">選擇路線號碼</h2>
                 <div className="button_base route_fill"><p>{route_num || `\u00A0`}</p></div>
-                <div id="letter_pad">
-                    {letters_div}
-                </div>
                 <div className="num_pad">
                     <button onClick={() => {chooseRoute("1")}}  className='numbers' disabled={!avail_letter.includes("1")}>1</button>
                     <button onClick={() => {chooseRoute("2")}}  className='numbers' disabled={!avail_letter.includes("2")}>2</button>
                     <button onClick={() => {chooseRoute("3")}}  className='numbers' disabled={!avail_letter.includes("3")}>3</button>
+                    <div className="letter_pad">
+                        {letters_div}
+                    </div>
                     <button onClick={() => {chooseRoute("4")}}  className='numbers' disabled={!avail_letter.includes("4")}>4</button>
                     <button onClick={() => {chooseRoute("5")}}  className='numbers' disabled={!avail_letter.includes("5")}>5</button>
                     <button onClick={() => {chooseRoute("6")}}  className='numbers' disabled={!avail_letter.includes("6")}>6</button>
@@ -139,7 +143,7 @@ export default function SearchContainer() {
                     <button onClick={() => {chooseRoute("9")}}  className='numbers' disabled={!avail_letter.includes("9")}>9</button>
                     <button onClick={() => {chooseRoute("cancel")}}  className='numbers'>取消</button>
                     <button onClick={() => {chooseRoute("0")}}  className='numbers' disabled={!avail_letter.includes("0")}>0</button>
-                    <button onClick={() => {chooseRoute("back")}}  className='numbers'>返回</button>
+                    <button onClick={() => {chooseRoute("back")}}  className='numbers'>⌫</button>
                 </div>
                 <hr/>
             </div>
@@ -223,7 +227,7 @@ export default function SearchContainer() {
                     <button onClick={() => {chooseCompany("jor")}} className={`button_base ${company === "jor" ? "search_jor" : "search_not"}`}>全部</button>
                     <button onClick={() => {chooseCompany("kmb")}} className={`button_base ${company === "kmb" ? "search_kmb" : "search_not"}`}>九巴</button>
                     <button onClick={() => {chooseCompany("ctb")}} className={`button_base ${company === "ctb" ? "search_ctb" : "search_not"}`}>城巴</button>
-                    <button onClick={() => {chooseCompany("")}} className={`button_base ${company === "gmb" ? "search_gmb" : "search_not"}`}>重選</button>
+                    {/*<button onClick={() => {chooseCompany("")}} className={`button_base ${company === "gmb" ? "search_gmb" : "search_not"}`}>重選</button>*/}
                 </div>
                 <hr/>
             </div>

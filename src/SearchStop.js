@@ -82,9 +82,9 @@ export default function SearchStop(props) {
                     <h2 className={`stop_num_${props.style[0]}`}>#{Number(selected_id) + 1}</h2>
                     <h2 className={`${props.style[1]}_route_info`}>{stop_names[selected_id]}</h2>
                     <div className="num_pad">
-                        <button className='button_base' onClick={() => {chooseStop(selected_id - 1)}} disabled={selected_id === 0}>&lt;</button>
-                        <button className='button_base' onClick={() => {chooseStop(-1)}}>返回</button>
-                        <button className='button_base' onClick={() => {chooseStop(selected_id + 1)}} disabled={selected_id + 2 === stop_ids.length}>&gt;</button>
+                        <button className='button_base button_icon' onClick={() => {chooseStop(selected_id - 1)}} disabled={selected_id === 0}>&lt;</button>
+                        <button className='button_base button_thin' onClick={() => {chooseStop(-1)}}>返回</button>
+                        <button className='button_base button_icon' onClick={() => {chooseStop(selected_id + 1)}} disabled={selected_id + 2 === stop_ids.length}>&gt;</button>
                     </div>
                 </div>
                 <div className="time">
