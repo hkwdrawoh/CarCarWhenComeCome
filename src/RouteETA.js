@@ -70,7 +70,7 @@ export default function RouteETA(props) {
                 <p>{station}</p>
             </div>
             <div className='time'>
-                <ETADisplay route={props.route} route_num={route_num} stop_id={stop_id} />
+                <ETADisplay route={props.route} route_num={route_num} stop_id={stop_id} joint={null}/>
             </div>
         </div>
         <hr />

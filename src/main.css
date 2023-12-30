@@ -188,6 +188,10 @@ button.RefreshButton:hover {
   color: var(--BackColor2);
 }
 
+.button_base:disabled {
+  color: var(--BackColor2);
+}
+
 .list_dir {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -197,19 +201,19 @@ button.RefreshButton:hover {
   padding-bottom: 0.5rem;
 }
 
-#show_dir {
+.show_dir {
   display: grid;
   grid-column: span 4 / auto;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
 }
 
-#list_stop {
+.list_stop {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 1rem 0.5rem;
+  grid-gap: 0rem 0.5rem;
   align-items: center;
-  margin: auto;
+  margin-top: 0.7rem;
 }
 
 #chosen_stop {
@@ -454,7 +458,7 @@ button.RefreshButton:hover {
 
 .flash-animation.show {
   opacity: 1;
-  animation: flash 1s ease-in-out infinite;
+  animation: flash 1s ease-in-out;
 }
 
 @keyframes flash {
@@ -465,6 +469,6 @@ button.RefreshButton:hover {
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }

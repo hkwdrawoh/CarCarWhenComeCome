@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import SearchStop from "./SearchStop";
 import kmb_route_json from "./kmb_route.json"
 import ctb_route_json from "./ctb_route.json"
 import special_route_json from "./special_route.json"
@@ -34,10 +35,6 @@ export default function SearchContainer() {
             eventEmitter.off('resetDest', resetSelectedDest);
         });
     }, [selected_dest]);
-
-    const resetSelectedDest = () => {
-        setSelectedDest([]);
-    }
 
     const chooseCompany = (selected_company) => {
         let selected_routes_list = [];
@@ -82,17 +79,26 @@ export default function SearchContainer() {
         if (newAvailRoutes.includes(newRouteNum) && newRouteNum !== "") {
             if (company === "kmb") {
                 let dir = kmb_routes.filter(item => item.route === newRouteNum).sort((a, b) => a.service_type - b.service_type);
-                setDirection(dir.filter(item => item.service_type === "1").map(item => item.dest_tc));
-                setDirectionSpecial(dir.filter(item => item.service_type !== "1").map(item => item.dest_tc))
+                setDirection(dir.filter(item => item.service_type === "1"));
+                setDirectionSpecial(dir.filter(item => item.service_type !== "1"))
             } else if (company === "ctb") {
                 let dir = ctb_routes.filter(item => item.route === newRouteNum);
-                setDirection([dir[0].dest_tc]);
+                setDirection([dir[0]]);
                 if (!ctb_circular_routes.includes(newRouteNum)) {
-                    setDirectionSpecial([dir[0].orig_tc]);
+                    setDirectionSpecial([dir[0]]);
                 }
             }
         }
     }
+
+    const resetSelectedDest = () => {
+        setSelectedDest([]);
+    }
+
+    const selectDest = (dir, dest, bound, company, style) => {
+        setSelectedDest([dir, dest, bound, company, style]);
+    }
+
 
     let letters_div;
     if (avail_letter.filter(item => /^[A-Za-z]$/.test(item)).length === 0) {
@@ -137,42 +143,42 @@ export default function SearchContainer() {
     let dir_div = null;
     let dir_special_div = null;
     if (direction.length !== 0) {
-        let name;
+        let style;
         if (company === "kmb") {
             if (route_num.at(0) === "A" || route_num.at(0) === "E" || route_num.at(0) === "S" || route_num.slice(0, 2) === "NA") {
-                name = ['lwb', 'LWB'];
+                style = ['lwb', 'LWB'];
             } else if (joint_routes.includes(route_num)) {
-                name = ['jor', 'JOR'];
+                style = ['jor', 'JOR'];
             } else {
-                name = ['kmb', 'KMB'];
+                style = ['kmb', 'KMB'];
             }
             dir_div = direction.map((dir) => (<>
-                <div className={`button_base search_${name[0]}`}>{route_num}</div>
-                <div className={`${name[1]}_route_info`}><h2>往：{dir}</h2></div>
-                <button className='button_base'>選擇</button>
+                <div className={`button_base search_${style[0]}`}>{route_num}</div>
+                <div className={`${style[1]}_route_info`}><h2>往：{dir.dest_tc}</h2></div>
+                <button className='button_base' onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style)}}>選擇</button>
             </>));
             dir_special_div = direction_special.map((dir) => (<>
-                <div className={`button_base search_${name[0]}`}>{route_num}</div>
-                <div className={`${name[1]}_route_info`}><h2>往：{dir}</h2><h3>(特別班次)</h3></div>
-                <button className='button_base'>選擇</button>
+                <div className={`button_base search_${style[0]}`}>{route_num}</div>
+                <div className={`${style[1]}_route_info`}><h2>往：{dir.dest_tc}</h2><h3>(特別班次)</h3></div>
+                <button className='button_base' onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style)}}>選擇</button>
             </>))
         } else if (company === "ctb") {
             if (route_num.at(0) === "A" || route_num.slice(0, 2) === "NA") {
-                name = ['cty', 'CTY'];
+                style = ['cty', 'CTY'];
             } else if (joint_routes.includes(route_num)) {
-                name = ['jor', 'JOR'];
+                style = ['jor', 'JOR'];
             } else {
-                name = ['ctb', 'CTB'];
-            }
+                style = ['ctb', 'CTB'];
+            } 
             dir_div = direction.map((dir) => (<>
-                <div className={`button_base search_${name[0]}`}>{route_num}</div>
-                <div className={`${name[1]}_route_info`}><h2>往：{dir}</h2></div>
-                <button className='button_base'>選擇</button>
+                <div className={`button_base search_${style[0]}`}>{route_num}</div>
+                <div className={`${style[1]}_route_info`}><h2>往：{dir.dest_tc}</h2></div>
+                <button className='button_base' onClick={() => {selectDest(dir, dir.dest_tc, "O", "ctb", style)}}>選擇</button>
             </>));
             dir_special_div = direction_special.map((dir) => (<>
-                <div className={`button_base search_${name[0]}`}>{route_num}</div>
-                <div className={`${name[1]}_route_info`}><h2>往：{dir}</h2></div>
-                <button className='button_base'>選擇</button>
+                <div className={`button_base search_${style[0]}`}>{route_num}</div>
+                <div className={`${style[1]}_route_info`}><h2>往：{dir.orig_tc}</h2></div>
+                <button className='button_base' onClick={() => {selectDest(dir, dir.orig_tc, "I", "ctb", style)}}>選擇</button>
             </>));
         }
         select_dir_div = (
@@ -190,8 +196,12 @@ export default function SearchContainer() {
     }
 
 
-    return (
-        <div>
+    let componentToRender;
+    if (JSON.stringify(selected_dest) !== JSON.stringify([])) {
+        // console.log(selected_dest);
+        componentToRender = <SearchStop dir={selected_dest[0]} dest={selected_dest[1]} bound={selected_dest[2]} company={selected_dest[3]} style={selected_dest[4]}/>;
+    } else {
+        componentToRender = <>
             <div className="component">
                 <h2 className="section_title">選擇巴士公司</h2>
                 <div id="choose_company">
@@ -203,22 +213,8 @@ export default function SearchContainer() {
             </div>
             {letter_pad_div}
             {select_dir_div}
-        </div>
-    )
-        {/*<div className="component" >*/}
-        {/*    <div id="select_dir">*/}
-        {/*        <h2 className="section_title">選擇目的地</h2>*/}
-        {/*        <div className="list_dir" id="list_dir"></div>*/}
-        {/*        <hr/>*/}
-        {/*    </div>*/}
-        {/*    <div id="select_stop">*/}
-        {/*        <h2 className="section_title">選擇車站</h2>*/}
-        {/*        <div id="list_stop"></div>*/}
-        {/*    </div>*/}
-        {/*    <div id="show_eta">*/}
-        {/*        <h2 className="section_title">~ 到站時間 ~</h2>*/}
-        {/*        <div id="chosen_stop"></div>*/}
-        {/*        <div className="time"></div>*/}
-        {/*    </div>*/}
-        {/*</div>*/}
+        </>
+    }
+
+    return (componentToRender);
 }

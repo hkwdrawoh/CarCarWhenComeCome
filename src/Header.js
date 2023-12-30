@@ -12,7 +12,7 @@ export default function Header(props) {
 
     useEffect(() => {
         intervalID1 = setInterval(refreshTimeNow, 1000);
-        intervalID2 = setInterval(refreshPage, 40000);
+        intervalID2 = setInterval(refreshPage, 30000);
 
         return () => {
             clearInterval(intervalID1);
@@ -29,7 +29,7 @@ export default function Header(props) {
         setAnimation(true);
         setTimeout(() => {
             setAnimation(false);
-        }, 500);
+        }, 1000);
         eventEmitter.emit('refreshETA');
     };
 
