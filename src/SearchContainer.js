@@ -16,8 +16,8 @@ export default function SearchContainer() {
     const ctb_route_list = [...new Set(ctb_routes.map(item => item.route))];
 
 
-    const [routes_list, setRoutesList] = useState([]);
-    const [company, setCompany] = useState('');
+    const [routes_list, setRoutesList] = useState([...kmb_route_list, ...ctb_route_list]);
+    const [company, setCompany] = useState('jor');
     const [route_num, setRouteNum] = useState('');
     const [avail_letter, setAvailLetter] = useState([]);
     const [direction, setDirection] = useState([]);
@@ -46,6 +46,10 @@ export default function SearchContainer() {
             selected_routes_list = ctb_route_list;
             updateAvail("").then();
             setCompany("ctb");
+        } else if (selected_company === "jor") {
+            selected_routes_list = [...kmb_route_list, ...ctb_route_list]
+            updateAvail("").then();
+            setCompany("jor");
         } else {
             selected_routes_list = [];
             updateAvail("").then();
@@ -77,15 +81,20 @@ export default function SearchContainer() {
         setDirection([]);
         setDirectionSpecial([]);
         if (newAvailRoutes.includes(newRouteNum) && newRouteNum !== "") {
-            if (company === "kmb") {
+            if (company === "kmb" || "jor") {
                 let dir = kmb_routes.filter(item => item.route === newRouteNum).sort((a, b) => a.service_type - b.service_type);
-                setDirection(dir.filter(item => item.service_type === "1"));
-                setDirectionSpecial(dir.filter(item => item.service_type !== "1"))
-            } else if (company === "ctb") {
+                if (dir.length !== 0) {
+                    setDirection(dir.filter(item => item.service_type === "1"));
+                    setDirectionSpecial(dir.filter(item => item.service_type !== "1"));
+                }
+            }
+            if (company === "ctb" || (company === "jor" && !joint_routes.includes(newRouteNum))) {
                 let dir = ctb_routes.filter(item => item.route === newRouteNum);
-                setDirection([dir[0]]);
-                if (!ctb_circular_routes.includes(newRouteNum)) {
-                    setDirectionSpecial([dir[0]]);
+                if (dir.length !== 0) {
+                    setDirection(prevDir => [...prevDir, dir[0]]);
+                    if (!ctb_circular_routes.includes(newRouteNum)) {
+                        setDirectionSpecial([dir[0]]);
+                    }
                 }
             }
         }
@@ -140,11 +149,13 @@ export default function SearchContainer() {
     }
 
     let select_dir_div;
-    let dir_div = null;
-    let dir_special_div = null;
+    let dir_div1 = null;
+    let dir_special_div1 = null;
+    let dir_div2 = null;
+    let dir_special_div2 = null;
     if (direction.length !== 0) {
-        let style;
-        if (company === "kmb") {
+        if (company === "kmb" || "jor") {
+            let style;
             if (route_num.at(0) === "A" || route_num.at(0) === "E" || route_num.at(0) === "S" || route_num.slice(0, 2) === "NA") {
                 style = ['lwb', 'LWB'];
             } else if (joint_routes.includes(route_num)) {
@@ -152,17 +163,19 @@ export default function SearchContainer() {
             } else {
                 style = ['kmb', 'KMB'];
             }
-            dir_div = direction.map((dir) => (<>
+            dir_div1 = direction.filter((item) => item.co === undefined).map((dir) => (<>
                 <div className={`button_base search_${style[0]}`}>{route_num}</div>
                 <div className={`${style[1]}_route_info`}><h2>往：{dir.dest_tc}</h2></div>
                 <button className='button_base' onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style)}}>選擇</button>
             </>));
-            dir_special_div = direction_special.map((dir) => (<>
+            dir_special_div1 = direction_special.filter((item) => item.co === undefined).map((dir) => (<>
                 <div className={`button_base search_${style[0]}`}>{route_num}</div>
                 <div className={`${style[1]}_route_info`}><h2>往：{dir.dest_tc}</h2><h3>(特別班次)</h3></div>
                 <button className='button_base' onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style)}}>選擇</button>
             </>))
-        } else if (company === "ctb") {
+        }
+        if (company === "ctb" || "jor") {
+            let style;
             if (route_num.at(0) === "A" || route_num.slice(0, 2) === "NA") {
                 style = ['cty', 'CTY'];
             } else if (joint_routes.includes(route_num)) {
@@ -170,12 +183,12 @@ export default function SearchContainer() {
             } else {
                 style = ['ctb', 'CTB'];
             } 
-            dir_div = direction.map((dir) => (<>
+            dir_div2 = direction.filter((item) => item.co !== undefined).map((dir) => (<>
                 <div className={`button_base search_${style[0]}`}>{route_num}</div>
                 <div className={`${style[1]}_route_info`}><h2>往：{dir.dest_tc}</h2></div>
                 <button className='button_base' onClick={() => {selectDest(dir, dir.dest_tc, "O", "ctb", style)}}>選擇</button>
             </>));
-            dir_special_div = direction_special.map((dir) => (<>
+            dir_special_div2 = direction_special.filter((item) => item.co !== undefined).map((dir) => (<>
                 <div className={`button_base search_${style[0]}`}>{route_num}</div>
                 <div className={`${style[1]}_route_info`}><h2>往：{dir.orig_tc}</h2></div>
                 <button className='button_base' onClick={() => {selectDest(dir, dir.orig_tc, "I", "ctb", style)}}>選擇</button>
@@ -185,8 +198,10 @@ export default function SearchContainer() {
             <div className="component">
                 <h2 className="section_title">選擇目的地</h2>
                 <div className="list_dir">
-                    {dir_div}
-                    {dir_special_div}
+                    {dir_div1}
+                    {dir_special_div1}
+                    {dir_div2}
+                    {dir_special_div2}
                 </div>
                 <hr/>
             </div>
@@ -204,7 +219,8 @@ export default function SearchContainer() {
         componentToRender = <>
             <div className="component">
                 <h2 className="section_title">選擇巴士公司</h2>
-                <div id="choose_company">
+                <div className="choose_company">
+                    <button onClick={() => {chooseCompany("jor")}} className={`button_base ${company === "jor" ? "search_jor" : "search_not"}`}>全部</button>
                     <button onClick={() => {chooseCompany("kmb")}} className={`button_base ${company === "kmb" ? "search_kmb" : "search_not"}`}>九巴</button>
                     <button onClick={() => {chooseCompany("ctb")}} className={`button_base ${company === "ctb" ? "search_ctb" : "search_not"}`}>城巴</button>
                     <button onClick={() => {chooseCompany("")}} className={`button_base ${company === "gmb" ? "search_gmb" : "search_not"}`}>重選</button>

@@ -125,7 +125,7 @@ button.RefreshButton:hover {
   background-color: var(--BackColor3);
 }
 
-#choose_company {
+.choose_company {
   display: grid;
   grid-template-columns: repeat(auto-fit , minmax(6rem, 1fr));
   grid-gap: 1rem;
@@ -211,7 +211,7 @@ button.RefreshButton:hover {
 .list_stop {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 0rem 0.5rem;
+  grid-gap: 0 0.5rem;
   align-items: center;
   margin-top: 0.7rem;
 }
