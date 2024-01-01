@@ -8,27 +8,27 @@ export default function RouteETA(props) {
     const [station, setStation] = useState('---');
     const [terminal, setTerminal] = useState('---');
     const [stop_id, setStopID] = useState(null);
-    const [classes, setClasses]  = useState(['KMB_route_num', 'KMB_route_info']);
+    const [classes, setClasses]  = useState('');
 
     useEffect(() => {
         switch (props.route.style % 10) {
             case 1:
-                setClasses(['KMB_route_num', 'KMB_route_info']);
+                setClasses('kmb');
                 break;
             case 2:
-                setClasses(['CTB_route_num', 'CTB_route_info']);
+                setClasses('ctb');
                 break;
             case 3:
-                setClasses(['GMB_route_num', 'GMB_route_info']);
+                setClasses('gmb');
                 break;
             case 4:
-                setClasses(['CTY_route_num', 'CTY_route_info']);
+                setClasses('cty');
                 break;
             case 5:
-                setClasses(['LWB_route_num', 'LWB_route_info']);
+                setClasses('lwb');
                 break;
             default:
-                setClasses(['KMB_route_num', 'KMB_route_info']);
+                setClasses('kmb');
                 break;
         }
         fetchNames().then();
@@ -61,20 +61,20 @@ export default function RouteETA(props) {
     }
 
     return <>
-        <div className="eta">
-            <div className={classes[0]}>
-                <h1>{props.route.route}</h1>
-            </div>
-            <div className={classes[1]}>
+        <div className="grid-3_5-minmax">
+            <div className={`button_base grid-span2 ${classes}_icon`}>{props.route.route}</div>
+            <div className={`text_left grid-span3 ${classes}_text`}>
                 <h3>往：{terminal}</h3>
                 <p>{station}</p>
             </div>
-            <div className='time'>
+            <div className='grid-span6 grid-3-fixed'>
                 <ETADisplay route={props.route} route_num={route_num} stop_id={stop_id} joint={null}/>
             </div>
         </div>
-        <hr />
-        {Math.floor(props.route.style / 100) === 1 && <hr />}
+        <div>
+            <hr />
+            {Math.floor(props.route.style / 100) === 1 && <hr />}
+        </div>
     </>
 }
 

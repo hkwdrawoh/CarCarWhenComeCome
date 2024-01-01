@@ -25,7 +25,7 @@ export default function SearchStop(props) {
     const fetchStopNames = async () => {
         let ids = await FetchRouteStop(props.dir.route, props.bound, props.dir.service_type, "-1", props.company);
         // console.log(ids);
-        if (props.style[0] === 'jor' && (props.dir.service_type === "1" || props.company === "ctb")) {
+        if (props.style === 'jor' && (props.dir.service_type === "1" || props.company === "ctb")) {
             let jor_dir = (special_route_json.data.flip_bound.includes(props.dir.route)) ? ((props.bound === "O") ? "I" : "O") : props.bound;
             let jor_ids = await FetchRouteStop(props.dir.route, jor_dir, "1", "-1", (props.company === "kmb") ? "ctb" : "kmb");
             setJORStopIDs(jor_ids);
@@ -55,6 +55,14 @@ export default function SearchStop(props) {
         setSelectedID(id);
     }
 
+    const displayStopNum = (index) => {
+        let output = Number(index) + 1;
+        if (Number(output) < 10) {
+            output = "0" + String(output)
+        }
+        return String(output);
+    }
+
     let list_stop_div;
     if (selected_id !== -1) {
         let route = {
@@ -64,7 +72,7 @@ export default function SearchStop(props) {
             company: props.company
         };
         let joint = null;
-        if (props.style[0] === 'jor' && (props.dir.service_type === "1" || props.company === "ctb")) {
+        if (props.style === 'jor' && (props.dir.service_type === "1" || props.company === "ctb")) {
             console.log(jor_stop_ids);
             joint = {
                 route: props.dir.route,
@@ -76,53 +84,43 @@ export default function SearchStop(props) {
             }
         }
         list_stop_div = <>
-            <div id="show_eta">
-                <h2 className="section_title">~ 到站時間 ~</h2>
-                <div id="chosen_stop">
-                    <h2 className={`stop_num_${props.style[0]}`}>#{Number(selected_id) + 1}</h2>
-                    <h2 className={`${props.style[1]}_route_info`}>{stop_names[selected_id]}</h2>
-                    <div className="num_pad">
-                        <button className='button_base button_icon' onClick={() => {chooseStop(selected_id - 1)}} disabled={selected_id === 0}>&lt;</button>
-                        <button className='button_base button_thin' onClick={() => {chooseStop(-1)}}>返回</button>
-                        <button className='button_base button_icon' onClick={() => {chooseStop(selected_id + 1)}} disabled={selected_id + 2 === stop_ids.length}>&gt;</button>
-                    </div>
+            <h2>~ 到站時間 ~</h2>
+            <div className="grid-5-fixed">
+                <h2 className={`${props.style}_text`}>#{displayStopNum(selected_id)}</h2>
+                <h2 className={`${props.style}_text text_left grid-span3`}>{stop_names[selected_id]}</h2>
+                <div className="num_pad">
+                    <button className='button_base button_icon' onClick={() => {chooseStop(selected_id - 1)}} disabled={selected_id === 0}>&lt;</button>
+                    <button className='button_base button_thin' onClick={() => {chooseStop(-1)}}>返回</button>
+                    <button className='button_base button_icon' onClick={() => {chooseStop(selected_id + 1)}} disabled={selected_id + 2 === stop_ids.length}>&gt;</button>
                 </div>
-                <div className="time">
-                    <ETADisplay key={uuidv4()} route={route} route_num={props.dir.route} stop_id={stop_ids[selected_id]} joint={joint}/>
-                </div>
+            </div>
+            <div className="grid-3-fixed">
+                <ETADisplay key={uuidv4()} route={route} route_num={props.dir.route} stop_id={stop_ids[selected_id]} joint={joint}/>
             </div>
         </>
     } else if (JSON.stringify(stop_names) !== JSON.stringify([])) {
         list_stop_div = <>
-            <div className="list_stop">
+            <div className="grid-10-fixed">
                 {stop_names.map((stop_name, index) => <>
-                    <h2 className={`stop_num_${props.style[0]}`}>#{Number(index) + 1}</h2>
-                    <h2 className={`${props.style[1]}_route_info`}>{stop_name}</h2>
-                    <button className='button_base' onClick={() => {chooseStop(index)}}>選擇</button>
+                    <button className='button_base button_hover grid-span2' onClick={() => {chooseStop(index)}}>選擇</button>
+                    <h2 className={`${props.style}_text`}>#{displayStopNum(index)}</h2>
+                    <h2 className={`${props.style}_text text_left grid-span6`}>{stop_name}</h2>
                 </>)}
             </div>
         </>
     } else {
-        list_stop_div = <>
-            <div className="section_title">
-                    <h2>載入中...</h2>
-            </div>
-        </>
+        list_stop_div = (<h2>載入中...</h2>);
     }
 
 
     return <>
-        <div className="component">
-            <h2 className="section_title">選擇車站</h2>
-            <div className="list_dir">
-                <div className="show_dir">
-                    <div className={`button_base search_${props.style[0]}`}>{props.dir.route}</div>
-                    <div className={`${props.style[1]}_route_info`}><h2>住：{props.dest}</h2></div>
-                </div>
-                <button className='button_base' onClick={reSelectDest}>返回</button>
-            </div>
-            <hr />
-            {list_stop_div}
+        <h2>選擇車站</h2>
+        <div className="grid-5-fixed">
+            <div className={`button_base ${props.style}_icon`}>{props.dir.route}</div>
+            <div className={`${props.style}_text text_left grid-span3`}><h2>往：{props.dest}</h2></div>
+            <button className='button_base button_hover' onClick={reSelectDest}>返回</button>
         </div>
+        <hr />
+        {list_stop_div}
     </>
 }

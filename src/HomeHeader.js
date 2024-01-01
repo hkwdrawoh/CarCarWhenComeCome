@@ -39,22 +39,20 @@ export default function HomeHeader() {
     };
 
     return <>
-        <div className="menu component">
+        <div className="page_title">
             <h1>我要搭車!</h1>
         </div>
-        <div className="component">
-            <div className="clock">
-                <div>
-                    <h2>{getTimeString(time_now)}</h2>
-                    <h3>現在時間</h3>
-                </div>
-                <div className="weather_div">
-                    <h2 className="section_title">☀天氣就如預期☀</h2>
-                    <p className="weather">{weather}</p>
-                </div>
+        <div className="grid-3-fixed vertical_mid">
+            <div>
+                <h2>{getTimeString(time_now)}</h2>
+                <h3>現在時間</h3>
             </div>
-            <hr/>
+            <div className="grid-span2 text_left">
+                <h2>☀天氣就如預期☀</h2>
+                <p className="weather scroll_bar-1">{weather}</p>
+            </div>
         </div>
+        <hr/>
     </>
 
 }

@@ -26,12 +26,10 @@ export default function RouteETAContainer(props) {
         }
     })
 
-    return (
-        <div className='component'>
-            {routes.map((route) => (
+    return <>
+        {routes.map((route) => (
                 <RouteETA key={route.route + route.seq} route={route} />
             ))}
-        </div>
-    )
+    </>
 
 }

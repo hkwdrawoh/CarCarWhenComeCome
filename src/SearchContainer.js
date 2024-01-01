@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Header from "./Header";
 import SearchStop from "./SearchStop";
 import kmb_route_json from "./kmb_route.json"
 import ctb_route_json from "./ctb_route.json"
@@ -113,39 +114,32 @@ export default function SearchContainer() {
     }
 
 
-    let letters_div;
-    if (avail_letter.filter(item => /^[A-Za-z]$/.test(item)).length === 0) {
-        letters_div = <h1 style={{"padding": "0.4rem 0"}}>&emsp;</h1>
-    } else {
+    let letters_div = null;
+    if (avail_letter.filter(item => /^[A-Za-z]$/.test(item)).length !== 0) {
         letters_div = avail_letter.filter(item => /^[A-Za-z]$/.test(item)).map((letter) => (
-            <button onClick={() => {chooseRoute(letter)}}  className='letters' disabled={!avail_letter.includes(letter)}>{letter}</button>
+            <button onClick={() => {chooseRoute(letter)}}  className='button_base button_number' disabled={!avail_letter.includes(letter)}>{letter}</button>
         ))
     }
 
     let letter_pad_div;
     if (company !== "") {
         letter_pad_div = (
-            <div className="component">
-                <h2 className="section_title">選擇路線號碼</h2>
-                <div className="button_base route_fill"><p>{route_num || `\u00A0`}</p></div>
-                <div className="num_pad">
-                    <button onClick={() => {chooseRoute("1")}}  className='numbers' disabled={!avail_letter.includes("1")}>1</button>
-                    <button onClick={() => {chooseRoute("2")}}  className='numbers' disabled={!avail_letter.includes("2")}>2</button>
-                    <button onClick={() => {chooseRoute("3")}}  className='numbers' disabled={!avail_letter.includes("3")}>3</button>
-                    <div className="letter_pad">
-                        {letters_div}
-                    </div>
-                    <button onClick={() => {chooseRoute("4")}}  className='numbers' disabled={!avail_letter.includes("4")}>4</button>
-                    <button onClick={() => {chooseRoute("5")}}  className='numbers' disabled={!avail_letter.includes("5")}>5</button>
-                    <button onClick={() => {chooseRoute("6")}}  className='numbers' disabled={!avail_letter.includes("6")}>6</button>
-                    <button onClick={() => {chooseRoute("7")}}  className='numbers' disabled={!avail_letter.includes("7")}>7</button>
-                    <button onClick={() => {chooseRoute("8")}}  className='numbers' disabled={!avail_letter.includes("8")}>8</button>
-                    <button onClick={() => {chooseRoute("9")}}  className='numbers' disabled={!avail_letter.includes("9")}>9</button>
-                    <button onClick={() => {chooseRoute("cancel")}}  className='numbers'>取消</button>
-                    <button onClick={() => {chooseRoute("0")}}  className='numbers' disabled={!avail_letter.includes("0")}>0</button>
-                    <button onClick={() => {chooseRoute("back")}}  className='numbers'>⌫</button>
+            <div className="num_pad">
+                <button className='button_base button_number' onClick={() => {chooseRoute("1")}} disabled={!avail_letter.includes("1")}>1</button>
+                <button className='button_base button_number' onClick={() => {chooseRoute("2")}} disabled={!avail_letter.includes("2")}>2</button>
+                <button className='button_base button_number' onClick={() => {chooseRoute("3")}} disabled={!avail_letter.includes("3")}>3</button>
+                <div className="letter_pad grid-span4R scroll_bar-1a">
+                    {letters_div}
                 </div>
-                <hr/>
+                <button className='button_base button_number' onClick={() => {chooseRoute("4")}} disabled={!avail_letter.includes("4")}>4</button>
+                <button className='button_base button_number' onClick={() => {chooseRoute("5")}} disabled={!avail_letter.includes("5")}>5</button>
+                <button className='button_base button_number' onClick={() => {chooseRoute("6")}} disabled={!avail_letter.includes("6")}>6</button>
+                <button className='button_base button_number' onClick={() => {chooseRoute("7")}} disabled={!avail_letter.includes("7")}>7</button>
+                <button className='button_base button_number' onClick={() => {chooseRoute("8")}} disabled={!avail_letter.includes("8")}>8</button>
+                <button className='button_base button_number' onClick={() => {chooseRoute("9")}} disabled={!avail_letter.includes("9")}>9</button>
+                <button className='button_base button_number' onClick={() => {chooseRoute("cancel")}} >取消</button>
+                <button className='button_base button_number' onClick={() => {chooseRoute("0")}} disabled={!avail_letter.includes("0")}>0</button>
+                <button className='button_base button_number' onClick={() => {chooseRoute("back")}} >⌫</button>
             </div>
         )
     } else {
@@ -161,53 +155,49 @@ export default function SearchContainer() {
         if (company === "kmb" || "jor") {
             let style;
             if (route_num.at(0) === "A" || route_num.at(0) === "E" || route_num.at(0) === "S" || route_num.slice(0, 2) === "NA") {
-                style = ['lwb', 'LWB'];
+                style = 'lwb';
             } else if (joint_routes.includes(route_num)) {
-                style = ['jor', 'JOR'];
+                style = 'jor';
             } else {
-                style = ['kmb', 'KMB'];
+                style = 'kmb';
             }
             dir_div1 = direction.filter((item) => item.co === undefined).map((dir) => (<>
-                <div className={`button_base search_${style[0]}`}>{route_num}</div>
-                <div className={`${style[1]}_route_info`}><h2>往：{dir.dest_tc}</h2></div>
-                <button className='button_base' onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style)}}>選擇</button>
+                <div className={`button_base ${style}_icon`}>{route_num}</div>
+                <div className={`text_left grid-span3 ${style}_text`}><h2>往：{dir.dest_tc}</h2></div>
+                <button className='button_base button_hover' onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style)}}>選擇</button>
             </>));
             dir_special_div1 = direction_special.filter((item) => item.co === undefined).map((dir) => (<>
-                <div className={`button_base search_${style[0]}`}>{route_num}</div>
-                <div className={`${style[1]}_route_info`}><h2>往：{dir.dest_tc}</h2><h3>(特別班次)</h3></div>
-                <button className='button_base' onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style)}}>選擇</button>
+                <div className={`button_base ${style}_icon`}>{route_num}</div>
+                <div className={`text_left grid-span3 ${style}_text`}><h2>往：{dir.dest_tc}</h2><h3>(特別班次)</h3></div>
+                <button className='button_base button_hover' onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style)}}>選擇</button>
             </>))
         }
         if (company === "ctb" || "jor") {
             let style;
             if (route_num.at(0) === "A" || route_num.slice(0, 2) === "NA") {
-                style = ['cty', 'CTY'];
+                style = 'cty';
             } else if (joint_routes.includes(route_num)) {
-                style = ['jor', 'JOR'];
+                style = 'jor';
             } else {
-                style = ['ctb', 'CTB'];
+                style = 'ctb';
             } 
             dir_div2 = direction.filter((item) => item.co !== undefined).map((dir) => (<>
-                <div className={`button_base search_${style[0]}`}>{route_num}</div>
-                <div className={`${style[1]}_route_info`}><h2>往：{dir.dest_tc}</h2></div>
-                <button className='button_base' onClick={() => {selectDest(dir, dir.dest_tc, "O", "ctb", style)}}>選擇</button>
+                <div className={`button_base ${style}_icon`}>{route_num}</div>
+                <div className={`text_left grid-span3 ${style}_text`}><h2>往：{dir.dest_tc}</h2></div>
+                <button className='button_base button_hover' onClick={() => {selectDest(dir, dir.dest_tc, "O", "ctb", style)}}>選擇</button>
             </>));
             dir_special_div2 = direction_special.filter((item) => item.co !== undefined).map((dir) => (<>
-                <div className={`button_base search_${style[0]}`}>{route_num}</div>
-                <div className={`${style[1]}_route_info`}><h2>往：{dir.orig_tc}</h2></div>
-                <button className='button_base' onClick={() => {selectDest(dir, dir.orig_tc, "I", "ctb", style)}}>選擇</button>
+                <div className={`button_base ${style}_icon`}>{route_num}</div>
+                <div className={`text_left grid-span3 ${style}_text`}><h2>往：{dir.orig_tc}</h2></div>
+                <button className='button_base button_hover' onClick={() => {selectDest(dir, dir.orig_tc, "I", "ctb", style)}}>選擇</button>
             </>));
         }
         select_dir_div = (
-            <div className="component">
-                <h2 className="section_title">選擇目的地</h2>
-                <div className="list_dir">
-                    {dir_div1}
-                    {dir_special_div1}
-                    {dir_div2}
-                    {dir_special_div2}
-                </div>
-                <hr/>
+            <div className="grid-5-fixed">
+                {dir_div1}
+                {dir_special_div1}
+                {dir_div2}
+                {dir_special_div2}
             </div>
         )
     } else {
@@ -217,22 +207,43 @@ export default function SearchContainer() {
 
     let componentToRender;
     if (JSON.stringify(selected_dest) !== JSON.stringify([])) {
-        // console.log(selected_dest);
-        componentToRender = <SearchStop dir={selected_dest[0]} dest={selected_dest[1]} bound={selected_dest[2]} company={selected_dest[3]} style={selected_dest[4]}/>;
+        componentToRender = <>
+            <div className="container">
+                <div className="container_top">
+                    <Header text={selected_dest[0].route + " 幾時有車？"} />
+                </div>
+                <div className="container_mid">
+                    <SearchStop dir={selected_dest[0]} dest={selected_dest[1]} bound={selected_dest[2]} company={selected_dest[3]} style={selected_dest[4]}/>
+                </div>
+                <div className="container_bottom"></div>
+            </div>
+        </>;
     } else {
         componentToRender = <>
-            <div className="component">
-                <h2 className="section_title">選擇巴士公司</h2>
-                <div className="choose_company">
-                    <button onClick={() => {chooseCompany("jor")}} className={`button_base ${company === "jor" ? "search_jor" : "search_not"}`}>全部</button>
-                    <button onClick={() => {chooseCompany("kmb")}} className={`button_base ${company === "kmb" ? "search_kmb" : "search_not"}`}>九巴</button>
-                    <button onClick={() => {chooseCompany("ctb")}} className={`button_base ${company === "ctb" ? "search_ctb" : "search_not"}`}>城巴</button>
-                    {/*<button onClick={() => {chooseCompany("")}} className={`button_base ${company === "gmb" ? "search_gmb" : "search_not"}`}>重選</button>*/}
+            <div className="container">
+                <div className="container_top">
+                    <Header text="你搭邊架車車？" />
+                    <h2>選擇巴士公司</h2>
+                    <div className="grid-3-fixed">
+                        <button onClick={() => {chooseCompany("jor")}} className={`button_base ${company === "jor" ? "jor_icon" : ""}`}>全部</button>
+                        <button onClick={() => {chooseCompany("kmb")}} className={`button_base ${company === "kmb" ? "kmb_icon" : ""}`}>九巴</button>
+                        <button onClick={() => {chooseCompany("ctb")}} className={`button_base ${company === "ctb" ? "ctb_icon" : ""}`}>城巴</button>
+                    </div>
+                    <hr />
+                    <div className="grid-7-fixed">
+                        <h2 className="text_right grid-span2">路線：</h2>
+                        <div className="button_base route_area grid-span5"><p>{route_num || `\u00A0`}</p></div>
+                    </div>
+                    <hr />
                 </div>
-                <hr/>
+                <div className="container_mid">
+                    {select_dir_div}
+                </div>
+                <div className="container_bottom">
+                    <hr />
+                    {letter_pad_div}
+                </div>
             </div>
-            {letter_pad_div}
-            {select_dir_div}
         </>
     }
 

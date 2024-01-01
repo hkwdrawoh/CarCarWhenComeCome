@@ -45,7 +45,7 @@ export const OnTai = [
         "service_type": 1,
         "seq": 15,
         "company": "kmb",
-        "style": 1
+        "style": 101
     },
     {
         "route": "613",

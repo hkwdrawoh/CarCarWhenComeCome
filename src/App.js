@@ -21,51 +21,83 @@ export default function App() {
     switch (pages) {
         case "OnTai":
             componentToRender = <>
-                <Header text="安泰邨 幾時有車？" />
-                <RouteETAContainer key="1" routeset='OnTai' />
+                <div className="container">
+                    <div className="container_top">
+                        <Header text="安泰邨 幾時有車？" />
+                    </div>
+                    <div className="container_mid scroll_bar-1">
+                        <RouteETAContainer key="1" routeset='OnTai' />
+                    </div>
+                    <div className="container_bottom"></div>
+                </div>
             </>;
             break;
         case "HomeFrom108":
             componentToRender = <>
-                <Header text="108 幾時有車？" />
-                <RouteETAContainer key="1" routeset='HomeFrom108' />
+                <div className="container">
+                    <div className="container_top">
+                        <Header text="108 幾時有車？" />
+                    </div>
+                    <div className="container_mid scroll_bar-1">
+                        <RouteETAContainer key="1" routeset='HomeFrom108' />
+                    </div>
+                    <div className="container_bottom"></div>
+                </div>
             </>;
             break;
         case "LaiTakTsuen":
             componentToRender = <>
-                <Header text="勵德邨 幾時有車？" />
-                <RouteETAContainer key="1" routeset='LaiTakTsuen' />
+                <div className="container">
+                    <div className="container_top">
+                        <Header text="勵德邨 幾時有車？" />
+                    </div>
+                    <div className="container_mid scroll_bar-1">
+                        <RouteETAContainer key="1" routeset='LaiTakTsuen' />
+                    </div>
+                    <div className="container_bottom"></div>
+                </div>
             </>;
             break;
         case "Rhythm":
             componentToRender = <>
-                <Header text="采頤花園 幾時有車？" />
-                <RouteETAContainer key="1" routeset='Rhythm' />
+                <div className="container">
+                    <div className="container_top">
+                        <Header text="采頤花園 幾時有車？" />
+                    </div>
+                    <div className="container_mid scroll_bar-1">
+                        <RouteETAContainer key="1" routeset='Rhythm' />
+                    </div>
+                    <div className="container_bottom"></div>
+                </div>
             </>;
             break;
         case "Search":
             componentToRender = <>
-                <Header text="你搭邊架車車？" />
                 <SearchContainer />
             </>;
             break;
         default:
             componentToRender = <>
-                <HomeHeader />
-                <div className="content component">
-                    <h2 className="section_title">~ 我喺呢度! ~</h2>
-                    <div className="location">
-                        <button onClick={() => {goToSite("OnTai")}} className="button_base location_button">安泰邨</button>
-                        <button onClick={() => {goToSite("LaiTakTsuen")}} className="button_base location_button">勵德邨</button>
-                        <button onClick={() => {goToSite("HomeFrom108")}} className="button_base location_button">108回家</button>
-                        <button onClick={() => {goToSite("Rhythm")}} className="button_base location_button">采頤花園</button>
+                <div className="container">
+                    <div className="container_top">
+                        <HomeHeader />
                     </div>
-                    <hr/>
-                    <h2 className="section_title">~ 我要揀車! ~</h2>
-                    <div className="location">
-                        <button onClick={() => {goToSite("Search")}}  className="button_base location_button">車車?</button>
-                        <button onClick={() => {goToSite("Search")}}  className="button_base location_button">車車!</button>
+                    <div className="container_mid">
+                        <h2>~ 我喺呢度! ~</h2>
+                        <div className="grid-9-minmax">
+                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("OnTai")}}>安泰邨</button>
+                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("LaiTakTsuen")}}>勵德邨</button>
+                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("HomeFrom108")}}>108回家</button>
+                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("Rhythm")}}>采頤花園</button>
+                        </div>
+                        <hr/>
+                        <h2>~ 我要揀車! ~</h2>
+                        <div className="grid-9-minmax">
+                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("Search")}}>車車?</button>
+                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("Search")}}>車車!</button>
+                        </div>
                     </div>
+                    <div className="container_bottom"></div>
                 </div>
             </>
     }

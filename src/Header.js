@@ -47,28 +47,25 @@ export default function Header(props) {
         return time.toLocaleTimeString(undefined, options);
     };
 
-    return (
-        <div className="component menu">
-            <div className="menu">
-                <div className="nav">
-                    <h2>{props.text}</h2>
-                    <button className="button_base back_index" onClick={backToHome}>主頁</button>
-                </div>
-                <div className="clock">
-                    <div style={{verticalAlign: 'center'}}>
-                        <h3>{getTimeString(time_now)}</h3>
-                        <p>現在時間</p>
-                    </div>
-                    <div>
-                        <h3 className={`flash-animation ${animation ? "show" : ""}`}>{getTimeString(time_ref)}</h3>
-                        <p>更新時間</p>
-                    </div>
-                    <button className="RefreshButton" onClick={refreshPage}>更新</button>
-                </div>
-                <hr/>
-            </div>
+    return <>
+        <div className="page_title">
+            <h2>{props.text}</h2>
+            <p></p>
+            <button className="button_base button_hover" style={{"marginRight": "1.55rem"}} onClick={backToHome}>主頁</button>
         </div>
-    )
+        <div className="grid-3-fixed">
+            <div>
+                <h3>{getTimeString(time_now)}</h3>
+                <p>現在時間</p>
+            </div>
+            <div>
+                <h3 className={`flash-animation ${animation ? "show" : ""}`}>{getTimeString(time_ref)}</h3>
+                <p>更新時間</p>
+            </div>
+            <button className="button_base button_hover" style={{"marginRight": "1.55rem"}} onClick={refreshPage}>更新</button>
+        </div>
+        <hr/>
+    </>
 
 }
 
