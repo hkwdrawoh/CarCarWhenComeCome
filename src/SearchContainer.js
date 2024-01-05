@@ -5,6 +5,7 @@ import kmb_route_json from "./kmb_route.json"
 import ctb_route_json from "./ctb_route.json"
 import special_route_json from "./special_route.json"
 import {eventEmitter} from "./App";
+import {v4 as uuidv4} from 'uuid';
 
 
 export default function SearchContainer() {
@@ -213,7 +214,7 @@ export default function SearchContainer() {
                     <Header text={selected_dest[0].route + " 幾時有車？"} />
                 </div>
                 <div className="container_mid">
-                    <SearchStop dir={selected_dest[0]} dest={selected_dest[1]} bound={selected_dest[2]} company={selected_dest[3]} style={selected_dest[4]}/>
+                    <SearchStop key={uuidv4()} dir={selected_dest[0]} dest={selected_dest[1]} bound={selected_dest[2]} company={selected_dest[3]} style={selected_dest[4]}/>
                 </div>
                 <div className="container_bottom"></div>
             </div>
