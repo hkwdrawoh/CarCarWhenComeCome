@@ -142,6 +142,12 @@ body {
   grid-row: span 4 / auto;
 }
 
+@media (max-width: 42rem) {
+  .grid-span4-narrow {
+    grid-column: span 4 / auto;
+  }
+
+}
 
 /* Alignment */
 
@@ -211,6 +217,11 @@ body {
 .button_hover:hover {
   color: var(--BackColor3);
   background-color: var(--IconColor1);
+}
+
+.button_hover:hover:disabled {
+  color: var(--BackColor2);
+  background-color: var(--BackColor3);
 }
 
 .button_wide {
@@ -323,35 +334,47 @@ body {
 }
 
 .kmb_icon {
+  font-size: 1.4rem;
   color: var(--AuxColor1);
   background-color: var(--MainColor1);
+  padding: 0.1rem 0;
 }
 
 .ctb_icon {
+  font-size: 1.4rem;
   color: var(--AuxColor2);
   background-color: var(--MainColor2);
+  padding: 0.1rem 0;
 }
 
 .gmb_icon {
+  font-size: 1.4rem;
   color: var(--AuxColor1);
   background-color: var(--MainColor3);
   border-radius: 5rem;
+  padding: 0.1rem 0;
 }
 
 .cty_icon {
+  font-size: 1.4rem;
   color: var(--AuxColor2);
   background: radial-gradient(farthest-corner at 0% -25%, var(--MainColor2) 0%, var(--MainColor2) 60%, var(--MainColor4) 60%, var(--MainColor4) 70%, #990000 70%);
+  padding: 0.1rem 0;
 }
 
 .lmb_icon {
+  font-size: 1.4rem;
   color: var(--MainColor4);
   background-color: var(--BackColor2);
   border-width: thin;
   border-style: solid;
   border-color: var(--MainColor4);
+  padding: 0.1rem 0;
 }
 
 .jor_icon {
+  font-size: 1.4rem;
   color: var(--AuxColor2);
   background: linear-gradient(110deg, var(--MainColor1) 0%, var(--MainColor1) 50%, var(--MainColor2) 50%);
+  padding: 0.1rem 0;
 }
