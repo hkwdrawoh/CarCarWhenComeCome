@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import HomeHeader from "./HomeHeader";
 import Header from "./Header";
 import RouteETAContainer from "./RouteETAContainer";
@@ -10,6 +10,14 @@ export const eventEmitter = new EventEmitter();
 export default function App() {
 
     const [pages, setPages] = useState('main');
+
+    useEffect(() => {
+        const searchParams = new URLSearchParams(window.location.search);
+        const stateParam = searchParams.get('page');
+        if (stateParam) {
+            setPages(stateParam);
+        }
+    }, []);
 
     const goToSite = (site) => {
         setPages(site);
