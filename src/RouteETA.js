@@ -63,7 +63,7 @@ export default function RouteETA(props) {
     return <>
         <div className="grid-3_5-minmax">
             <div className={`button_base grid-span2 ${classes}_icon`}>{props.route.route}</div>
-            <div className={`text_left grid-span3 ${classes}_text`}>
+            <div className={`text_left grid-span3 grid-span4-narrow ${classes}_text`}>
                 <h3>往：{terminal}</h3>
                 <p>{station}</p>
             </div>
