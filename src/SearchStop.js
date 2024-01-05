@@ -88,10 +88,10 @@ export default function SearchStop(props) {
             <div className="grid-5-fixed">
                 <h2 className={`${props.style}_text`}>#{displayStopNum(selected_id)}</h2>
                 <h2 className={`${props.style}_text text_left grid-span3`}>{stop_names[selected_id]}</h2>
-                <div className="num_pad">
-                    <button className='button_base button_icon' onClick={() => {chooseStop(selected_id - 1)}} disabled={selected_id === 0}>&lt;</button>
-                    <button className='button_base button_thin' onClick={() => {chooseStop(-1)}}>返回</button>
-                    <button className='button_base button_icon' onClick={() => {chooseStop(selected_id + 1)}} disabled={selected_id + 2 === stop_ids.length}>&gt;</button>
+                <div>
+                    <button className='button_base button_hover button_icon' onClick={() => {chooseStop(selected_id - 1)}} disabled={selected_id === 0}>&lt;</button>
+                    <button className='button_base button_hover button_thin' onClick={() => {chooseStop(-1)}}>返回</button>
+                    <button className='button_base button_hover button_icon' onClick={() => {chooseStop(selected_id + 1)}} disabled={selected_id + 1 === stop_ids.length}>&gt;</button>
                 </div>
             </div>
             <div className="grid-3-fixed">
@@ -103,7 +103,7 @@ export default function SearchStop(props) {
             <div className="grid-10-fixed">
                 {stop_names.map((stop_name, index) => <>
                     <button className='button_base button_hover grid-span2' onClick={() => {chooseStop(index)}}>選擇</button>
-                    <h2 className={`${props.style}_text`}>#{displayStopNum(index)}</h2>
+                    <h2 className={`${props.style}_text text_left`}>#{displayStopNum(index)}</h2>
                     <h2 className={`${props.style}_text text_left grid-span6`}>{stop_name}</h2>
                 </>)}
             </div>
@@ -118,7 +118,7 @@ export default function SearchStop(props) {
         <div className="grid-5-fixed">
             <div className={`button_base ${props.style}_icon`}>{props.dir.route}</div>
             <div className={`${props.style}_text text_left grid-span3`}><h2>往：{props.dest}</h2></div>
-            <button className='button_base button_hover' onClick={reSelectDest}>返回</button>
+            <button className='button_base button_hover' onClick={reSelectDest}>重選</button>
         </div>
         <hr />
         {list_stop_div}
