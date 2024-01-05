@@ -1,7 +1,7 @@
 {
   "type": "RouteList",
   "version": "1.0",
-  "generated_timestamp": "2023-12-04T22:27:45+08:00",
+  "generated_timestamp": "2024-01-05T16:59:21+08:00",
   "data": [
     {
       "route": "1",
@@ -1687,6 +1687,28 @@
       "dest_sc": "旺角(循环线)"
     },
     {
+      "route": "27X",
+      "bound": "O",
+      "service_type": "1",
+      "orig_en": "SHUN TIN",
+      "orig_tc": "順天",
+      "orig_sc": "顺天",
+      "dest_en": "OLYMPIC STATION",
+      "dest_tc": "奧運站",
+      "dest_sc": "奥运站"
+    },
+    {
+      "route": "27X",
+      "bound": "I",
+      "service_type": "1",
+      "orig_en": "OLYMPIC STATION",
+      "orig_tc": "奧運站",
+      "orig_sc": "奥运站",
+      "dest_en": "SHUN TIN",
+      "dest_tc": "順天",
+      "dest_sc": "顺天"
+    },
+    {
       "route": "28",
       "bound": "O",
       "service_type": "1",
@@ -1808,6 +1830,17 @@
       "dest_sc": "荃湾(荃威花园)"
     },
     {
+      "route": "30X",
+      "bound": "I",
+      "service_type": "2",
+      "orig_en": "WHAMPOA GARDEN",
+      "orig_tc": "黃埔花園",
+      "orig_sc": "黄埔花园",
+      "dest_en": "TSUEN WAN (ALLWAY GARDENS)",
+      "dest_tc": "荃灣(荃威花園)",
+      "dest_sc": "荃湾(荃威花园)"
+    },
+    {
       "route": "31",
       "bound": "O",
       "service_type": "1",
@@ -1828,17 +1861,6 @@
       "dest_en": "SHEK LEI (TAI LOONG STREET)",
       "dest_tc": "石籬(大隴街)",
       "dest_sc": "石篱(大陇街)"
-    },
-    {
-      "route": "31A",
-      "bound": "I",
-      "service_type": "1",
-      "orig_en": "SHEK LEI (TAI LOONG STREET)",
-      "orig_tc": "石籬(大隴街)",
-      "orig_sc": "石篱(大陇街)",
-      "dest_en": "KWAI CHUNG ESTATE",
-      "dest_tc": "葵涌邨",
-      "dest_sc": "葵涌邨"
     },
     {
       "route": "31B",
@@ -4668,6 +4690,28 @@
       "dest_sc": "荃湾(如心广场)"
     },
     {
+      "route": "73F",
+      "bound": "O",
+      "service_type": "1",
+      "orig_en": "TSUEN WAN (NINA TOWER)",
+      "orig_tc": "荃灣(如心廣場)",
+      "orig_sc": "荃湾(如心广场)",
+      "dest_en": "EDUCATION UNIVERSITY OF HONG KONG",
+      "dest_tc": "香港教育大學",
+      "dest_sc": "香港教育大学"
+    },
+    {
+      "route": "73F",
+      "bound": "I",
+      "service_type": "1",
+      "orig_en": "EDUCATION UNIVERSITY OF HONG KONG",
+      "orig_tc": "香港教育大學",
+      "orig_sc": "香港教育大学",
+      "dest_en": "TSUEN WAN (NINA TOWER)",
+      "dest_tc": "荃灣(如心廣場)",
+      "dest_sc": "荃湾(如心广场)"
+    },
+    {
       "route": "73K",
       "bound": "O",
       "service_type": "1",
@@ -5381,6 +5425,28 @@
       "dest_en": "FANLING (WAH MING)",
       "dest_tc": "粉嶺(華明)",
       "dest_sc": "粉岭(华明)"
+    },
+    {
+      "route": "78S",
+      "bound": "O",
+      "service_type": "1",
+      "orig_en": "SHEUNG SHUI",
+      "orig_tc": "上水",
+      "orig_sc": "上水",
+      "dest_en": "SHA TAU KOK",
+      "dest_tc": "沙頭角",
+      "dest_sc": "沙头角"
+    },
+    {
+      "route": "78S",
+      "bound": "I",
+      "service_type": "1",
+      "orig_en": "SHA TAU KOK",
+      "orig_tc": "沙頭角",
+      "orig_sc": "沙头角",
+      "dest_en": "SHEUNG SHUI",
+      "dest_tc": "上水",
+      "dest_sc": "上水"
     },
     {
       "route": "79K",
@@ -7768,17 +7834,6 @@
       "dest_en": "CENTRAL (MACAU FERRY)",
       "dest_tc": "中環(港澳碼頭)",
       "dest_sc": "中环(港澳码头)"
-    },
-    {
-      "route": "111",
-      "bound": "O",
-      "service_type": "8",
-      "orig_en": "PING SHEK / CHOI HUNG STATION",
-      "orig_tc": "坪石 / 彩虹站",
-      "orig_sc": "坪石 / 彩虹站",
-      "dest_en": "ADMIRALTY",
-      "dest_tc": "金鐘",
-      "dest_sc": "金钟"
     },
     {
       "route": "111",
@@ -12711,10 +12766,10 @@
     {
       "route": "680",
       "bound": "O",
-      "service_type": "2",
-      "orig_en": "CHUNG ON",
-      "orig_tc": "頌安",
-      "orig_sc": "颂安",
+      "service_type": "3",
+      "orig_en": "LEE ON",
+      "orig_tc": "利安",
+      "orig_sc": "利安",
       "dest_en": "ADMIRALTY STATION (EAST)",
       "dest_tc": "金鐘站(東)",
       "dest_sc": "金钟站(东)"
@@ -14145,6 +14200,17 @@
       "orig_en": "AIRPORT (GROUND TRANSPORTATION CENTRE)",
       "orig_tc": "機場(地面運輸中心)",
       "orig_sc": "机场(地面运输中心)",
+      "dest_en": "TUEN MUN (FU TAI ESTATE)",
+      "dest_tc": "屯門(富泰邨)",
+      "dest_sc": "屯门(富泰邨)"
+    },
+    {
+      "route": "A33X",
+      "bound": "I",
+      "service_type": "2",
+      "orig_en": "Cathay Pacific City",
+      "orig_tc": "國泰城",
+      "orig_sc": "国泰城",
       "dest_en": "TUEN MUN (FU TAI ESTATE)",
       "dest_tc": "屯門(富泰邨)",
       "dest_sc": "屯门(富泰邨)"
@@ -15844,6 +15910,17 @@
       "dest_sc": "东涌(逸东)"
     },
     {
+      "route": "N64P",
+      "bound": "O",
+      "service_type": "1",
+      "orig_en": "TAI PO MARKET STATION",
+      "orig_tc": "大埔墟站",
+      "orig_sc": "大埔墟站",
+      "dest_en": "NG TUNG CHAI (PAK NGAU SHEK)",
+      "dest_tc": "梧桐寨 (白牛石)",
+      "dest_sc": "梧桐寨 (白牛石)"
+    },
+    {
       "route": "N673",
       "bound": "O",
       "service_type": "1",
@@ -16249,6 +16326,17 @@
       "dest_en": "YUEN LONG (WEST)",
       "dest_tc": "元朗(西)",
       "dest_sc": "元朗(西)"
+    },
+    {
+      "route": "R108",
+      "bound": "O",
+      "service_type": "1",
+      "orig_en": "KAI YIP",
+      "orig_tc": "啟業",
+      "orig_sc": "启业",
+      "dest_en": "CAUSEWAY BAY (VICTORIA PARK)",
+      "dest_tc": "銅鑼灣(維多利亞公園)",
+      "dest_sc": "铜锣湾(维多利亚公园)"
     },
     {
       "route": "R215",
@@ -16958,9 +17046,9 @@
       "route": "X42P",
       "bound": "O",
       "service_type": "1",
-      "orig_en": "TSING YI (CHEUNG ON ESTATE)",
-      "orig_tc": "青衣(長安邨)",
-      "orig_sc": "青衣(长安邨)",
+      "orig_en": "TSING YI STATION",
+      "orig_tc": "青衣站",
+      "orig_sc": "青衣站",
       "dest_en": "LAM TIN STATION",
       "dest_tc": "藍田站",
       "dest_sc": "蓝田站"

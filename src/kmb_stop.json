@@ -1,7 +1,7 @@
 {
   "type": "StopList",
   "version": "1.0",
-  "generated_timestamp": "2023-12-09T17:57:10+08:00",
+  "generated_timestamp": "2024-01-05T16:58:47+08:00",
   "data": [
     {
       "stop": "18492910339410B1",
@@ -1349,7 +1349,7 @@
     },
     {
       "stop": "9F914539576C53A5",
-      "name_en": "SHEK KIP MEI COMMERCIAL CENTRE",
+      "name_en": "SHEK KIP MEI SHOPPING CENTRE",
       "name_tc": "石硤尾商場",
       "name_sc": "石硖尾商场",
       "lat": "22.332023",
@@ -1573,7 +1573,7 @@
     },
     {
       "stop": "598CB8743A812BCC",
-      "name_en": "SHEK KIP MEI COMMERCIAL CENTRE",
+      "name_en": "SHEK KIP MEI SHOPPING CENTRE",
       "name_tc": "石硤尾商場",
       "name_sc": "石硖尾商场",
       "lat": "22.331741",
@@ -2509,7 +2509,7 @@
     },
     {
       "stop": "ACE23D880D07ABB1",
-      "name_en": "GRANDVIEW GARDEN",
+      "name_en": "GRAND VIEW GARDEN",
       "name_tc": "宏景花園",
       "name_sc": "宏景花园",
       "lat": "22.342399",
@@ -9220,6 +9220,22 @@
       "long": "114.169949"
     },
     {
+      "stop": "0A92C86D7158856F",
+      "name_en": "CHOI HING COURT",
+      "name_tc": "彩興苑",
+      "name_sc": "彩兴苑",
+      "lat": "22.331152",
+      "long": "114.213223"
+    },
+    {
+      "stop": "BC280265AF2BEB66",
+      "name_en": "OLYMPIC STATION BUS TERMINUS",
+      "name_tc": "奧運站巴士總站",
+      "name_sc": "奥运站巴士总站",
+      "lat": "22.318880",
+      "long": "114.160753"
+    },
+    {
       "stop": "29E5BCA5DC430F85",
       "name_en": "LOK WAH BUS TERMINUS",
       "name_tc": "樂華總站",
@@ -10060,6 +10076,30 @@
       "long": "114.139795"
     },
     {
+      "stop": "E090C46182471309",
+      "name_en": "WANG LUNG STREET TSUEN WAN",
+      "name_tc": "荃灣橫龍街",
+      "name_sc": "荃湾横龙街",
+      "lat": "22.366353",
+      "long": "114.118736"
+    },
+    {
+      "stop": "132584D5CB2235BC",
+      "name_en": "YEUNG UK ROAD MARKET",
+      "name_tc": "楊屋道街市",
+      "name_sc": "杨屋道街市",
+      "lat": "22.368370",
+      "long": "114.114593"
+    },
+    {
+      "stop": "060A70079F196C7C",
+      "name_en": "TAI HO ROAD TSUEN WAN",
+      "name_tc": "荃灣大河道",
+      "name_sc": "荃湾大河道",
+      "lat": "22.371519",
+      "long": "114.114991"
+    },
+    {
       "stop": "9B664F8FD4E76E48",
       "name_en": "CLAGUE GARDEN ESTATE",
       "name_tc": "祈德尊新邨",
@@ -10340,46 +10380,6 @@
       "long": "114.139143"
     },
     {
-      "stop": "D5382A8A3773E6FE",
-      "name_en": "SHEK YAM EAST ESTATE",
-      "name_tc": "石蔭東邨",
-      "name_sc": "石荫东邨",
-      "lat": "22.371931",
-      "long": "114.139780"
-    },
-    {
-      "stop": "1423FCFF61709EAC",
-      "name_en": "CHEUNG WING ROAD",
-      "name_tc": "昌榮路",
-      "name_sc": "昌荣路",
-      "lat": "22.370511",
-      "long": "114.134739"
-    },
-    {
-      "stop": "434BB67EF7BCA912",
-      "name_en": "KWAI HONG COURT",
-      "name_tc": "葵康苑",
-      "name_sc": "葵康苑",
-      "lat": "22.363164",
-      "long": "114.130480"
-    },
-    {
-      "stop": "698AD748223B2BEA",
-      "name_en": "HA KWAI HOUSE KWAI CHUNG ESTATE",
-      "name_tc": "葵涌邨夏葵樓",
-      "name_sc": "葵涌邨夏葵楼",
-      "lat": "22.366133",
-      "long": "114.130921"
-    },
-    {
-      "stop": "9BEBB2D3B05DD529",
-      "name_en": "CHAU KWAI HOUSE KWAI CHUNG ESTATE",
-      "name_tc": "葵涌邨秋葵樓",
-      "name_sc": "葵涌邨秋葵楼",
-      "lat": "22.368040",
-      "long": "114.130166"
-    },
-    {
       "stop": "3972A3F0E991EC16",
       "name_en": "SHEK LEI (TAI LOONG STREET) BUS TERMINUS",
       "name_tc": "石籬(大隴街)總站",
@@ -10586,6 +10586,14 @@
       "name_sc": "葵涌蓝田街",
       "lat": "22.369709",
       "long": "114.138771"
+    },
+    {
+      "stop": "1423FCFF61709EAC",
+      "name_en": "CHEUNG WING ROAD",
+      "name_tc": "昌榮路",
+      "name_sc": "昌荣路",
+      "lat": "22.370511",
+      "long": "114.134739"
     },
     {
       "stop": "B09E06FF6EF5A8C4",
@@ -11092,6 +11100,14 @@
       "long": "114.127747"
     },
     {
+      "stop": "434BB67EF7BCA912",
+      "name_en": "KWAI HONG COURT",
+      "name_tc": "葵康苑",
+      "name_sc": "葵康苑",
+      "lat": "22.363164",
+      "long": "114.130480"
+    },
+    {
       "stop": "5A850F8739B82EA6",
       "name_en": "KWAI HONG COURT KWAI SHING CIRCUIT",
       "name_tc": "葵盛圍葵康苑",
@@ -11170,6 +11186,22 @@
       "name_sc": "林护纪念中学",
       "lat": "22.365373",
       "long": "114.130073"
+    },
+    {
+      "stop": "698AD748223B2BEA",
+      "name_en": "HA KWAI HOUSE KWAI CHUNG ESTATE",
+      "name_tc": "葵涌邨夏葵樓",
+      "name_sc": "葵涌邨夏葵楼",
+      "lat": "22.366133",
+      "long": "114.130921"
+    },
+    {
+      "stop": "9BEBB2D3B05DD529",
+      "name_en": "CHAU KWAI HOUSE KWAI CHUNG ESTATE",
+      "name_tc": "葵涌邨秋葵樓",
+      "name_sc": "葵涌邨秋葵楼",
+      "lat": "22.368040",
+      "long": "114.130166"
     },
     {
       "stop": "1761C3A8C035C581",
@@ -11722,14 +11754,6 @@
       "name_sc": "葵涌邨芷葵楼",
       "lat": "22.368079",
       "long": "114.127197"
-    },
-    {
-      "stop": "132584D5CB2235BC",
-      "name_en": "YEUNG UK ROAD MARKET",
-      "name_tc": "楊屋道街市",
-      "name_sc": "杨屋道街市",
-      "lat": "22.368370",
-      "long": "114.114593"
     },
     {
       "stop": "D0F8772D043C207E",
@@ -12962,6 +12986,14 @@
       "name_sc": "大陇街",
       "lat": "22.365980",
       "long": "114.139090"
+    },
+    {
+      "stop": "D5382A8A3773E6FE",
+      "name_en": "SHEK YAM EAST ESTATE",
+      "name_tc": "石蔭東邨",
+      "name_sc": "石荫东邨",
+      "lat": "22.371931",
+      "long": "114.139780"
     },
     {
       "stop": "FCBCC90E0ECE4F58",
@@ -14226,14 +14258,6 @@
       "name_sc": "青衣转车站 - 长安总站 (A6)",
       "lat": "22.361456",
       "long": "114.102827"
-    },
-    {
-      "stop": "E090C46182471309",
-      "name_en": "WANG LUNG STREET TSUEN WAN",
-      "name_tc": "荃灣橫龍街",
-      "name_sc": "荃湾横龙街",
-      "lat": "22.366353",
-      "long": "114.118736"
     },
     {
       "stop": "C3D18DE248C7C435",
@@ -18972,12 +18996,12 @@
       "long": "114.148368"
     },
     {
-      "stop": "950140C36BBC6369",
-      "name_en": "MEI FOO BBI (B2)",
-      "name_tc": "美孚轉車站 (B2)",
-      "name_sc": "美孚转车站 (B2)",
-      "lat": "22.336454",
-      "long": "114.141467"
+      "stop": "7DD772B7D55C54B2",
+      "name_en": "MEI FOO BBI (B1)",
+      "name_tc": "美孚轉車站 (B1)",
+      "name_sc": "美孚转车站 (B1)",
+      "lat": "22.336459",
+      "long": "114.141340"
     },
     {
       "stop": "8D6792FF38584BE0",
@@ -19290,6 +19314,14 @@
       "name_sc": "旺角站",
       "lat": "22.319436",
       "long": "114.170734"
+    },
+    {
+      "stop": "950140C36BBC6369",
+      "name_en": "MEI FOO BBI (B2)",
+      "name_tc": "美孚轉車站 (B2)",
+      "name_sc": "美孚转车站 (B2)",
+      "lat": "22.336454",
+      "long": "114.141467"
     },
     {
       "stop": "0C9D04F079377C44",
@@ -20010,14 +20042,6 @@
       "name_sc": "铭基书院",
       "lat": "22.318559",
       "long": "114.164958"
-    },
-    {
-      "stop": "7DD772B7D55C54B2",
-      "name_en": "MEI FOO BBI (B1)",
-      "name_tc": "美孚轉車站 (B1)",
-      "name_sc": "美孚转车站 (B1)",
-      "lat": "22.336459",
-      "long": "114.141340"
     },
     {
       "stop": "F26CC0CB9587F2F9",
@@ -24716,6 +24740,46 @@
       "long": "114.211589"
     },
     {
+      "stop": "75BC2D1936D0EACD",
+      "name_en": "TAI PO WATERFRONT PARK",
+      "name_tc": "大埔海濱公園",
+      "name_sc": "大埔海滨公园",
+      "lat": "22.451677",
+      "long": "114.177012"
+    },
+    {
+      "stop": "ADF5445FF5059D45",
+      "name_en": "TAI PO INDUSTRIAL ESTATE",
+      "name_tc": "大埔工業邨",
+      "name_sc": "大埔工业邨",
+      "lat": "22.457664",
+      "long": "114.187690"
+    },
+    {
+      "stop": "5998A11C63EAB82E",
+      "name_en": "TAI PO EAST FIRE STATION",
+      "name_tc": "大埔東消防局",
+      "name_sc": "大埔东消防局",
+      "lat": "22.462336",
+      "long": "114.190670"
+    },
+    {
+      "stop": "A1A1CE1BACE1973D",
+      "name_en": "THE EDUCATION UNIVERSITY OF HK",
+      "name_tc": "香港教育大學",
+      "name_sc": "香港教育大学",
+      "lat": "22.466682",
+      "long": "114.193577"
+    },
+    {
+      "stop": "790B8E94D15A0888",
+      "name_en": "TAI PO WATERFRONT PARK",
+      "name_tc": "大埔海濱公園",
+      "name_sc": "大埔海滨公园",
+      "lat": "22.452289",
+      "long": "114.177642"
+    },
+    {
       "stop": "C799751FDFCE292E",
       "name_en": "SHEUNG SHUI BBI - SHEUNG SHUI TERMINUS (A1)",
       "name_tc": "上水轉車站 - 上水總站(A1)",
@@ -24898,14 +24962,6 @@
       "name_sc": "盛福街",
       "lat": "22.359107",
       "long": "114.121163"
-    },
-    {
-      "stop": "5998A11C63EAB82E",
-      "name_en": "TAI PO EAST FIRE STATION",
-      "name_tc": "大埔東消防局",
-      "name_sc": "大埔东消防局",
-      "lat": "22.462336",
-      "long": "114.190670"
     },
     {
       "stop": "C044260C4C65B4F9",
@@ -25394,30 +25450,6 @@
       "name_sc": "云滙",
       "lat": "22.429561",
       "long": "114.203338"
-    },
-    {
-      "stop": "790B8E94D15A0888",
-      "name_en": "TAI PO WATERFRONT PARK",
-      "name_tc": "大埔海濱公園",
-      "name_sc": "大埔海滨公园",
-      "lat": "22.452289",
-      "long": "114.177642"
-    },
-    {
-      "stop": "75BC2D1936D0EACD",
-      "name_en": "TAI PO WATERFRONT PARK",
-      "name_tc": "大埔海濱公園",
-      "name_sc": "大埔海滨公园",
-      "lat": "22.451677",
-      "long": "114.177012"
-    },
-    {
-      "stop": "ADF5445FF5059D45",
-      "name_en": "TAI PO INDUSTRIAL ESTATE",
-      "name_tc": "大埔工業邨",
-      "name_sc": "大埔工业邨",
-      "lat": "22.457664",
-      "long": "114.187690"
     },
     {
       "stop": "081EB225028BC80B",
@@ -27058,6 +27090,14 @@
       "name_sc": "华明转车站(C7)",
       "lat": "22.484250",
       "long": "114.141642"
+    },
+    {
+      "stop": "8EC63D8C071F72C4",
+      "name_en": "SHA TAU KOK BUS TERMINUS",
+      "name_tc": "沙頭角總站",
+      "name_sc": "沙头角总站",
+      "lat": "22.545550",
+      "long": "114.223333"
     },
     {
       "stop": "515ECE2791A22276",
@@ -31884,6 +31924,14 @@
       "long": "114.230851"
     },
     {
+      "stop": "81C1875EBC7FD3E4",
+      "name_en": "CHA KWO LING ROAD",
+      "name_tc": "茶果嶺道",
+      "name_sc": "茶果岭道",
+      "lat": "22.300048",
+      "long": "114.228399"
+    },
+    {
       "stop": "E94AD3FBEF23A842",
       "name_en": "WAN HANG HOUSE, WAN TAU TONG ESTATE",
       "name_tc": "運頭塘邨運亨樓",
@@ -35564,22 +35612,6 @@
       "long": "114.149844"
     },
     {
-      "stop": "A0934516C3FE8D29",
-      "name_en": "LUARD ROAD",
-      "name_tc": "盧押道",
-      "name_sc": "卢押道",
-      "lat": "22.278420",
-      "long": "114.171585"
-    },
-    {
-      "stop": "D2F2B3C5436007C2",
-      "name_en": "ADMIRALTY CENTRE",
-      "name_tc": "海富中心",
-      "name_sc": "海富中心",
-      "lat": "22.279408",
-      "long": "114.165369"
-    },
-    {
       "stop": "FA0F3FFF968619F2",
       "name_en": "ARSENAL STREET",
       "name_tc": "軍器廠街",
@@ -37644,14 +37676,6 @@
       "long": "114.110466"
     },
     {
-      "stop": "060A70079F196C7C",
-      "name_en": "TAI HO ROAD TSUEN WAN",
-      "name_tc": "荃灣大河道",
-      "name_sc": "荃湾大河道",
-      "lat": "22.371519",
-      "long": "114.114991"
-    },
-    {
       "stop": "305F5FBA023A7EE2",
       "name_en": "SEA CREST VILLA PHASE 3",
       "name_tc": "浪翠園第三期",
@@ -38450,14 +38474,6 @@
       "name_sc": "九龙站巴士总站",
       "lat": "22.305051",
       "long": "114.162734"
-    },
-    {
-      "stop": "BE7FCE464060FF91",
-      "name_en": "KOWLOON STATION BUS TERMINUS",
-      "name_tc": "九龍站巴士總站",
-      "name_sc": "九龙站巴士总站",
-      "lat": "22.305001",
-      "long": "114.162985"
     },
     {
       "stop": "896148008606A47A",
@@ -40348,6 +40364,14 @@
       "long": "114.233650"
     },
     {
+      "stop": "D2F2B3C5436007C2",
+      "name_en": "ADMIRALTY CENTRE",
+      "name_tc": "海富中心",
+      "name_sc": "海富中心",
+      "lat": "22.279408",
+      "long": "114.165369"
+    },
+    {
       "stop": "74EE2ECB1A3773E9",
       "name_en": "LI YUEN STREET EAST",
       "name_tc": "利源東街",
@@ -40954,6 +40978,14 @@
       "name_sc": "轩尼诗道官立小学",
       "lat": "22.277752",
       "long": "114.175652"
+    },
+    {
+      "stop": "A0934516C3FE8D29",
+      "name_en": "LUARD ROAD",
+      "name_tc": "盧押道",
+      "name_sc": "卢押道",
+      "lat": "22.278420",
+      "long": "114.171585"
     },
     {
       "stop": "E30B8672A91A50B9",
@@ -46324,6 +46356,14 @@
       "long": "113.982927"
     },
     {
+      "stop": "86201D4BB45ED201",
+      "name_en": "CATHAY PACIFIC CITY",
+      "name_tc": "國泰城",
+      "name_sc": "国泰城",
+      "lat": "22.297608",
+      "long": "113.932902"
+    },
+    {
       "stop": "E24E05B38AA2D28E",
       "name_en": "HUNG SHUI KIU (HUNG YUEN ROAD) BUS TERMINUS",
       "name_tc": "洪水橋(洪元路)總站",
@@ -48916,14 +48956,6 @@
       "long": "114.171185"
     },
     {
-      "stop": "86201D4BB45ED201",
-      "name_en": "CATHAY PACIFIC CITY",
-      "name_tc": "國泰城",
-      "name_sc": "国泰城",
-      "lat": "22.297608",
-      "long": "113.932902"
-    },
-    {
       "stop": "9F5D9D454274AF91",
       "name_en": "MA LIU SHUI PUBLIC PIER",
       "name_tc": "馬料水公眾碼頭",
@@ -49189,9 +49221,9 @@
     },
     {
       "stop": "905332ED392ADC36",
-      "name_en": "TAI WO HAU STATION",
-      "name_tc": "大窩口站",
-      "name_sc": "大窝口站",
+      "name_en": "TAI WO HAU BBI-TAI WO HAU STATION",
+      "name_tc": "大窩口轉車站 -大窩口站",
+      "name_sc": "大窝口转车站 -大窝口站",
       "lat": "22.370555",
       "long": "114.123701"
     },
@@ -51730,14 +51762,6 @@
       "name_sc": "青屿干线转车站 (A6)",
       "lat": "22.338361",
       "long": "114.042342"
-    },
-    {
-      "stop": "D62232AAB4E6B2E9",
-      "name_en": "YAU LAI ESTATE",
-      "name_tc": "油麗邨",
-      "name_sc": "油丽邨",
-      "lat": "22.302760",
-      "long": "114.236611"
     },
     {
       "stop": "9DBFBF7A3CE5DF0A",
