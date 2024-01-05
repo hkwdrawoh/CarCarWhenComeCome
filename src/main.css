@@ -78,25 +78,9 @@ body {
   width: 100%;
 }
 
-.grid-5-fixed {
+.grid-6-fixed {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 0.2rem 0.2rem;
-  align-items: center;
-  width: 100%;
-}
-
-.grid-7-fixed {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-gap: 0.2rem 0.2rem;
-  align-items: center;
-  width: 100%;
-}
-
-.grid-10-fixed {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 0.2rem 0.2rem;
   align-items: center;
   width: 100%;
@@ -128,10 +112,6 @@ body {
 
 .grid-span4 {
   grid-column: span 4 / auto;
-}
-
-.grid-span5 {
-  grid-column: span 5 / auto;
 }
 
 .grid-span6 {
