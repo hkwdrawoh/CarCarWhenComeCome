@@ -100,13 +100,13 @@ export default function SearchStop(props) {
         </>
     } else if (JSON.stringify(stop_names) !== JSON.stringify([])) {
         list_stop_div = <>
-            <div className="grid-10-fixed">
-                {stop_names.map((stop_name, index) => <>
-                    <button className='button_base button_hover grid-span2' onClick={() => {chooseStop(index)}}>選擇</button>
-                    <h2 className={`${props.style}_text text_left`}>#{displayStopNum(index)}</h2>
-                    <h2 className={`${props.style}_text text_left grid-span6`}>{stop_name}</h2>
-                </>)}
-            </div>
+            {stop_names.map((stop_name, index) => <>
+                <div className="grid-7-fixed list_button" onClick={() => {chooseStop(index)}}>
+                    <h2 className={`${props.style}_text grid-span2`}>#{displayStopNum(index)}</h2>
+                    <h2 className={`${props.style}_text text_left grid-span4`}>{stop_name}</h2>
+                    <h2>→</h2>
+                </div>
+            </>)}
         </>
     } else {
         list_stop_div = (<h2>載入中...</h2>);
@@ -115,9 +115,9 @@ export default function SearchStop(props) {
 
     return <>
         <h2>選擇車站</h2>
-        <div className="grid-5-fixed">
-            <div className={`button_base ${props.style}_icon`}>{props.dir.route}</div>
-            <div className={`${props.style}_text text_left grid-span3`}><h2>往：{props.dest}</h2></div>
+        <div className="grid-7-fixed">
+            <div className={`button_base ${props.style}_icon grid-span2`}>{props.dir.route}</div>
+            <div className={`${props.style}_text text_left grid-span4`}><h2>往：{props.dest}</h2></div>
             <button className='button_base button_hover' onClick={reSelectDest}>重選</button>
         </div>
         <hr />

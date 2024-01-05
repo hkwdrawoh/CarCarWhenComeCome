@@ -54,7 +54,7 @@ body {
 }
 
 .container_mid {
-  overflow-y: scroll;
+  overflow-y: auto;
   display: grid;
   grid-gap: 0.4rem 0.2rem;
   margin-bottom: 0.4rem;
@@ -239,6 +239,20 @@ body {
 
 .button_icon {
   width: 2.3rem;
+}
+
+.list_button {
+  padding: 0.2rem 0;
+  border-radius: 0.4rem;
+  background-color: var(--BackColor1b);
+}
+
+.list_button:hover {
+  background-color: var(--BackColor2);
+}
+
+.list_button:active {
+  background-color: var(--BackColor1a);
 }
 
 

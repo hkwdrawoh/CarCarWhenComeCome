@@ -147,7 +147,7 @@ export default function SearchContainer() {
         letter_pad_div = null;
     }
 
-    let select_dir_div;
+    let select_dir_div = null;
     let dir_div1 = null;
     let dir_special_div1 = null;
     let dir_div2 = null;
@@ -163,14 +163,18 @@ export default function SearchContainer() {
                 style = 'kmb';
             }
             dir_div1 = direction.filter((item) => item.co === undefined).map((dir) => (<>
-                <div className={`button_base ${style}_icon`}>{route_num}</div>
-                <div className={`text_left grid-span3 ${style}_text`}><h2>往：{dir.dest_tc}</h2></div>
-                <button className='button_base button_hover' onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style)}}>選擇</button>
+                <div className="grid-7-fixed list_button"  onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style)}}>
+                    <div className={`button_base grid-span2 ${style}_icon`}>{route_num}</div>
+                    <div className={`text_left grid-span4 ${style}_text`}><h2>往：{dir.dest_tc}</h2></div>
+                    <h2>→</h2>
+                </div>
             </>));
             dir_special_div1 = direction_special.filter((item) => item.co === undefined).map((dir) => (<>
-                <div className={`button_base ${style}_icon`}>{route_num}</div>
-                <div className={`text_left grid-span3 ${style}_text`}><h2>往：{dir.dest_tc}</h2><h3>(特別班次)</h3></div>
-                <button className='button_base button_hover' onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style)}}>選擇</button>
+                <div className="grid-7-fixed list_button"  onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style)}}>
+                    <div className={`button_base grid-span2 ${style}_icon`}>{route_num}</div>
+                    <div className={`text_left grid-span4 ${style}_text`}><h2>往：{dir.dest_tc}</h2><h3>(特別班次)</h3></div>
+                    <h2>→</h2>
+                </div>
             </>))
         }
         if (company === "ctb" || "jor") {
@@ -183,26 +187,26 @@ export default function SearchContainer() {
                 style = 'ctb';
             } 
             dir_div2 = direction.filter((item) => item.co !== undefined).map((dir) => (<>
-                <div className={`button_base ${style}_icon`}>{route_num}</div>
-                <div className={`text_left grid-span3 ${style}_text`}><h2>往：{dir.dest_tc}</h2></div>
-                <button className='button_base button_hover' onClick={() => {selectDest(dir, dir.dest_tc, "O", "ctb", style)}}>選擇</button>
+                <div className="grid-7-fixed list_button"  onClick={() => {selectDest(dir, dir.dest_tc, "O", "ctb", style)}}>
+                    <div className={`button_base grid-span2 ${style}_icon`}>{route_num}</div>
+                    <div className={`text_left grid-span4 ${style}_text`}><h2>往：{dir.dest_tc}</h2></div>
+                    <h2>→</h2>
+                </div>
             </>));
             dir_special_div2 = direction_special.filter((item) => item.co !== undefined).map((dir) => (<>
-                <div className={`button_base ${style}_icon`}>{route_num}</div>
-                <div className={`text_left grid-span3 ${style}_text`}><h2>往：{dir.orig_tc}</h2></div>
-                <button className='button_base button_hover' onClick={() => {selectDest(dir, dir.orig_tc, "I", "ctb", style)}}>選擇</button>
+                <div className='grid-7-fixed list_button' onClick={() => {selectDest(dir, dir.orig_tc, "I", "ctb", style)}}>
+                    <div className={`button_base grid-span2 ${style}_icon`}>{route_num}</div>
+                    <div className={`text_left grid-span4 ${style}_text`}><h2>往：{dir.orig_tc}</h2></div>
+                    <h2>→</h2>
+                </div>
             </>));
         }
-        select_dir_div = (
-            <div className="grid-5-fixed">
-                {dir_div1}
-                {dir_special_div1}
-                {dir_div2}
-                {dir_special_div2}
-            </div>
-        )
-    } else {
-        select_dir_div = null;
+        select_dir_div = <>
+            {dir_div1}
+            {dir_special_div1}
+            {dir_div2}
+            {dir_special_div2}
+        </>
     }
 
 
@@ -237,7 +241,7 @@ export default function SearchContainer() {
                     </div>
                     <hr />
                 </div>
-                <div className="container_mid">
+                <div className="container_mid scroll_bar-1">
                     {select_dir_div}
                 </div>
                 <div className="container_bottom">
