@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FetchETA } from "./fetchBusAPI";
+import { FetchETA, compareTime } from "./fetchBusAPI";
 import {eventEmitter} from "./App";
 
 
@@ -11,21 +11,6 @@ export default function ETADisplay(props) {
     }
 
     const [state, setState] = useState(initState);
-
-    const CompareTime = (eta) => {
-        const curr_time = new Date();
-        const eta_time = new Date(eta);
-
-        if (curr_time > eta_time && Math.abs(eta_time - curr_time) > 240000) {
-            curr_time.setHours(curr_time.getHours() - 12);
-            eta_time.setHours(eta_time.getHours() + 12);
-        }
-        let MinuteDiff = Math.floor(Math.abs(eta_time - curr_time + 20000) / (1000 * 60));
-        // console.log(MinuteDiff);
-        if (curr_time > eta_time) {return 0}
-        else if (MinuteDiff === 0) {return "<1"}
-        else {return MinuteDiff}
-    };
 
     useEffect(() => {
         eventEmitter.on('refreshETA', fetchETA);
@@ -91,7 +76,7 @@ export default function ETADisplay(props) {
             } else if (record.eta === null) {
                 temp_eta[i] = ['null', '', ''];
             } else {
-                temp_eta[i][0] = CompareTime(record.eta) + " min";
+                temp_eta[i][0] = compareTime(record.eta) + " min";
                 temp_eta[i][1] = record.eta.slice(11, 19);
             }
             if (record !== undefined && (record.rmk_tc !== "" && record.rmk_tc !== null)) {
