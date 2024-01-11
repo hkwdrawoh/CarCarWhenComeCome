@@ -1,0 +1,63 @@
+{
+  "type": "MTRRouteList",
+  "version": "1.0",
+  "generated_timestamp": "2024-01-09T12:00:00+08:00",
+  "data": {
+    "route": [
+      {
+        "name": "觀塘綫",
+        "code": "KTL",
+        "from": "調景嶺",
+        "to": "黃埔"
+      },
+      {
+        "name": "荃灣綫",
+        "code": "TWL",
+        "from": "荃灣",
+        "to": "中環"
+      },
+      {
+        "name": "港島綫",
+        "code": "ISL",
+        "from": "柴灣",
+        "to": "堅尼地城"
+      },
+      {
+        "name": "將軍澳綫",
+        "code": "TKL",
+        "from": "寶琳\n康城",
+        "to": "北角"
+      },
+      {
+        "name": "南港島綫",
+        "code": "SIL",
+        "from": "海怡半島",
+        "to": "金鐘"
+      },
+      {
+        "name": "東鐵綫",
+        "code": "EAL",
+        "from": "羅湖\n落馬洲",
+        "to": "金鐘"
+      },
+      {
+        "name": "屯馬綫",
+        "code": "TML",
+        "from": "屯門",
+        "to": "烏溪沙"
+      },
+      {
+        "name": "東涌綫",
+        "code": "TCL",
+        "from": "東涌",
+        "to": "香港"
+      },
+      {
+        "name": "機場快綫",
+        "code": "AEL",
+        "from": "機場\n博覽館",
+        "to": "香港"
+      }
+    ]
+  }
+}

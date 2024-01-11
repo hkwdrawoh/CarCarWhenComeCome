@@ -1,0 +1,979 @@
+{
+  "type": "MTRStationList",
+  "version": "1.0",
+  "generated_timestamp": "2024-01-09T12:00:00+08:00",
+  "data": {
+    "station": [
+      [
+        {
+          "name": "調景嶺",
+          "code": "TIK",
+          "seq": 1,
+          "style": ["start", ""],
+          "lines": 2,
+          "lineName": ["TKL"]
+        },
+        {
+          "name": "油塘",
+          "code": "YAT",
+          "seq": 2,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TKL"]
+        },
+        {
+          "name": "藍田",
+          "code": "LAT",
+          "seq": 3,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "觀塘",
+          "code": "KWT",
+          "seq": 4,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "牛頭角",
+          "code": "NTK",
+          "seq": 5,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "九龍灣",
+          "code": "KOB",
+          "seq": 6,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "彩虹",
+          "code": "CHH",
+          "seq": 7,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "鑽石山",
+          "code": "DIH",
+          "seq": 8,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TML"]
+        },
+        {
+          "name": "黃大仙",
+          "code": "WTS",
+          "seq": 9,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "樂富",
+          "code": "LOF",
+          "seq": 10,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "九龍塘",
+          "code": "KOT",
+          "seq": 11,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["EAL"]
+        },
+        {
+          "name": "石硤尾",
+          "code": "SKM",
+          "seq": 12,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "太子",
+          "code": "PRE",
+          "seq": 13,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TWL"]
+        },
+        {
+          "name": "旺角",
+          "code": "MOK",
+          "seq": 14,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TWL"]
+        },
+        {
+          "name": "油麻地",
+          "code": "YMT",
+          "seq": 15,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TWL"]
+        },
+        {
+          "name": "何文田",
+          "code": "HOM",
+          "seq": 16,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TML"]
+        },
+        {
+          "name": "黃埔",
+          "code": "WHA",
+          "seq": 17,
+          "style": ["end", ""],
+          "lines": 1,
+          "lineName": []
+        }
+      ],
+      [
+        {
+          "name": "荃灣",
+          "code": "TSW",
+          "seq": 1,
+          "style": ["start", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "大窩口",
+          "code": "TWO",
+          "seq": 2,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "葵興",
+          "code": "KWH",
+          "seq": 3,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "葵芳",
+          "code": "KWF",
+          "seq": 4,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "荔景",
+          "code": "LAK",
+          "seq": 5,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TCL"]
+        },
+        {
+          "name": "美孚",
+          "code": "MEF",
+          "seq": 6,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TML"]
+        },
+        {
+          "name": "荔枝角",
+          "code": "LCK",
+          "seq": 7,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "長沙灣",
+          "code": "CSW",
+          "seq": 8,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "深水埗",
+          "code": "SSP",
+          "seq": 9,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "太子",
+          "code": "PRe",
+          "seq": 10,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["KTL"]
+        },
+        {
+          "name": "旺角",
+          "code": "MOK",
+          "seq": 11,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["KTL"]
+        },
+        {
+          "name": "油麻地",
+          "code": "YMT",
+          "seq": 12,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["KTL"]
+        },
+        {
+          "name": "佐敦",
+          "code": "JOR",
+          "seq": 13,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "尖沙咀",
+          "code": "TST",
+          "seq": 14,
+          "style": ["", ""],
+          "lines": 5,
+          "lineName": ["TML"]
+        },
+        {
+          "name": "金鐘",
+          "code": "ADM",
+          "seq": 15,
+          "style": ["", ""],
+          "lines": 4,
+          "lineName": ["ISL", "SIL", "EAL"]
+        },
+        {
+          "name": "中環",
+          "code": "CEN",
+          "seq": 16,
+          "style": ["end", ""],
+          "lines": 7,
+          "lineName": ["ISL", "TCL", "AEL"]
+        }
+      ],
+      [
+        {
+          "name": "柴灣",
+          "code": "JOR",
+          "seq": 1,
+          "style": ["start", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "杏花邨",
+          "code": "HFC",
+          "seq": 2,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "筲箕灣",
+          "code": "SKW",
+          "seq": 3,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "西灣河",
+          "code": "SWH",
+          "seq": 4,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "太古",
+          "code": "TIK",
+          "seq": 5,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "鰂魚涌",
+          "code": "QUB",
+          "seq": 6,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TKL"]
+        },
+        {
+          "name": "北角",
+          "code": "NOP",
+          "seq": 7,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TKL"]
+        },
+        {
+          "name": "炮台山",
+          "code": "FOH",
+          "seq": 8,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "天后",
+          "code": "TIH",
+          "seq": 9,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "銅鑼灣",
+          "code": "CAB",
+          "seq": 10,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "灣仔",
+          "code": "WAC",
+          "seq": 11,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "金鐘",
+          "code": "ADM",
+          "seq": 12,
+          "style": ["", ""],
+          "lines": 4,
+          "lineName": ["TWL", "SIL", "EAL"]
+        },
+        {
+          "name": "中環",
+          "code": "CEN",
+          "seq": 13,
+          "style": ["", ""],
+          "lines": 7,
+          "lineName": ["TWL", "TCL", "AEL"]
+        },
+        {
+          "name": "上環",
+          "code": "SHW",
+          "seq": 14,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "西營盤",
+          "code": "SYP",
+          "seq": 15,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "香港大學",
+          "code": "HKU",
+          "seq": 16,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "堅尼地城",
+          "code": "KET",
+          "seq": 17,
+          "style": ["end", ""],
+          "lines": 1,
+          "lineName": []
+        }
+      ],
+      [
+        {
+          "name": "康城",
+          "code": "LHP",
+          "seq": 1,
+          "style": [null, "split_start"],
+          "lines": 0,
+          "lineName": []
+        },
+        {
+          "name": "寶琳",
+          "code": "POA",
+          "seq": 2,
+          "style": ["start", "split_mid"],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "坑口",
+          "code": "HAH",
+          "seq": 3,
+          "style": ["", "split_mid"],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "將軍澳",
+          "code": "TKO",
+          "seq": 4,
+          "style": ["", "merge"],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "調景嶺",
+          "code": "TIK",
+          "seq": 5,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["KTL"]
+        },
+        {
+          "name": "油塘",
+          "code": "YAT",
+          "seq": 6,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["KTL"]
+        },
+        {
+          "name": "鰂魚涌",
+          "code": "QUB",
+          "seq": 7,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["ISL"]
+        },
+        {
+          "name": "北角",
+          "code": "NOP",
+          "seq": 8,
+          "style": ["end", ""],
+          "lines": 2,
+          "lineName": ["ISL"]
+        }
+      ],
+      [
+        {
+          "name": "海怡半島",
+          "code": "SOH",
+          "seq": 1,
+          "style": ["start", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "利東",
+          "code": "LET",
+          "seq": 2,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "黃竹坑",
+          "code": "WCH",
+          "seq": 3,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "海洋公園",
+          "code": "OCP",
+          "seq": 4,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "金鐘",
+          "code": "ADM",
+          "seq": 5,
+          "style": ["end", ""],
+          "lines": 4,
+          "lineName": ["EAL", "TWL", "ISL"]
+        }
+      ],
+      [
+        {
+          "name": "落馬洲",
+          "code": "LMC",
+          "seq": 1,
+          "style": [null, "split_start"],
+          "lines": 0,
+          "lineName": []
+        },
+        {
+          "name": "羅湖",
+          "code": "OCP",
+          "seq": 2,
+          "style": ["start", "split_mid"],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "上水",
+          "code": "SHS",
+          "seq": 3,
+          "style": ["", "merge"],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "粉嶺",
+          "code": "FAN",
+          "seq": 4,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "太和",
+          "code": "TAW",
+          "seq": 5,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "大埔壚",
+          "code": "TPM",
+          "seq": 6,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "大學",
+          "code": "UNI",
+          "seq": 7,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "馬場",
+          "code": "RAC",
+          "seq": 8,
+          "style": ["", "split_dash"],
+          "lines": 0,
+          "lineName": []
+        },
+        {
+          "name": "火炭",
+          "code": "FOT",
+          "seq": 9,
+          "style": ["", "merge_dash"],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "沙田",
+          "code": "SHT",
+          "seq": 10,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "大圍",
+          "code": "TAW",
+          "seq": 11,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TML"]
+        },
+        {
+          "name": "九龍塘",
+          "code": "KOT",
+          "seq": 12,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["KTL"]
+        },
+        {
+          "name": "旺角東",
+          "code": "MKK",
+          "seq": 13,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "紅磡",
+          "code": "HUH",
+          "seq": 14,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TML"]
+        },
+        {
+          "name": "會展",
+          "code": "EXC",
+          "seq": 15,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "金鐘",
+          "code": "ADM",
+          "seq": 16,
+          "style": ["end", ""],
+          "lines": 4,
+          "lineName": ["SIL", "TWL", "ISL"]
+        }
+      ],
+      [
+        {
+          "name": "屯門",
+          "code": "TUM",
+          "seq": 1,
+          "style": ["start", ""],
+          "lines": 2,
+          "lineName": ["LRT"]
+        },
+        {
+          "name": "兆康",
+          "code": "SIH",
+          "seq": 2,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["LRT"]
+        },
+        {
+          "name": "天水圍",
+          "code": "TSW",
+          "seq": 3,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["LRT"]
+        },
+        {
+          "name": "朗屏",
+          "code": "LOP",
+          "seq": 4,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "元朗",
+          "code": "YUL",
+          "seq": 5,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["LRT"]
+        },
+        {
+          "name": "錦上路",
+          "code": "KSR",
+          "seq": 6,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "荃灣西",
+          "code": "TWW",
+          "seq": 7,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "美孚",
+          "code": "MEF",
+          "seq": 8,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TWL"]
+        },
+        {
+          "name": "南昌",
+          "code": "NAC",
+          "seq": 9,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TCL"]
+        },
+        {
+          "name": "柯士甸",
+          "code": "AUS",
+          "seq": 10,
+          "style": ["", ""],
+          "lines": 5,
+          "lineName": ["XRL"]
+        },
+        {
+          "name": "尖東",
+          "code": "ETS",
+          "seq": 11,
+          "style": ["", ""],
+          "lines": 5,
+          "lineName": ["TWL"]
+        },
+        {
+          "name": "紅磡",
+          "code": "HUH",
+          "seq": 12,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["EAL"]
+        },
+        {
+          "name": "何文田",
+          "code": "HOM",
+          "seq": 13,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["KTL"]
+        },
+        {
+          "name": "土瓜灣",
+          "code": "TKW",
+          "seq": 14,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "宋皇臺",
+          "code": "SWT",
+          "seq": 15,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "啟德",
+          "code": "KAT",
+          "seq": 16,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "鑽石山",
+          "code": "DIH",
+          "seq": 17,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["KTL"]
+        },
+        {
+          "name": "顯徑",
+          "code": "HIK",
+          "seq": 18,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "大圍",
+          "code": "TAW",
+          "seq": 19,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["EAL"]
+        },
+        {
+          "name": "車公廟",
+          "code": "CKT",
+          "seq": 20,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "沙田圍",
+          "code": "STW",
+          "seq": 21,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "第一城",
+          "code": "CIO",
+          "seq": 22,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "石門",
+          "code": "SHM",
+          "seq": 23,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "大水坑",
+          "code": "TSH",
+          "seq": 24,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "恆安",
+          "code": "HEO",
+          "seq": 25,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "馬鞍山",
+          "code": "MOS",
+          "seq": 26,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "烏溪沙",
+          "code": "WKS",
+          "seq": 27,
+          "style": ["end", ""],
+          "lines": 1,
+          "lineName": []
+        }
+      ],
+      [
+        {
+          "name": "東涌",
+          "code": "TUC",
+          "seq": 1,
+          "style": ["start", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "欣澳",
+          "code": "SUB",
+          "seq": 2,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["DRL"]
+        },
+        {
+          "name": "青衣",
+          "code": "TSY",
+          "seq": 3,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["AEL"]
+        },
+        {
+          "name": "荔景",
+          "code": "LAK",
+          "seq": 4,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TWL"]
+        },
+        {
+          "name": "南昌",
+          "code": "NAC",
+          "seq": 5,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TML"]
+        },
+        {
+          "name": "奧運",
+          "code": "OLY",
+          "seq": 6,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "九龍",
+          "code": "KOW",
+          "seq": 7,
+          "style": ["", ""],
+          "lines": 6,
+          "lineName": ["AEL", "XRL"]
+        },
+        {
+          "name": "香港",
+          "code": "HOK",
+          "seq": 8,
+          "style": ["end", ""],
+          "lines": 7,
+          "lineName": ["AEL", "TWL", "ISL"]
+        }
+      ],
+      [
+        {
+          "name": "博覽館",
+          "code": "AWE",
+          "seq": 1,
+          "style": ["start", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "機場",
+          "code": "AIR",
+          "seq": 2,
+          "style": ["", ""],
+          "lines": 1,
+          "lineName": []
+        },
+        {
+          "name": "青衣",
+          "code": "TSY",
+          "seq": 3,
+          "style": ["", ""],
+          "lines": 2,
+          "lineName": ["TCL"]
+        },
+        {
+          "name": "九龍",
+          "code": "KOW",
+          "seq": 4,
+          "style": ["", ""],
+          "lines": 6,
+          "lineName": ["TCL", "XRL"]
+        },
+        {
+          "name": "香港",
+          "code": "HOK",
+          "seq": 5,
+          "style": ["end", ""],
+          "lines": 7,
+          "lineName": ["TCL", "TWL", "ISL"]
+        }
+      ]
+    ]
+  }
+}
