@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-import kmb_stop_json from "./kmb_stop.json";
-import special_route_json from "./special_route.json";
+import kmb_stop_json from "./json/kmb_stop.json";
+import special_route_json from "./json/special_route.json";
 import {eventEmitter} from "./App";
 import {FetchRouteStop, FetchStop} from "./fetch_api";
 import ETADisplay from "./ETADisplay";

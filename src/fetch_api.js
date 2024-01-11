@@ -1,4 +1,4 @@
-import kmb_stops from "./kmb_stop.json"
+import kmb_stops from "./json/kmb_stop.json"
 
 const api_kmb = "https://data.etabus.gov.hk/v1/transport/kmb"
 const api_ctb = "https://rt.data.gov.hk/v2/transport/citybus"
