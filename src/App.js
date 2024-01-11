@@ -4,6 +4,7 @@ import Header from "./Header";
 import RouteETAContainer from "./RouteETAContainer";
 import SearchContainer from "./SearchContainer";
 import EventEmitter from 'eventemitter3';
+import MTRContainer from "./MTRContainer";
 
 export const eventEmitter = new EventEmitter();
 
@@ -82,6 +83,11 @@ export default function App() {
         case "Search":
             componentToRender = <>
                 <SearchContainer />
+            </>;
+            break;
+        case "MTR":
+            componentToRender = <>
+                <MTRContainer />
             </>;
             break;
         default:
