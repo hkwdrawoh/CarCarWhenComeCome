@@ -217,7 +217,7 @@
         },
         {
           "name": "太子",
-          "code": "PRe",
+          "code": "PRE",
           "seq": 10,
           "style": ["", ""],
           "lines": 2,
@@ -275,7 +275,7 @@
       [
         {
           "name": "柴灣",
-          "code": "JOR",
+          "code": "CHW",
           "seq": 1,
           "style": ["start", ""],
           "lines": 1,
@@ -561,7 +561,7 @@
         },
         {
           "name": "大埔壚",
-          "code": "TPM",
+          "code": "TAP",
           "seq": 6,
           "style": ["", ""],
           "lines": 1,
