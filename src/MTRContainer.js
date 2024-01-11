@@ -28,7 +28,9 @@ export default function MTRContainer() {
     }
 
     function selectStation (station, index) {
-        setSelectedStation([station, index]);
+        if (station !== selectedStation[0]) {
+            setSelectedStation([station, index]);
+        }
     }
 
     let componentsToRender;
