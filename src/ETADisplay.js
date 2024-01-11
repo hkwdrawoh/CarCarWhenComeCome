@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FetchETA } from "./fetch_api";
+import { FetchETA } from "./fetchBusAPI";
 import {eventEmitter} from "./App";
 
 

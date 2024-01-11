@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import ETADisplay from "./ETADisplay";
-import { FetchRoute, FetchRouteStop, FetchStop } from "./fetch_api";
+import { FetchRoute, FetchRouteStop, FetchStop } from "./fetchBusAPI";
 
 export default function RouteETA(props) {
 

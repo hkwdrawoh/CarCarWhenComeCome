@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {GetJSON} from "./fetch_api";
+import {GetJSON} from "./fetchBusAPI";
 
 export default function HomeHeader() {
 

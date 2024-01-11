@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import kmb_stop_json from "./json/kmb_stop.json";
 import special_route_json from "./json/special_route.json";
 import {eventEmitter} from "./App";
-import {FetchRouteStop, FetchStop} from "./fetch_api";
+import {FetchRouteStop, FetchStop} from "./fetchBusAPI";
 import ETADisplay from "./ETADisplay";
 import {v4 as uuidv4} from 'uuid';
 
