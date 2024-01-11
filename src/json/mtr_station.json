@@ -153,7 +153,7 @@
         },
         {
           "name": "大窩口",
-          "code": "TWO",
+          "code": "TWH",
           "seq": 2,
           "style": ["", ""],
           "lines": 1,
@@ -307,7 +307,7 @@
         },
         {
           "name": "太古",
-          "code": "TIK",
+          "code": "TAK",
           "seq": 5,
           "style": ["", ""],
           "lines": 1,
@@ -529,7 +529,7 @@
         },
         {
           "name": "羅湖",
-          "code": "OCP",
+          "code": "LOW",
           "seq": 2,
           "style": ["start", "split_mid"],
           "lines": 1,
@@ -553,7 +553,7 @@
         },
         {
           "name": "太和",
-          "code": "TAW",
+          "code": "TWO",
           "seq": 5,
           "style": ["", ""],
           "lines": 1,
