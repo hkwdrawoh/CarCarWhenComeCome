@@ -667,7 +667,7 @@
         },
         {
           "name": "天水圍",
-          "code": "TSW",
+          "code": "TIS",
           "seq": 3,
           "style": ["", ""],
           "lines": 2,
@@ -763,7 +763,7 @@
         },
         {
           "name": "宋皇臺",
-          "code": "SWT",
+          "code": "SUW",
           "seq": 15,
           "style": ["", ""],
           "lines": 1,
@@ -877,7 +877,7 @@
         },
         {
           "name": "欣澳",
-          "code": "SUB",
+          "code": "SUN",
           "seq": 2,
           "style": ["", ""],
           "lines": 2,
