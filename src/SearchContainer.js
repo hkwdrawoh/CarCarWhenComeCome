@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Header from "./Header";
 import SearchStop from "./SearchStop";
-import kmb_route_json from "./kmb_route.json"
-import ctb_route_json from "./ctb_route.json"
-import special_route_json from "./special_route.json"
+import kmb_route_json from "./json/kmb_route.json"
+import ctb_route_json from "./json/ctb_route.json"
+import special_route_json from "./json/special_route.json"
 import {eventEmitter} from "./App";
 import {v4 as uuidv4} from 'uuid';
 
@@ -129,7 +129,7 @@ export default function SearchContainer() {
                 <button className='button_base button_number' onClick={() => {chooseRoute("1")}} disabled={!avail_letter.includes("1")}>1</button>
                 <button className='button_base button_number' onClick={() => {chooseRoute("2")}} disabled={!avail_letter.includes("2")}>2</button>
                 <button className='button_base button_number' onClick={() => {chooseRoute("3")}} disabled={!avail_letter.includes("3")}>3</button>
-                <div className="letter_pad grid-span4R scroll_bar-1a">
+                <div className="letter_pad grid-span4R grid-align_start scroll_bar-1a">
                     {letters_div}
                 </div>
                 <button className='button_base button_number' onClick={() => {chooseRoute("4")}} disabled={!avail_letter.includes("4")}>4</button>

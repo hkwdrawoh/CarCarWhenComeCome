@@ -78,6 +78,14 @@ body {
   width: 100%;
 }
 
+.grid-5-fixed {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0.2rem 0.2rem;
+  align-items: center;
+  width: 100%;
+}
+
 .grid-6-fixed {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -114,6 +122,10 @@ body {
   grid-column: span 4 / auto;
 }
 
+.grid-span5 {
+  grid-column: span 5 / auto;
+}
+
 .grid-span6 {
   grid-column: span 6 / auto;
 }
@@ -128,6 +140,16 @@ body {
   }
 
 }
+
+
+/* Flex Display */
+
+.flex {
+  display: flex;
+  grid-gap: 0.2rem 0.2rem;
+  align-items: center;
+}
+
 
 /* Alignment */
 
@@ -161,6 +183,7 @@ body {
 .scroll_bar-1::-webkit-scrollbar {
   background: var(--BackColor1);
   width: 5px;
+  height: 10px;
 }
 
 .scroll_bar-1::-webkit-scrollbar-thumb {
@@ -170,6 +193,7 @@ body {
 .scroll_bar-1a::-webkit-scrollbar {
   background: var(--BackColor1a);
   width: 5px;
+  height: 10px;
 }
 
 .scroll_bar-1a::-webkit-scrollbar-thumb {
@@ -222,17 +246,14 @@ body {
 }
 
 .list_button {
+  height: 100%;
   padding: 0.2rem 0;
   border-radius: 0.4rem;
-  background-color: var(--BackColor1b);
+  background-color: var(--BackColor1a);
 }
 
 .list_button:hover {
-  background-color: var(--BackColor2);
-}
-
-.list_button:active {
-  background-color: var(--BackColor1a);
+  background-color: var(--BackColor1b);
 }
 
 
@@ -278,8 +299,6 @@ body {
 }
 
 .letter_pad {
-  /*display: grid;*/
-  align-items: start;
   overflow-x: hidden;
   overflow-y: scroll;
   height: 12rem;
