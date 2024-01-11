@@ -77,7 +77,7 @@ function StationCircle (props)  {
             </>;
             break;
         default:
-            svgToRender = <circle cx="3em" cy="3.4em" r="0.8em" strokeWidth="0.25em" className="station_circle" />;
+            svgToRender = <circle cx="50%" cy="75%" className="station_icon" />;
             break;
     }
 
@@ -176,9 +176,9 @@ export const MTRLines = (props) => {
             <h2 className={`button_base color_${props.lineColor}`}>{props.lineName}</h2>
             <h3 className="text_right">{props.from.split('\n').map((text, i) => (<Fragment key={i}>{text}<br /></Fragment>))}</h3>
             <svg className="svg_narrow grid-span2">
-                <rect className={`simplified_line color_${props.lineColor}`} />
-                <rect rx="2em" className="simplified_line-start station_circle" />
-                <rect rx="2em" className="simplified_line-end station_circle" />
+                <rect className={`line_complete color_${props.lineColor}`} />
+                svgToRender = <circle className="station_icon line-start" />;
+                svgToRender = <circle className="station_icon line-end" />;
             </svg>
             <h3 className="text_left">{props.to.split('\n').map((text, i) => (<Fragment key={i}>{text}<br /></Fragment>))}</h3>
         </div>

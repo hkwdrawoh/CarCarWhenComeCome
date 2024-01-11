@@ -54,31 +54,21 @@ svg.svg_station_wide {
     height: 4.5rem;
 }
 
-.station_circle {
-    fill: var(--AuxColor1);
-    stroke: var(--AuxColor2);
-    stroke-width: 0.25em;
-}
-
-.simplified_line {
-    x: 0.5em;
+rect.line_complete {
+    x: 1.1em;
     y: calc(50% - 0.4em);
-    width: calc(100% - 2.6em);
+    width: calc(100% - 2.2em);
     height: 0.8em;
 }
 
-.simplified_line-start {
-    x: 0.5em;
-    y: calc(50% - 0.8em);
-    width: 1.6em;
-    height: 1.6em;
+circle.line-start {
+    cx: 1.1em;
+    cy: 50%;
 }
 
-.simplified_line-end {
-    x: calc(100% - 2.1em);
-    y: calc(50% - 0.8em);
-    width: 1.6em;
-    height: 1.6em;
+circle.line-end {
+    cx: calc(100% - 1.1em);
+    cy: 50%;
 }
 
 
