@@ -1,33 +1,19 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import "./mtr.css";
 import mtr_route_json from "./json/mtr_route.json";
 import mtr_station_json from "./json/mtr_station.json";
 import {eventEmitter} from "./App";
-import {GetJSON} from "./fetchBusAPI";
+import { GetJSON, compareTime } from "./fetchBusAPI";
 
 export default function MTRETA (props) {
 
+    const mtr_routes = mtr_route_json.data.route[props.routeCode[1]];
+    const mtr_stations = mtr_station_json.data.station[props.routeCode[1]];
+
     const api_mtr = "https://rt.data.gov.hk/v1/transport/mtr/getSchedule.php"
-    const initState = {
-        eta: [['', '', ''], ['', '更新中...', ''], ['', '', '']],
-        animation: [[false, false, false], [false, false, false], [false, false, false]]
-    }
-    const [state, setState] = useState(initState);
     const [message, setMessage] = useState('載入中...');
-
-    const CompareTime = (eta) => {
-        const curr_time = new Date();
-        const eta_time = new Date(eta);
-
-        if (curr_time > eta_time && Math.abs(eta_time - curr_time) > 240000) {
-            curr_time.setHours(curr_time.getHours() - 12);
-            eta_time.setHours(eta_time.getHours() + 12);
-        }
-        let MinuteDiff = Math.floor(Math.abs(eta_time - curr_time + 20000) / (1000 * 60));
-        if (curr_time > eta_time) {return 0}
-        else if (MinuteDiff === 0) {return "<1"}
-        else {return MinuteDiff}
-    };
+    const [upTime, setUpTime] = useState(null);
+    const [dnTime, setDnTime] = useState(null);
 
     useEffect(() => {
         eventEmitter.on('refreshETA', fetchETA);
@@ -35,9 +21,12 @@ export default function MTRETA (props) {
         return (() => {
             eventEmitter.off('refreshETA', fetchETA);
         });
-    }, [props, state]);
+    }, [props, upTime, dnTime]);
 
     useEffect(() => {
+        setMessage('載入中...');
+        setUpTime(null);
+        setDnTime(null);
         if (props.stationCode[0] !== '') {
             fetchETA().then();
         }
@@ -54,24 +43,93 @@ export default function MTRETA (props) {
                 setMessage("出現錯誤，請稍後再試。");
             } else {
                 setMessage('');
+                if (json_data.data[codes].UP) {
+                    let up = [];
+                    for (let record of json_data.data[codes].UP) {
+                        up.push([record.plat, record.dest, record.time.slice(-8, -3), compareTime(record.time)])
+                    }
+                    setUpTime(up);
+                }
+                if (json_data.data[codes].DOWN) {
+                    let dn = [];
+                    for (let record of json_data.data[codes].DOWN) {
+                        dn.push([record.plat, record.dest, record.time.slice(-8, -3), compareTime(record.time)])
+                    }
+                    setDnTime(dn);
+                }
             }
         }
     }
 
-    let componentToRender;
-    if (message === '') {
-        componentToRender = <>
-            <h2>HIIII</h2>
-        </>;
+    let messageRender = null;
+    let upRender = null;
+    let dnRender = null;
+    if (message !== '') {
+        messageRender = <h2>{message}</h2>;
     } else {
-        componentToRender = <h2>{message}</h2>;
+        if (JSON.stringify(upTime) === JSON.stringify([])) {
+            upRender = <>
+                <hr />
+                <div className="grid-5-fixed">
+                    <h2 className="eta grid-span5">{mtr_routes.from.replace("\n", " / ")} 方向</h2>
+                    <h2 className="eta grid-span5">暫無預定班次</h2>
+                </div>
+            </>;
+        } else if (upTime !== null) {
+            upRender = <>
+                <hr />
+                <div className="">
+                    <h2 className="eta">{mtr_routes.from.replace("\n", " / ")} 方向</h2>
+                    {upTime.map((record) => (
+                        <div className="grid-6-fixed">
+                            <div className="grid-3-fixed grid-span3">
+                                <h2 className={`platform_num color_${props.routeCode[0]}`}>{record[0]}</h2>
+                                <h2 className="grid-span2">往：{mtr_stations.find(sta => JSON.stringify(sta.code) === JSON.stringify(record[1])).name}</h2>
+                            </div>
+                            <div className="grid-3_5-minmax grid-span3">
+                                <h2>{record[3]} min</h2>
+                                <h3>({record[2]})</h3>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </>;
+        }
+        if (JSON.stringify(dnTime) === JSON.stringify([])) {
+            dnRender = <>
+                <hr />
+                <div className="grid-5-fixed">
+                    <h2 className="eta grid-span5">{mtr_routes.to} 方向</h2>
+                    <h2 className="eta grid-span5">暫無預定班次</h2>
+                </div>
+            </>;
+        } else if (dnTime !== null) {
+            dnRender = <>
+                <hr />
+                <div className="">
+                    <h2 className="eta">{mtr_routes.to} 方向</h2>
+                    {dnTime.map((record) => (
+                        <div className="grid-6-fixed">
+                            <div className="grid-3-fixed grid-span3">
+                                <h2 className={`platform_num color_${props.routeCode[0]}`}>{record[0]}</h2>
+                                <h2 className="grid-span2">往：{mtr_stations.find(sta => JSON.stringify(sta.code) === JSON.stringify(record[1])).name}</h2>
+                            </div>
+                            <div className="grid-3_5-minmax grid-span3">
+                                <h2>{record[3]} min</h2>
+                                <h3>({record[2]})</h3>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </>;
+        }
     }
 
     return (
         <div>
-            <h2>{props.routeCode}</h2>
-            <h2>{props.stationCode}</h2>
-            {componentToRender}
+            {messageRender}
+            {upRender}
+            {dnRender}
         </div>
     )
 }

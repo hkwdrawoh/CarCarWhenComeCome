@@ -36,6 +36,18 @@ div.station_wide {
     width: 100%;
 }
 
+.eta {
+    margin: 0.3rem 0;
+}
+
+.platform_num {
+    padding: 0.1rem;
+    margin: 0.2rem 0 0.2rem auto;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+}
+
 
 
 /* SVG Drawings */
