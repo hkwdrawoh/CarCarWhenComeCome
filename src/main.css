@@ -102,10 +102,17 @@ body {
   width: 100%;
 }
 
+.grid-4_4-minmax {
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(4.4rem, 1fr));
+  grid-gap: 0.2rem 0.2rem;
+  align-items: center;
+  width: 100%;
+}
+
 .grid-6-minmax {
   display: grid;
   grid-template-columns: repeat(auto-fit , minmax(6rem, 1fr));
-  grid-auto-flow: column;
   grid-gap: 0.2rem 0.2rem;
   align-items: center;
   width: 100%;
@@ -150,6 +157,10 @@ body {
 
 }
 
+.grid-column {
+  grid-auto-flow: column;
+}
+
 
 /* Flex Display */
 
@@ -173,6 +184,11 @@ body {
 .vertical_mid {
   vertical-align: center;
   place-items: center;
+}
+
+.vertical_bottom {
+  vertical-align: bottom;
+  place-items: baseline;
 }
 
 

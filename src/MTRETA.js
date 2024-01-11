@@ -71,56 +71,67 @@ export default function MTRETA (props) {
             upRender = <>
                 <hr />
                 <div className="grid-5-fixed">
-                    <h2 className="eta grid-span5">{mtr_routes.from.replace("\n", " / ")} 方向</h2>
-                    <h2 className="eta grid-span5">暫無預定班次</h2>
+                    <h2>←</h2>
+                    <h2 className="eta grid-span3">{mtr_routes.from.replace("\n", " / ")} 方向</h2>
+                    <h2></h2>
                 </div>
+                <h2 className="eta">暫無預定班次</h2>
             </>;
         } else if (upTime !== null) {
             upRender = <>
                 <hr />
-                <div className="">
-                    <h2 className="eta">{mtr_routes.from.replace("\n", " / ")} 方向</h2>
-                    {upTime.map((record) => (
-                        <div className="grid-6-fixed">
-                            <div className="grid-3-fixed grid-span3">
-                                <h2 className={`platform_num color_${props.routeCode[0]}`}>{record[0]}</h2>
-                                <h2 className="grid-span2">往：{mtr_stations.find(sta => JSON.stringify(sta.code) === JSON.stringify(record[1])).name}</h2>
-                            </div>
-                            <div className="grid-3_5-minmax grid-span3">
-                                <h2>{record[3]} min</h2>
-                                <h3>({record[2]})</h3>
-                            </div>
-                        </div>
-                    ))}
+                <div className="grid-5-fixed">
+                    <h2>←</h2>
+                    <h2 className="eta grid-span3">{mtr_routes.from.replace("\n", " / ")} 方向</h2>
+                    <h2></h2>
                 </div>
+                {upTime.map((record) => (
+                    <div className="grid-5-fixed">
+                        <h2 className={`platform_num color_${props.routeCode[0]}`}>{record[0]}</h2>
+                        <div className="grid-span2 text_left grid-6-minmax vertical_bottom">
+                            <h2 className="">
+                                往: {mtr_stations.find(sta => JSON.stringify(sta.code) === JSON.stringify(record[1])).name}
+                            </h2>
+                            {/*<p>{`經馬場`}</p>*/}
+                        </div>
+                        <div className="grid-4_4-minmax grid-span2">
+                            <h2>{record[3]} min</h2>
+                            <h3>({record[2]})</h3>
+                        </div>
+                    </div>
+                ))}
             </>;
         }
         if (JSON.stringify(dnTime) === JSON.stringify([])) {
             dnRender = <>
                 <hr />
                 <div className="grid-5-fixed">
-                    <h2 className="eta grid-span5">{mtr_routes.to} 方向</h2>
-                    <h2 className="eta grid-span5">暫無預定班次</h2>
+                    <h2></h2>
+                    <h2 className="eta grid-span3">{mtr_routes.to} 方向</h2>
+                    <h2>→</h2>
                 </div>
+                <h2 className="eta">暫無預定班次</h2>
             </>;
         } else if (dnTime !== null) {
             dnRender = <>
                 <hr />
-                <div className="">
-                    <h2 className="eta">{mtr_routes.to} 方向</h2>
-                    {dnTime.map((record) => (
-                        <div className="grid-6-fixed">
-                            <div className="grid-3-fixed grid-span3">
-                                <h2 className={`platform_num color_${props.routeCode[0]}`}>{record[0]}</h2>
-                                <h2 className="grid-span2">往：{mtr_stations.find(sta => JSON.stringify(sta.code) === JSON.stringify(record[1])).name}</h2>
-                            </div>
-                            <div className="grid-3_5-minmax grid-span3">
-                                <h2>{record[3]} min</h2>
-                                <h3>({record[2]})</h3>
-                            </div>
-                        </div>
-                    ))}
+                <div className="grid-5-fixed">
+                    <h2></h2>
+                    <h2 className="eta grid-span3">{mtr_routes.to} 方向</h2>
+                    <h2>→</h2>
                 </div>
+                {dnTime.map((record) => (
+                    <div className="grid-5-fixed">
+                        <h2 className={`platform_num color_${props.routeCode[0]}`}>{record[0]}</h2>
+                        <h2 className="grid-span2 text_left grid-6-minmax vertical_bottom">
+                            往: {mtr_stations.find(sta => JSON.stringify(sta.code) === JSON.stringify(record[1])).name}
+                        </h2>
+                        <div className="grid-4_4-minmax grid-span2">
+                            <h2>{record[3]} min</h2>
+                            <h3>({record[2]})</h3>
+                        </div>
+                    </div>
+                ))}
             </>;
         }
     }

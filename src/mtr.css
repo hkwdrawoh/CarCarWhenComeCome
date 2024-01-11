@@ -42,7 +42,7 @@ div.station_wide {
 
 .platform_num {
     padding: 0.1rem;
-    margin: 0.2rem 0 0.2rem auto;
+    margin: 0.2rem auto;
     border-radius: 50%;
     height: 2rem;
     width: 2rem;
