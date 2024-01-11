@@ -107,8 +107,8 @@ export default function App() {
                         <hr/>
                         <h2>~ 我要揀車! ~</h2>
                         <div className="grid-9-minmax">
-                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("Search")}}>車車?</button>
-                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("Search")}}>車車!</button>
+                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("Search")}}>巴士?</button>
+                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("MTR")}}>港鐵!</button>
                         </div>
                     </div>
                     <div className="container_bottom"></div>
