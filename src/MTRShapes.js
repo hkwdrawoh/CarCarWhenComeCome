@@ -27,7 +27,7 @@ function StationCircle (props)  {
             break;
         case 5:
             svgToRender = <>
-                <svg viewBox="0 0 63 45">
+                <svg viewBox="0 0 63 45" preserveAspectRatio="none">
                     <path
                         d="M31.5 34.5 L31.5 14"
                         stroke="black"
@@ -43,10 +43,10 @@ function StationCircle (props)  {
             break;
         case 6:
             svgToRender = <>
-                <svg viewBox="0 0 93 45">
+                <svg viewBox="0 0 63 45" preserveAspectRatio="none">
                     <path
                         // d="M30 25 L50 25 L50 10"
-                        d="M40 20 L80 20 "
+                        d="M30 20 L50 20 "
                         stroke="black"
                         strokeWidth="0.2em"
                         strokeDasharray="2 2"
@@ -61,9 +61,9 @@ function StationCircle (props)  {
             break;
         case 7:
             svgToRender = <>
-                <svg viewBox="0 0 93 45">
+                <svg viewBox="0 0 93 45" preserveAspectRatio="none">
                     <path
-                        d="M40 20 L70 20"
+                        d="M45 20 L70 20"
                         stroke="black"
                         strokeWidth="0.2em"
                         fill="none"
@@ -109,7 +109,7 @@ function RouteLine (props) {
             break;
         case "split":
             componentToRender = <>
-                <svg viewBox="0 0 63 45">
+                <svg viewBox="0 0 63 45" preserveAspectRatio="none">
                     <path
                         d="M31.5 30 Q31.5 11.3 51.3 11.3 L63 11.3"
                         strokeWidth="0.53em"
@@ -121,10 +121,10 @@ function RouteLine (props) {
             break;
         case "merge":
             componentToRender = <>
-                <svg viewBox="0 0 63 45">
+                <svg viewBox="0 0 63 45" preserveAspectRatio="none">
                     <path
                         d="M0 11.3 L11.5 11.3 Q31.5 11.3 31.5 30"
-                        strokeWidth="7"
+                        strokeWidth="0.5em"
                         fill="none"
                         className={`stroke_${props.name}`}
                     />
@@ -133,7 +133,7 @@ function RouteLine (props) {
             break;
         case "split_dash":
             componentToRender = <>
-                <svg viewBox="0 0 63 45">
+                <svg viewBox="0 0 63 45" preserveAspectRatio="none">
                     <path
                         d="M8 30 Q8 11.3 28 11.3 L63 11.3"
                         strokeWidth="0.53em"
@@ -147,7 +147,7 @@ function RouteLine (props) {
             break;
         case "merge_dash":
             componentToRender = <>
-                <svg viewBox="0 0 63 45">
+                <svg viewBox="0 0 63 45" preserveAspectRatio="none">
                     <path
                         d="M0 11.3 L35 11.3 Q55 11.3 55 30"
                         strokeWidth="0.53em"
@@ -187,8 +187,8 @@ export const MTRLines = (props) => {
 
 export const MTRStations = (props) => {
     return (
-        <div className={(props.lines >= 7) ? 'station_wide' : 'station'}>
-            <svg className={(props.lines >= 7) ? 'svg_station_wide' : 'svg_station'}>
+        <div className={`${props.selected ? '' : 'list_button'} ${(props.lines >= 7) ? 'station_wide' : 'station'}`}>
+            <svg className='svg_station'>
                 {(props.lineStyle[0] !== null) ? <RouteLine state={props.lineStyle[0]} name={props.lineColor} /> : null}
                 {(props.lineStyle[1] !== '') ? <RouteLine state={props.lineStyle[1]} name={props.lineColor} /> : null}
                 <StationCircle lines={props.lines} names={props.lineName}/>

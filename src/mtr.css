@@ -27,11 +27,13 @@ div.scroll_x {
 }
 
 div.station {
-    width: 6rem;
+    min-width: 6rem;
+    width: 100%;
 }
 
 div.station_wide {
-    width: 9rem;
+    min-width: 9rem;
+    width: 100%;
 }
 
 
@@ -44,14 +46,9 @@ svg.svg_narrow {
 }
 
 svg.svg_station {
-    width: 6.3rem;
+    width: calc(100% + 0.3rem);
     height: 4.5rem;
     margin-left: -0.15rem;
-}
-
-svg.svg_station_wide {
-    width: 9.3rem;
-    height: 4.5rem;
 }
 
 rect.line_complete {
