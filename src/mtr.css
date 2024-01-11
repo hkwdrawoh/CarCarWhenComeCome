@@ -1,0 +1,283 @@
+:root{
+    --AuxColor1: #e0e0e0;
+    --AuxColor2: #101010;
+    --AEL: #00888a;
+    --DRL: #f173ac;
+    --EAL: #63c7f8;
+    --ISL: #007dc5;
+    --KTL: #009b3e;
+    --SIL: #bac429;
+    --TKL: #7d499d;
+    --TWL: #ed1d24;
+    --TML: #923011;
+    --TCL: #f7943e;
+    --LRT: #d3a809;
+    --XRL: #bbb0a3;
+    --GRY: #94989a;
+
+}
+
+
+/* Div Settings */
+
+div.scroll_x {
+    min-height: 7.8rem;
+    overflow-x: scroll;
+    margin: 0.2rem 0;
+}
+
+div.station {
+    width: 6rem;
+}
+
+div.station_wide {
+    width: 9rem;
+}
+
+
+
+/* SVG Drawings */
+
+svg.svg_narrow {
+    width: 100%;
+    height: 2rem;
+}
+
+svg.svg_station {
+    width: 6.3rem;
+    height: 4.5rem;
+    margin-left: -0.15rem;
+}
+
+svg.svg_station_wide {
+    width: 9.3rem;
+    height: 4.5rem;
+}
+
+.station_circle {
+    fill: var(--AuxColor1);
+    stroke: var(--AuxColor2);
+    stroke-width: 0.25em;
+}
+
+.simplified_line {
+    x: 0.5em;
+    y: calc(50% - 0.4em);
+    width: calc(100% - 2.6em);
+    height: 0.8em;
+}
+
+.simplified_line-start {
+    x: 0.5em;
+    y: calc(50% - 0.8em);
+    width: 1.6em;
+    height: 1.6em;
+}
+
+.simplified_line-end {
+    x: calc(100% - 2.1em);
+    y: calc(50% - 0.8em);
+    width: 1.6em;
+    height: 1.6em;
+}
+
+
+circle.station_icon {
+    r: 0.8em;
+    fill: var(--AuxColor1);
+    stroke: var(--AuxColor2);
+    stroke-width: 0.25em;
+}
+
+rect.station_icon2 {
+    width: 1.6em;
+    height: 2.8em;
+    fill: var(--AuxColor1);
+    stroke: var(--AuxColor2);
+    stroke-width: 0.25em;
+    transform: translate(-0.8em, -2.0em);
+}
+
+rect.station_icon3 {
+    width: 1.6em;
+    height: 3.6em;
+    fill: var(--AuxColor1);
+    stroke: var(--AuxColor2);
+    stroke-width: 0.25em;
+    transform: translate(-0.8em, -2.8em);
+}
+
+rect.interchange_vertical {
+    width: 0.7em;
+    height: 2em;
+    transform: translate(-0.35em, -1.8em);
+}
+
+rect.interchange_horizontalL {
+    width: 2em;
+    height: 0.7em;
+    transform: translate(-1.8em, -0.35em);
+}
+
+rect.interchange_horizontalR {
+    width: 2em;
+    height: 0.7em;
+    transform: translate(-0.2em, -0.35em);
+}
+
+rect.line_start {
+    x: 48%;
+    width: 52%;
+    height: 0.8em;
+    transform: translate(0, -0.4em);
+}
+
+rect.line_end {
+    x: 0%;
+    width: 52%;
+    height: 0.8em;
+    transform: translate(0, -0.4em);
+}
+
+
+
+/* Fill Colors */
+
+.color_AEL {
+    color: var(--AuxColor1);
+    background-color: var(--AEL);
+    fill: var(--AEL);
+}
+
+.color_DRL {
+    color: var(--AuxColor1);
+    background-color: var(--DRL);
+    fill: var(--DRL);
+}
+
+.color_EAL {
+    color: var(--AuxColor2);
+    background-color: var(--EAL);
+    fill: var(--EAL);
+}
+
+.color_ISL {
+    color: var(--AuxColor1);
+    background-color: var(--ISL);
+    fill: var(--ISL);
+}
+
+.color_KTL {
+    color: var(--AuxColor1);
+    background-color: var(--KTL);
+    fill: var(--KTL);
+}
+
+.color_SIL {
+    color: var(--AuxColor2);
+    background-color: var(--SIL);
+    fill: var(--SIL);
+}
+
+.color_TKL {
+    color: var(--AuxColor1);
+    background-color: var(--TKL);
+    fill: var(--TKL);
+}
+
+.color_TWL {
+    color: var(--AuxColor1);
+    background-color: var(--TWL);
+    fill: var(--TWL);
+}
+
+.color_TML {
+    color: var(--AuxColor1);
+    background-color: var(--TML);
+    fill: var(--TML);
+}
+
+.color_TCL {
+    color: var(--AuxColor2);
+    background-color: var(--TCL);
+    fill: var(--TCL);
+}
+
+.color_LRT {
+    color: var(--AuxColor1);
+    background-color: var(--LRT);
+    fill: var(--LRT);
+}
+
+.color_XRL {
+    color: var(--AuxColor1);
+    background-color: var(--XRL);
+    fill: var(--XRL);
+}
+
+.color_GRY {
+    color: var(--AuxColor1);
+    background-color: var(--GRY);
+    fill: var(--GRY);
+}
+
+
+/* Stroke Colors */
+
+.stroke_AEL {
+    stroke: var(--AEL);
+}
+
+.stroke_DRL {
+    stroke: var(--DRL);
+}
+
+.stroke_EAL {
+    stroke: var(--EAL);
+}
+
+.stroke_ISL {
+    stroke: var(--ISL);
+}
+
+.stroke_KTL {
+    stroke: var(--KTL);
+}
+
+.stroke_SIL {
+    stroke: var(--SIL);
+}
+
+.stroke_TKL {
+    stroke: var(--TKL);
+}
+
+.stroke_TWL {
+    stroke: var(--TWL);
+}
+
+.stroke_TML {
+    stroke: var(--TML);
+}
+
+.stroke_TCL {
+    stroke: var(--TCL);
+}
+
+.stroke_LRT {
+    stroke: var(--LRT);
+}
+
+.stroke_XRL {
+    stroke: var(--XRL);
+}
+
+.stroke_GRY {
+    stroke: var(--GRY);
+}
+
+
+
+
+
+
