@@ -20,6 +20,9 @@ export default function RouteETAContainer(props) {
             case "Rhythm":
                 setRoutes(routesData.Rhythm);
                 break;
+            case "CWB":
+                setRoutes(routesData.CWB);
+                break;
             default:
                 setRoutes(routesData.OnTai);
                 break;

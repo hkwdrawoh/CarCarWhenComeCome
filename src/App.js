@@ -80,6 +80,19 @@ export default function App() {
                 </div>
             </>;
             break;
+        case "CWB":
+            componentToRender = <>
+                <div className="container">
+                    <div className="container_top">
+                        <Header text="銅鑼灣 幾時有車？" />
+                    </div>
+                    <div className="container_mid scroll_bar-1">
+                        <RouteETAContainer key="1" routeset='CWB' />
+                    </div>
+                    <div className="container_bottom"></div>
+                </div>
+            </>;
+            break;
         case "Search":
             componentToRender = <>
                 <SearchContainer />
@@ -100,9 +113,10 @@ export default function App() {
                         <h2>~ 我喺呢度! ~</h2>
                         <div className="grid-9-minmax">
                             <button className="button_base button_wide button_hover" onClick={() => {goToSite("OnTai")}}>安泰邨</button>
-                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("LaiTakTsuen")}}>勵德邨</button>
-                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("HomeFrom108")}}>108回家</button>
                             <button className="button_base button_wide button_hover" onClick={() => {goToSite("Rhythm")}}>采頤花園</button>
+                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("LaiTakTsuen")}}>勵德邨</button>
+                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("CWB")}}>銅鑼灣</button>
+                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("HomeFrom108")}}>108回家</button>
                         </div>
                         <hr/>
                         <h2>~ 我要揀車! ~</h2>

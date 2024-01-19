@@ -278,6 +278,40 @@ export const LaiTakTsuen = [
         "style": 2
     }];
 
+export const CWB = [
+    {
+        "route": "21A",
+        "direction": "I",
+        "service_type": 1,
+        "seq": 1,
+        "company": "gmb_hki",
+        "style": 103
+    },
+    {
+        "route": "25",
+        "direction": "O",
+        "service_type": 1,
+        "seq": 8,
+        "company": "gmb_hki",
+        "style": 103
+    },
+    {
+        "route": "25A",
+        "direction": "O",
+        "service_type": 1,
+        "seq": 5,
+        "company": "ctb",
+        "style": 2
+    },
+    {
+        "route": "26",
+        "direction": "I",
+        "service_type": 1,
+        "seq": 18,
+        "company": "ctb",
+        "style": 2
+    }];
+
 
 
 
