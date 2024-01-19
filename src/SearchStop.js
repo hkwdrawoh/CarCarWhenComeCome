@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import kmb_stop_json from "./json/kmb_stop.json";
 import special_route_json from "./json/special_route.json";
-import {eventEmitter} from "./App";
 import {FetchRouteStop, FetchStop} from "./fetchBusAPI";
 import ETADisplay from "./ETADisplay";
 import {v4 as uuidv4} from 'uuid';
@@ -14,13 +13,17 @@ export default function SearchStop(props) {
     const [jor_stop_ids, setJORStopIDs] = useState([]);
     const [jor_dir, setJORDir] = useState("");
 
-    const reSelectDest = () => {
-        eventEmitter.emit("resetDest");
-    }
+    const scrollToRef = useRef(null);
 
     useEffect( () => {
         fetchStopNames().then();
     }, []);
+
+    useEffect(() => {
+        if (scrollToRef.current) {
+            // scrollToRef.current.scrollBy(0, 2000);
+        }
+    }, [selected_id]);
 
     const fetchStopNames = async () => {
         let ids = await FetchRouteStop(props.dir.route, props.bound, props.dir.service_type, "-1", props.company);
@@ -49,11 +52,11 @@ export default function SearchStop(props) {
         }
         setStopIDs(ids);
         setStopNames(names);
-    }
+    };
 
     const chooseStop = (id) => {
-        setSelectedID(id);
-    }
+        setSelectedID((selected_id === id) ? -1 : id);
+    };
 
     const displayStopNum = (index) => {
         let output = Number(index) + 1;
@@ -61,51 +64,48 @@ export default function SearchStop(props) {
             output = "0" + String(output)
         }
         return String(output);
+    };
+
+    const route = {
+        direction: props.bound,
+        service_type: props.dir.service_type,
+        seq: Number(selected_id) + 1,
+        company: props.company
+    };
+
+    let joint = null;
+    if (props.style === 'jor' && (props.dir.service_type === "1" || props.company === "ctb")) {
+        joint = {
+            route: props.dir.route,
+            direction: jor_dir,
+            service_type: "1",
+            seq: Number(selected_id) + 1,
+            stop_id: jor_stop_ids[selected_id],
+            company: (props.company === "kmb") ? "ctb" : "kmb"
+        }
+    }
+
+    const ShowStopETA = (id) => {
+        if (selected_id === id.id) {
+            return <>
+                <div className="grid-3-fixed">
+                    <ETADisplay key={uuidv4()} route={route} route_num={props.dir.route} stop_id={stop_ids[selected_id]} joint={joint}/>
+                </div>
+            </>
+        }
+        return <></>
     }
 
     let list_stop_div;
-    if (selected_id !== -1) {
-        let route = {
-            direction: props.bound,
-            service_type: props.dir.service_type,
-            seq: Number(selected_id) + 1,
-            company: props.company
-        };
-        let joint = null;
-        if (props.style === 'jor' && (props.dir.service_type === "1" || props.company === "ctb")) {
-            console.log(jor_stop_ids);
-            joint = {
-                route: props.dir.route,
-                direction: jor_dir,
-                service_type: "1",
-                seq: Number(selected_id) + 1,
-                stop_id: jor_stop_ids[selected_id],
-                company: (props.company === "kmb") ? "ctb" : "kmb"
-            }
-        }
-        list_stop_div = <>
-            <h2>~ 到站時間 ~</h2>
-            <div className="grid-6-fixed">
-                <h2 className={`${props.style}_text`}>#{displayStopNum(selected_id)}</h2>
-                <h2 className={`${props.style}_text text_left grid-span3`}>{stop_names[selected_id]}</h2>
-                <div className="grid-span2">
-                    <button className='button_base button_hover button_icon' onClick={() => {chooseStop(selected_id - 1)}} disabled={selected_id === 0}>&lt;</button>
-                    <button className='button_base button_hover button_thin' onClick={() => {chooseStop(-1)}}>返回</button>
-                    <button className='button_base button_hover button_icon' onClick={() => {chooseStop(selected_id + 1)}} disabled={selected_id + 1 === stop_ids.length}>&gt;</button>
-                </div>
-            </div>
-            <div className="grid-3-fixed">
-                <ETADisplay key={uuidv4()} route={route} route_num={props.dir.route} stop_id={stop_ids[selected_id]} joint={joint}/>
-            </div>
-        </>
-    } else if (JSON.stringify(stop_names) !== JSON.stringify([])) {
+    if (JSON.stringify(stop_names) !== JSON.stringify([])) {
         list_stop_div = <>
             {stop_names.map((stop_name, index) => <>
-                <div className="grid-6-fixed list_button" onClick={() => {chooseStop(index)}}>
+                <div ref={(selected_id === index) ? null : scrollToRef} className={(selected_id === index) ? "grid-6-fixed " : "list_button grid-6-fixed"} onClick={() => {chooseStop(index)}}>
                     <h2 className={`${props.style}_text`}>#{displayStopNum(index)}</h2>
                     <h2 className={`${props.style}_text text_left grid-span4`}>{stop_name}</h2>
-                    <h2>→</h2>
+                    <h2>{(selected_id === index) ? "↑" : "↓"}</h2>
                 </div>
+                <ShowStopETA id={index} />
             </>)}
         </>
     } else {
@@ -114,13 +114,6 @@ export default function SearchStop(props) {
 
 
     return <>
-        <h2>選擇車站</h2>
-        <div className="grid-6-fixed">
-            <div className={`button_base ${props.style}_icon`}>{props.dir.route}</div>
-            <div className={`${props.style}_text text_left grid-span4`}><h2>往：{props.dest}</h2></div>
-            <button className='button_base button_hover' onClick={reSelectDest}>重選</button>
-        </div>
-        <hr />
         {list_stop_div}
     </>
 }

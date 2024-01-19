@@ -4,7 +4,6 @@ import SearchStop from "./SearchStop";
 import kmb_route_json from "./json/kmb_route.json"
 import ctb_route_json from "./json/ctb_route.json"
 import special_route_json from "./json/special_route.json"
-import {eventEmitter} from "./App";
 import {v4 as uuidv4} from 'uuid';
 
 
@@ -29,14 +28,6 @@ export default function SearchContainer() {
     useEffect(() => {
         updateAvail("").then();
     }, [routes_list]);
-
-    useEffect(() => {
-        eventEmitter.on('resetDest', resetSelectedDest);
-
-        return (() => {
-            eventEmitter.off('resetDest', resetSelectedDest);
-        });
-    }, [selected_dest]);
 
     const chooseCompany = (selected_company) => {
         let selected_routes_list = [];
@@ -215,7 +206,13 @@ export default function SearchContainer() {
         componentToRender = <>
             <div className="container">
                 <div className="container_top">
-                    <Header text={selected_dest[0].route + " 幾時有車？"} />
+                    <Header text={route_num + " 幾時有車？"} />
+                    <div className="grid-6-fixed">
+                        <div className={`button_base ${selected_dest[4]}_icon`}>{route_num}</div>
+                        <div className={`${selected_dest[4]}_text text_left grid-span4`}><h2>往：{selected_dest[1]}</h2></div>
+                        <button className='button_base button_hover' onClick={resetSelectedDest}>重選</button>
+                    </div>
+                    <hr />
                 </div>
                 <div className="container_mid">
                     <SearchStop key={uuidv4()} dir={selected_dest[0]} dest={selected_dest[1]} bound={selected_dest[2]} company={selected_dest[3]} style={selected_dest[4]}/>
@@ -228,13 +225,11 @@ export default function SearchContainer() {
             <div className="container">
                 <div className="container_top">
                     <Header text="你搭邊架車車？" />
-                    <h2>選擇巴士公司</h2>
                     <div className="grid-3-fixed">
                         <button onClick={() => {chooseCompany("jor")}} className={`button_base ${company === "jor" ? "jor_icon" : ""}`}>全部</button>
                         <button onClick={() => {chooseCompany("kmb")}} className={`button_base ${company === "kmb" ? "kmb_icon" : ""}`}>九巴</button>
                         <button onClick={() => {chooseCompany("ctb")}} className={`button_base ${company === "ctb" ? "ctb_icon" : ""}`}>城巴</button>
                     </div>
-                    <hr />
                     <div className="grid-6-fixed">
                         <h2 className="text_right grid-span2">路線：</h2>
                         <div className="button_base route_area grid-span4"><p>{route_num || `\u00A0`}</p></div>
