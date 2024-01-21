@@ -26,7 +26,6 @@ export default function App() {
 
     eventEmitter.on('backToHome', () => {goToSite('main')});
 
-    let componentToRender;
     switch (pages) {
         case "OnTai":
             return <>
