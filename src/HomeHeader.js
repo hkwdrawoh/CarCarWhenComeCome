@@ -47,7 +47,7 @@ export default function HomeHeader() {
                 <h2>{getTimeString(time_now)}</h2>
                 <h3>現在時間</h3>
             </div>
-            <div className="grid-span2 text_left">
+            <div className="grid-span2 text_left" style={{width: "100%"}}>
                 <h2>☀天氣就如預期☀</h2>
                 <p className="weather scroll_bar-1">{weather}</p>
             </div>

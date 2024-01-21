@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import "./mtr.css";
 import mtr_route_json from "./json/mtr_route.json";
 import mtr_station_json from "./json/mtr_station.json";

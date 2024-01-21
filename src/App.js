@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import HomeHeader from "./HomeHeader";
 import Header from "./Header";
 import RouteETAContainer from "./RouteETAContainer";
@@ -29,7 +29,7 @@ export default function App() {
     let componentToRender;
     switch (pages) {
         case "OnTai":
-            componentToRender = <>
+            return <>
                 <div className="container">
                     <div className="container_top">
                         <Header text="安泰邨 幾時有車？" />
@@ -40,9 +40,8 @@ export default function App() {
                     <div className="container_bottom"></div>
                 </div>
             </>;
-            break;
         case "HomeFrom108":
-            componentToRender = <>
+            return <>
                 <div className="container">
                     <div className="container_top">
                         <Header text="108 幾時有車？" />
@@ -53,9 +52,8 @@ export default function App() {
                     <div className="container_bottom"></div>
                 </div>
             </>;
-            break;
         case "LaiTakTsuen":
-            componentToRender = <>
+            return <>
                 <div className="container">
                     <div className="container_top">
                         <Header text="勵德邨 幾時有車？" />
@@ -66,9 +64,8 @@ export default function App() {
                     <div className="container_bottom"></div>
                 </div>
             </>;
-            break;
         case "Rhythm":
-            componentToRender = <>
+            return <>
                 <div className="container">
                     <div className="container_top">
                         <Header text="采頤花園 幾時有車？" />
@@ -79,9 +76,8 @@ export default function App() {
                     <div className="container_bottom"></div>
                 </div>
             </>;
-            break;
         case "CWB":
-            componentToRender = <>
+            return <>
                 <div className="container">
                     <div className="container_top">
                         <Header text="銅鑼灣 幾時有車？" />
@@ -92,19 +88,16 @@ export default function App() {
                     <div className="container_bottom"></div>
                 </div>
             </>;
-            break;
         case "Search":
-            componentToRender = <>
+            return <>
                 <SearchContainer />
             </>;
-            break;
         case "MTR":
-            componentToRender = <>
+            return <>
                 <MTRContainer />
             </>;
-            break;
         default:
-            componentToRender = <>
+            return <>
                 <div className="container">
                     <div className="container_top">
                         <HomeHeader />
@@ -127,8 +120,7 @@ export default function App() {
                     </div>
                     <div className="container_bottom"></div>
                 </div>
-            </>
+            </>;
     }
-    return (componentToRender);
 
 }

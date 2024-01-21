@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import "./mtr.css";
 import Header from "./Header";
 import {MTRLines, MTRStations} from "./MTRShapes";
