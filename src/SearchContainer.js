@@ -9,6 +9,9 @@ import {v4 as uuidv4} from 'uuid';
 
 export default function SearchContainer() {
 
+    // KMB Route List API URL: https://data.etabus.gov.hk/v1/transport/kmb/route
+    // KMB Stop List API URL: https://data.etabus.gov.hk/v1/transport/kmb/stop
+    // CTB Route List API URL: https://rt.data.gov.hk/v2/transport/citybus/route/CTB
     const kmb_routes = kmb_route_json.data;
     const ctb_routes = ctb_route_json.data;
     const joint_routes = special_route_json.data.joint_routes;

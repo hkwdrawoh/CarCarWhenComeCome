@@ -1,7 +1,7 @@
 {
   "type": "StopList",
   "version": "1.0",
-  "generated_timestamp": "2024-01-05T16:58:47+08:00",
+  "generated_timestamp": "2024-01-22T18:31:45+08:00",
   "data": [
     {
       "stop": "18492910339410B1",
@@ -6925,9 +6925,9 @@
     },
     {
       "stop": "EA2CFF27310EAEC3",
-      "name_en": "PO TAT BBI - PO TAT ESTATE (H2)",
-      "name_tc": "寶達轉車站 - 寶達邨 (H2)",
-      "name_sc": "宝达转车站 - 宝达邨 (H2)",
+      "name_en": "PO TAT ESTATE BBI (H2)",
+      "name_tc": "寶達邨轉車站 (H2)",
+      "name_sc": "宝达邨转车站 (H2)",
       "lat": "22.318256",
       "long": "114.237594"
     },
@@ -6966,8 +6966,8 @@
     {
       "stop": "7A95C545D0393126",
       "name_en": "KAI TAK TUNNEL BBI - KITEC (L1)",
-      "name_tc": "啟德隧道轉車站-九龍灣展貿(L1)",
-      "name_sc": "启德隧道转车站-九龙湾展贸(L1)",
+      "name_tc": "啟隧轉車站-九龍灣國際展貿(L1)",
+      "name_sc": "启隧转车站-九龙湾国际展贸(L1)",
       "lat": "22.322033",
       "long": "114.204300"
     },
@@ -7021,9 +7021,9 @@
     },
     {
       "stop": "466BC4C1908A1A06",
-      "name_en": "PO TAT BBI - PO TAT ESTATE (N2)",
-      "name_tc": "寶達轉車站 - 寶達邨 (N2)",
-      "name_sc": "宝达转车站 - 宝达邨 (N2)",
+      "name_en": "PO TAT ESTATE BBI (N2)",
+      "name_tc": "寶達邨轉車站 (N2)",
+      "name_sc": "宝达邨转车站 (N2)",
       "lat": "22.318565",
       "long": "114.236118"
     },
@@ -7622,8 +7622,8 @@
     {
       "stop": "F90ED764C7A95649",
       "name_en": "KAI TAK TUNNEL BBI - WANG CHIN STREET (M1)",
-      "name_tc": "啟德隧道轉車站 - 宏展街 (M1)",
-      "name_sc": "启德隧道转车站 - 宏展街 (M1)",
+      "name_tc": "啟隧轉車站 - 宏展街 (M1)",
+      "name_sc": "启隧转车站 - 宏展街 (M1)",
       "lat": "22.325057",
       "long": "114.205195"
     },
@@ -7718,8 +7718,8 @@
     {
       "stop": "416B7606A9A5FEEB",
       "name_en": "KAI TAK TUNNEL BBI - KAI SHING STREET (N1)",
-      "name_tc": "啟德隧道轉車站 - 啟成街 (N1)",
-      "name_sc": "启德隧道转车站 - 启成街 (N1)",
+      "name_tc": "啟隧轉車站 - 啟成街 (N1)",
+      "name_sc": "启隧转车站 - 启成街 (N1)",
       "lat": "22.325231",
       "long": "114.204423"
     },
@@ -8350,8 +8350,8 @@
     {
       "stop": "BE27F066CF40DF7D",
       "name_en": "KAI TAK TUNNEL BBI - KITEC (K1)",
-      "name_tc": "啟德隧道轉車站-九龍灣展貿(K1)",
-      "name_sc": "启德隧道转车站-九龙湾展贸(K1)",
+      "name_tc": "啟隧轉車站-九龍灣國際展貿(K1)",
+      "name_sc": "启隧转车站-九龙湾国际展贸(K1)",
       "lat": "22.322812",
       "long": "114.203806"
     },
@@ -9362,14 +9362,6 @@
       "name_sc": "牛池湾转车站 - 彩虹站 (K5)",
       "lat": "22.334130",
       "long": "114.209990"
-    },
-    {
-      "stop": "BF424F7F22F8EED9",
-      "name_en": "SZE MEI STREET, SAN PO KONG",
-      "name_tc": "新蒲崗四美街",
-      "name_sc": "新蒲岗四美街",
-      "lat": "22.337718",
-      "long": "114.201500"
     },
     {
       "stop": "175A11C9B8E170D3",
@@ -18572,20 +18564,20 @@
       "long": "113.967806"
     },
     {
-      "stop": "2560149CE75EABA0",
-      "name_en": "TUEN MUN ROAD BBI (A6)",
-      "name_tc": "屯門公路轉車站 (A6)",
-      "name_sc": "屯门公路转车站 (A6)",
-      "lat": "22.362751",
-      "long": "114.015706"
+      "stop": "376C4835851621D4",
+      "name_en": "TUEN MUN ROAD BBI (A15)",
+      "name_tc": "屯門公路轉車站 (A15)",
+      "name_sc": "屯门公路转车站 (A15)",
+      "lat": "22.362644",
+      "long": "114.015733"
     },
     {
-      "stop": "ACB5FEA2BF9FC5AD",
-      "name_en": "TUEN MUN ROAD BBI (A4)",
-      "name_tc": "屯門公路轉車站 (A4)",
-      "name_sc": "屯门公路转车站 (A4)",
-      "lat": "22.362444",
-      "long": "114.015978"
+      "stop": "CA6AB8446B694566",
+      "name_en": "TUEN MUN ROAD BBI (A5)",
+      "name_tc": "屯門公路轉車站 (A5)",
+      "name_sc": "屯门公路转车站 (A5)",
+      "lat": "22.362630",
+      "long": "114.015810"
     },
     {
       "stop": "ED364A58F885DC92",
@@ -19148,12 +19140,12 @@
       "long": "113.966721"
     },
     {
-      "stop": "CA6AB8446B694566",
-      "name_en": "TUEN MUN ROAD BBI (A5)",
-      "name_tc": "屯門公路轉車站 (A5)",
-      "name_sc": "屯门公路转车站 (A5)",
-      "lat": "22.362630",
-      "long": "114.015810"
+      "stop": "2560149CE75EABA0",
+      "name_en": "TUEN MUN ROAD BBI (A6)",
+      "name_tc": "屯門公路轉車站 (A6)",
+      "name_sc": "屯门公路转车站 (A6)",
+      "lat": "22.362751",
+      "long": "114.015706"
     },
     {
       "stop": "D893FD9E88E2A98D",
@@ -21404,6 +21396,14 @@
       "long": "113.997883"
     },
     {
+      "stop": "ACB5FEA2BF9FC5AD",
+      "name_en": "TUEN MUN ROAD BBI (A4)",
+      "name_tc": "屯門公路轉車站 (A4)",
+      "name_sc": "屯门公路转车站 (A4)",
+      "lat": "22.362444",
+      "long": "114.015978"
+    },
+    {
       "stop": "A39682B5A68D668F",
       "name_en": "TSING YI STATION",
       "name_tc": "青衣站",
@@ -22140,12 +22140,12 @@
       "long": "114.214104"
     },
     {
-      "stop": "846488D96E25F4D3",
-      "name_en": "SZE MEI STREET, SAN PO KONG",
-      "name_tc": "新蒲崗四美街",
-      "name_sc": "新蒲岗四美街",
-      "lat": "22.337784",
-      "long": "114.201364"
+      "stop": "8373F7DDB88D19C4",
+      "name_en": "KAI CHEUNG COURT",
+      "name_tc": "啟翔苑",
+      "name_sc": "启翔苑",
+      "lat": "22.337988",
+      "long": "114.203107"
     },
     {
       "stop": "1DF17F085C6C1B78",
@@ -25220,12 +25220,12 @@
       "long": "114.208719"
     },
     {
-      "stop": "0A24CC239F39F33E",
-      "name_en": "SZE MEI STREET, SAN PO KONG",
-      "name_tc": "新蒲崗四美街",
-      "name_sc": "新蒲岗四美街",
-      "lat": "22.337663",
-      "long": "114.201656"
+      "stop": "3C34422AC69920E7",
+      "name_en": "KAI CHEUNG COURT",
+      "name_tc": "啟翔苑",
+      "name_sc": "启翔苑",
+      "lat": "22.337851",
+      "long": "114.203078"
     },
     {
       "stop": "E47CD422B33E5BE7",
@@ -25266,6 +25266,14 @@
       "name_sc": "九龙湾总站",
       "lat": "22.321940",
       "long": "114.207920"
+    },
+    {
+      "stop": "FC343F5E57B07FBE",
+      "name_en": "KAI CHEUNG COURT",
+      "name_tc": "啟翔苑",
+      "name_sc": "启翔苑",
+      "lat": "22.337880",
+      "long": "114.203209"
     },
     {
       "stop": "E89B2315750AB2FD",
@@ -28548,12 +28556,12 @@
       "long": "114.207021"
     },
     {
-      "stop": "BC137465F7BC4A8F",
+      "stop": "10A25AF26C9972AC",
       "name_en": "SZE MEI STREET, SAN PO KONG",
       "name_tc": "新蒲崗四美街",
       "name_sc": "新蒲岗四美街",
-      "lat": "22.337757",
-      "long": "114.201542"
+      "lat": "22.337820",
+      "long": "114.202023"
     },
     {
       "stop": "EB3A1D751C96E053",
@@ -29074,14 +29082,6 @@
       "name_sc": "富安花园",
       "lat": "22.406903",
       "long": "114.222652"
-    },
-    {
-      "stop": "3CF6C88065281406",
-      "name_en": "SZE MEI STREET, SAN PO KONG",
-      "name_tc": "新蒲崗四美街",
-      "name_sc": "新蒲岗四美街",
-      "lat": "22.337676",
-      "long": "114.201591"
     },
     {
       "stop": "0A22872F65392B48",
@@ -29837,9 +29837,9 @@
     },
     {
       "stop": "39AB774DC35311C0",
-      "name_en": "PO TAT BBI - PO TAT ESTATE (H3)",
-      "name_tc": "寶達轉車站 - 寶達邨 (H3)",
-      "name_sc": "宝达转车站 - 宝达邨 (H3)",
+      "name_en": "PO TAT ESTATE BBI (H3)",
+      "name_tc": "寶達邨轉車站 (H3)",
+      "name_sc": "宝达邨转车站 (H3)",
       "lat": "22.318216",
       "long": "114.237735"
     },
@@ -30036,12 +30036,12 @@
       "long": "114.216795"
     },
     {
-      "stop": "0C99872CC5846EEE",
-      "name_en": "SZE MEI STREET, SAN PO KONG",
-      "name_tc": "新蒲崗四美街",
-      "name_sc": "新蒲岗四美街",
-      "lat": "22.337682",
-      "long": "114.201460"
+      "stop": "645CC2C9E1C90E69",
+      "name_en": "KAI CHEUNG COURT",
+      "name_tc": "啟翔苑",
+      "name_sc": "启翔苑",
+      "lat": "22.337832",
+      "long": "114.202923"
     },
     {
       "stop": "FA01BA1CA14120E3",
@@ -31349,9 +31349,9 @@
     },
     {
       "stop": "03C3F537C41E4986",
-      "name_en": "PO TAT BBI - PO TAT ESTATE (N1)",
-      "name_tc": "寶達轉車站 - 寶達邨 (N1)",
-      "name_sc": "宝达转车站 - 宝达邨 (N1)",
+      "name_en": "PO TAT ESTATE BBI (N1)",
+      "name_tc": "寶達邨轉車站 (N1)",
+      "name_sc": "宝达邨转车站 (N1)",
       "lat": "22.318565",
       "long": "114.236118"
     },
@@ -31461,9 +31461,9 @@
     },
     {
       "stop": "AE0DC8745DFCA0FA",
-      "name_en": "PO TAT BBI - PO TAT ESTATE (H1)",
-      "name_tc": "寶達轉車站 - 寶達邨 (H1)",
-      "name_sc": "宝达转车站 - 宝达邨 (H1)",
+      "name_en": "PO TAT ESTATE BBI (H1)",
+      "name_tc": "寶達邨轉車站 (H1)",
+      "name_sc": "宝达邨转车站 (H1)",
       "lat": "22.318255",
       "long": "114.237469"
     },
@@ -38524,7 +38524,7 @@
       "long": "114.003672"
     },
     {
-      "stop": "BD830C5E8AAE1C74",
+      "stop": "26B5D3C001417E0E",
       "name_en": "TUEN MUN CENTRAL BUS TERMINUS",
       "name_tc": "屯門市中心總站",
       "name_sc": "屯门市中心总站",
@@ -38786,6 +38786,14 @@
       "name_sc": "元朗公园总站",
       "lat": "22.442051",
       "long": "114.020163"
+    },
+    {
+      "stop": "E8B52C5A78E48365",
+      "name_en": "KAI CHEUNG COURT",
+      "name_tc": "啟翔苑",
+      "name_sc": "启翔苑",
+      "lat": "22.337961",
+      "long": "114.202952"
     },
     {
       "stop": "C20893EE82D32C84",
@@ -39562,14 +39570,6 @@
       "name_sc": "蓝田站",
       "lat": "22.306701",
       "long": "114.233898"
-    },
-    {
-      "stop": "A7BA13A9AA331D97",
-      "name_en": "SZE MEI STREET, SAN PO KONG",
-      "name_tc": "新蒲崗四美街",
-      "name_sc": "新蒲岗四美街",
-      "lat": "22.337720",
-      "long": "114.201438"
     },
     {
       "stop": "E960E8842F9C633D",
@@ -42740,7 +42740,7 @@
       "long": "114.201865"
     },
     {
-      "stop": "26B5D3C001417E0E",
+      "stop": "BD830C5E8AAE1C74",
       "name_en": "TUEN MUN CENTRAL BUS TERMINUS",
       "name_tc": "屯門市中心總站",
       "name_sc": "屯门市中心总站",
@@ -44301,9 +44301,9 @@
     },
     {
       "stop": "CAC48CE541F0E887",
-      "name_en": "PACIFIC PLACE (A3)",
-      "name_tc": "太古廣場 (A3)",
-      "name_sc": "太古广场 (A3)",
+      "name_en": "PACIFIC PLACE (A4)",
+      "name_tc": "太古廣場 (A4)",
+      "name_sc": "太古广场 (A4)",
       "lat": "22.277987",
       "long": "114.165210"
     },
@@ -44666,6 +44666,14 @@
       "name_sc": "会展站巴士总站",
       "lat": "22.281690",
       "long": "114.175660"
+    },
+    {
+      "stop": "6F9CEABEE36E8682",
+      "name_en": "PACIFIC PLACE (A3)",
+      "name_tc": "太古廣場 (A3)",
+      "name_sc": "太古广场 (A3)",
+      "lat": "22.278005",
+      "long": "114.165408"
     },
     {
       "stop": "AD97EA183A25102C",
@@ -47700,10 +47708,10 @@
       "long": "113.937235"
     },
     {
-      "stop": "38A38CABCA7969CF",
-      "name_en": "HZMB HONG KONG PORT (E4)",
-      "name_tc": "港珠澳大橋香港口岸 (E4)",
-      "name_sc": "港珠澳大桥香港口岸 (E4)",
+      "stop": "B0851FD6C20D738D",
+      "name_en": "HZMB HONG KONG PORT (E6)",
+      "name_tc": "港珠澳大橋香港口岸 (E6)",
+      "name_sc": "港珠澳大桥香港口岸 (E6)",
       "lat": "22.315761",
       "long": "113.950402"
     },
@@ -47972,10 +47980,10 @@
       "long": "113.937235"
     },
     {
-      "stop": "B0851FD6C20D738D",
-      "name_en": "HZMB HONG KONG PORT (E6)",
-      "name_tc": "港珠澳大橋香港口岸 (E6)",
-      "name_sc": "港珠澳大桥香港口岸 (E6)",
+      "stop": "A7378EEEBFA0C76C",
+      "name_en": "HZMB HONG KONG PORT (E7)",
+      "name_tc": "港珠澳大橋香港口岸 (E7)",
+      "name_sc": "港珠澳大桥香港口岸 (E7)",
       "lat": "22.315761",
       "long": "113.950402"
     },
@@ -48250,6 +48258,14 @@
       "name_sc": "大围转车站 - 田心村",
       "lat": "22.370674",
       "long": "114.177940"
+    },
+    {
+      "stop": "38A38CABCA7969CF",
+      "name_en": "HZMB HONG KONG PORT (E4)",
+      "name_tc": "港珠澳大橋香港口岸 (E4)",
+      "name_sc": "港珠澳大桥香港口岸 (E4)",
+      "lat": "22.315761",
+      "long": "113.950402"
     },
     {
       "stop": "829C1171F750F675",
@@ -48900,12 +48916,12 @@
       "long": "114.213945"
     },
     {
-      "stop": "A7378EEEBFA0C76C",
-      "name_en": "HZMB HONG KONG PORT (E7)",
-      "name_tc": "港珠澳大橋香港口岸 (E7)",
-      "name_sc": "港珠澳大桥香港口岸 (E7)",
-      "lat": "22.315761",
-      "long": "113.950402"
+      "stop": "09836E367F4BA3E2",
+      "name_en": "HZMB HONG KONG PORT (W6)",
+      "name_tc": "港珠澳大橋香港口岸 (W6)",
+      "name_sc": "港珠澳大桥香港口岸 (W6)",
+      "lat": "22.316075",
+      "long": "113.950434"
     },
     {
       "stop": "FC1FCC3EF8D5C544",
