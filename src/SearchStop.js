@@ -4,6 +4,7 @@ import special_route_json from "./json/special_route.json";
 import {FetchRouteStop, FetchStop} from "./fetchBusAPI";
 import ETADisplay from "./ETADisplay";
 import {v4 as uuidv4} from 'uuid';
+import bus_fares_json from "./json/bus_fare.json";
 
 export default function SearchStop(props) {
 
@@ -12,8 +13,10 @@ export default function SearchStop(props) {
     const [selected_id, setSelectedID] = useState(-1);
     const [jor_stop_ids, setJORStopIDs] = useState([]);
     const [jor_dir, setJORDir] = useState("");
+    const [fares, setFares] = useState([]);
 
     const scrollToRef = useRef(null);
+    const bus_fares = bus_fares_json.data.bus_fares;
 
     useEffect( () => {
         fetchStopNames().then();
@@ -27,7 +30,6 @@ export default function SearchStop(props) {
 
     const fetchStopNames = async () => {
         let ids = await FetchRouteStop(props.dir.route, props.bound, props.dir.service_type, "-1", props.company);
-        // console.log(ids);
         if (props.style === 'jor' && (props.dir.service_type === "1" || props.company === "ctb")) {
             let jor_dir = (special_route_json.data.flip_bound.includes(props.dir.route)) ? ((props.bound === "O") ? "I" : "O") : props.bound;
             let jor_ids = await FetchRouteStop(props.dir.route, jor_dir, "1", "-1", (props.company === "kmb") ? "ctb" : "kmb");
@@ -37,7 +39,7 @@ export default function SearchStop(props) {
             setJORStopIDs([]);
             setJORDir("");
         }
-        let names;
+        let names = [];
         if (props.company === "kmb") {
             names = ids.map(id => {
                 const matchedItem = kmb_stop_json.data.find(item => item.stop === id);
@@ -47,11 +49,16 @@ export default function SearchStop(props) {
             const promises = ids.map(async id => FetchStop(id, "ctb"));
             const resolvedPromises = await Promise.all(promises);
             names = resolvedPromises.map(matchedItem => matchedItem ? matchedItem[0] : "錯誤");
-        } else {
-            names = ['錯誤'];
+        }
+        let section_fares = bus_fares.filter((a) => a.route_id === props.route_id && a.route_seq === (props.bound === "O" ? 1 : 2)).sort((a, b) => a.starting_seq > b.starting_seq);
+        let fares = Array(names.length);
+        fares.fill(0);
+        for (let i = 0; i < section_fares.length; i++) {
+            fares.fill(section_fares[i].price, section_fares[i].starting_seq - 1)
         }
         setStopIDs(ids);
         setStopNames(names);
+        setFares(fares);
     };
 
     const chooseStop = (id) => {
@@ -102,7 +109,10 @@ export default function SearchStop(props) {
             {stop_names.map((stop_name, index) => <>
                 <div ref={(selected_id === index) ? null : scrollToRef} className={(selected_id === index) ? "grid-6-fixed " : "list_button grid-6-fixed"} onClick={() => {chooseStop(index)}}>
                     <h2 className={`${props.style}_text`}>#{displayStopNum(index)}</h2>
-                    <h2 className={`${props.style}_text text_left grid-span4`}>{stop_name}</h2>
+                    <div className={`${props.style}_text text_left grid-span4`}>
+                        <h2>{stop_name}</h2>
+                        <p>{(fares[index] !== 0 && props.company === "kmb") ? `車費：$${fares[index].toFixed(1)}` : ""}</p>
+                    </div>
                     <h2>{(selected_id === index) ? "↑" : "↓"}</h2>
                 </div>
                 <ShowStopETA id={index} />
