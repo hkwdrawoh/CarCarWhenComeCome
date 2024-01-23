@@ -48,10 +48,9 @@ export default function Header(props) {
     };
 
     return <>
-        <div className="page_title">
-            <h2>{props.text}</h2>
-            <p></p>
-            <button className="button_base button_hover" style={{"marginRight": "1.55rem"}} onClick={backToHome}>主頁</button>
+        <div className="page_title grid-5-fixed">
+            <button className="button_base button_hover" onClick={backToHome}>主頁</button>
+            <h2 className="grid-span4 text_left">{props.text}</h2>
         </div>
         <div className="grid-3-fixed">
             <div>
