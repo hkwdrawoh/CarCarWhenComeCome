@@ -111,7 +111,7 @@ export default function SearchStop(props) {
                     <h2 className={`${props.style}_text`}>#{displayStopNum(index)}</h2>
                     <div className={`${props.style}_text text_left grid-span4`}>
                         <h2>{stop_name}</h2>
-                        <p>{(fares[index] !== 0 && props.company === "kmb") ? `車費：$${fares[index].toFixed(1)}` : ""}</p>
+                        <p>{(fares[index] !== 0 && props.company === "kmb" && props.dir.service_type === "1") ? `車費：$${fares[index].toFixed(1)}` : ""}</p>
                     </div>
                     <h2>{(selected_id === index) ? "↑" : "↓"}</h2>
                 </div>
