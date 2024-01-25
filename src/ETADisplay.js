@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { FetchETA, compareTime } from "./fetchBusAPI";
 import {eventEmitter} from "./App";
+import {LoaderComponent} from "./SmallComponents";
 
 
 export default function ETADisplay(props) {
 
     const initState = {
-        eta: [['', '', ''], ['', '更新中...', ''], ['', '', '']],
+        eta: [['', '', ''], ['', 'loading', ''], ['', '', '']],
         animation: [[false, false, false], [false, false, false], [false, false, false]]
     }
 
@@ -66,7 +67,7 @@ export default function ETADisplay(props) {
     async function generateETA(route, dir, serv, seq, stop_id, company)  {
         let temp_eta = initState.eta;
         let output = await FetchETA(route, dir, serv, seq, stop_id, company);
-        temp_eta[1][1] = (temp_eta[1][1] === '更新中...') ? '' : temp_eta[1][1];
+        temp_eta[1][1] = (temp_eta[1][1] === 'loading') ? '' : temp_eta[1][1];
         for (let i = 0; i < 3; i++) {
             let record = output[i];
             if (i === 0 && (record === undefined || record.eta === null)) {
@@ -91,22 +92,22 @@ export default function ETADisplay(props) {
         return temp_eta;
     }
 
-    return <>
-        <div>
-            <h2 className={`flash-animation ${state.animation[0][0] ? "show" : ""}`}>{state.eta[0][0] || `\u00A0`}</h2>
-            <h3 className={`flash-animation ${state.animation[0][1] ? "show" : ""}`}>{state.eta[0][1] || `\u00A0`}</h3>
-            <p className={`rmk flash-animation ${state.animation[0][2] ? "show" : ""}`}>{state.eta[0][2] || `\u00A0`}</p>
-        </div>
-        <div>
-            <h2 className={`flash-animation ${state.animation[1][0] ? "show" : ""}`}>{state.eta[1][0] || `\u00A0`}</h2>
-            <h3 className={`flash-animation ${state.animation[1][1] ? "show" : ""}`}>{state.eta[1][1] || `\u00A0`}</h3>
-            <p className={`rmk flash-animation ${state.animation[1][2] ? "show" : ""}`}>{state.eta[1][2] || `\u00A0`}</p>
-        </div>
-        <div>
-            <h2 className={`flash-animation ${state.animation[2][0] ? "show" : ""}`}>{state.eta[2][0] || `\u00A0`}</h2>
-            <h3 className={`flash-animation ${state.animation[2][1] ? "show" : ""}`}>{state.eta[2][1] || `\u00A0`}</h3>
-            <p className={`rmk flash-animation ${state.animation[2][2] ? "show" : ""}`}>{state.eta[2][2] || `\u00A0`}</p>
-        </div>
-    </>
+    if (state.eta[1][1] === 'loading') {
+        return <>
+            <div></div>
+            <LoaderComponent />
+            <div></div>
+        </>
+    } else {
+        return <>
+            {state.eta.map((record, index) => <>
+                <div>
+                    <h2 className={`flash-animation ${state.animation[index][0] ? "show" : ""}`}>{record[0] || `\u00A0`}</h2>
+                    <h3 className={`flash-animation ${state.animation[index][1] ? "show" : ""}`}>{record[1] || `\u00A0`}</h3>
+                    <p className={`rmk flash-animation ${state.animation[index][2] ? "show" : ""}`}>{record[2] || `\u00A0`}</p>
+                </div>
+            </>)}
+        </>
+    }
 
 }

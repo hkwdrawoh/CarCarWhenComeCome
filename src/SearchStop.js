@@ -5,6 +5,7 @@ import {FetchRouteStop, FetchStop} from "./fetchBusAPI";
 import ETADisplay from "./ETADisplay";
 import {v4 as uuidv4} from 'uuid';
 import bus_fares_json from "./json/bus_fare.json";
+import {LoaderComponent} from "./SmallComponents";
 
 export default function SearchStop(props) {
 
@@ -103,9 +104,8 @@ export default function SearchStop(props) {
         return <></>
     }
 
-    let list_stop_div;
     if (JSON.stringify(stop_names) !== JSON.stringify([])) {
-        list_stop_div = <>
+        return <>
             {stop_names.map((stop_name, index) => <>
                 <div ref={(selected_id === index) ? null : scrollToRef} className={(selected_id === index) ? "grid-6-fixed " : "list_button grid-6-fixed"} onClick={() => {chooseStop(index)}}>
                     <h2 className={`${props.style}_text`}>#{displayStopNum(index)}</h2>
@@ -119,11 +119,9 @@ export default function SearchStop(props) {
             </>)}
         </>
     } else {
-        list_stop_div = (<h2>載入中...</h2>);
+        return <>
+            <LoaderComponent />
+        </>;
     }
 
-
-    return <>
-        {list_stop_div}
-    </>
 }

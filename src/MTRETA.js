@@ -4,6 +4,7 @@ import mtr_route_json from "./json/mtr_route.json";
 import mtr_station_json from "./json/mtr_station.json";
 import {eventEmitter} from "./App";
 import { GetJSON, compareTime } from "./fetchBusAPI";
+import {LoaderComponent} from "./SmallComponents";
 
 export default function MTRETA (props) {
 
@@ -11,7 +12,7 @@ export default function MTRETA (props) {
     const mtr_stations = mtr_station_json.data.station[props.routeCode[1]];
 
     const api_mtr = "https://rt.data.gov.hk/v1/transport/mtr/getSchedule.php"
-    const [message, setMessage] = useState('載入中...');
+    const [message, setMessage] = useState('loading');
     const [upTime, setUpTime] = useState(null);
     const [dnTime, setDnTime] = useState(null);
 
@@ -23,7 +24,7 @@ export default function MTRETA (props) {
     }, [props, upTime, dnTime]);
 
     useEffect(() => {
-        setMessage('載入中...');
+        setMessage('loading');
         setUpTime(null);
         setDnTime(null);
         if (props.stationCode[0] !== '') {
@@ -101,7 +102,9 @@ export default function MTRETA (props) {
     let messageRender = null;
     let upRender = null;
     let dnRender = null;
-    if (message !== '') {
+    if (message === 'loading') {
+        messageRender = <LoaderComponent />;
+    } else if (message !== '') {
         messageRender = <h2>{message}</h2>;
     } else {
         upRender = etaRender(upTime, "UP");
