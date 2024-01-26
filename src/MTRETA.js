@@ -103,7 +103,7 @@ export default function MTRETA (props) {
     let upRender = null;
     let dnRender = null;
     if (message === 'loading') {
-        messageRender = <LoaderComponent />;
+        messageRender = <><hr /><LoaderComponent /></>;
     } else if (message !== '') {
         messageRender = <h2>{message}</h2>;
     } else {
