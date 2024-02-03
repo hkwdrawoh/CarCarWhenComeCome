@@ -5,6 +5,7 @@ import RouteETAContainer from "./RouteETAContainer";
 import SearchContainer from "./SearchContainer";
 import EventEmitter from 'eventemitter3';
 import MTRContainer from "./MTRContainer";
+import {Button, Grid, Text} from "@chakra-ui/react";
 
 export const eventEmitter = new EventEmitter();
 
@@ -20,18 +21,12 @@ export default function App() {
         }
     }, []);
 
-    const goToSite = (site) => {
-        setPages(site);
-    };
-
-    eventEmitter.on('backToHome', () => {goToSite('main')});
-
     switch (pages) {
         case "OnTai":
             return <>
                 <div className="container">
                     <div className="container_top">
-                        <Header text="安泰邨 幾時有車？" />
+                        <Header text="安泰邨幾時有車？" goPage={setPages} />
                     </div>
                     <div className="container_mid scroll_bar-1">
                         <RouteETAContainer key="1" routeset='OnTai' />
@@ -43,7 +38,7 @@ export default function App() {
             return <>
                 <div className="container">
                     <div className="container_top">
-                        <Header text="108 幾時有車？" />
+                        <Header text="108 幾時有車？" goPage={setPages} />
                     </div>
                     <div className="container_mid scroll_bar-1">
                         <RouteETAContainer key="1" routeset='HomeFrom108' />
@@ -55,7 +50,7 @@ export default function App() {
             return <>
                 <div className="container">
                     <div className="container_top">
-                        <Header text="勵德邨 幾時有車？" />
+                        <Header text="勵德邨幾時有車？" goPage={setPages} />
                     </div>
                     <div className="container_mid scroll_bar-1">
                         <RouteETAContainer key="1" routeset='LaiTakTsuen' />
@@ -67,7 +62,7 @@ export default function App() {
             return <>
                 <div className="container">
                     <div className="container_top">
-                        <Header text="采頤花園 幾時有車？" />
+                        <Header text="采頤花園幾時有車？" goPage={setPages} />
                     </div>
                     <div className="container_mid scroll_bar-1">
                         <RouteETAContainer key="1" routeset='Rhythm' />
@@ -79,7 +74,7 @@ export default function App() {
             return <>
                 <div className="container">
                     <div className="container_top">
-                        <Header text="銅鑼灣 幾時有車？" />
+                        <Header text="銅鑼灣幾時有車？" goPage={setPages} />
                     </div>
                     <div className="container_mid scroll_bar-1">
                         <RouteETAContainer key="1" routeset='CWB' />
@@ -89,11 +84,11 @@ export default function App() {
             </>;
         case "Search":
             return <>
-                <SearchContainer />
+                <SearchContainer goPage={setPages} />
             </>;
         case "MTR":
             return <>
-                <MTRContainer />
+                <MTRContainer goPage={setPages} />
             </>;
         default:
             return <>
@@ -102,20 +97,20 @@ export default function App() {
                         <HomeHeader />
                     </div>
                     <div className="container_mid">
-                        <h2>~ 我喺呢度! ~</h2>
-                        <div className="grid-9-minmax">
-                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("OnTai")}}>安泰邨</button>
-                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("Rhythm")}}>采頤花園</button>
-                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("LaiTakTsuen")}}>勵德邨</button>
-                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("CWB")}}>銅鑼灣</button>
-                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("HomeFrom108")}}>108回家</button>
-                        </div>
+                        <Text fontSize='xl' as='b'>~ 我喺呢度! ~</Text>
+                        <Grid templateColumns="repeat(auto-fit , minmax(9em, 1fr))" gap={2}>
+                            <Button onClick={() => {setPages("OnTai")}}>安泰邨</Button>
+                            <Button onClick={() => {setPages("Rhythm")}}>采頤花園</Button>
+                            <Button onClick={() => {setPages("LaiTakTsuen")}}>勵德邨</Button>
+                            <Button onClick={() => {setPages("CWB")}}>銅鑼灣</Button>
+                            <Button onClick={() => {setPages("HomeFrom108")}}>108回家</Button>
+                        </Grid>
                         <hr/>
-                        <h2>~ 我要揀車! ~</h2>
-                        <div className="grid-9-minmax">
-                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("Search")}}>巴士?</button>
-                            <button className="button_base button_wide button_hover" onClick={() => {goToSite("MTR")}}>港鐵!</button>
-                        </div>
+                        <Text fontSize='xl' as='b'>~ 我要揀車! ~</Text>
+                        <Grid templateColumns="repeat(auto-fit , minmax(9em, 1fr))" gap={2}>
+                            <Button onClick={() => {setPages("Search")}}>巴士?</Button>
+                            <Button onClick={() => {setPages("MTR")}}>港鐵!</Button>
+                        </Grid>
                     </div>
                     <div className="container_bottom"></div>
                 </div>
