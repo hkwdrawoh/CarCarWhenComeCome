@@ -8,7 +8,7 @@ import bus_route_info_json from "./json/bus_route-info.json";
 import {v4 as uuidv4} from 'uuid';
 
 
-export default function SearchContainer() {
+export default function SearchContainer(props) {
 
     // KMB Route List API URL: https://data.etabus.gov.hk/v1/transport/kmb/route
     // KMB Stop List API URL: https://data.etabus.gov.hk/v1/transport/kmb/stop
@@ -187,7 +187,7 @@ export default function SearchContainer() {
         return <>
             <div className="container">
                 <div className="container_top">
-                    <Header text={route_num + " 號巴士幾時有車？"} />
+                    <Header text={route_num + " 號巴士幾時有車？"} goPage={props.goPage} />
                     <div className="grid-6-fixed">
                         <div className={`button_base ${selected_dest[4]}_icon`}>{route_num}</div>
                         <div className={`${selected_dest[4]}_text text_left grid-span4`}>
@@ -208,7 +208,7 @@ export default function SearchContainer() {
         return <>
             <div className="container">
                 <div className="container_top">
-                    <Header text="你搭邊架車車？" />
+                    <Header text="你搭邊架車車？" goPage={props.goPage} />
                     <div className="grid-3-fixed">
                         <button onClick={() => {chooseCompany("jor")}} className={`button_base ${company === "jor" ? "jor_icon" : ""}`}>全部</button>
                         <button onClick={() => {chooseCompany("kmb")}} className={`button_base ${company === "kmb" ? "kmb_icon" : ""}`}>九巴</button>

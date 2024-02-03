@@ -7,7 +7,7 @@ import mtr_station_json from "./json/mtr_station.json";
 import MTRETA from "./MTRETA";
 
 
-export default function MTRContainer() {
+export default function MTRContainer(props) {
 
     const mtr_routes = mtr_route_json.data.route;
     const mtr_stations = mtr_station_json.data.station;
@@ -73,9 +73,9 @@ export default function MTRContainer() {
 
     let headersToRender;
     if (selectedStation[0] === '') {
-        headersToRender = <Header text="你喺邊個地鐵站？" />;
+        headersToRender = <Header text="你喺邊個地鐵站？" goPage={props.goPage} />;
     } else {
-        headersToRender = <Header text={selectedStation[2] + " 幾點有車？"} />;
+        headersToRender = <Header text={selectedStation[2] + " 幾點有車？"} goPage={props.goPage} />;
     }
 
     return (
