@@ -255,14 +255,6 @@ body {
   background-color: var(--BackColor3);
 }
 
-.button_wide {
-  width: 7.5rem;
-}
-
-.button_thin {
-  width: 4rem;
-}
-
 .button_number {
   width: 80%;
   min-width: 3rem;
@@ -326,10 +318,6 @@ body {
   overflow-y: scroll;
   height: 12rem;
   background-color: var(--BackColor1a);
-}
-
-.rmk {
-  color: var(--IconColor2);
 }
 
 .route_area {
