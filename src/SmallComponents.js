@@ -6,7 +6,7 @@ export function LoaderComponent () {
         <div style={{
             margin: "1.65rem 0"
         }}>
-            <SyncLoader color="#e0e0e0" size="10" />
+            <SyncLoader color="#e0e0e0" size="10px" />
         </div>
     )
 }
