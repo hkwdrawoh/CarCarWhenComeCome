@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import ETADisplay from "./ETADisplay";
 import { FetchRoute, FetchRouteStop, FetchStop } from "./fetchBusAPI";
+import {Grid} from "@chakra-ui/react";
 
 export default function RouteETA(props) {
 
@@ -67,8 +68,10 @@ export default function RouteETA(props) {
                 <h3>往：{terminal}</h3>
                 <p>{station}</p>
             </div>
-            <div className='grid-span6 grid-3-fixed'>
-                <ETADisplay route={props.route} route_num={route_num} stop_id={stop_id} joint={null}/>
+            <div className='grid-span6'>
+                <Grid templateColumns='repeat(3, 1fr)' gap={6}>
+                    <ETADisplay route={props.route} route_num={route_num} stop_id={stop_id} joint={null}/>
+                </Grid>
             </div>
         </div>
         <div>
