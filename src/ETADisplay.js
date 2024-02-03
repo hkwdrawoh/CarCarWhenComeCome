@@ -32,11 +32,11 @@ export default function ETADisplay(props) {
             let temp_ani = initState.animation;
             let temp_eta;
             let data = await generateETA(props.route_num, props.route.direction, props.route.service_type, props.route.seq, props.stop_id, props.route.company);
-            temp_eta = JSON.parse(JSON.stringify(data));
+            temp_eta = structuredClone(data);
             if (props.joint !== null && props.joint !== undefined) {
                 let temp_eta2;
                 let data = await generateETA(props.joint.route, props.joint.direction, props.joint.service_type, props.joint.seq, props.joint.stop_id, props.joint.company);
-                temp_eta2 = JSON.parse(JSON.stringify(data));
+                temp_eta2 = structuredClone(data);
                 for (let i = 0; i < 3; i++) {
                     if (props.route.company === "kmb") {
                         temp_eta[i][2] = (temp_eta[i][2] === "") ? "九巴" : "九巴，" + temp_eta[i][2];
