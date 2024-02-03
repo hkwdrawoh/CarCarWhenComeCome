@@ -104,10 +104,6 @@ export default function SearchContainer(props) {
         }
     }
 
-    const resetSelectedDest = () => {
-        setSelectedDest([]);
-    }
-
     const selectDest = (dir, dest, bound, company, style) => {
         // Find Route ID
         let results = bus_route_ids.filter((a) => (a.company.includes(company.toUpperCase()) || a.company.includes("LWB")) && String(a.route) === route_num);
@@ -191,7 +187,7 @@ export default function SearchContainer(props) {
                 <div className="container_top">
                     <Header text={route_num + " 號巴士幾時有車？"} goPage={props.goPage} />
                     <HStack spacing={2} w="100%">
-                        <Button size='xxxl' variant='ghost' colorScheme='white' onClick={resetSelectedDest}><ChevronLeftIcon /></Button>
+                        <Button size='xxxl' variant='ghost' colorScheme='white' onClick={() => setSelectedDest([])}><ChevronLeftIcon /></Button>
                         <div className={`button_base ${selected_dest[4]}_icon`} style={{margin: 0}}>{route_num}</div>
                         <div className={`${selected_dest[4]}_text text_left grid-span4`}>
                             <h2>往: {selected_dest[1]}</h2>
