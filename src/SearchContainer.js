@@ -6,8 +6,8 @@ import ctb_route_json from "./json/ctb_route.json"
 import special_route_json from "./json/special_route.json"
 import bus_route_info_json from "./json/bus_route-info.json";
 import {v4 as uuidv4} from 'uuid';
-import {Button, HStack} from "@chakra-ui/react";
-import {ChevronLeftIcon} from "@chakra-ui/icons";
+import {Button, Center, HStack, Text} from "@chakra-ui/react";
+import {ChevronLeftIcon, ChevronRightIcon} from "@chakra-ui/icons";
 
 
 export default function SearchContainer(props) {
@@ -137,14 +137,14 @@ export default function SearchContainer(props) {
                 <div className="grid-6-fixed list_button"  onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style)}}>
                     <div className={`button_base ${style}_icon`}>{route_num}</div>
                     <div className={`text_left grid-span4 ${style}_text`}><h2>往: {dir.dest_tc}</h2></div>
-                    <h2>→</h2>
+                    <Center><ChevronRightIcon boxSize={10} /></Center>
                 </div>
             </>));
             dir_special_div1 = direction_special.filter((item) => item.co === undefined).map((dir) => (<>
                 <div className="grid-6-fixed list_button"  onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style)}}>
                     <div className={`button_base ${style}_icon`}>{route_num}</div>
                     <div className={`text_left grid-span4 ${style}_text`}><h2>往: {dir.dest_tc}</h2><h3>(特別班次)</h3></div>
-                    <h2>→</h2>
+                    <Center><ChevronRightIcon boxSize={10} /></Center>
                 </div>
             </>))
         }
@@ -161,14 +161,14 @@ export default function SearchContainer(props) {
                 <div className="grid-6-fixed list_button"  onClick={() => {selectDest(dir, dir.dest_tc, "O", "ctb", style)}}>
                     <div className={`button_base ${style}_icon`}>{route_num}</div>
                     <div className={`text_left grid-span4 ${style}_text`}><h2>往: {dir.dest_tc}</h2></div>
-                    <h2>→</h2>
+                    <Center><ChevronRightIcon boxSize={10} /></Center>
                 </div>
             </>));
             dir_special_div2 = direction_special.filter((item) => item.co !== undefined).map((dir) => (<>
                 <div className='grid-6-fixed list_button' onClick={() => {selectDest(dir, dir.orig_tc, "I", "ctb", style)}}>
                     <div className={`button_base ${style}_icon`}>{route_num}</div>
                     <div className={`text_left grid-span4 ${style}_text`}><h2>往: {dir.orig_tc}</h2></div>
-                    <h2>→</h2>
+                    <Center><ChevronRightIcon boxSize={10} /></Center>
                 </div>
             </>));
         }
@@ -214,7 +214,7 @@ export default function SearchContainer(props) {
                     </div>
                     <div className="grid-6-fixed">
                         <h2 className="text_right grid-span2">路線：</h2>
-                        <div className="button_base route_area grid-span4"><p>{route_num || `\u00A0`}</p></div>
+                        <div className="button_base route_area grid-span4"><Text fontSize='xl'>{route_num || `\u00A0`}</Text></div>
                     </div>
                     <hr />
                 </div>
