@@ -6,7 +6,7 @@ import {eventEmitter} from "./App";
 import { GetJSON, compareTime } from "./fetchBusAPI";
 import {LoaderComponent} from "./SmallComponents";
 import {Center} from "@chakra-ui/react";
-import {ArrowBackIcon} from "@chakra-ui/icons";
+import {ArrowBackIcon, ArrowForwardIcon} from "@chakra-ui/icons";
 
 export default function MTRETA (props) {
 
@@ -70,7 +70,7 @@ export default function MTRETA (props) {
                 <div className="grid-5-fixed">
                     <Center>{(dir === "UP") ? <ArrowBackIcon boxSize={7} /> : null}</Center>
                     <h2 className="eta grid-span3">{((dir === "UP") ? mtr_routes.from : mtr_routes.to).replace("\n", " / ")} 方向</h2>
-                    <h2>{(dir === "DN") ? "→" : ""}</h2>
+                    <Center>{(dir === "DN") ? <ArrowForwardIcon boxSize={7} /> : null}</Center>
                 </div>
                 <h2 className="eta">暫無預定班次</h2>
             </>;
@@ -81,7 +81,7 @@ export default function MTRETA (props) {
                 <div className="grid-5-fixed">
                     <Center>{(dir === "UP") ? <ArrowBackIcon boxSize={7} /> : null}</Center>
                     <h2 className="eta grid-span3">{((dir === "UP") ? mtr_routes.from : mtr_routes.to).replace("\n", " / ")} 方向</h2>
-                    <h2>{(dir === "DN") ? "→" : ""}</h2>
+                    <Center>{(dir === "DN") ? <ArrowForwardIcon boxSize={7} /> : null}</Center>
                 </div>
                 {records.map((record) => (
                     <div className="grid-5-fixed">
