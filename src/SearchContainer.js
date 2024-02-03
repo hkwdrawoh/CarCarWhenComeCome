@@ -6,6 +6,8 @@ import ctb_route_json from "./json/ctb_route.json"
 import special_route_json from "./json/special_route.json"
 import bus_route_info_json from "./json/bus_route-info.json";
 import {v4 as uuidv4} from 'uuid';
+import {Button, HStack} from "@chakra-ui/react";
+import {ChevronLeftIcon} from "@chakra-ui/icons";
 
 
 export default function SearchContainer(props) {
@@ -188,14 +190,14 @@ export default function SearchContainer(props) {
             <div className="container">
                 <div className="container_top">
                     <Header text={route_num + " 號巴士幾時有車？"} goPage={props.goPage} />
-                    <div className="grid-6-fixed">
-                        <div className={`button_base ${selected_dest[4]}_icon`}>{route_num}</div>
+                    <HStack spacing={2} w="100%">
+                        <Button size='xxxl' variant='ghost' colorScheme='white' onClick={resetSelectedDest}><ChevronLeftIcon /></Button>
+                        <div className={`button_base ${selected_dest[4]}_icon`} style={{margin: 0}}>{route_num}</div>
                         <div className={`${selected_dest[4]}_text text_left grid-span4`}>
                             <h2>往: {selected_dest[1]}</h2>
                             <p>{selected_dest[6] ? `總行車時間：${selected_dest[6]} 分鐘` : ""}</p>
                         </div>
-                        <button className='button_base button_hover' onClick={resetSelectedDest}>重選</button>
-                    </div>
+                    </HStack>
                     <hr />
                 </div>
                 <div className="container_mid">

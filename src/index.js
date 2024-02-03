@@ -25,6 +25,11 @@ const Button = defineStyleConfig({
             px: 4,
             py: 2,
         },
+        xxxl: {
+            fontSize: '4xl',
+            px: 2,
+            py: 2,
+        },
     },
     variants: {
         outline: {
