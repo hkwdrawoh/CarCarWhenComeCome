@@ -1,10 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import "./mtr.css";
 import Header from "./Header";
 import {MTRLines, MTRStations} from "./MTRShapes";
 import mtr_route_json from "./json/mtr_route.json";
 import mtr_station_json from "./json/mtr_station.json";
 import MTRETA from "./MTRETA";
+import {Button, HStack} from "@chakra-ui/react";
+import {ChevronLeftIcon} from "@chakra-ui/icons";
 
 
 export default function MTRContainer(props) {
@@ -52,11 +54,11 @@ export default function MTRContainer(props) {
         </>
     } else {
         componentsToRender = <>
-            <div className="grid-3-fixed">
-                <h2 className={`button_base color_${selectedRoute[0]}`}>{mtr_routes[selectedRoute[1]].name}</h2>
-                <h1>{mtr_stations[selectedRoute[1]][selectedStation[1] - 1].name}</h1>
-                <button className='button_base button_hover' onClick={() => setSelectedStation(['', -1, ''])}>返回</button>
-            </div>
+            <HStack spacing={2} w="100%">
+                <Button size='xxxl' variant='ghost' colorScheme='white' onClick={() => setSelectedStation(['', -1, ''])}><ChevronLeftIcon /></Button>
+                <h1 style={{margin: "auto"}}>{mtr_stations[selectedRoute[1]][selectedStation[1] - 1].name}</h1>
+                <h2 className={`button_base color_${selectedRoute[0]}`} style={{margin: 0}}>{mtr_routes[selectedRoute[1]].name}</h2>
+            </HStack>
 
             <div className="scroll_x scroll_bar-1">
                 <div className="grid-6-minmax grid-column">

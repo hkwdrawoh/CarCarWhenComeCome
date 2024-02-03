@@ -173,7 +173,6 @@ function RouteLine (props) {
 export const MTRLines = (props) => {
     return (
         <div className="grid-5-fixed">
-            <h2 className={`button_base color_${props.lineColor}`}>{props.lineName}</h2>
             <h3 className="text_right">{props.from.split('\n').map((text, i) => (<Fragment key={i}>{text}<br /></Fragment>))}</h3>
             <svg className="svg_narrow grid-span2">
                 <rect className={`line_complete color_${props.lineColor}`} />
@@ -181,6 +180,7 @@ export const MTRLines = (props) => {
                 svgToRender = <circle className="station_icon line-end" />;
             </svg>
             <h3 className="text_left">{props.to.split('\n').map((text, i) => (<Fragment key={i}>{text}<br /></Fragment>))}</h3>
+            <h2 className={`button_base color_${props.lineColor}`}>{props.lineName}</h2>
         </div>
     )
 }
