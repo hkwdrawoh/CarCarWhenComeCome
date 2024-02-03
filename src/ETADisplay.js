@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FetchETA, compareTime } from "./fetchBusAPI";
 import {eventEmitter} from "./App";
 import {LoaderComponent} from "./SmallComponents";
+import {GridItem, Text, VStack} from "@chakra-ui/react";
 
 
 export default function ETADisplay(props) {
@@ -94,18 +95,30 @@ export default function ETADisplay(props) {
 
     if (state.eta[1][1] === 'loading') {
         return <>
-            <div></div>
-            <LoaderComponent />
-            <div></div>
+            <GridItem colSpan={3}>
+                <LoaderComponent/>
+            </GridItem>
+        </>
+    } else if (state.eta[0][1] === '未來1個鐘都冇車') {
+        return <>
+            <GridItem colSpan={3}>
+                <VStack spacing={0}>
+                    <Text fontSize='xl' as='b'>{`\u00A0`}</Text>
+                    <Text fontSize='lg' as='b' className={`flash-animation ${state.animation[1][1] ? "show" : ""}`}>{state.eta[0][1]}</Text>
+                    <Text>{`\u00A0`}</Text>
+                </VStack>
+            </GridItem>
         </>
     } else {
         return <>
             {state.eta.map((record, index) => <>
-                <div>
-                    <h2 className={`flash-animation ${state.animation[index][0] ? "show" : ""}`}>{record[0] || `\u00A0`}</h2>
-                    <h3 className={`flash-animation ${state.animation[index][1] ? "show" : ""}`}>{record[1] || `\u00A0`}</h3>
-                    <p className={`rmk flash-animation ${state.animation[index][2] ? "show" : ""}`}>{record[2] || `\u00A0`}</p>
-                </div>
+                <GridItem>
+                    <VStack spacing={0}>
+                        <Text fontSize='xl' as='b' className={`flash-animation ${state.animation[index][0] ? "show" : ""}`}>{record[0] || `\u00A0`}</Text>
+                        <Text fontSize='lg' as='b' className={`flash-animation ${state.animation[index][1] ? "show" : ""}`}>{record[1] || `\u00A0`}</Text>
+                        <Text color='cyan.600' className={`flash-animation ${state.animation[index][2] ? "show" : ""}`}>{record[2] || `\u00A0`}</Text>
+                    </VStack>
+                </GridItem>
             </>)}
         </>
     }
