@@ -115,7 +115,7 @@ export default function SearchStop(props) {
                         <h2>{stop_name}</h2>
                         <p>{(fares[index] !== 0 && props.company === "kmb" && props.dir.service_type === "1") ? `車費：$${fares[index].toFixed(1)}` : ""}</p>
                     </div>
-                    {(selected_id === index) ? <Center><ChevronUpIcon boxSize={7} /></Center> : <Center><ChevronDownIcon boxSize={7} /></Center>}
+                    <Center>{(selected_id === index) ? <ChevronUpIcon boxSize={7} /> : <ChevronDownIcon boxSize={7} />}</Center>
                 </div>
                 <ShowStopETA id={index} />
             </>)}
