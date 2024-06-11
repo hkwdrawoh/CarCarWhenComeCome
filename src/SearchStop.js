@@ -6,8 +6,9 @@ import ETADisplay from "./ETADisplay";
 import {v4 as uuidv4} from 'uuid';
 import bus_fares_json from "./json/bus_fare.json";
 import {LoaderComponent} from "./SmallComponents";
-import {Center} from "@chakra-ui/react";
+import {Button, HStack, Icon} from "@chakra-ui/react";
 import {ChevronDownIcon, ChevronUpIcon} from "@chakra-ui/icons";
+import {MdBookmarkBorder} from "react-icons/md";
 
 export default function SearchStop(props) {
 
@@ -115,7 +116,10 @@ export default function SearchStop(props) {
                         <h2>{stop_name}</h2>
                         <p>{(fares[index] !== 0 && props.company === "kmb" && props.dir.service_type === "1") ? `車費：$${fares[index].toFixed(1)}` : ""}</p>
                     </div>
-                    <Center>{(selected_id === index) ? <ChevronUpIcon boxSize={7} /> : <ChevronDownIcon boxSize={7} />}</Center>
+                    <HStack>
+                        <Button size='xl' height={10} width={10} variant='ghost' colorScheme='white' zIndex={5} onClick={() => props.pinRoute(index+1, joint)}><Icon as={MdBookmarkBorder} /></Button>
+                        {(selected_id === index) ? <ChevronUpIcon boxSize={7} /> : <ChevronDownIcon boxSize={7} />}
+                    </HStack>
                 </div>
                 <ShowStopETA id={index} />
             </>)}

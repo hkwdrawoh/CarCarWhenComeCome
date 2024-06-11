@@ -6,8 +6,10 @@ import ctb_route_json from "./json/ctb_route.json"
 import special_route_json from "./json/special_route.json"
 import bus_route_info_json from "./json/bus_route-info.json";
 import {v4 as uuidv4} from 'uuid';
-import {Button, Center, HStack, Text} from "@chakra-ui/react";
+import {Button, Center, HStack, Icon, Text} from "@chakra-ui/react";
 import {ChevronLeftIcon, ChevronRightIcon} from "@chakra-ui/icons";
+import {MdBookmark} from "react-icons/md";
+import RouteETA from "./RouteETA";
 
 
 export default function SearchContainer(props) {
@@ -31,6 +33,16 @@ export default function SearchContainer(props) {
     const [direction, setDirection] = useState([]);
     const [direction_special, setDirectionSpecial] = useState([]);
     const [selected_dest, setSelectedDest] = useState([]);
+    const [pinned_route, setPinnedRoute] = useState({
+        "id": "-2",
+        "route": "",
+        "direction": "",
+        "service_type": 0,
+        "seq": 0,
+        "company": "",
+        "style": 0,
+        "joint": null
+    });
 
     useEffect(() => {
         updateAvail("").then();
@@ -128,7 +140,8 @@ export default function SearchContainer(props) {
             let style;
             if (route_num.at(0) === "A" || route_num.at(0) === "E" || route_num.at(0) === "S" || route_num.slice(0, 2) === "NA") {
                 style = 'lwb';
-            } else if (joint_routes.includes(route_num)) {
+            }
+            if (joint_routes.includes(route_num)) {
                 style = 'jor';
             } else {
                 style = 'kmb';
@@ -152,7 +165,8 @@ export default function SearchContainer(props) {
             let style;
             if (route_num.at(0) === "A" || route_num.slice(0, 2) === "NA") {
                 style = 'cty';
-            } else if (joint_routes.includes(route_num)) {
+            }
+            if (joint_routes.includes(route_num)) {
                 style = 'jor';
             } else {
                 style = 'ctb';
@@ -179,6 +193,38 @@ export default function SearchContainer(props) {
             {dir_special_div2}
         </>
     }
+    const pinRoute = (seq, joint) => {
+        const routes = structuredClone(selected_dest);
+        const service_type = routes[0].service_type || 1;
+
+        const pinning_route = {
+            "id": routes[3] + routes[0].route + seq,
+            "route": routes[0].route,
+            "direction": routes[2],
+            "service_type": service_type,
+            "seq": seq,
+            "company": routes[3],
+            "style": ["kmb", "ctb", "gmb", "cty", "lwb", "jor"].indexOf(routes[4]) + 1,
+            "joint": joint
+        };
+
+        console.log(pinning_route);
+
+        setPinnedRoute(pinning_route);
+    }
+
+    const unpinRoute = () => {
+        setPinnedRoute({
+            "id": "-1",
+            "route": "",
+            "direction": "",
+            "service_type": 0,
+            "seq": 0,
+            "company": "",
+            "style": 0,
+            "joint": null
+        })
+    }
 
 
     if (JSON.stringify(selected_dest) !== JSON.stringify([])) {
@@ -186,6 +232,13 @@ export default function SearchContainer(props) {
             <div className="container">
                 <div className="container_top">
                     <Header text={route_num + " 號巴士幾時有車？"} goPage={props.goPage} />
+                    {pinned_route.route !== "" ? <>
+                        <HStack spacing={0} w="100%">
+                            <Button size='xl' height="60%" variant='ghost' colorScheme='white' onClick={unpinRoute}><Icon as={MdBookmark} /></Button>
+                            <RouteETA key={pinned_route.id} route={pinned_route} />
+                        </HStack>
+                        <hr />
+                    </> : <></>}
                     <HStack spacing={2} w="100%">
                         <Button size='xxxl' variant='ghost' colorScheme='white' onClick={() => setSelectedDest([])}><ChevronLeftIcon /></Button>
                         <div className={`button_base ${selected_dest[4]}_icon`} style={{margin: 0}}>{route_num}</div>
@@ -197,7 +250,7 @@ export default function SearchContainer(props) {
                     <hr />
                 </div>
                 <div className="container_mid">
-                    <SearchStop key={uuidv4()} dir={selected_dest[0]} dest={selected_dest[1]} bound={selected_dest[2]} company={selected_dest[3]} style={selected_dest[4]} route_id={selected_dest[5]}/>
+                    <SearchStop key={uuidv4()} dir={selected_dest[0]} dest={selected_dest[1]} bound={selected_dest[2]} company={selected_dest[3]} style={selected_dest[4]} route_id={selected_dest[5]} pinRoute={pinRoute}/>
                 </div>
                 <div className="container_bottom"></div>
             </div>
@@ -207,6 +260,13 @@ export default function SearchContainer(props) {
             <div className="container">
                 <div className="container_top">
                     <Header text="你搭邊架車車？" goPage={props.goPage} />
+                    {pinned_route.route !== "" ? <>
+                        <HStack spacing={0} w="100%">
+                            <Button size='xl' height="60%" variant='ghost' colorScheme='white' onClick={unpinRoute}><Icon as={MdBookmark} /></Button>
+                            <RouteETA key={pinned_route.id} route={pinned_route} />
+                        </HStack>
+                        <hr />
+                    </> : <></>}
                     <div className="grid-3-fixed">
                         <button onClick={() => {chooseCompany("jor")}} className={`button_base ${company === "jor" ? "jor_icon" : ""}`}>全部</button>
                         <button onClick={() => {chooseCompany("kmb")}} className={`button_base ${company === "kmb" ? "kmb_icon" : ""}`}>九巴</button>

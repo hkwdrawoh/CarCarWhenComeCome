@@ -28,6 +28,9 @@ export default function RouteETA(props) {
             case 5:
                 setClasses('lwb');
                 break;
+            case 6:
+                setClasses('jor');
+                break;
             default:
                 setClasses('kmb');
                 break;
@@ -70,7 +73,7 @@ export default function RouteETA(props) {
             </div>
             <div className='grid-span6'>
                 <Grid templateColumns='repeat(3, 1fr)' gap={6}>
-                    <ETADisplay route={props.route} route_num={route_num} stop_id={stop_id} joint={null}/>
+                    <ETADisplay route={props.route} route_num={route_num} stop_id={stop_id} joint={props.route.joint || null}/>
                 </Grid>
             </div>
         </div>
