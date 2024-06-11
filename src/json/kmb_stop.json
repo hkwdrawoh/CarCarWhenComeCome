@@ -1,7 +1,7 @@
 {
   "type": "StopList",
   "version": "1.0",
-  "generated_timestamp": "2024-01-22T18:31:45+08:00",
+  "generated_timestamp": "2024-06-02T15:02:27+08:00",
   "data": [
     {
       "stop": "18492910339410B1",
@@ -476,12 +476,12 @@
       "long": "114.214468"
     },
     {
-      "stop": "CC811B604DD883AE",
+      "stop": "C2AA10A9751D3692",
       "name_en": "TELFORD GARDENS",
       "name_tc": "德福花園",
       "name_sc": "德福花园",
-      "lat": "22.322088",
-      "long": "114.214272"
+      "lat": "22.322128",
+      "long": "114.214269"
     },
     {
       "stop": "8570495BD7C63C02",
@@ -1069,17 +1069,17 @@
     },
     {
       "stop": "D355B700FF30B3D7",
-      "name_en": "HING WAH STREET CHEUNG SHA WAN",
-      "name_tc": "長沙灣興華街",
-      "name_sc": "长沙湾兴华街",
+      "name_en": "HING WAH STREET CHEUNG SHA WAN (X28)",
+      "name_tc": "長沙灣興華街 (X28)",
+      "name_sc": "长沙湾兴华街 (X28)",
       "lat": "22.337744",
       "long": "114.152954"
     },
     {
       "stop": "6762DEA1B89E6354",
-      "name_en": "CHEUNG LAI STREET CHEUNG SHA WAN",
-      "name_tc": "長沙灣長荔街",
-      "name_sc": "长沙湾长荔街",
+      "name_en": "CHEUNG LAI STREET CHEUNG SHA WAN (X45)",
+      "name_tc": "長沙灣長荔街 (X45)",
+      "name_sc": "长沙湾长荔街 (X45)",
       "lat": "22.336786",
       "long": "114.147023"
     },
@@ -1389,17 +1389,17 @@
     },
     {
       "stop": "0CE37125BC509E5D",
-      "name_en": "CHEUNG SHA WAN PATH",
-      "name_tc": "長沙灣徑",
-      "name_sc": "长沙湾径",
+      "name_en": "CHEUNG SHA WAN PATH (X31)",
+      "name_tc": "長沙灣徑 (X31)",
+      "name_sc": "长沙湾径 (X31)",
       "lat": "22.338203",
       "long": "114.151281"
     },
     {
       "stop": "B6ECF261EB79418C",
-      "name_en": "CHEUNG LAI STREET CHEUNG SHA WAN",
-      "name_tc": "長沙灣長荔街",
-      "name_sc": "长沙湾长荔街",
+      "name_en": "CHEUNG LAI STREET CHEUNG SHA WAN (X46)",
+      "name_tc": "長沙灣長荔街 (X46)",
+      "name_sc": "长沙湾长荔街 (X46)",
       "lat": "22.336684",
       "long": "114.146749"
     },
@@ -2261,9 +2261,9 @@
     },
     {
       "stop": "62A1C8EFAC876BDB",
-      "name_en": "WONG TAI SIN BBI - SHATIN PASS ROAD (D2)",
-      "name_tc": "黃大仙轉車站 - 沙田坳道 (D2)",
-      "name_sc": "黄大仙转车站 - 沙田坳道 (D2)",
+      "name_en": "WONG TAI SIN BBI - WONG TAI SIN TEMPLE (D2)",
+      "name_tc": "黃大仙轉車站 - 黃大仙廟 (D2)",
+      "name_sc": "黄大仙转车站 - 黄大仙庙 (D2)",
       "lat": "22.341470",
       "long": "114.195370"
     },
@@ -2373,9 +2373,9 @@
     },
     {
       "stop": "812E72C257C94B73",
-      "name_en": "PEI HO STREET SHAM SHUI PO",
-      "name_tc": "深水埗北河街",
-      "name_sc": "深水埗北河街",
+      "name_en": "PEI HO STREET SHAM SHUI PO (Y27)",
+      "name_tc": "深水埗北河街 (Y27)",
+      "name_sc": "深水埗北河街 (Y27)",
       "lat": "22.330678",
       "long": "114.162566"
     },
@@ -2389,9 +2389,9 @@
     },
     {
       "stop": "B27236FC63F891D9",
-      "name_en": "WONG TAI SIN BBI - WONG TAI SIN STATION (B3)",
-      "name_tc": "黃大仙轉車站 - 黃大仙站 (B3)",
-      "name_sc": "黄大仙转车站 - 黄大仙站 (B3)",
+      "name_en": "WONG TAI SIN BBI - WONG TAI SIN TEMPLE (B3)",
+      "name_tc": "黃大仙轉車站 - 黃大仙廟 (B3)",
+      "name_sc": "黄大仙转车站 - 黄大仙庙 (B3)",
       "lat": "22.341855",
       "long": "114.192263"
     },
@@ -2613,9 +2613,9 @@
     },
     {
       "stop": "098AF67CBBB9FBA9",
-      "name_en": "YEE KOK COURT",
-      "name_tc": "怡閣苑",
-      "name_sc": "怡阁苑",
+      "name_en": "YEE KOK COURT (X18)",
+      "name_tc": "怡閣苑 (X18)",
+      "name_sc": "怡阁苑 (X18)",
       "lat": "22.333466",
       "long": "114.158514"
     },
@@ -3300,12 +3300,12 @@
       "long": "114.221502"
     },
     {
-      "stop": "C2AA10A9751D3692",
+      "stop": "CC811B604DD883AE",
       "name_en": "TELFORD GARDENS",
       "name_tc": "德福花園",
       "name_sc": "德福花园",
-      "lat": "22.322128",
-      "long": "114.214269"
+      "lat": "22.322088",
+      "long": "114.214272"
     },
     {
       "stop": "5E1B227D9FAC4267",
@@ -4477,9 +4477,9 @@
     },
     {
       "stop": "A1AA846971415968",
-      "name_en": "CHEUNG SHA WAN PATH",
-      "name_tc": "長沙灣徑",
-      "name_sc": "长沙湾径",
+      "name_en": "CHEUNG SHA WAN PATH (X33)",
+      "name_tc": "長沙灣徑 (X33)",
+      "name_sc": "长沙湾径 (X33)",
       "lat": "22.338091",
       "long": "114.150935"
     },
@@ -4925,17 +4925,17 @@
     },
     {
       "stop": "C13E41666B5A1394",
-      "name_en": "PEI HO STREET SHAM SHUI PO",
-      "name_tc": "深水埗北河街",
-      "name_sc": "深水埗北河街",
+      "name_en": "PEI HO STREET SHAM SHUI PO (X6)",
+      "name_tc": "深水埗北河街 (X6)",
+      "name_sc": "深水埗北河街 (X6)",
       "lat": "22.330543",
       "long": "114.162338"
     },
     {
       "stop": "C6E9CA12DCD8F695",
-      "name_en": "YEE CHING COURT",
-      "name_tc": "怡靖苑",
-      "name_sc": "怡靖苑",
+      "name_en": "YEE CHING COURT (X13)",
+      "name_tc": "怡靖苑 (X13)",
+      "name_sc": "怡靖苑 (X13)",
       "lat": "22.332425",
       "long": "114.159871"
     },
@@ -5333,17 +5333,17 @@
     },
     {
       "stop": "C3FD63E226246052",
-      "name_en": "PEI HO STREET SHAM SHUI PO",
-      "name_tc": "深水埗北河街",
-      "name_sc": "深水埗北河街",
+      "name_en": "PEI HO STREET SHAM SHUI PO (X8)",
+      "name_tc": "深水埗北河街 (X8)",
+      "name_sc": "深水埗北河街 (X8)",
       "lat": "22.330756",
       "long": "114.162065"
     },
     {
       "stop": "04FC6E130D4953F4",
-      "name_en": "CHEUNG SHA WAN PLAYGROUND",
-      "name_tc": "長沙灣遊樂場",
-      "name_sc": "长沙湾游乐场",
+      "name_en": "CHEUNG SHA WAN PLAYGROUND (X26)",
+      "name_tc": "長沙灣遊樂場 (X26)",
+      "name_sc": "长沙湾游乐场 (X26)",
       "lat": "22.335618",
       "long": "114.155787"
     },
@@ -5922,6 +5922,14 @@
       "name_sc": "佐敦上海街",
       "lat": "22.305631",
       "long": "114.169025"
+    },
+    {
+      "stop": "2E9166ECCD0DB0E5",
+      "name_en": "YMCA",
+      "name_tc": "青年會",
+      "name_sc": "青年会",
+      "lat": "22.313550",
+      "long": "114.171580"
     },
     {
       "stop": "051C24F9614CEDC2",
@@ -6517,9 +6525,9 @@
     },
     {
       "stop": "9FD865B00B2D54A1",
-      "name_en": "WONG TAI SIN BBI-WONG TAI SIN STATION (B5)",
-      "name_tc": "黃大仙轉車站-黃大仙站 (B5)",
-      "name_sc": "黄大仙转车站-黄大仙站 (B5)",
+      "name_en": "WONG TAI SIN BBI - WONG TAI SIN TEMPLE (B5)",
+      "name_tc": "黃大仙轉車站 - 黃大仙廟 (B5)",
+      "name_sc": "黄大仙转车站 - 黄大仙庙 (B5)",
       "lat": "22.341855",
       "long": "114.192100"
     },
@@ -6658,6 +6666,14 @@
       "name_sc": "牛头角下邨",
       "lat": "22.319024",
       "long": "114.214661"
+    },
+    {
+      "stop": "1A38F9517732098F",
+      "name_en": "TELFORD GARDENS",
+      "name_tc": "德福花園",
+      "name_sc": "德福花园",
+      "lat": "22.322088",
+      "long": "114.214272"
     },
     {
       "stop": "6FB456AE4E4CFFD4",
@@ -8352,8 +8368,8 @@
       "name_en": "KAI TAK TUNNEL BBI - KITEC (K1)",
       "name_tc": "啟隧轉車站-九龍灣國際展貿(K1)",
       "name_sc": "启隧转车站-九龙湾国际展贸(K1)",
-      "lat": "22.322812",
-      "long": "114.203806"
+      "lat": "22.322242",
+      "long": "114.204425"
     },
     {
       "stop": "07521BB848913F74",
@@ -9384,8 +9400,8 @@
       "name_en": "LEE FOO HOUSE",
       "name_tc": "利富樓",
       "name_sc": "利富楼",
-      "lat": "22.329869",
-      "long": "114.227131"
+      "lat": "22.330110",
+      "long": "114.227270"
     },
     {
       "stop": "756141FB7A6EA349",
@@ -9965,41 +9981,41 @@
     },
     {
       "stop": "8EAD803DDD2C3BBA",
-      "name_en": "KWONG CHEUNG STREET CHEUNG SHA WAN",
-      "name_tc": "長沙灣光昌街",
-      "name_sc": "长沙湾光昌街",
+      "name_en": "KWONG CHEUNG STREET CHEUNG SHA WAN (Y5)",
+      "name_tc": "長沙灣光昌街 (Y5)",
+      "name_sc": "长沙湾光昌街 (Y5)",
       "lat": "22.338442",
       "long": "114.151193"
     },
     {
       "stop": "DAE9E14BA67CEC80",
-      "name_en": "HING WAH STREET CHEUNG SHA WAN",
-      "name_tc": "長沙灣興華街",
-      "name_sc": "长沙湾兴华街",
+      "name_en": "HING WAH STREET CHEUNG SHA WAN (Y11)",
+      "name_tc": "長沙灣興華街 (Y11)",
+      "name_sc": "长沙湾兴华街 (Y11)",
       "lat": "22.337851",
       "long": "114.153289"
     },
     {
       "stop": "3A5C336CCB38A3FA",
-      "name_en": "UN CHAU ESTATE",
-      "name_tc": "元州邨",
-      "name_sc": "元州邨",
+      "name_en": "UN CHAU ESTATE (Y15)",
+      "name_tc": "元州邨 (Y15)",
+      "name_sc": "元州邨 (Y15)",
       "lat": "22.335758",
       "long": "114.155971"
     },
     {
       "stop": "7BA304A9D0662541",
-      "name_en": "KIU KIANG STREET SHAM SHUI PO",
-      "name_tc": "深水埗九江街",
-      "name_sc": "深水埗九江街",
+      "name_en": "KIU KIANG STREET SHAM SHUI PO (Y19)",
+      "name_tc": "深水埗九江街 (Y19)",
+      "name_sc": "深水埗九江街 (Y19)",
       "lat": "22.332873",
       "long": "114.159755"
     },
     {
       "stop": "943DA171019723CE",
-      "name_en": "PEI HO STREET SHAM SHUI PO",
-      "name_tc": "深水埗北河街",
-      "name_sc": "深水埗北河街",
+      "name_en": "PEI HO STREET SHAM SHUI PO (Y26)",
+      "name_tc": "深水埗北河街 (Y26)",
+      "name_sc": "深水埗北河街 (Y26)",
       "lat": "22.330642",
       "long": "114.162617"
     },
@@ -10037,25 +10053,25 @@
     },
     {
       "stop": "E9F3DC5D89154BB7",
-      "name_en": "PEI HO STREET SHAM SHUI PO",
-      "name_tc": "深水埗北河街",
-      "name_sc": "深水埗北河街",
+      "name_en": "PEI HO STREET SHAM SHUI PO (X5)",
+      "name_tc": "深水埗北河街 (X5)",
+      "name_sc": "深水埗北河街 (X5)",
       "lat": "22.330100",
       "long": "114.162879"
     },
     {
       "stop": "1A85B99EDE6D01D8",
-      "name_en": "YEE KOK COURT",
-      "name_tc": "怡閣苑",
-      "name_sc": "怡阁苑",
+      "name_en": "YEE KOK COURT (X17)",
+      "name_tc": "怡閣苑 (X17)",
+      "name_sc": "怡阁苑 (X17)",
       "lat": "22.333414",
       "long": "114.158573"
     },
     {
       "stop": "1F51B830DD359962",
-      "name_en": "LAI CHI KOK STATION",
-      "name_tc": "荔枝角站",
-      "name_sc": "荔枝角站",
+      "name_en": "LAI CHI KOK STATION (X41)",
+      "name_tc": "荔枝角站 (X41)",
+      "name_sc": "荔枝角站 (X41)",
       "lat": "22.337193",
       "long": "114.148229"
     },
@@ -10493,25 +10509,25 @@
     },
     {
       "stop": "EB9E9B5EEE20114C",
-      "name_en": "LAI KOK ESTATE",
-      "name_tc": "麗閣邨",
-      "name_sc": "丽阁邨",
+      "name_en": "LAI KOK ESTATE (X21)",
+      "name_tc": "麗閣邨 (X21)",
+      "name_sc": "丽阁邨 (X21)",
       "lat": "22.333843",
       "long": "114.158223"
     },
     {
       "stop": "0BADB28A19C2E0BE",
-      "name_en": "TRADE SQUARE",
-      "name_tc": "貿易廣場",
-      "name_sc": "贸易广场",
+      "name_en": "TRADE SQUARE (X27)",
+      "name_tc": "貿易廣場 (X27)",
+      "name_sc": "贸易广场 (X27)",
       "lat": "22.336740",
       "long": "114.154311"
     },
     {
       "stop": "44EA73AE2E27AC12",
-      "name_en": "LAI CHI KOK STATION",
-      "name_tc": "荔枝角站",
-      "name_sc": "荔枝角站",
+      "name_en": "LAI CHI KOK STATION (X37)",
+      "name_tc": "荔枝角站 (X37)",
+      "name_sc": "荔枝角站 (X37)",
       "lat": "22.337271",
       "long": "114.148454"
     },
@@ -10813,9 +10829,9 @@
     },
     {
       "stop": "4A1EEF2271FA16D3",
-      "name_en": "LAI CHI KOK STATION",
-      "name_tc": "荔枝角站",
-      "name_sc": "荔枝角站",
+      "name_en": "LAI CHI KOK STATION (X38)",
+      "name_tc": "荔枝角站 (X38)",
+      "name_sc": "荔枝角站 (X38)",
       "lat": "22.337258",
       "long": "114.148408"
     },
@@ -11412,12 +11428,12 @@
       "long": "114.195281"
     },
     {
-      "stop": "DF04BD4B98EB6153",
-      "name_en": "KWUN TONG FERRY",
-      "name_tc": "觀塘碼頭",
-      "name_sc": "观塘码头",
-      "lat": "22.307701",
-      "long": "114.221503"
+      "stop": "8A928A173E67CD96",
+      "name_en": "TSUN YIP STREET, KWUN TONG",
+      "name_tc": "觀塘駿業街",
+      "name_sc": "观塘骏业街",
+      "lat": "22.309675",
+      "long": "114.221690"
     },
     {
       "stop": "3EAFE91BF6223FA6",
@@ -11444,12 +11460,12 @@
       "long": "114.226733"
     },
     {
-      "stop": "B18F49819CAF37B7",
-      "name_en": "KWUN TONG FERRY",
-      "name_tc": "觀塘碼頭",
-      "name_sc": "观塘码头",
-      "lat": "22.307701",
-      "long": "114.221503"
+      "stop": "F8D908466E28E9C2",
+      "name_en": "TSUN YIP STREET, KWUN TONG",
+      "name_tc": "觀塘駿業街",
+      "name_sc": "观塘骏业街",
+      "lat": "22.309844",
+      "long": "114.221264"
     },
     {
       "stop": "992F89F2265F8D8D",
@@ -11477,9 +11493,9 @@
     },
     {
       "stop": "0EB21C27E769261B",
-      "name_en": "WONG TAI SIN BBI - SHATIN PASS ROAD (D1)",
-      "name_tc": "黃大仙轉車站 - 沙田坳道 (D1)",
-      "name_sc": "黄大仙转车站 - 沙田坳道 (D1)",
+      "name_en": "WONG TAI SIN BBI - WONG TAI SIN TEMPLE (D1)",
+      "name_tc": "黃大仙轉車站 - 黃大仙廟 (D1)",
+      "name_sc": "黄大仙转车站 - 黄大仙庙 (D1)",
       "lat": "22.341470",
       "long": "114.195370"
     },
@@ -11556,12 +11572,12 @@
       "long": "114.131178"
     },
     {
-      "stop": "84711D0C2EEEF336",
+      "stop": "88658D10545F9014",
       "name_en": "LAI KING ESTATE KWAI CHUNG ROAD",
       "name_tc": "葵涌道荔景邨",
       "name_sc": "葵涌道荔景邨",
-      "lat": "22.351699",
-      "long": "114.126089"
+      "lat": "22.352528",
+      "long": "114.126528"
     },
     {
       "stop": "50E78EB09845863E",
@@ -11573,33 +11589,33 @@
     },
     {
       "stop": "09A156B1A802D093",
-      "name_en": "LAI CHI KOK STATION",
-      "name_tc": "荔枝角站",
-      "name_sc": "荔枝角站",
+      "name_en": "LAI CHI KOK STATION (Y3)",
+      "name_tc": "荔枝角站 (Y3)",
+      "name_sc": "荔枝角站 (Y3)",
       "lat": "22.337617",
       "long": "114.148799"
     },
     {
       "stop": "BD34A7B702373B12",
-      "name_en": "CHEUNG WAH STREET",
-      "name_tc": "昌華街",
-      "name_sc": "昌华街",
+      "name_en": "CHEUNG WAH STREET (Y9)",
+      "name_tc": "昌華街 (Y9)",
+      "name_sc": "昌华街 (Y9)",
       "lat": "22.338530",
       "long": "114.152280"
     },
     {
       "stop": "E30C2815DA280036",
-      "name_en": "UN CHAU ESTATE",
-      "name_tc": "元州邨",
-      "name_sc": "元州邨",
+      "name_en": "UN CHAU ESTATE (Y13)",
+      "name_tc": "元州邨 (Y13)",
+      "name_sc": "元州邨 (Y13)",
       "lat": "22.335838",
       "long": "114.155871"
     },
     {
       "stop": "C06334CA2AF7814B",
-      "name_en": "KIU KIANG STREET SHAM SHUI PO",
-      "name_tc": "深水埗九江街",
-      "name_sc": "深水埗九江街",
+      "name_en": "KIU KIANG STREET SHAM SHUI PO (Y18)",
+      "name_tc": "深水埗九江街 (Y18)",
+      "name_sc": "深水埗九江街 (Y18)",
       "lat": "22.333000",
       "long": "114.159601"
     },
@@ -11669,25 +11685,25 @@
     },
     {
       "stop": "551045DD53EA529D",
-      "name_en": "YEE CHING COURT",
-      "name_tc": "怡靖苑",
-      "name_sc": "怡靖苑",
+      "name_en": "YEE CHING COURT (X16)",
+      "name_tc": "怡靖苑 (X16)",
+      "name_sc": "怡靖苑 (X16)",
       "lat": "22.332839",
       "long": "114.159552"
     },
     {
       "stop": "A88468CF154B16E9",
-      "name_en": "TONKIN STREET CHEUNG SHA WAN",
-      "name_tc": "長沙灣東京街",
-      "name_sc": "长沙湾东京街",
+      "name_en": "TONKIN STREET CHEUNG SHA WAN (X23)",
+      "name_tc": "長沙灣東京街 (X23)",
+      "name_sc": "长沙湾东京街 (X23)",
       "lat": "22.334980",
       "long": "114.156595"
     },
     {
       "stop": "1B68DD9D137F906D",
-      "name_en": "LAI CHI KOK STATION",
-      "name_tc": "荔枝角站",
-      "name_sc": "荔枝角站",
+      "name_en": "LAI CHI KOK STATION (X40)",
+      "name_tc": "荔枝角站 (X40)",
+      "name_sc": "荔枝角站 (X40)",
       "lat": "22.337229",
       "long": "114.148332"
     },
@@ -12613,9 +12629,9 @@
     },
     {
       "stop": "D5C36653A51759C3",
-      "name_en": "PEI HO STREET SHAM SHUI PO",
-      "name_tc": "深水埗北河街",
-      "name_sc": "深水埗北河街",
+      "name_en": "PEI HO STREET SHAM SHUI PO (X4)",
+      "name_tc": "深水埗北河街 (X4)",
+      "name_sc": "深水埗北河街 (X4)",
       "lat": "22.330100",
       "long": "114.162879"
     },
@@ -12805,33 +12821,33 @@
     },
     {
       "stop": "8BCB786E1F1A2457",
-      "name_en": "LAI CHI KOK STATION",
-      "name_tc": "荔枝角站",
-      "name_sc": "荔枝角站",
+      "name_en": "LAI CHI KOK STATION (Y1)",
+      "name_tc": "荔枝角站 (Y1)",
+      "name_sc": "荔枝角站 (Y1)",
       "lat": "22.337301",
       "long": "114.147868"
     },
     {
       "stop": "5CF51F3B971D4D56",
-      "name_en": "CHEUNG WAH STREET",
-      "name_tc": "昌華街",
-      "name_sc": "昌华街",
+      "name_en": "CHEUNG WAH STREET (Y8)",
+      "name_tc": "昌華街 (Y8)",
+      "name_sc": "昌华街 (Y8)",
       "lat": "22.338556",
       "long": "114.152201"
     },
     {
       "stop": "AAB25066B96C6588",
-      "name_en": "UN CHAU ESTATE",
-      "name_tc": "元州邨",
-      "name_sc": "元州邨",
+      "name_en": "UN CHAU ESTATE (Y14)",
+      "name_tc": "元州邨 (Y14)",
+      "name_sc": "元州邨 (Y14)",
       "lat": "22.335706",
       "long": "114.156039"
     },
     {
       "stop": "8CE4B83B45F22F1F",
-      "name_en": "KOWLOON TECHNICAL SCHOOL",
-      "name_tc": "九龍工業學校",
-      "name_sc": "九龙工业学校",
+      "name_en": "KOWLOON TECHNICAL SCHOOL (Y17)",
+      "name_tc": "九龍工業學校 (Y17)",
+      "name_sc": "九龙工业学校 (Y17)",
       "lat": "22.333804",
       "long": "114.158553"
     },
@@ -13149,9 +13165,9 @@
     },
     {
       "stop": "38330C642568FE3F",
-      "name_en": "WONG TAI SIN BBI - WONG TAI SIN STATION (B4)",
-      "name_tc": "黃大仙轉車站 - 黃大仙站 (B4)",
-      "name_sc": "黄大仙转车站 - 黄大仙站 (B4)",
+      "name_en": "WONG TAI SIN BBI - WONG TAI SIN TEMPLE (B4)",
+      "name_tc": "黃大仙轉車站 - 黃大仙廟 (B4)",
+      "name_sc": "黄大仙转车站 - 黄大仙庙 (B4)",
       "lat": "22.341855",
       "long": "114.192179"
     },
@@ -13644,12 +13660,12 @@
       "long": "114.131178"
     },
     {
-      "stop": "AEF88DA61C0553EE",
+      "stop": "D8828243CCA293B4",
       "name_en": "LAI KING ESTATE KWAI CHUNG ROAD",
       "name_tc": "葵涌道荔景邨",
       "name_sc": "葵涌道荔景邨",
-      "lat": "22.351564",
-      "long": "114.126046"
+      "lat": "22.352386",
+      "long": "114.126387"
     },
     {
       "stop": "FCA3906F0282A3CE",
@@ -13741,9 +13757,9 @@
     },
     {
       "stop": "5536C9E3A0CE1228",
-      "name_en": "WONG TAI SIN BBI - WONG TAI SIN STATION (B6)",
-      "name_tc": "黃大仙轉車站 - 黃大仙站 (B6)",
-      "name_sc": "黄大仙转车站 - 黄大仙站 (B6)",
+      "name_en": "WONG TAI SIN BBI - WONG TAI SIN TEMPLE (B6)",
+      "name_tc": "黃大仙轉車站 - 黃大仙廟 (B6)",
+      "name_sc": "黄大仙转车站 - 黄大仙庙 (B6)",
       "lat": "22.341855",
       "long": "114.192100"
     },
@@ -14477,17 +14493,17 @@
     },
     {
       "stop": "F75C1A9AFDBB52F1",
-      "name_en": "YEE CHING COURT",
-      "name_tc": "怡靖苑",
-      "name_sc": "怡靖苑",
+      "name_en": "YEE CHING COURT (X14)",
+      "name_tc": "怡靖苑 (X14)",
+      "name_sc": "怡靖苑 (X14)",
       "lat": "22.332470",
       "long": "114.159832"
     },
     {
       "stop": "B294A8638290F5C2",
-      "name_en": "CHEUNG SHA WAN PATH",
-      "name_tc": "長沙灣徑",
-      "name_sc": "长沙湾径",
+      "name_en": "CHEUNG SHA WAN PATH (X34)",
+      "name_tc": "長沙灣徑 (X34)",
+      "name_sc": "长沙湾径 (X34)",
       "lat": "22.337936",
       "long": "114.150416"
     },
@@ -14573,9 +14589,9 @@
     },
     {
       "stop": "F01F8CF411A34AA7",
-      "name_en": "LAI CHI KOK STATION",
-      "name_tc": "荔枝角站",
-      "name_sc": "荔枝角站",
+      "name_en": "LAI CHI KOK STATION (Y2)",
+      "name_tc": "荔枝角站 (Y2)",
+      "name_sc": "荔枝角站 (Y2)",
       "lat": "22.337559",
       "long": "114.148620"
     },
@@ -14605,9 +14621,9 @@
     },
     {
       "stop": "A468A530A8C84E11",
-      "name_en": "CHEUNG SHA WAN PATH",
-      "name_tc": "長沙灣徑",
-      "name_sc": "长沙湾径",
+      "name_en": "CHEUNG SHA WAN PATH (X35)",
+      "name_tc": "長沙灣徑 (X35)",
+      "name_sc": "长沙湾径 (X35)",
       "lat": "22.337878",
       "long": "114.150247"
     },
@@ -15032,30 +15048,30 @@
       "name_en": "UNIVERSITY STATION",
       "name_tc": "大學站",
       "name_sc": "大学站",
-      "lat": "22.412633",
-      "long": "114.210648"
+      "lat": "22.412578",
+      "long": "114.210303"
     },
     {
       "stop": "739A5DDE0CF1970C",
-      "name_en": "MA LIU SHUI PUBLIC PIER",
-      "name_tc": "馬料水公眾碼頭",
-      "name_sc": "马料水公众码头",
+      "name_en": "MA LIU SHUI PUBLIC PIER (N1)",
+      "name_tc": "馬料水公眾碼頭 (N1)",
+      "name_sc": "马料水公众码头 (N1)",
       "lat": "22.415908",
       "long": "114.213778"
     },
     {
       "stop": "9E95343C77BB85E2",
-      "name_en": "WATER SPORTS CENTRE",
-      "name_tc": "水上活動中心",
-      "name_sc": "水上活动中心",
+      "name_en": "WATER SPORTS CENTRE (N2)",
+      "name_tc": "水上活動中心 (N2)",
+      "name_sc": "水上活动中心 (N2)",
       "lat": "22.420023",
       "long": "114.214250"
     },
     {
       "stop": "F808AF482CCA028E",
-      "name_en": "HONG KONG INSTITUTE OF BIOTECHNOLOGY",
-      "name_tc": "香港生物科技研究院",
-      "name_sc": "香港生物科技研究院",
+      "name_en": "HONG KONG INSTITUTE OF BIOTECHNOLOGY (N3)",
+      "name_tc": "香港生物科技研究院 (N3)",
+      "name_sc": "香港生物科技研究院 (N3)",
       "lat": "22.422518",
       "long": "114.213925"
     },
@@ -15077,25 +15093,25 @@
     },
     {
       "stop": "A0D379E172F5BC93",
-      "name_en": "HONG KONG INSTITUTE OF BIOTECHNOLOGY",
-      "name_tc": "香港生物科技研究院",
-      "name_sc": "香港生物科技研究院",
+      "name_en": "HONG KONG INSTITUTE OF BIOTECHNOLOGY (S7)",
+      "name_tc": "香港生物科技研究院 (S7)",
+      "name_sc": "香港生物科技研究院 (S7)",
       "lat": "22.422664",
       "long": "114.214179"
     },
     {
       "stop": "853CD1316EB5227B",
-      "name_en": "WATER SPORTS CENTRE",
-      "name_tc": "水上活動中心",
-      "name_sc": "水上活动中心",
+      "name_en": "WATER SPORTS CENTRE (S8)",
+      "name_tc": "水上活動中心 (S8)",
+      "name_sc": "水上活动中心 (S8)",
       "lat": "22.418662",
       "long": "114.214271"
     },
     {
       "stop": "BE6EC9708F5FB613",
-      "name_en": "MA LIU SHUI PUBLIC PIER",
-      "name_tc": "馬料水公眾碼頭",
-      "name_sc": "马料水公众码头",
+      "name_en": "MA LIU SHUI PUBLIC PIER (S9)",
+      "name_tc": "馬料水公眾碼頭 (S9)",
+      "name_sc": "马料水公众码头 (S9)",
       "lat": "22.416027",
       "long": "114.213945"
     },
@@ -15309,25 +15325,25 @@
     },
     {
       "stop": "BA2F4E8CB1D43CD8",
-      "name_en": "YEE CHING COURT",
-      "name_tc": "怡靖苑",
-      "name_sc": "怡靖苑",
+      "name_en": "YEE CHING COURT (X15)",
+      "name_tc": "怡靖苑 (X15)",
+      "name_sc": "怡靖苑 (X15)",
       "lat": "22.332397",
       "long": "114.159929"
     },
     {
       "stop": "55973ABF49182097",
-      "name_en": "TONKIN STREET CHEUNG SHA WAN",
-      "name_tc": "長沙灣東京街",
-      "name_sc": "长沙湾东京街",
+      "name_en": "TONKIN STREET CHEUNG SHA WAN (X22)",
+      "name_tc": "長沙灣東京街 (X22)",
+      "name_sc": "长沙湾东京街 (X22)",
       "lat": "22.334934",
       "long": "114.156659"
     },
     {
       "stop": "0E718C4DB85C8005",
-      "name_en": "CHEUNG SHA WAN PATH",
-      "name_tc": "長沙灣徑",
-      "name_sc": "长沙湾径",
+      "name_en": "CHEUNG SHA WAN PATH (X36)",
+      "name_tc": "長沙灣徑 (X36)",
+      "name_sc": "长沙湾径 (X36)",
       "lat": "22.337827",
       "long": "114.150084"
     },
@@ -15405,9 +15421,9 @@
     },
     {
       "stop": "09889186EAB604F2",
-      "name_en": "PEI HO STREET SHAM SHUI PO",
-      "name_tc": "深水埗北河街",
-      "name_sc": "深水埗北河街",
+      "name_en": "PEI HO STREET SHAM SHUI PO (X3)",
+      "name_tc": "深水埗北河街 (X3)",
+      "name_sc": "深水埗北河街 (X3)",
       "lat": "22.330083",
       "long": "114.163062"
     },
@@ -15421,41 +15437,41 @@
     },
     {
       "stop": "A6013462EAC8AA50",
-      "name_en": "KWONG CHEUNG STREET CHEUNG SHA WAN",
-      "name_tc": "長沙灣光昌街",
-      "name_sc": "长沙湾光昌街",
+      "name_en": "KWONG CHEUNG STREET CHEUNG SHA WAN (Y4)",
+      "name_tc": "長沙灣光昌街 (Y4)",
+      "name_sc": "长沙湾光昌街 (Y4)",
       "lat": "22.338442",
       "long": "114.151193"
     },
     {
       "stop": "2035C91B61C6DFC0",
-      "name_en": "HING WAH STREET CHEUNG SHA WAN",
-      "name_tc": "長沙灣興華街",
-      "name_sc": "长沙湾兴华街",
+      "name_en": "HING WAH STREET CHEUNG SHA WAN (Y10)",
+      "name_tc": "長沙灣興華街 (Y10)",
+      "name_sc": "长沙湾兴华街 (Y10)",
       "lat": "22.337928",
       "long": "114.153199"
     },
     {
       "stop": "789384E5DC5AF7A9",
-      "name_en": "KIU KIANG STREET SHAM SHUI PO",
-      "name_tc": "深水埗九江街",
-      "name_sc": "深水埗九江街",
+      "name_en": "KIU KIANG STREET SHAM SHUI PO (Y20)",
+      "name_tc": "深水埗九江街 (Y20)",
+      "name_sc": "深水埗九江街 (Y20)",
       "lat": "22.332801",
       "long": "114.159824"
     },
     {
       "stop": "0F4D809AED62F6E9",
-      "name_en": "YEN CHOW STREET SHAM SHUI PO",
-      "name_tc": "深水埗欽州街",
-      "name_sc": "深水埗钦州街",
+      "name_en": "YEN CHOW STREET SHAM SHUI PO (Y22)",
+      "name_tc": "深水埗欽州街 (Y22)",
+      "name_sc": "深水埗钦州街 (Y22)",
       "lat": "22.331237",
       "long": "114.161858"
     },
     {
       "stop": "833DE523F16B97C3",
-      "name_en": "WONG CHUK STREET SHAM SHUI PO",
-      "name_tc": "深水埗黃竹街",
-      "name_sc": "深水埗黄竹街",
+      "name_en": "WONG CHUK STREET SHAM SHUI PO (Y29)",
+      "name_tc": "深水埗黃竹街 (Y29)",
+      "name_sc": "深水埗黄竹街 (Y29)",
       "lat": "22.328895",
       "long": "114.164877"
     },
@@ -15572,12 +15588,12 @@
       "long": "114.172547"
     },
     {
-      "stop": "6A46C83B59AAB8E0",
-      "name_en": "TAI WAI STATION BUS TERMINUS",
-      "name_tc": "大圍站總站",
-      "name_sc": "大围站总站",
-      "lat": "22.372928",
-      "long": "114.180132"
+      "stop": "8C7CF1C55484A294",
+      "name_en": "TAI WAI STATION BUS TERMINUS (G7)",
+      "name_tc": "大圍站總站 (G7)",
+      "name_sc": "大围站总站 (G7)",
+      "lat": "22.372863",
+      "long": "114.180047"
     },
     {
       "stop": "673B33867260EBB7",
@@ -15586,14 +15602,6 @@
       "name_sc": "青沙公路转车站 (A4)",
       "lat": "22.358523",
       "long": "114.163314"
-    },
-    {
-      "stop": "8C7CF1C55484A294",
-      "name_en": "TAI WAI STATION BUS TERMINUS",
-      "name_tc": "大圍站總站",
-      "name_sc": "大围站总站",
-      "lat": "22.372976",
-      "long": "114.180213"
     },
     {
       "stop": "AF020613AEB25447",
@@ -15676,12 +15684,12 @@
       "long": "114.177213"
     },
     {
-      "stop": "0390D5DEEEC05A7B",
-      "name_en": "TAI WAI STATION BUS TERMINUS",
-      "name_tc": "大圍站總站",
-      "name_sc": "大围站总站",
-      "lat": "22.373034",
-      "long": "114.180291"
+      "stop": "14C3BF43DC0878D1",
+      "name_en": "TAI WAI STATION BUS TERMINUS (G2)",
+      "name_tc": "大圍站總站 (G2)",
+      "name_sc": "大围站总站 (G2)",
+      "lat": "22.373074",
+      "long": "114.180370"
     },
     {
       "stop": "BAE4DA32E5043726",
@@ -17309,41 +17317,41 @@
     },
     {
       "stop": "A4D7F88689232BE9",
-      "name_en": "WONG CHUK STREET SHAM SHUI PO",
-      "name_tc": "深水埗黃竹街",
-      "name_sc": "深水埗黄竹街",
+      "name_en": "WONG CHUK STREET SHAM SHUI PO (X2)",
+      "name_tc": "深水埗黃竹街 (X2)",
+      "name_sc": "深水埗黄竹街 (X2)",
       "lat": "22.328683",
       "long": "114.164710"
     },
     {
       "stop": "07F21DF049D501B1",
-      "name_en": "YEN CHOW STREET SHAM SHUI PO",
-      "name_tc": "深水埗欽州街",
-      "name_sc": "深水埗钦州街",
+      "name_en": "YEN CHOW STREET SHAM SHUI PO (X10)",
+      "name_tc": "深水埗欽州街 (X10)",
+      "name_sc": "深水埗钦州街 (X10)",
       "lat": "22.331188",
       "long": "114.161505"
     },
     {
       "stop": "325788C7375BFC0B",
-      "name_en": "CHEUNG SHA WAN PLAYGROUND",
-      "name_tc": "長沙灣遊樂場",
-      "name_sc": "长沙湾游乐场",
+      "name_en": "CHEUNG SHA WAN PLAYGROUND (X25)",
+      "name_tc": "長沙灣遊樂場 (X25)",
+      "name_sc": "长沙湾游乐场 (X25)",
       "lat": "22.335563",
       "long": "114.155853"
     },
     {
       "stop": "6564600C3B5BFB65",
-      "name_en": "HING WAH STREET CHEUNG SHA WAN",
-      "name_tc": "長沙灣興華街",
-      "name_sc": "长沙湾兴华街",
+      "name_en": "HING WAH STREET CHEUNG SHA WAN (X29)",
+      "name_tc": "長沙灣興華街 (X29)",
+      "name_sc": "长沙湾兴华街 (X29)",
       "lat": "22.338299",
       "long": "114.152182"
     },
     {
       "stop": "01E580BD435E9301",
-      "name_en": "CHEUNG LAI STREET CHEUNG SHA WAN",
-      "name_tc": "長沙灣長荔街",
-      "name_sc": "长沙湾长荔街",
+      "name_en": "CHEUNG LAI STREET CHEUNG SHA WAN (X43)",
+      "name_tc": "長沙灣長荔街 (X43)",
+      "name_sc": "长沙湾长荔街 (X43)",
       "lat": "22.336916",
       "long": "114.147431"
     },
@@ -18568,8 +18576,8 @@
       "name_en": "TUEN MUN ROAD BBI (A15)",
       "name_tc": "屯門公路轉車站 (A15)",
       "name_sc": "屯门公路转车站 (A15)",
-      "lat": "22.362644",
-      "long": "114.015733"
+      "lat": "22.362928",
+      "long": "114.015522"
     },
     {
       "stop": "CA6AB8446B694566",
@@ -18933,9 +18941,9 @@
     },
     {
       "stop": "E5EBA1D47BA06FCC",
-      "name_en": "PEI HO STREET SHAM SHUI PO",
-      "name_tc": "深水埗北河街",
-      "name_sc": "深水埗北河街",
+      "name_en": "PEI HO STREET SHAM SHUI PO (Y28)",
+      "name_tc": "深水埗北河街 (Y28)",
+      "name_sc": "深水埗北河街 (Y28)",
       "lat": "22.330603",
       "long": "114.162668"
     },
@@ -18965,35 +18973,35 @@
     },
     {
       "stop": "F88278FBE1C3FF34",
-      "name_en": "YEN CHOW STREET SHAM SHUI PO",
-      "name_tc": "深水埗欽州街",
-      "name_sc": "深水埗钦州街",
+      "name_en": "YEN CHOW STREET SHAM SHUI PO (X9)",
+      "name_tc": "深水埗欽州街 (X9)",
+      "name_sc": "深水埗钦州街 (X9)",
       "lat": "22.331188",
       "long": "114.161505"
     },
     {
       "stop": "315B55985B328146",
-      "name_en": "YEE KOK COURT",
-      "name_tc": "怡閣苑",
-      "name_sc": "怡阁苑",
+      "name_en": "YEE KOK COURT (X19)",
+      "name_tc": "怡閣苑 (X19)",
+      "name_sc": "怡阁苑 (X19)",
       "lat": "22.333442",
       "long": "114.158535"
     },
     {
       "stop": "FE3B71A48A6B0C30",
-      "name_en": "LAI CHI KOK STATION",
-      "name_tc": "荔枝角站",
-      "name_sc": "荔枝角站",
+      "name_en": "LAI CHI KOK STATION (X39)",
+      "name_tc": "荔枝角站 (X39)",
+      "name_sc": "荔枝角站 (X39)",
       "lat": "22.337248",
       "long": "114.148368"
     },
     {
-      "stop": "7DD772B7D55C54B2",
-      "name_en": "MEI FOO BBI (B1)",
-      "name_tc": "美孚轉車站 (B1)",
-      "name_sc": "美孚转车站 (B1)",
-      "lat": "22.336459",
-      "long": "114.141340"
+      "stop": "950140C36BBC6369",
+      "name_en": "MEI FOO BBI (B2)",
+      "name_tc": "美孚轉車站 (B2)",
+      "name_sc": "美孚转车站 (B2)",
+      "lat": "22.336454",
+      "long": "114.141467"
     },
     {
       "stop": "8D6792FF38584BE0",
@@ -19144,8 +19152,8 @@
       "name_en": "TUEN MUN ROAD BBI (A6)",
       "name_tc": "屯門公路轉車站 (A6)",
       "name_sc": "屯门公路转车站 (A6)",
-      "lat": "22.362751",
-      "long": "114.015706"
+      "lat": "22.362528",
+      "long": "114.015847"
     },
     {
       "stop": "D893FD9E88E2A98D",
@@ -19306,14 +19314,6 @@
       "name_sc": "旺角站",
       "lat": "22.319436",
       "long": "114.170734"
-    },
-    {
-      "stop": "950140C36BBC6369",
-      "name_en": "MEI FOO BBI (B2)",
-      "name_tc": "美孚轉車站 (B2)",
-      "name_sc": "美孚转车站 (B2)",
-      "lat": "22.336454",
-      "long": "114.141467"
     },
     {
       "stop": "0C9D04F079377C44",
@@ -19517,9 +19517,9 @@
     },
     {
       "stop": "20FADDD5EB4002B3",
-      "name_en": "CHEUNG LAI STREET CHEUNG SHA WAN",
-      "name_tc": "長沙灣長荔街",
-      "name_sc": "长沙湾长荔街",
+      "name_en": "CHEUNG LAI STREET CHEUNG SHA WAN (X42)",
+      "name_tc": "長沙灣長荔街 (X42)",
+      "name_sc": "长沙湾长荔街 (X42)",
       "lat": "22.336875",
       "long": "114.147299"
     },
@@ -19789,9 +19789,9 @@
     },
     {
       "stop": "0EAFBD8737911A6A",
-      "name_en": "WONG TAI SIN BBI - SHATIN PASS ROAD (D3)",
-      "name_tc": "黃大仙轉車站 - 沙田坳道 (D3)",
-      "name_sc": "黄大仙转车站 - 沙田坳道 (D3)",
+      "name_en": "WONG TAI SIN BBI - WONG TAI SIN TEMPLE (D3)",
+      "name_tc": "黃大仙轉車站 - 黃大仙廟 (D3)",
+      "name_sc": "黄大仙转车站 - 黄大仙庙 (D3)",
       "lat": "22.341474",
       "long": "114.195481"
     },
@@ -20010,6 +20010,14 @@
       "name_sc": "洪水桥(洪福邨)总站",
       "lat": "22.436706",
       "long": "113.998677"
+    },
+    {
+      "stop": "A856593C105D479B",
+      "name_en": "HUNG FUK ESTATE HUNG YUEN ROAD",
+      "name_tc": "洪元路洪福邨",
+      "name_sc": "洪元路洪福邨",
+      "lat": "22.437026",
+      "long": "113.996724"
     },
     {
       "stop": "EF43A73D4C0CC508",
@@ -20724,12 +20732,52 @@
       "long": "114.064602"
     },
     {
-      "stop": "1EB0804A03908237",
-      "name_en": "YUEN LONG (WEST) BUS TERMINUS",
-      "name_tc": "元朗（西）總站",
-      "name_sc": "元朗（西）总站",
-      "lat": "22.445520",
-      "long": "114.024812"
+      "stop": "595CE3974AB6F377",
+      "name_en": "HUNG SHUI KIU (HUNG YUEN ROAD) BUS TERMINUS",
+      "name_tc": "洪水橋(洪元路)總站",
+      "name_sc": "洪水桥(洪元路)总站",
+      "lat": "22.434560",
+      "long": "113.998290"
+    },
+    {
+      "stop": "0BFC5F7FC4A2D431",
+      "name_en": "HUNG SHUI KIU STATION",
+      "name_tc": "洪水橋站",
+      "name_sc": "洪水桥站",
+      "lat": "22.433880",
+      "long": "113.997787"
+    },
+    {
+      "stop": "5F616585205DDDF9",
+      "name_en": "TAI TAO TSUEN",
+      "name_tc": "大道村",
+      "name_sc": "大道村",
+      "lat": "22.436340",
+      "long": "114.001273"
+    },
+    {
+      "stop": "147D513A708AA741",
+      "name_en": "FUI SHA WAI",
+      "name_tc": "灰沙圍",
+      "name_sc": "灰沙围",
+      "lat": "22.438957",
+      "long": "114.005297"
+    },
+    {
+      "stop": "B88640E0CA83F12C",
+      "name_en": "TONG FONG TSUEN STATION",
+      "name_tc": "塘坊村站",
+      "name_sc": "塘坊村站",
+      "lat": "22.439816",
+      "long": "114.006851"
+    },
+    {
+      "stop": "F87A56BD0A2640ED",
+      "name_en": "YUEN LONG PLAZA (N2)",
+      "name_tc": "元朗廣場 (N2)",
+      "name_sc": "元朗广场 (N2)",
+      "lat": "22.444681",
+      "long": "114.023872"
     },
     {
       "stop": "6DE63371E5E799BA",
@@ -20749,49 +20797,49 @@
     },
     {
       "stop": "74648B92E0E80E2E",
-      "name_en": "PAK SHEK KOK SUBSTATION",
-      "name_tc": "白石角變電站",
-      "name_sc": "白石角变电站",
+      "name_en": "PAK SHEK KOK SUBSTATION (S1)",
+      "name_tc": "白石角變電站 (S1)",
+      "name_sc": "白石角变电站 (S1)",
       "lat": "22.434893",
       "long": "114.201372"
     },
     {
       "stop": "F3243F2A0BC4DEAD",
-      "name_en": "PROVIDENCE BAY",
-      "name_tc": "天賦海灣",
-      "name_sc": "天赋海湾",
+      "name_en": "PROVIDENCE BAY (S2)",
+      "name_tc": "天賦海灣 (S2)",
+      "name_sc": "天赋海湾 (S2)",
       "lat": "22.431492",
       "long": "114.201558"
     },
     {
       "stop": "3F24CFF9046300D9",
-      "name_en": "St MARTIN",
-      "name_tc": "雲滙",
-      "name_sc": "云滙",
+      "name_en": "St MARTIN (S3)",
+      "name_tc": "雲滙 (S3)",
+      "name_sc": "云滙 (S3)",
       "lat": "22.429805",
       "long": "114.203323"
     },
     {
       "stop": "3A7AC3A5F9530786",
-      "name_en": "CHONG SAN ROAD",
-      "name_tc": "創新路",
-      "name_sc": "创新路",
+      "name_en": "CHONG SAN ROAD (S4)",
+      "name_tc": "創新路 (S4)",
+      "name_sc": "创新路 (S4)",
       "lat": "22.428649",
       "long": "114.204981"
     },
     {
       "stop": "39E7051B17D302DA",
-      "name_en": "FO YIN ROAD",
-      "name_tc": "科研路",
-      "name_sc": "科研路",
+      "name_en": "FO YIN ROAD (S5)",
+      "name_tc": "科研路 (S5)",
+      "name_sc": "科研路 (S5)",
       "lat": "22.426442",
       "long": "114.208450"
     },
     {
       "stop": "1C6EAAF5F48167F9",
-      "name_en": "SCIENCE PARK (PHASE 1)",
-      "name_tc": "科學園(第一期)",
-      "name_sc": "科学园(第一期)",
+      "name_en": "SCIENCE PARK (PHASE 1) (S6)",
+      "name_tc": "科學園(第一期) (S6)",
+      "name_sc": "科学园(第一期) (S6)",
       "lat": "22.424272",
       "long": "114.211589"
     },
@@ -21085,9 +21133,9 @@
     },
     {
       "stop": "B7C0A83790F94D99",
-      "name_en": "HING WAH STREET CHEUNG SHA WAN",
-      "name_tc": "長沙灣興華街",
-      "name_sc": "长沙湾兴华街",
+      "name_en": "HING WAH STREET CHEUNG SHA WAN (X30)",
+      "name_tc": "長沙灣興華街 (X30)",
+      "name_sc": "长沙湾兴华街 (X30)",
       "lat": "22.338323",
       "long": "114.152087"
     },
@@ -21244,14 +21292,6 @@
       "long": "113.976479"
     },
     {
-      "stop": "0BFC5F7FC4A2D431",
-      "name_en": "HUNG SHUI KIU STATION",
-      "name_tc": "洪水橋站",
-      "name_sc": "洪水桥站",
-      "lat": "22.433880",
-      "long": "113.997787"
-    },
-    {
       "stop": "55E3A1A6E995A9CB",
       "name_en": "HUNG SHUI KIU (HUNG FUK ESTATE) BUS TERMINUS",
       "name_tc": "洪水橋(洪福邨)總站",
@@ -21298,6 +21338,14 @@
       "name_sc": "太子站 (N78)",
       "lat": "22.325767",
       "long": "114.167890"
+    },
+    {
+      "stop": "7DD772B7D55C54B2",
+      "name_en": "MEI FOO BBI (B1)",
+      "name_tc": "美孚轉車站 (B1)",
+      "name_sc": "美孚转车站 (B1)",
+      "lat": "22.336459",
+      "long": "114.141340"
     },
     {
       "stop": "67D38E584B919815",
@@ -21434,30 +21482,6 @@
       "name_sc": "洪天路洪福邨",
       "lat": "22.437614",
       "long": "113.998962"
-    },
-    {
-      "stop": "5F616585205DDDF9",
-      "name_en": "TAI TAO TSUEN",
-      "name_tc": "大道村",
-      "name_sc": "大道村",
-      "lat": "22.436340",
-      "long": "114.001273"
-    },
-    {
-      "stop": "147D513A708AA741",
-      "name_en": "FUI SHA WAI",
-      "name_tc": "灰沙圍",
-      "name_sc": "灰沙围",
-      "lat": "22.438957",
-      "long": "114.005297"
-    },
-    {
-      "stop": "B88640E0CA83F12C",
-      "name_en": "TONG FONG TSUEN STATION",
-      "name_tc": "塘坊村站",
-      "name_sc": "塘坊村站",
-      "lat": "22.439816",
-      "long": "114.006851"
     },
     {
       "stop": "6A435795576D92E8",
@@ -21684,6 +21708,14 @@
       "long": "114.019983"
     },
     {
+      "stop": "50B398D31C6B2D28",
+      "name_en": "YUEN LONG PARK BUS TERMINUS",
+      "name_tc": "元朗公園總站",
+      "name_sc": "元朗公园总站",
+      "lat": "22.442051",
+      "long": "114.020163"
+    },
+    {
       "stop": "D0B77FEEE42DB65A",
       "name_en": "YUEN LONG PARK BUS TERMINUS",
       "name_tc": "元朗公園總站",
@@ -21812,6 +21844,14 @@
       "long": "114.163112"
     },
     {
+      "stop": "1EB0804A03908237",
+      "name_en": "YUEN LONG (WEST) BUS TERMINUS",
+      "name_tc": "元朗（西）總站",
+      "name_sc": "元朗（西）总站",
+      "lat": "22.445520",
+      "long": "114.024812"
+    },
+    {
       "stop": "FF39B95C2931B8A1",
       "name_en": "LONG PING STATION",
       "name_tc": "朗屏站",
@@ -21845,41 +21885,41 @@
     },
     {
       "stop": "BE1A19A3705F5B70",
-      "name_en": "WONG CHUK STREET SHAM SHUI PO",
-      "name_tc": "深水埗黃竹街",
-      "name_sc": "深水埗黄竹街",
+      "name_en": "WONG CHUK STREET SHAM SHUI PO (X1)",
+      "name_tc": "深水埗黃竹街 (X1)",
+      "name_sc": "深水埗黄竹街 (X1)",
       "lat": "22.328683",
       "long": "114.164710"
     },
     {
       "stop": "95731C2B3563CF5E",
-      "name_en": "YEN CHOW STREET SHAM SHUI PO",
-      "name_tc": "深水埗欽州街",
-      "name_sc": "深水埗钦州街",
+      "name_en": "YEN CHOW STREET SHAM SHUI PO (X12)",
+      "name_tc": "深水埗欽州街 (X12)",
+      "name_sc": "深水埗钦州街 (X12)",
       "lat": "22.331227",
       "long": "114.161465"
     },
     {
       "stop": "4AFCFC726ADBD5F7",
-      "name_en": "YEE KOK COURT",
-      "name_tc": "怡閣苑",
-      "name_sc": "怡阁苑",
+      "name_en": "YEE KOK COURT (X20)",
+      "name_tc": "怡閣苑 (X20)",
+      "name_sc": "怡阁苑 (X20)",
       "lat": "22.333706",
       "long": "114.158398"
     },
     {
       "stop": "DD9DF46F3BA040EE",
-      "name_en": "CHEUNG SHA WAN PLAYGROUND",
-      "name_tc": "長沙灣遊樂場",
-      "name_sc": "长沙湾游乐场",
+      "name_en": "CHEUNG SHA WAN PLAYGROUND (X24)",
+      "name_tc": "長沙灣遊樂場 (X24)",
+      "name_sc": "长沙湾游乐场 (X24)",
       "lat": "22.335507",
       "long": "114.155923"
     },
     {
       "stop": "06566A7FE3C6466A",
-      "name_en": "CHEUNG LAI STREET CHEUNG SHA WAN",
-      "name_tc": "長沙灣長荔街",
-      "name_sc": "长沙湾长荔街",
+      "name_en": "CHEUNG LAI STREET CHEUNG SHA WAN (X44)",
+      "name_tc": "長沙灣長荔街 (X44)",
+      "name_sc": "长沙湾长荔街 (X44)",
       "lat": "22.336962",
       "long": "114.147567"
     },
@@ -21978,14 +22018,6 @@
       "name_sc": "元朗屏昌径",
       "lat": "22.447583",
       "long": "114.022903"
-    },
-    {
-      "stop": "F87A56BD0A2640ED",
-      "name_en": "YUEN LONG PLAZA (N2)",
-      "name_tc": "元朗廣場 (N2)",
-      "name_sc": "元朗广场 (N2)",
-      "lat": "22.444681",
-      "long": "114.023872"
     },
     {
       "stop": "D8F0A3AD8E765CE0",
@@ -22157,9 +22189,9 @@
     },
     {
       "stop": "7917BB962CCB11C0",
-      "name_en": "WONG TAI SIN BBI - SHATIN PASS ROAD (C3)",
-      "name_tc": "黃大仙轉車站 - 沙田坳道 (C3)",
-      "name_sc": "黄大仙转车站 - 沙田坳道 (C3)",
+      "name_en": "WONG TAI SIN BBI - WONG TAI SIN TEMPLE (C3)",
+      "name_tc": "黃大仙轉車站 - 黃大仙廟 (C3)",
+      "name_sc": "黄大仙转车站 - 黄大仙庙 (C3)",
       "lat": "22.341481",
       "long": "114.194522"
     },
@@ -22381,9 +22413,9 @@
     },
     {
       "stop": "EBE72869FC78A62D",
-      "name_en": "YEN CHOW STREET SHAM SHUI PO",
-      "name_tc": "深水埗欽州街",
-      "name_sc": "深水埗钦州街",
+      "name_en": "YEN CHOW STREET SHAM SHUI PO (X11)",
+      "name_tc": "深水埗欽州街 (X11)",
+      "name_sc": "深水埗钦州街 (X11)",
       "lat": "22.331227",
       "long": "114.161465"
     },
@@ -22724,14 +22756,6 @@
       "long": "114.144319"
     },
     {
-      "stop": "637DDC1A9BF31C4C",
-      "name_en": "WAH MING BBI",
-      "name_tc": "華明轉車站",
-      "name_sc": "华明转车站",
-      "lat": "22.484132",
-      "long": "114.141587"
-    },
-    {
       "stop": "A412A5FD403C8275",
       "name_en": "WUI MAN ROAD",
       "name_tc": "匯民道",
@@ -22853,17 +22877,17 @@
     },
     {
       "stop": "15FCDE0753176016",
-      "name_en": "PEI HO STREET SHAM SHUI PO",
-      "name_tc": "深水埗北河街",
-      "name_sc": "深水埗北河街",
+      "name_en": "PEI HO STREET SHAM SHUI PO (X7)",
+      "name_tc": "深水埗北河街 (X7)",
+      "name_sc": "深水埗北河街 (X7)",
       "lat": "22.330543",
       "long": "114.162338"
     },
     {
       "stop": "EEBBD352B7F16E3F",
-      "name_en": "CHEUNG SHA WAN PATH",
-      "name_tc": "長沙灣徑",
-      "name_sc": "长沙湾径",
+      "name_en": "CHEUNG SHA WAN PATH (X32)",
+      "name_tc": "長沙灣徑 (X32)",
+      "name_sc": "长沙湾径 (X32)",
       "lat": "22.338147",
       "long": "114.151104"
     },
@@ -23756,6 +23780,14 @@
       "long": "114.167887"
     },
     {
+      "stop": "6C9B7DDF24725CA9",
+      "name_en": "TAI WAI STATION BUS TERMINUS (G8)",
+      "name_tc": "大圍站總站 (G8)",
+      "name_sc": "大围站总站 (G8)",
+      "lat": "22.372863",
+      "long": "114.180047"
+    },
+    {
       "stop": "BE58B5A4B0E76EF7",
       "name_en": "HOLFORD GARDEN",
       "name_tc": "海福花園",
@@ -24156,6 +24188,30 @@
       "long": "114.180137"
     },
     {
+      "stop": "C28681F6959BE178",
+      "name_en": "FU TIP ESTATE",
+      "name_tc": "富蝶邨",
+      "name_sc": "富蝶邨",
+      "lat": "22.462699",
+      "long": "114.176025"
+    },
+    {
+      "stop": "2D2F0A476CB1FEF5",
+      "name_en": "HENG YUE HOUSE, FU HENG ESTATE",
+      "name_tc": "富亨邨亨裕樓",
+      "name_sc": "富亨邨亨裕楼",
+      "lat": "22.459314",
+      "long": "114.172704"
+    },
+    {
+      "stop": "FB7E3001FDAB2CB1",
+      "name_en": "TAI WO BUS TERMINUS",
+      "name_tc": "太和總站",
+      "name_sc": "太和总站",
+      "lat": "22.450314",
+      "long": "114.161343"
+    },
+    {
       "stop": "8259A9EF4DB191A6",
       "name_en": "TAI PO CENTRAL BUS TERMINUS",
       "name_tc": "大埔中心總站",
@@ -24516,12 +24572,12 @@
       "long": "114.141439"
     },
     {
-      "stop": "808560798B6F771E",
+      "stop": "7234BEA4242461F7",
       "name_en": "FO TAN (SHAN MEI STREET) BUS TERMINUS",
       "name_tc": "火炭(山尾街)總站",
       "name_sc": "火炭(山尾街)总站",
-      "lat": "22.396351",
-      "long": "114.194293"
+      "lat": "22.396452",
+      "long": "114.194295"
     },
     {
       "stop": "3C624F6CB2D5BBEA",
@@ -24629,49 +24685,49 @@
     },
     {
       "stop": "2D1A8946EF054FC9",
-      "name_en": "HONG KONG INSTITUTE OF BIOTECHNOLOGY",
-      "name_tc": "香港生物科技研究院",
-      "name_sc": "香港生物科技研究院",
+      "name_en": "HONG KONG INSTITUTE OF BIOTECHNOLOGY (N3)",
+      "name_tc": "香港生物科技研究院 (N3)",
+      "name_sc": "香港生物科技研究院 (N3)",
       "lat": "22.423223",
       "long": "114.213922"
     },
     {
       "stop": "DADEC4FDAD7C58B3",
-      "name_en": "SCIENCE PARK (PHASE 1)",
-      "name_tc": "科學園(第一期)",
-      "name_sc": "科学园(第一期)",
+      "name_en": "SCIENCE PARK (PHASE 1) (N4)",
+      "name_tc": "科學園(第一期) (N4)",
+      "name_sc": "科学园(第一期) (N4)",
       "lat": "22.424247",
       "long": "114.211432"
     },
     {
       "stop": "E8F5E085BAEFE100",
-      "name_en": "FO YIN ROAD",
-      "name_tc": "科研路",
-      "name_sc": "科研路",
+      "name_en": "FO YIN ROAD (N5)",
+      "name_tc": "科研路 (N5)",
+      "name_sc": "科研路 (N5)",
       "lat": "22.426628",
       "long": "114.208027"
     },
     {
       "stop": "79FD1B44D37205B8",
-      "name_en": "St MARTIN",
-      "name_tc": "雲滙",
-      "name_sc": "云滙",
+      "name_en": "St MARTIN (N6)",
+      "name_tc": "雲滙 (N6)",
+      "name_sc": "云滙 (N6)",
       "lat": "22.429561",
       "long": "114.203338"
     },
     {
       "stop": "369A5601F8A63B5E",
-      "name_en": "PAK SHEK KOK",
-      "name_tc": "白石角",
-      "name_sc": "白石角",
+      "name_en": "PAK SHEK KOK (N7)",
+      "name_tc": "白石角 (N7)",
+      "name_sc": "白石角 (N7)",
       "lat": "22.431492",
       "long": "114.201512"
     },
     {
       "stop": "A339426A8F633D63",
-      "name_en": "PAK SHEK KOK SUBSTATION",
-      "name_tc": "白石角變電站",
-      "name_sc": "白石角变电站",
+      "name_en": "PAK SHEK KOK SUBSTATION (N8)",
+      "name_tc": "白石角變電站 (N8)",
+      "name_sc": "白石角变电站 (N8)",
       "lat": "22.433895",
       "long": "114.200812"
     },
@@ -24701,41 +24757,41 @@
     },
     {
       "stop": "4DD5EC5516B360D7",
-      "name_en": "PROVIDENCE BAY",
-      "name_tc": "天賦海灣",
-      "name_sc": "天赋海湾",
+      "name_en": "PROVIDENCE BAY (S2)",
+      "name_tc": "天賦海灣 (S2)",
+      "name_sc": "天赋海湾 (S2)",
       "lat": "22.431492",
       "long": "114.201558"
     },
     {
       "stop": "33ABA49F0E91A247",
-      "name_en": "St MARTIN",
-      "name_tc": "雲滙",
-      "name_sc": "云滙",
+      "name_en": "St MARTIN (S3)",
+      "name_tc": "雲滙 (S3)",
+      "name_sc": "云滙 (S3)",
       "lat": "22.429805",
       "long": "114.203323"
     },
     {
       "stop": "B34F59A0270AEDA4",
-      "name_en": "CHONG SAN ROAD",
-      "name_tc": "創新路",
-      "name_sc": "创新路",
+      "name_en": "CHONG SAN ROAD (S4)",
+      "name_tc": "創新路 (S4)",
+      "name_sc": "创新路 (S4)",
       "lat": "22.428649",
       "long": "114.204981"
     },
     {
       "stop": "B464BD6334A93FA1",
-      "name_en": "FO YIN ROAD",
-      "name_tc": "科研路",
-      "name_sc": "科研路",
+      "name_en": "FO YIN ROAD (S5)",
+      "name_tc": "科研路 (S5)",
+      "name_sc": "科研路 (S5)",
       "lat": "22.426442",
       "long": "114.208450"
     },
     {
       "stop": "5C2A974134634635",
-      "name_en": "SCIENCE PARK (PHASE 1)",
-      "name_tc": "科學園(第一期)",
-      "name_sc": "科学园(第一期)",
+      "name_en": "SCIENCE PARK (PHASE 1) (S6)",
+      "name_tc": "科學園(第一期) (S6)",
+      "name_sc": "科学园(第一期) (S6)",
       "lat": "22.424272",
       "long": "114.211589"
     },
@@ -25148,14 +25204,6 @@
       "long": "114.168091"
     },
     {
-      "stop": "FB7E3001FDAB2CB1",
-      "name_en": "TAI WO BUS TERMINUS",
-      "name_tc": "太和總站",
-      "name_sc": "太和总站",
-      "lat": "22.450314",
-      "long": "114.161343"
-    },
-    {
       "stop": "5D6FB6C3F67A70DC",
       "name_en": "ON CHEUNG ROAD TAI PO",
       "name_tc": "大埔安祥路",
@@ -25237,9 +25285,9 @@
     },
     {
       "stop": "99440967B8390837",
-      "name_en": "WONG TAI SIN BBI - SHATIN PASS ROAD (C1)",
-      "name_tc": "黃大仙轉車站 - 沙田坳道 (C1)",
-      "name_sc": "黄大仙转车站 - 沙田坳道 (C1)",
+      "name_en": "WONG TAI SIN BBI - WONG TAI SIN TEMPLE (C1)",
+      "name_tc": "黃大仙轉車站 - 黃大仙廟 (C1)",
+      "name_sc": "黄大仙转车站 - 黄大仙庙 (C1)",
       "lat": "22.341481",
       "long": "114.194301"
     },
@@ -25357,49 +25405,49 @@
     },
     {
       "stop": "261392BB77CC768D",
-      "name_en": "PROVIDENCE BAY",
-      "name_tc": "天賦海灣",
-      "name_sc": "天赋海湾",
+      "name_en": "PROVIDENCE BAY (S2)",
+      "name_tc": "天賦海灣 (S2)",
+      "name_sc": "天赋海湾 (S2)",
       "lat": "22.431492",
       "long": "114.201558"
     },
     {
       "stop": "07AB149DAD888683",
-      "name_en": "St MARTIN",
-      "name_tc": "雲滙",
-      "name_sc": "云滙",
+      "name_en": "St MARTIN (S3)",
+      "name_tc": "雲滙 (S3)",
+      "name_sc": "云滙 (S3)",
       "lat": "22.429805",
       "long": "114.203323"
     },
     {
       "stop": "023E9E5A9E073E1A",
-      "name_en": "CHONG SAN ROAD",
-      "name_tc": "創新路",
-      "name_sc": "创新路",
+      "name_en": "CHONG SAN ROAD (S4)",
+      "name_tc": "創新路 (S4)",
+      "name_sc": "创新路 (S4)",
       "lat": "22.428649",
       "long": "114.204981"
     },
     {
       "stop": "B644204AEDE7A031",
-      "name_en": "FO YIN ROAD",
-      "name_tc": "科研路",
-      "name_sc": "科研路",
+      "name_en": "FO YIN ROAD (S5)",
+      "name_tc": "科研路 (S5)",
+      "name_sc": "科研路 (S5)",
       "lat": "22.426442",
       "long": "114.208450"
     },
     {
       "stop": "64101F297D3C1C55",
-      "name_en": "WATER SPORTS CENTRE",
-      "name_tc": "水上活動中心",
-      "name_sc": "水上活动中心",
+      "name_en": "WATER SPORTS CENTRE (S8)",
+      "name_tc": "水上活動中心 (S8)",
+      "name_sc": "水上活动中心 (S8)",
       "lat": "22.418662",
       "long": "114.214271"
     },
     {
       "stop": "5B39CC28607910E4",
-      "name_en": "MA LIU SHUI PUBLIC PIER",
-      "name_tc": "馬料水公眾碼頭",
-      "name_sc": "马料水公众码头",
+      "name_en": "MA LIU SHUI PUBLIC PIER (S9)",
+      "name_tc": "馬料水公眾碼頭 (S9)",
+      "name_sc": "马料水公众码头 (S9)",
       "lat": "22.416027",
       "long": "114.213945"
     },
@@ -25432,32 +25480,16 @@
       "name_en": "TELFORD GARDENS",
       "name_tc": "德福花園",
       "name_sc": "德福花园",
-      "lat": "22.322377",
-      "long": "114.214259"
+      "lat": "22.322570",
+      "long": "114.214311"
     },
     {
       "stop": "34E1E68A3C2AFE81",
-      "name_en": "WATER SPORTS CENTRE",
-      "name_tc": "水上活動中心",
-      "name_sc": "水上活动中心",
+      "name_en": "WATER SPORTS CENTRE (N2)",
+      "name_tc": "水上活動中心 (N2)",
+      "name_sc": "水上活动中心 (N2)",
       "lat": "22.420023",
       "long": "114.214250"
-    },
-    {
-      "stop": "BE940A2F1B154D6E",
-      "name_en": "SCIENCE PARK (PHASE 1)",
-      "name_tc": "科學園(第一期)",
-      "name_sc": "科学园(第一期)",
-      "lat": "22.424247",
-      "long": "114.211432"
-    },
-    {
-      "stop": "3313B37BF82AFF18",
-      "name_en": "St MARTIN",
-      "name_tc": "雲滙",
-      "name_sc": "云滙",
-      "lat": "22.429561",
-      "long": "114.203338"
     },
     {
       "stop": "081EB225028BC80B",
@@ -25560,8 +25592,8 @@
       "name_en": "TELFORD GARDENS",
       "name_tc": "德福花園",
       "name_sc": "德福花园",
-      "lat": "22.322542",
-      "long": "114.214064"
+      "lat": "22.322703",
+      "long": "114.214288"
     },
     {
       "stop": "A7274154A935CF21",
@@ -25661,9 +25693,9 @@
     },
     {
       "stop": "AA2D8DCDD78651B0",
-      "name_en": "WONG TAI SIN BBI - SHATIN PASS ROAD (C2)",
-      "name_tc": "黃大仙轉車站 - 沙田坳道 (C2)",
-      "name_sc": "黄大仙转车站 - 沙田坳道 (C2)",
+      "name_en": "WONG TAI SIN BBI - WONG TAI SIN TEMPLE (C2)",
+      "name_tc": "黃大仙轉車站 - 黃大仙廟 (C2)",
+      "name_sc": "黄大仙转车站 - 黄大仙庙 (C2)",
       "lat": "22.341479",
       "long": "114.194399"
     },
@@ -27596,6 +27628,14 @@
       "long": "114.170565"
     },
     {
+      "stop": "460D29054B1D54B1",
+      "name_en": "MEI LAM BUS TERMINUS",
+      "name_tc": "美林巴士總站",
+      "name_sc": "美林巴士总站",
+      "lat": "22.377689",
+      "long": "114.175003"
+    },
+    {
       "stop": "DD696D5A43B30E93",
       "name_en": "SUN CHUI BUS TERMINUS",
       "name_tc": "新翠巴士總站",
@@ -27610,6 +27650,14 @@
       "name_sc": "新田村",
       "lat": "22.371250",
       "long": "114.182514"
+    },
+    {
+      "stop": "3CEFE1F7CC598005",
+      "name_en": "TAI WAI STATION BUS TERMINUS (G6)",
+      "name_tc": "大圍站總站 (G6)",
+      "name_sc": "大围站总站 (G6)",
+      "lat": "22.372863",
+      "long": "114.180047"
     },
     {
       "stop": "A3647D99DA65BA96",
@@ -27732,6 +27780,14 @@
       "long": "114.178845"
     },
     {
+      "stop": "9D42555312E18AE9",
+      "name_en": "TAI WAI STATION BUS TERMINUS (G1)",
+      "name_tc": "大圍站總站 (G1)",
+      "name_sc": "大围站总站 (G1)",
+      "lat": "22.373074",
+      "long": "114.180370"
+    },
+    {
       "stop": "E791811B54447855",
       "name_en": "SAN TIN VILLAGE",
       "name_tc": "新田村",
@@ -27764,12 +27820,12 @@
       "long": "114.191749"
     },
     {
-      "stop": "59A591C17AEB1AF6",
+      "stop": "808560798B6F771E",
       "name_en": "FO TAN (SHAN MEI STREET) BUS TERMINUS",
       "name_tc": "火炭(山尾街)總站",
       "name_sc": "火炭(山尾街)总站",
-      "lat": "22.396525",
-      "long": "114.194300"
+      "lat": "22.396351",
+      "long": "114.194293"
     },
     {
       "stop": "024D478CE8AC52F3",
@@ -28268,14 +28324,6 @@
       "long": "114.170565"
     },
     {
-      "stop": "6C9B7DDF24725CA9",
-      "name_en": "TAI WAI STATION BUS TERMINUS",
-      "name_tc": "大圍站總站",
-      "name_sc": "大围站总站",
-      "lat": "22.372928",
-      "long": "114.180132"
-    },
-    {
       "stop": "C31623CD04CA37F0",
       "name_en": "KWONG YUEN BUS TERMINUS",
       "name_tc": "廣源巴士總站",
@@ -28372,7 +28420,7 @@
       "long": "114.213729"
     },
     {
-      "stop": "F8F0E91589F099CD",
+      "stop": "A9949A6EB27A63E8",
       "name_en": "PAK SHEK KOK",
       "name_tc": "白石角",
       "name_sc": "白石角",
@@ -28388,12 +28436,20 @@
       "long": "114.203753"
     },
     {
-      "stop": "460D29054B1D54B1",
-      "name_en": "MEI LAM BUS TERMINUS",
-      "name_tc": "美林巴士總站",
-      "name_sc": "美林巴士总站",
-      "lat": "22.377689",
-      "long": "114.175003"
+      "stop": "BE940A2F1B154D6E",
+      "name_en": "SCIENCE PARK (PHASE 1) (N4)",
+      "name_tc": "科學園(第一期) (N4)",
+      "name_sc": "科学园(第一期) (N4)",
+      "lat": "22.424247",
+      "long": "114.211432"
+    },
+    {
+      "stop": "3313B37BF82AFF18",
+      "name_en": "St MARTIN (N6)",
+      "name_tc": "雲滙 (N6)",
+      "name_sc": "云滙 (N6)",
+      "lat": "22.429561",
+      "long": "114.203338"
     },
     {
       "stop": "2E299F1E89BC57CE",
@@ -28788,12 +28844,12 @@
       "long": "114.221917"
     },
     {
-      "stop": "7234BEA4242461F7",
-      "name_en": "FO TAN (SHAN MEI STREET) BUS TERMINUS",
-      "name_tc": "火炭(山尾街)總站",
-      "name_sc": "火炭(山尾街)总站",
-      "lat": "22.396452",
-      "long": "114.194295"
+      "stop": "B730549EB3703C74",
+      "name_en": "FO TAN CHUN YEUNG ESTATE",
+      "name_tc": "火炭駿洋邨",
+      "name_sc": "火炭骏洋邨",
+      "lat": "22.399154",
+      "long": "114.190288"
     },
     {
       "stop": "8F28FEF1946A7FE3",
@@ -29164,12 +29220,12 @@
       "long": "114.188848"
     },
     {
-      "stop": "BA6D9F93E62B8075",
+      "stop": "1D99BD02B9B45429",
       "name_en": "MA ON SHAN TOWN CENTRE BUS TERMINUS",
       "name_tc": "馬鞍山市中心總站",
       "name_sc": "马鞍山市中心总站",
-      "lat": "22.424406",
-      "long": "114.231554"
+      "lat": "22.424445",
+      "long": "114.231544"
     },
     {
       "stop": "C43782B93826F4CD",
@@ -29266,6 +29322,14 @@
       "name_sc": "马鞍山公园",
       "lat": "22.425937",
       "long": "114.230765"
+    },
+    {
+      "stop": "7005EE5654387B8A",
+      "name_en": "MA ON SHAN TOWN CENTRE BUS TERMINUS (ALIGHTING)",
+      "name_tc": "馬鞍山市中心總站 (落客站)",
+      "name_sc": "马鞍山市中心总站 (落客站)",
+      "lat": "22.424211",
+      "long": "114.231614"
     },
     {
       "stop": "9001559964CBF493",
@@ -29596,12 +29660,12 @@
       "long": "114.237219"
     },
     {
-      "stop": "82FBCA6799699AA0",
+      "stop": "41E806B7927291BE",
       "name_en": "MA ON SHAN TOWN CENTRE BUS TERMINUS",
       "name_tc": "馬鞍山市中心總站",
       "name_sc": "马鞍山市中心总站",
-      "lat": "22.424332",
-      "long": "114.231580"
+      "lat": "22.424211",
+      "long": "114.231614"
     },
     {
       "stop": "028E0B68D3166C00",
@@ -29676,14 +29740,6 @@
       "long": "114.239571"
     },
     {
-      "stop": "85C58FB7D26A6E68",
-      "name_en": "MA ON SHAN TOWN CENTRE BUS TERMINUS",
-      "name_tc": "馬鞍山市中心總站",
-      "name_sc": "马鞍山市中心总站",
-      "lat": "22.424373",
-      "long": "114.231570"
-    },
-    {
       "stop": "2B7E8054D4A2CBA7",
       "name_en": "CHUNG ON BUS TERMINUS",
       "name_tc": "頌安巴士總站",
@@ -29698,6 +29754,14 @@
       "name_sc": "耀安邨耀谦楼",
       "lat": "22.418087",
       "long": "114.230731"
+    },
+    {
+      "stop": "EC5018363D5C45EB",
+      "name_en": "UNIVERSITY STATION",
+      "name_tc": "大學站",
+      "name_sc": "大学站",
+      "lat": "22.412678",
+      "long": "114.210665"
     },
     {
       "stop": "0C81107C4ABFCD56",
@@ -29730,14 +29794,6 @@
       "name_sc": "香港体育馆",
       "lat": "22.301962",
       "long": "114.181147"
-    },
-    {
-      "stop": "878A6FDD75689A2D",
-      "name_en": "UNIVERSITY STATION",
-      "name_tc": "大學站",
-      "name_sc": "大学站",
-      "lat": "22.412923",
-      "long": "114.210274"
     },
     {
       "stop": "6BBF595BBAD1DB2E",
@@ -29786,6 +29842,14 @@
       "name_sc": "沙田大会堂",
       "lat": "22.382109",
       "long": "114.189951"
+    },
+    {
+      "stop": "62E74F8E7357BC2D",
+      "name_en": "TAI WAI STATION BUS TERMINUS (G4)",
+      "name_tc": "大圍站總站 (G4)",
+      "name_sc": "大围站总站 (G4)",
+      "lat": "22.373074",
+      "long": "114.180370"
     },
     {
       "stop": "B9270C10E51D95F4",
@@ -29924,14 +29988,6 @@
       "long": "114.198842"
     },
     {
-      "stop": "B730549EB3703C74",
-      "name_en": "FO TAN CHUN YEUNG ESTATE",
-      "name_tc": "火炭駿洋邨",
-      "name_sc": "火炭骏洋邨",
-      "lat": "22.399154",
-      "long": "114.190288"
-    },
-    {
       "stop": "FCFE5157EBD8042B",
       "name_en": "SHA TIN STATION BUS TERMINUS",
       "name_tc": "沙田站巴士總站",
@@ -29954,6 +30010,14 @@
       "name_sc": "鲤鱼门广场",
       "lat": "22.296278",
       "long": "114.239716"
+    },
+    {
+      "stop": "9056734C713A7A14",
+      "name_en": "FO TAN CHUN YEUNG ESTATE",
+      "name_tc": "火炭駿洋邨",
+      "name_sc": "火炭骏洋邨",
+      "lat": "22.399154",
+      "long": "114.190288"
     },
     {
       "stop": "588AC7E77A3E3DB6",
@@ -30252,12 +30316,12 @@
       "long": "114.251823"
     },
     {
-      "stop": "9D208FE6B2CFD450",
+      "stop": "DF54B41AF7CE380C",
       "name_en": "TONG MING STREET PARK",
       "name_tc": "唐明街公園",
       "name_sc": "唐明街公园",
-      "lat": "22.310769",
-      "long": "114.259045"
+      "lat": "22.310718",
+      "long": "114.259016"
     },
     {
       "stop": "094EACC936039B3F",
@@ -30282,30 +30346,6 @@
       "name_sc": "将军澳隧道转车站 (G1)",
       "lat": "22.315362",
       "long": "114.240526"
-    },
-    {
-      "stop": "3418D6822E151335",
-      "name_en": "SHA TIN STATION BUS TERMINUS",
-      "name_tc": "沙田站巴士總站",
-      "name_sc": "沙田站巴士总站",
-      "lat": "22.383590",
-      "long": "114.187812"
-    },
-    {
-      "stop": "FA12CD84E4A4B73A",
-      "name_en": "KMB SHATIN DEPOT",
-      "name_tc": "九巴沙田車廠",
-      "name_sc": "九巴沙田车厂",
-      "lat": "22.383796",
-      "long": "114.206064"
-    },
-    {
-      "stop": "5A8E12780960ED97",
-      "name_en": "KMB SHATIN DEPOT",
-      "name_tc": "九巴沙田車廠",
-      "name_sc": "九巴沙田车厂",
-      "lat": "22.382590",
-      "long": "114.207310"
     },
     {
       "stop": "8DDA1226E5C7F144",
@@ -30938,38 +30978,6 @@
       "name_sc": "清水湾总站",
       "lat": "22.286983",
       "long": "114.287299"
-    },
-    {
-      "stop": "10590D40479607E8",
-      "name_en": "CHUNG WA ROAD",
-      "name_tc": "重華路",
-      "name_sc": "重华路",
-      "lat": "22.316889",
-      "long": "114.266003"
-    },
-    {
-      "stop": "54FCA9F5D8F3587E",
-      "name_en": "YUK MING COURT",
-      "name_tc": "煜明苑",
-      "name_sc": "煜明苑",
-      "lat": "22.314696",
-      "long": "114.266582"
-    },
-    {
-      "stop": "C37E7CF06680272D",
-      "name_en": "CHUI LING ROAD",
-      "name_tc": "翠嶺路",
-      "name_sc": "翠岭路",
-      "lat": "22.304726",
-      "long": "114.253849"
-    },
-    {
-      "stop": "26F23B1B4A5AB703",
-      "name_en": "TIU KENG LENG STATION",
-      "name_tc": "調景嶺站",
-      "name_sc": "调景岭站",
-      "lat": "22.304787",
-      "long": "114.252229"
     },
     {
       "stop": "0F283CD99F7295F3",
@@ -31900,6 +31908,14 @@
       "long": "114.250283"
     },
     {
+      "stop": "54FCA9F5D8F3587E",
+      "name_en": "YUK MING COURT",
+      "name_tc": "煜明苑",
+      "name_sc": "煜明苑",
+      "lat": "22.314696",
+      "long": "114.266582"
+    },
+    {
       "stop": "C9EA7B56F1197D16",
       "name_en": "TSEUNG KWAN O STATION",
       "name_tc": "將軍澳站",
@@ -32036,12 +32052,12 @@
       "long": "114.272414"
     },
     {
-      "stop": "89E9AB03B639BC10",
+      "stop": "91CD1740B6AC752B",
       "name_en": "WU KAI SHA STATION",
       "name_tc": "烏溪沙站",
       "name_sc": "乌溪沙站",
-      "lat": "22.428344",
-      "long": "114.243423"
+      "lat": "22.428333",
+      "long": "114.243275"
     },
     {
       "stop": "7FD05121B0A4A750",
@@ -32394,14 +32410,6 @@
       "name_sc": "西贡总站",
       "lat": "22.382044",
       "long": "114.273822"
-    },
-    {
-      "stop": "91CD1740B6AC752B",
-      "name_en": "WU KAI SHA STATION",
-      "name_tc": "烏溪沙站",
-      "name_sc": "乌溪沙站",
-      "lat": "22.428333",
-      "long": "114.243275"
     },
     {
       "stop": "DAFAF65DCEA183D8",
@@ -33069,41 +33077,41 @@
     },
     {
       "stop": "AE9F399F5ACF4837",
-      "name_en": "CHEUNG WAH STREET",
-      "name_tc": "昌華街",
-      "name_sc": "昌华街",
+      "name_en": "CHEUNG WAH STREET (Y7)",
+      "name_tc": "昌華街 (Y7)",
+      "name_sc": "昌华街 (Y7)",
       "lat": "22.338579",
       "long": "114.152137"
     },
     {
       "stop": "9DA9C859E574B8B4",
-      "name_en": "CHEUNG SHA WAN STATION",
-      "name_tc": "長沙灣站",
-      "name_sc": "长沙湾站",
+      "name_en": "CHEUNG SHA WAN STATION (Y12)",
+      "name_tc": "長沙灣站 (Y12)",
+      "name_sc": "长沙湾站 (Y12)",
       "lat": "22.336841",
       "long": "114.154597"
     },
     {
       "stop": "A701BCC43DF54B6B",
-      "name_en": "TONKIN STREET CHEUNG SHA WAN",
-      "name_tc": "長沙灣東京街",
-      "name_sc": "长沙湾东京街",
+      "name_en": "TONKIN STREET CHEUNG SHA WAN (Y16)",
+      "name_tc": "長沙灣東京街 (Y16)",
+      "name_sc": "长沙湾东京街 (Y16)",
       "lat": "22.335199",
       "long": "114.156697"
     },
     {
       "stop": "FC28F96F0BAF8FF7",
-      "name_en": "YEN CHOW STREET SHAM SHUI PO",
-      "name_tc": "深水埗欽州街",
-      "name_sc": "深水埗钦州街",
+      "name_en": "YEN CHOW STREET SHAM SHUI PO (Y21)",
+      "name_tc": "深水埗欽州街 (Y21)",
+      "name_sc": "深水埗钦州街 (Y21)",
       "lat": "22.332413",
       "long": "114.160366"
     },
     {
       "stop": "5159E5E97EA88D9D",
-      "name_en": "PEI HO STREET SHAM SHUI PO",
-      "name_tc": "深水埗北河街",
-      "name_sc": "深水埗北河街",
+      "name_en": "PEI HO STREET SHAM SHUI PO (Y23)",
+      "name_tc": "深水埗北河街 (Y23)",
+      "name_sc": "深水埗北河街 (Y23)",
       "lat": "22.330935",
       "long": "114.162251"
     },
@@ -35332,12 +35340,28 @@
       "long": "114.228306"
     },
     {
-      "stop": "3FD67C010BBA54DA",
-      "name_en": "YIU TUNG ESTATE",
-      "name_tc": "耀東邨",
-      "name_sc": "耀东邨",
-      "lat": "22.277965",
-      "long": "114.222893"
+      "stop": "4FC7150518C5234A",
+      "name_en": "SHAUKEIWAN PLAZA",
+      "name_tc": "筲箕灣廣場",
+      "name_sc": "筲箕湾广场",
+      "lat": "22.277232",
+      "long": "114.226245"
+    },
+    {
+      "stop": "3FB2109BF5E57DDB",
+      "name_en": "TUNG SHING COURT",
+      "name_tc": "東盛苑",
+      "name_sc": "东盛苑",
+      "lat": "22.275998",
+      "long": "114.226498"
+    },
+    {
+      "stop": "F01C5503A89517B4",
+      "name_en": "YIU TUNG SHOPPING CENTRE",
+      "name_tc": "耀東商場",
+      "name_sc": "耀东商场",
+      "lat": "22.277031",
+      "long": "114.223742"
     },
     {
       "stop": "88461293F994CB07",
@@ -35546,6 +35570,14 @@
       "name_sc": "耀华楼",
       "lat": "22.279297",
       "long": "114.221017"
+    },
+    {
+      "stop": "3FD67C010BBA54DA",
+      "name_en": "YIU TUNG ESTATE",
+      "name_tc": "耀東邨",
+      "name_sc": "耀东邨",
+      "lat": "22.277965",
+      "long": "114.222893"
     },
     {
       "stop": "1ACC12FB59AE1A98",
@@ -36133,9 +36165,9 @@
     },
     {
       "stop": "1E29A8A8D3F6BABB",
-      "name_en": "PEI HO STREET SHAM SHUI PO",
-      "name_tc": "深水埗北河街",
-      "name_sc": "深水埗北河街",
+      "name_en": "PEI HO STREET SHAM SHUI PO (Y24)",
+      "name_tc": "深水埗北河街 (Y24)",
+      "name_sc": "深水埗北河街 (Y24)",
       "lat": "22.330875",
       "long": "114.162332"
     },
@@ -36490,14 +36522,6 @@
       "name_sc": "聚康山庄",
       "lat": "22.411907",
       "long": "113.982927"
-    },
-    {
-      "stop": "595CE3974AB6F377",
-      "name_en": "HUNG SHUI KIU (HUNG YUEN ROAD) BUS TERMINUS",
-      "name_tc": "洪水橋(洪元路)總站",
-      "name_sc": "洪水桥(洪元路)总站",
-      "lat": "22.434560",
-      "long": "113.998290"
     },
     {
       "stop": "DAFFF59B0718B464",
@@ -37157,7 +37181,7 @@
     },
     {
       "stop": "55DFA7DF300865AF",
-      "name_en": "CHOI HUNG BUS TERMINUS (N1)",
+      "name_en": "CHOI HUNG BBI - CHOI HUNG BUS TERMINUS (N1)",
       "name_tc": "彩虹轉車站 - 彩虹總站 (N1)",
       "name_sc": "彩虹转车站 - 彩虹总站 (N1)",
       "lat": "22.336120",
@@ -37341,9 +37365,9 @@
     },
     {
       "stop": "A7ACF96685132360",
-      "name_en": "WONG TAI SIN BBI - WONG TAI SIN STATION  (B1)",
-      "name_tc": "黃大仙轉車站 - 黃大仙站 (B1)",
-      "name_sc": "黄大仙转车站 - 黄大仙站 (B1)",
+      "name_en": "WONG TAI SIN BBI - WONG TAI SIN TEMPLE (B1)",
+      "name_tc": "黃大仙轉車站 - 黃大仙廟 (B1)",
+      "name_sc": "黄大仙转车站 - 黄大仙庙 (B1)",
       "lat": "22.341850",
       "long": "114.192418"
     },
@@ -37626,6 +37650,38 @@
       "name_sc": "启业总站",
       "lat": "22.328552",
       "long": "114.208729"
+    },
+    {
+      "stop": "68A0FA3CC69206CC",
+      "name_en": "KOWLOON STATION BUS TERMINUS",
+      "name_tc": "九龍站巴士總站",
+      "name_sc": "九龙站巴士总站",
+      "lat": "22.305015",
+      "long": "114.162893"
+    },
+    {
+      "stop": "83B921ED81BE55A9",
+      "name_en": "FU CHEONG ESTATE",
+      "name_tc": "富昌邨",
+      "name_sc": "富昌邨",
+      "lat": "22.327310",
+      "long": "114.154421"
+    },
+    {
+      "stop": "E37FAF099C26C878",
+      "name_en": "MA WAN (PAK YAN ROAD)",
+      "name_tc": "馬灣(珀欣路)",
+      "name_sc": "马湾(珀欣路)",
+      "lat": "22.348203",
+      "long": "114.060729"
+    },
+    {
+      "stop": "25215C60B06337AF",
+      "name_en": "FU CHEONG ESTATE",
+      "name_tc": "富昌邨",
+      "name_sc": "富昌邨",
+      "lat": "22.328403",
+      "long": "114.153699"
     },
     {
       "stop": "B97161BE6BCBD04D",
@@ -38005,9 +38061,9 @@
     },
     {
       "stop": "58100E7F618C4018",
-      "name_en": "WONG TAI SIN BBI - WONG TAI SIN STATION (B2)",
-      "name_tc": "黃大仙轉車站 - 黃大仙站 (B2)",
-      "name_sc": "黄大仙转车站 - 黄大仙站 (B2)",
+      "name_en": "WONG TAI SIN BBI - WONG TAI SIN TEMPLE (B2)",
+      "name_tc": "黃大仙轉車站 - 黃大仙廟 (B2)",
+      "name_sc": "黄大仙转车站 - 黄大仙庙 (B2)",
       "lat": "22.341852",
       "long": "114.192339"
     },
@@ -38484,14 +38540,6 @@
       "long": "113.978906"
     },
     {
-      "stop": "A856593C105D479B",
-      "name_en": "HUNG FUK ESTATE HUNG YUEN ROAD",
-      "name_tc": "洪元路洪福邨",
-      "name_sc": "洪元路洪福邨",
-      "lat": "22.437026",
-      "long": "113.996724"
-    },
-    {
       "stop": "16F5EB4168069F73",
       "name_en": "LEUNG KING ESTATE BUS TERMINUS",
       "name_tc": "良景邨總站",
@@ -38564,20 +38612,20 @@
       "long": "114.016263"
     },
     {
+      "stop": "3418D6822E151335",
+      "name_en": "SHA TIN STATION BUS TERMINUS",
+      "name_tc": "沙田站巴士總站",
+      "name_sc": "沙田站巴士总站",
+      "lat": "22.383590",
+      "long": "114.187812"
+    },
+    {
       "stop": "5FDA47671B5557B3",
       "name_en": "SHING MUN TUNNELS BUS INTERCHANGE (B5)",
       "name_tc": "城門隧道轉車站 (B5)",
       "name_sc": "城门隧道转车站 (B5)",
       "lat": "22.381418",
       "long": "114.137985"
-    },
-    {
-      "stop": "69E2EED46A147AE3",
-      "name_en": "FO TAN (SHAN MEI STREET) BUS TERMINUS",
-      "name_tc": "火炭(山尾街)總站",
-      "name_sc": "火炭(山尾街)总站",
-      "lat": "22.396525",
-      "long": "114.194300"
     },
     {
       "stop": "45E245505155AFF3",
@@ -38778,14 +38826,6 @@
       "name_sc": "银田花园",
       "lat": "22.439505",
       "long": "114.022113"
-    },
-    {
-      "stop": "50B398D31C6B2D28",
-      "name_en": "YUEN LONG PARK BUS TERMINUS",
-      "name_tc": "元朗公園總站",
-      "name_sc": "元朗公园总站",
-      "lat": "22.442051",
-      "long": "114.020163"
     },
     {
       "stop": "E8B52C5A78E48365",
@@ -39172,12 +39212,36 @@
       "long": "114.210665"
     },
     {
+      "stop": "F8F0E91589F099CD",
+      "name_en": "PAK SHEK KOK",
+      "name_tc": "白石角",
+      "name_sc": "白石角",
+      "lat": "22.431368",
+      "long": "114.201986"
+    },
+    {
+      "stop": "D31420E8C08168FC",
+      "name_en": "POK YIN ROAD",
+      "name_tc": "博研路",
+      "name_sc": "博研路",
+      "lat": "22.427840",
+      "long": "114.202526"
+    },
+    {
       "stop": "1D1571E9D1588FBE",
-      "name_en": "HONG KONG INSTITUTE OF BIOTECHNOLOGY",
-      "name_tc": "香港生物科技研究院",
-      "name_sc": "香港生物科技研究院",
+      "name_en": "HONG KONG INSTITUTE OF BIOTECHNOLOGY (S7)",
+      "name_tc": "香港生物科技研究院 (S7)",
+      "name_sc": "香港生物科技研究院 (S7)",
       "lat": "22.422664",
       "long": "114.214179"
+    },
+    {
+      "stop": "878A6FDD75689A2D",
+      "name_en": "UNIVERSITY STATION",
+      "name_tc": "大學站",
+      "name_sc": "大学站",
+      "lat": "22.412923",
+      "long": "114.210274"
     },
     {
       "stop": "A9459D38A4A41F36",
@@ -39226,14 +39290,6 @@
       "name_sc": "百福田心球场",
       "lat": "22.488346",
       "long": "114.140923"
-    },
-    {
-      "stop": "9D6348EE544EF362",
-      "name_en": "WAH MING BBI",
-      "name_tc": "華明轉車站",
-      "name_sc": "华明转车站",
-      "lat": "22.483955",
-      "long": "114.141712"
     },
     {
       "stop": "18785E68EAD3D9B8",
@@ -39338,6 +39394,14 @@
       "name_sc": "昌盛苑",
       "lat": "22.483813",
       "long": "114.139244"
+    },
+    {
+      "stop": "E22B819E638307CC",
+      "name_en": "WU KAI SHA STATION",
+      "name_tc": "烏溪沙站",
+      "name_sc": "乌溪沙站",
+      "lat": "22.428420",
+      "long": "114.244017"
     },
     {
       "stop": "D517E296CB051677",
@@ -39644,6 +39708,14 @@
       "long": "114.104436"
     },
     {
+      "stop": "59A591C17AEB1AF6",
+      "name_en": "FO TAN (SHAN MEI STREET) BUS TERMINUS",
+      "name_tc": "火炭(山尾街)總站",
+      "name_sc": "火炭(山尾街)总站",
+      "lat": "22.396525",
+      "long": "114.194300"
+    },
+    {
       "stop": "F3433105FE5F6865",
       "name_en": "TSING SHA HIGHWAY BBI (A3)",
       "name_tc": "青沙公路轉車站 (A3)",
@@ -39658,6 +39730,14 @@
       "name_sc": "新田围巴士总站",
       "lat": "22.370898",
       "long": "114.186118"
+    },
+    {
+      "stop": "CEE44B3D4CC3E847",
+      "name_en": "TAI WAI STATION BUS TERMINUS (G3)",
+      "name_tc": "大圍站總站 (G3)",
+      "name_sc": "大围站总站 (G3)",
+      "lat": "22.373074",
+      "long": "114.180370"
     },
     {
       "stop": "EAA44CDBC231DB8C",
@@ -39796,14 +39876,6 @@
       "long": "114.162925"
     },
     {
-      "stop": "91326B089261EF3B",
-      "name_en": "MA ON SHAN TOWN CENTRE BUS TERMINUS",
-      "name_tc": "馬鞍山市中心總站",
-      "name_sc": "马鞍山市中心总站",
-      "lat": "22.424293",
-      "long": "114.231589"
-    },
-    {
       "stop": "0CAB5EE71EF19B76",
       "name_en": "CHUNG ON BUS TERMINUS",
       "name_tc": "頌安巴士總站",
@@ -39866,6 +39938,22 @@
       "name_sc": "深水埗(钦州街)",
       "lat": "22.331051",
       "long": "114.159891"
+    },
+    {
+      "stop": "3E10F323161F4ADB",
+      "name_en": "UNIVERSITY STATION",
+      "name_tc": "大學站",
+      "name_sc": "大学站",
+      "lat": "22.412599",
+      "long": "114.211231"
+    },
+    {
+      "stop": "8AD4B244D6A50BDB",
+      "name_en": "SHAP SZE HEUNG",
+      "name_tc": "十四鄉",
+      "name_sc": "十四乡",
+      "lat": "22.427029",
+      "long": "114.265792"
     },
     {
       "stop": "81E82A4D2A0D9BD3",
@@ -39956,6 +40044,14 @@
       "long": "114.198576"
     },
     {
+      "stop": "69E2EED46A147AE3",
+      "name_en": "FO TAN (SHAN MEI STREET) BUS TERMINUS",
+      "name_tc": "火炭(山尾街)總站",
+      "name_sc": "火炭(山尾街)总站",
+      "lat": "22.396525",
+      "long": "114.194300"
+    },
+    {
       "stop": "888C8A612C998895",
       "name_en": "UNIVERSITY STATION",
       "name_tc": "大學站",
@@ -39986,6 +40082,14 @@
       "name_sc": "彩明总站",
       "lat": "22.305903",
       "long": "114.251711"
+    },
+    {
+      "stop": "9D208FE6B2CFD450",
+      "name_en": "TONG MING STREET PARK",
+      "name_tc": "唐明街公園",
+      "name_sc": "唐明街公园",
+      "lat": "22.310769",
+      "long": "114.259045"
     },
     {
       "stop": "3047EC57E5BC5FA6",
@@ -40082,6 +40186,14 @@
       "name_sc": "康城站",
       "lat": "22.296239",
       "long": "114.268098"
+    },
+    {
+      "stop": "26F23B1B4A5AB703",
+      "name_en": "TIU KENG LENG STATION",
+      "name_tc": "調景嶺站",
+      "name_sc": "调景岭站",
+      "lat": "22.304787",
+      "long": "114.252229"
     },
     {
       "stop": "43C8B0C86DE8805D",
@@ -40234,6 +40346,14 @@
       "name_sc": "坑口(北) (将军澳医院)",
       "lat": "22.317722",
       "long": "114.269074"
+    },
+    {
+      "stop": "10590D40479607E8",
+      "name_en": "CHUNG WA ROAD",
+      "name_tc": "重華路",
+      "name_sc": "重华路",
+      "lat": "22.316889",
+      "long": "114.266003"
     },
     {
       "stop": "F5B19145922F18CC",
@@ -41388,22 +41508,6 @@
       "long": "114.202365"
     },
     {
-      "stop": "D284FB0096B5A8E6",
-      "name_en": "HONG KONG CONVENTION & EXHIBITION CENTRE",
-      "name_tc": "香港會議展覽中心",
-      "name_sc": "香港会议展览中心",
-      "lat": "22.281387",
-      "long": "114.174153"
-    },
-    {
-      "stop": "FBE07247C3FDB904",
-      "name_en": "ON TAI (WEST) (WO TAI HOUSE)",
-      "name_tc": "安泰(西)(和泰樓)",
-      "name_sc": "安泰(西)(和泰楼)",
-      "lat": "22.328027",
-      "long": "114.227750"
-    },
-    {
       "stop": "360587444784CEAB",
       "name_en": "CHOI WAN (FUNG SHING STREET) BUS TERMINUS",
       "name_tc": "彩雲(豐盛街)總站",
@@ -41468,6 +41572,46 @@
       "long": "114.217396"
     },
     {
+      "stop": "EE5EC4A3D89B15A2",
+      "name_en": "TUNG YAN COURT",
+      "name_tc": "東欣苑",
+      "name_sc": "东欣苑",
+      "lat": "22.280777",
+      "long": "114.220835"
+    },
+    {
+      "stop": "919E4DD5F0CD1EB8",
+      "name_en": "TUNG HEI COURT",
+      "name_tc": "東熹苑",
+      "name_sc": "东熹苑",
+      "lat": "22.280510",
+      "long": "114.219654"
+    },
+    {
+      "stop": "C5047114FD7095C2",
+      "name_en": "YAT HEI HOUSE",
+      "name_tc": "逸熹閣",
+      "name_sc": "逸熹阁",
+      "lat": "22.279692",
+      "long": "114.218320"
+    },
+    {
+      "stop": "09C3C495C7DF0E37",
+      "name_en": "YIU WAH HOUSE",
+      "name_tc": "耀華樓",
+      "name_sc": "耀华楼",
+      "lat": "22.279341",
+      "long": "114.221004"
+    },
+    {
+      "stop": "D709FAE71F6D5238",
+      "name_en": "YIU TUNG ESTATE",
+      "name_tc": "耀東邨",
+      "name_sc": "耀东邨",
+      "lat": "22.277965",
+      "long": "114.222893"
+    },
+    {
       "stop": "249030228FF24B3F",
       "name_en": "NAM ON LANE",
       "name_tc": "南安里",
@@ -41516,68 +41660,28 @@
       "long": "114.226149"
     },
     {
-      "stop": "32D100AA14882F16",
-      "name_en": "SAI WAN HO CIVIC CENTRE",
-      "name_tc": "西灣河文娛中心",
-      "name_sc": "西湾河文娱中心",
-      "lat": "22.281715",
-      "long": "114.222056"
+      "stop": "223C710D32CE25F0",
+      "name_en": "SHAUKEIWAN PLAZA",
+      "name_tc": "筲箕灣廣場",
+      "name_sc": "筲箕湾广场",
+      "lat": "22.277134",
+      "long": "114.226274"
     },
     {
-      "stop": "996069D6FEF7D71A",
-      "name_en": "BO FUNG GARDENS",
-      "name_tc": "寶峰園",
-      "name_sc": "宝峰园",
-      "lat": "22.284577",
-      "long": "114.214738"
+      "stop": "ACF62AEB50A6E73F",
+      "name_en": "TUNG SHING COURT",
+      "name_tc": "東盛苑",
+      "name_sc": "东盛苑",
+      "lat": "22.275883",
+      "long": "114.226417"
     },
     {
-      "stop": "9335E0F061724158",
-      "name_en": "TIN CHIU STREET",
-      "name_tc": "電照街",
-      "name_sc": "电照街",
-      "lat": "22.292559",
-      "long": "114.202798"
-    },
-    {
-      "stop": "EE5EC4A3D89B15A2",
-      "name_en": "TUNG YAN COURT",
-      "name_tc": "東欣苑",
-      "name_sc": "东欣苑",
-      "lat": "22.280777",
-      "long": "114.220835"
-    },
-    {
-      "stop": "919E4DD5F0CD1EB8",
-      "name_en": "TUNG HEI COURT",
-      "name_tc": "東熹苑",
-      "name_sc": "东熹苑",
-      "lat": "22.280510",
-      "long": "114.219654"
-    },
-    {
-      "stop": "C5047114FD7095C2",
-      "name_en": "YAT HEI HOUSE",
-      "name_tc": "逸熹閣",
-      "name_sc": "逸熹阁",
-      "lat": "22.279692",
-      "long": "114.218320"
-    },
-    {
-      "stop": "09C3C495C7DF0E37",
-      "name_en": "YIU WAH HOUSE",
-      "name_tc": "耀華樓",
-      "name_sc": "耀华楼",
-      "lat": "22.279341",
-      "long": "114.221004"
-    },
-    {
-      "stop": "86A7D57B3275BC96",
-      "name_en": "YIU TUNG ESTATE",
-      "name_tc": "耀東邨",
-      "name_sc": "耀东邨",
-      "lat": "22.277965",
-      "long": "114.222893"
+      "stop": "D715DFCAE9DEB3E7",
+      "name_en": "YIU TUNG SHOPPING CENTRE",
+      "name_tc": "耀東商場",
+      "name_sc": "耀东商场",
+      "lat": "22.277323",
+      "long": "114.223499"
     },
     {
       "stop": "E114ADD0B146D4CA",
@@ -41612,12 +41716,44 @@
       "long": "114.220325"
     },
     {
+      "stop": "996069D6FEF7D71A",
+      "name_en": "BO FUNG GARDENS",
+      "name_tc": "寶峰園",
+      "name_sc": "宝峰园",
+      "lat": "22.284577",
+      "long": "114.214738"
+    },
+    {
+      "stop": "9335E0F061724158",
+      "name_en": "TIN CHIU STREET",
+      "name_tc": "電照街",
+      "name_sc": "电照街",
+      "lat": "22.292559",
+      "long": "114.202798"
+    },
+    {
+      "stop": "86A7D57B3275BC96",
+      "name_en": "YIU TUNG ESTATE",
+      "name_tc": "耀東邨",
+      "name_sc": "耀东邨",
+      "lat": "22.277965",
+      "long": "114.222893"
+    },
+    {
       "stop": "A1D5C0FDCC39AFF8",
       "name_en": "SHAU KEI WAN BUS TERMINUS",
       "name_tc": "筲箕灣巴士總站",
       "name_sc": "筲箕湾巴士总站",
       "lat": "22.278445",
       "long": "114.228306"
+    },
+    {
+      "stop": "FBE07247C3FDB904",
+      "name_en": "ON TAI (WEST) (WO TAI HOUSE)",
+      "name_tc": "安泰(西)(和泰樓)",
+      "name_sc": "安泰(西)(和泰楼)",
+      "lat": "22.328027",
+      "long": "114.227750"
     },
     {
       "stop": "57FA25A4EF6DC06B",
@@ -41722,6 +41858,14 @@
       "name_sc": "海晏街",
       "lat": "22.280809",
       "long": "114.223237"
+    },
+    {
+      "stop": "32D100AA14882F16",
+      "name_en": "SAI WAN HO CIVIC CENTRE",
+      "name_tc": "西灣河文娛中心",
+      "name_sc": "西湾河文娱中心",
+      "lat": "22.281715",
+      "long": "114.222056"
     },
     {
       "stop": "D57DA1E15D3C0332",
@@ -42508,12 +42652,12 @@
       "long": "114.189206"
     },
     {
-      "stop": "96F3B1A2E2ACE68F",
+      "stop": "15FF958BE6921BAA",
       "name_en": "MA ON SHAN TOWN CENTRE BUS TERMINUS",
       "name_tc": "馬鞍山市中心總站",
       "name_sc": "马鞍山市中心总站",
-      "lat": "22.424256",
-      "long": "114.231604"
+      "lat": "22.424211",
+      "long": "114.231614"
     },
     {
       "stop": "F86BDB236D6ACDC3",
@@ -42562,14 +42706,6 @@
       "name_sc": "富安花园巴士总站",
       "lat": "22.405742",
       "long": "114.224139"
-    },
-    {
-      "stop": "E22B819E638307CC",
-      "name_en": "WU KAI SHA STATION",
-      "name_tc": "烏溪沙站",
-      "name_sc": "乌溪沙站",
-      "lat": "22.428420",
-      "long": "114.244017"
     },
     {
       "stop": "228D031FB197691F",
@@ -42636,12 +42772,12 @@
       "long": "114.177404"
     },
     {
-      "stop": "B17D6DC7AB0799FA",
+      "stop": "BA6D9F93E62B8075",
       "name_en": "MA ON SHAN TOWN CENTRE BUS TERMINUS",
       "name_tc": "馬鞍山市中心總站",
       "name_sc": "马鞍山市中心总站",
-      "lat": "22.424211",
-      "long": "114.231614"
+      "lat": "22.424406",
+      "long": "114.231554"
     },
     {
       "stop": "16A987682D402255",
@@ -42933,17 +43069,17 @@
     },
     {
       "stop": "FF3CD465098B03A5",
-      "name_en": "CHEUNG WAH STREET",
-      "name_tc": "昌華街",
-      "name_sc": "昌华街",
+      "name_en": "CHEUNG WAH STREET (Y6)",
+      "name_tc": "昌華街 (Y6)",
+      "name_sc": "昌华街 (Y6)",
       "lat": "22.338530",
       "long": "114.151457"
     },
     {
       "stop": "652BD65D62F807DE",
-      "name_en": "PEI HO STREET SHAM SHUI PO",
-      "name_tc": "深水埗北河街",
-      "name_sc": "深水埗北河街",
+      "name_en": "PEI HO STREET SHAM SHUI PO (Y25)",
+      "name_tc": "深水埗北河街 (Y25)",
+      "name_sc": "深水埗北河街 (Y25)",
       "lat": "22.330821",
       "long": "114.162391"
     },
@@ -43138,14 +43274,6 @@
       "name_sc": "碧海蓝天",
       "lat": "22.332237",
       "long": "114.148069"
-    },
-    {
-      "stop": "25215C60B06337AF",
-      "name_en": "FU CHEONG ESTATE",
-      "name_tc": "富昌邨",
-      "name_sc": "富昌邨",
-      "lat": "22.328403",
-      "long": "114.153699"
     },
     {
       "stop": "2DA1D06B46A56276",
@@ -45252,6 +45380,22 @@
       "long": "114.133599"
     },
     {
+      "stop": "EF7EC605C6C6859A",
+      "name_en": "JU CHING CHU SEC. SCH.",
+      "name_tc": "裘錦秋中學",
+      "name_sc": "裘锦秋中学",
+      "lat": "22.369340",
+      "long": "114.140828"
+    },
+    {
+      "stop": "2A70ADF9A6812DD6",
+      "name_en": "WO YI HOP ROAD SPORTSGROUND",
+      "name_tc": "和宜合道運動場",
+      "name_sc": "和宜合道运动场",
+      "lat": "22.373954",
+      "long": "114.136349"
+    },
+    {
       "stop": "708870108A511AF7",
       "name_en": "NINA TOWER BUS TERMINUS",
       "name_tc": "如心廣場巴士總站",
@@ -45530,6 +45674,14 @@
       "name_sc": "青衣街市",
       "lat": "22.354494",
       "long": "114.106015"
+    },
+    {
+      "stop": "C4BFD3A76F6CDCED",
+      "name_en": "TSING YI FERRY",
+      "name_tc": "青衣碼頭",
+      "name_sc": "青衣码头",
+      "lat": "22.353312",
+      "long": "114.108981"
     },
     {
       "stop": "A1456D9E78A4CBE9",
@@ -46916,6 +47068,14 @@
       "long": "114.019456"
     },
     {
+      "stop": "00115688D89603F9",
+      "name_en": "THE FAMILY PLANNING ASSOCIATION OF HK",
+      "name_tc": "香港家庭計劃指導會",
+      "name_sc": "香港家庭计划指导会",
+      "lat": "22.445861",
+      "long": "114.022618"
+    },
+    {
       "stop": "3D566753F149907F",
       "name_en": "KUK TING STREET (N17)",
       "name_tc": "谷亭街 (N17)",
@@ -47677,17 +47837,17 @@
     },
     {
       "stop": "4F09976CA4CF80C9",
-      "name_en": "TAI WAI BBI - SUN MING HOUSE, SUN CHUI ESTATE",
-      "name_tc": "大圍轉車站 - 新翠邨新明樓",
-      "name_sc": "大围转车站 - 新翠邨新明楼",
+      "name_en": "TAI WAI BBI - SUN MING HOUSE, SUN CHUI ESTATE (A2)",
+      "name_tc": "大圍轉車站 - 新翠邨新明樓 (A2)",
+      "name_sc": "大围转车站 - 新翠邨新明楼 (A2)",
       "lat": "22.372094",
       "long": "114.180196"
     },
     {
       "stop": "F01D5D94B03AA8A2",
-      "name_en": "TAI WAI BBI - CHIK WAN STREET",
-      "name_tc": "大圍轉車站 - 積運街",
-      "name_sc": "大围转车站 - 积运街",
+      "name_en": "TAI WAI BBI - CHIK WAN STREET (E2)",
+      "name_tc": "大圍轉車站 - 積運街 (E2)",
+      "name_sc": "大围转车站 - 积运街 (E2)",
       "lat": "22.371958",
       "long": "114.178141"
     },
@@ -47733,9 +47893,9 @@
     },
     {
       "stop": "156FFE36D7D42EFE",
-      "name_en": "TAI WAI BBI - TAI WAI STATION",
-      "name_tc": "大圍轉車站 - 大圍站",
-      "name_sc": "大围转车站 - 大围站",
+      "name_en": "TAI WAI BBI - TAI WAI STATION (F2)",
+      "name_tc": "大圍轉車站 - 大圍站 (F2)",
+      "name_sc": "大围转车站 - 大围站 (F2)",
       "lat": "22.372631",
       "long": "114.180352"
     },
@@ -48253,9 +48413,9 @@
     },
     {
       "stop": "FC48D23E87345ABF",
-      "name_en": "TAI WAI BBI - TIN SAM VILLAGE",
-      "name_tc": "大圍轉車站 - 田心村",
-      "name_sc": "大围转车站 - 田心村",
+      "name_en": "TAI WAI BBI - TIN SAM VILLAGE (D2)",
+      "name_tc": "大圍轉車站 - 田心村(D2)",
+      "name_sc": "大围转车站 - 田心村(D2)",
       "lat": "22.370674",
       "long": "114.177940"
     },
@@ -48292,12 +48452,28 @@
       "long": "114.171960"
     },
     {
+      "stop": "BF9EF4DE47490F5E",
+      "name_en": "SUN TIN WAI ESTATE",
+      "name_tc": "新田圍邨",
+      "name_sc": "新田围邨",
+      "lat": "22.368914",
+      "long": "114.187352"
+    },
+    {
       "stop": "8A7BE4178A2816EE",
       "name_en": "JAT MIN CHUEN STREET",
       "name_tc": "乙明邨街",
       "name_sc": "乙明邨街",
       "lat": "22.376165",
       "long": "114.191545"
+    },
+    {
+      "stop": "0D6A59BA601131AD",
+      "name_en": "TO SHEK STREET",
+      "name_tc": "多石街",
+      "name_sc": "多石街",
+      "lat": "22.377451",
+      "long": "114.201727"
     },
     {
       "stop": "F49465D014D12FF8",
@@ -48629,9 +48805,9 @@
     },
     {
       "stop": "04A05525A6AB819D",
-      "name_en": "CHEUNG CHUNG HOUSE CHEUNG WAH ESTATE (A1)",
-      "name_tc": "祥華邨祥頌樓 (A1)",
-      "name_sc": "祥华邨祥颂楼 (A1)",
+      "name_en": "FANLING STATION BBI-CHEUNG WAH ESTATE(PLATFORM A1)",
+      "name_tc": "粉嶺站轉車站-祥華邨 (A1月台)",
+      "name_sc": "粉岭站转车站-祥华邨 (A1月台)",
       "lat": "22.492360",
       "long": "114.140507"
     },
@@ -48714,6 +48890,14 @@
       "name_sc": "港珠澳大桥香港口岸 (E5)",
       "lat": "22.315761",
       "long": "113.950402"
+    },
+    {
+      "stop": "129219C30B38D844",
+      "name_en": "TUNG LO WAN VILLAGE",
+      "name_tc": "銅鑼灣村",
+      "name_sc": "铜锣湾村",
+      "lat": "22.377496",
+      "long": "114.181367"
     },
     {
       "stop": "110E1A65A0670D0F",
@@ -48845,73 +49029,73 @@
     },
     {
       "stop": "3945D5C71A298168",
-      "name_en": "PAK SHEK KOK SUBSTATION",
-      "name_tc": "白石角變電站",
-      "name_sc": "白石角变电站",
+      "name_en": "PAK SHEK KOK SUBSTATION (S1)",
+      "name_tc": "白石角變電站 (S1)",
+      "name_sc": "白石角变电站 (S1)",
       "lat": "22.434893",
       "long": "114.201372"
     },
     {
       "stop": "B4E25ABB1C5DE439",
-      "name_en": "PROVIDENCE BAY",
-      "name_tc": "天賦海灣",
-      "name_sc": "天赋海湾",
+      "name_en": "PROVIDENCE BAY (S2)",
+      "name_tc": "天賦海灣 (S2)",
+      "name_sc": "天赋海湾 (S2)",
       "lat": "22.431492",
       "long": "114.201558"
     },
     {
       "stop": "4A0ECA0D5AA4CB7E",
-      "name_en": "St MARTIN",
-      "name_tc": "雲滙",
-      "name_sc": "云滙",
+      "name_en": "St MARTIN (S3)",
+      "name_tc": "雲滙 (S3)",
+      "name_sc": "云滙 (S3)",
       "lat": "22.429805",
       "long": "114.203323"
     },
     {
       "stop": "437CE05BCFE6248C",
-      "name_en": "CHONG SAN ROAD",
-      "name_tc": "創新路",
-      "name_sc": "创新路",
+      "name_en": "CHONG SAN ROAD (S4)",
+      "name_tc": "創新路 (S4)",
+      "name_sc": "创新路 (S4)",
       "lat": "22.428901",
       "long": "114.204693"
     },
     {
       "stop": "A3D85C5591D7F0CA",
-      "name_en": "FO YIN ROAD",
-      "name_tc": "科研路",
-      "name_sc": "科研路",
+      "name_en": "FO YIN ROAD (S5)",
+      "name_tc": "科研路 (S5)",
+      "name_sc": "科研路 (S5)",
       "lat": "22.426442",
       "long": "114.208450"
     },
     {
       "stop": "241AA85186E2C93E",
-      "name_en": "SCIENCE PARK (PHASE 1)",
-      "name_tc": "科學園(第一期)",
-      "name_sc": "科学园(第一期)",
+      "name_en": "SCIENCE PARK (PHASE 1) (S6)",
+      "name_tc": "科學園(第一期) (S6)",
+      "name_sc": "科学园(第一期) (S6)",
       "lat": "22.424272",
       "long": "114.211589"
     },
     {
       "stop": "2412E319B88EBF96",
-      "name_en": "HONG KONG INSTITUTE OF BIOTECHNOLOGY",
-      "name_tc": "香港生物科技研究院",
-      "name_sc": "香港生物科技研究院",
+      "name_en": "HONG KONG INSTITUTE OF BIOTECHNOLOGY (S7)",
+      "name_tc": "香港生物科技研究院(S7)",
+      "name_sc": "香港生物科技研究院(S7)",
       "lat": "22.422664",
       "long": "114.214179"
     },
     {
       "stop": "907CF3142C0E02BB",
-      "name_en": "WATER SPORTS CENTRE",
-      "name_tc": "水上活動中心",
-      "name_sc": "水上活动中心",
+      "name_en": "WATER SPORTS CENTRE (S8)",
+      "name_tc": "水上活動中心 (S8)",
+      "name_sc": "水上活动中心 (S8)",
       "lat": "22.418662",
       "long": "114.214271"
     },
     {
       "stop": "A5FDDA13C2C7A953",
-      "name_en": "MA LIU SHUI PUBLIC PIER",
-      "name_tc": "馬料水公眾碼頭",
-      "name_sc": "马料水公众码头",
+      "name_en": "MA LIU SHUI PUBLIC PIER (S9)",
+      "name_tc": "馬料水公眾碼頭 (S9)",
+      "name_sc": "马料水公众码头 (S9)",
       "lat": "22.416027",
       "long": "114.213945"
     },
@@ -48973,65 +49157,65 @@
     },
     {
       "stop": "9F5D9D454274AF91",
-      "name_en": "MA LIU SHUI PUBLIC PIER",
-      "name_tc": "馬料水公眾碼頭",
-      "name_sc": "马料水公众码头",
+      "name_en": "MA LIU SHUI PUBLIC PIER (N1)",
+      "name_tc": "馬料水公眾碼頭 (N1)",
+      "name_sc": "马料水公众码头 (N1)",
       "lat": "22.415908",
       "long": "114.213778"
     },
     {
       "stop": "47B5143937DB578C",
-      "name_en": "WATER SPORTS CENTRE",
-      "name_tc": "水上活動中心",
-      "name_sc": "水上活动中心",
+      "name_en": "WATER SPORTS CENTRE (N2)",
+      "name_tc": "水上活動中心 (N2)",
+      "name_sc": "水上活动中心 (N2)",
       "lat": "22.420023",
       "long": "114.214250"
     },
     {
       "stop": "17BDB3D563DF2BA6",
-      "name_en": "HONG KONG INSTITUTE OF BIOTECHNOLOGY",
-      "name_tc": "香港生物科技研究院",
-      "name_sc": "香港生物科技研究院",
+      "name_en": "HONG KONG INSTITUTE OF BIOTECHNOLOGY (N3)",
+      "name_tc": "香港生物科技研究院 (N3)",
+      "name_sc": "香港生物科技研究院 (N3)",
       "lat": "22.422518",
       "long": "114.213925"
     },
     {
       "stop": "E1128E909284D1D7",
-      "name_en": "SCIENCE PARK (PHASE 1)",
-      "name_tc": "科學園(第一期)",
-      "name_sc": "科学园(第一期)",
+      "name_en": "SCIENCE PARK (PHASE 1) (N4)",
+      "name_tc": "科學園(第一期) (N4)",
+      "name_sc": "科学园(第一期) (N4)",
       "lat": "22.424247",
       "long": "114.211432"
     },
     {
       "stop": "098439701CF42A44",
-      "name_en": "FO YIN ROAD",
-      "name_tc": "科研路",
-      "name_sc": "科研路",
+      "name_en": "FO YIN ROAD (N5)",
+      "name_tc": "科研路 (N5)",
+      "name_sc": "科研路 (N5)",
       "lat": "22.426628",
       "long": "114.208027"
     },
     {
       "stop": "42E95A3F058750C1",
-      "name_en": "St MARTIN",
-      "name_tc": "雲滙",
-      "name_sc": "云滙",
+      "name_en": "St MARTIN (N6)",
+      "name_tc": "雲滙 (N6)",
+      "name_sc": "云滙 (N6)",
       "lat": "22.429561",
       "long": "114.203338"
     },
     {
       "stop": "1B1D9A9077A0827F",
-      "name_en": "PAK SHEK KOK",
-      "name_tc": "白石角",
-      "name_sc": "白石角",
+      "name_en": "PAK SHEK KOK (N7)",
+      "name_tc": "白石角 (N7)",
+      "name_sc": "白石角 (N7)",
       "lat": "22.431492",
       "long": "114.201512"
     },
     {
       "stop": "08BEE6A022FBBE53",
-      "name_en": "PAK SHEK KOK SUBSTATION",
-      "name_tc": "白石角變電站",
-      "name_sc": "白石角变电站",
+      "name_en": "PAK SHEK KOK SUBSTATION (N8)",
+      "name_tc": "白石角變電站 (N8)",
+      "name_sc": "白石角变电站 (N8)",
       "lat": "22.433895",
       "long": "114.200812"
     },
@@ -49186,6 +49370,14 @@
       "name_sc": "元朗 形点",
       "lat": "22.445065",
       "long": "114.036445"
+    },
+    {
+      "stop": "B02B0B9F73E50D93",
+      "name_en": "YUEN LONG PLAZA (N3)",
+      "name_tc": "元朗廣場 (N3)",
+      "name_sc": "元朗广场 (N3)",
+      "lat": "22.444678",
+      "long": "114.023992"
     },
     {
       "stop": "9180C6A461D5C206",
@@ -50493,9 +50685,9 @@
     },
     {
       "stop": "F8446E87636522E1",
-      "name_en": "WAH MING BUS TERMINUS",
-      "name_tc": "華明總站",
-      "name_sc": "华明总站",
+      "name_en": "WAH MING BBI(C1)",
+      "name_tc": "華明轉車站(C1)",
+      "name_sc": "华明转车站(C1)",
       "lat": "22.484557",
       "long": "114.141194"
     },
@@ -50562,6 +50754,14 @@
       "name_sc": "曾梅千禧学校",
       "lat": "22.494309",
       "long": "114.125098"
+    },
+    {
+      "stop": "BD7F4A65B230DDB2",
+      "name_en": "ROYAL GREEN",
+      "name_tc": "御皇庭",
+      "name_sc": "御皇庭",
+      "lat": "22.494589",
+      "long": "114.126142"
     },
     {
       "stop": "CCED20D6135C0347",
@@ -51010,22 +51210,6 @@
       "name_sc": "天慈总站",
       "lat": "22.453535",
       "long": "114.006997"
-    },
-    {
-      "stop": "B02B0B9F73E50D93",
-      "name_en": "YUEN LONG PLAZA (N3)",
-      "name_tc": "元朗廣場 (N3)",
-      "name_sc": "元朗广场 (N3)",
-      "lat": "22.444678",
-      "long": "114.023992"
-    },
-    {
-      "stop": "1D99BD02B9B45429",
-      "name_en": "MA ON SHAN TOWN CENTRE BUS TERMINUS",
-      "name_tc": "馬鞍山市中心總站",
-      "name_sc": "马鞍山市中心总站",
-      "lat": "22.424445",
-      "long": "114.231544"
     },
     {
       "stop": "145AA374D8CB7123",
@@ -51532,6 +51716,14 @@
       "long": "114.129385"
     },
     {
+      "stop": "5FE1FD252713A49B",
+      "name_en": "CATHAY PACIFIC CITY",
+      "name_tc": "國泰城",
+      "name_sc": "国泰城",
+      "lat": "22.297608",
+      "long": "113.932902"
+    },
+    {
       "stop": "98197302E98C548E",
       "name_en": "WALDORF GARDEN",
       "name_tc": "華都花園",
@@ -51725,9 +51917,9 @@
     },
     {
       "stop": "B49F719CC4A8BD7E",
-      "name_en": "TAI WAI STATION BUS TERMINUS",
-      "name_tc": "大圍站總站",
-      "name_sc": "大围站总站",
+      "name_en": "TAI WAI STATION BUS TERMINUS (G6)",
+      "name_tc": "大圍站總站 (G6)",
+      "name_sc": "大围站总站 (G6)",
       "lat": "22.372804",
       "long": "114.180216"
     },
