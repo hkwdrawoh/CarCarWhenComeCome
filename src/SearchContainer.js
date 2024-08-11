@@ -93,8 +93,6 @@ export default function SearchContainer(props) {
                     if (a.service_type < b.service_type) return -1;
                     if (a.service_type > b.service_type) return 1;
 
-                    // if (routeA.substring(0, routeA.length - 1) < routeB.substring(0, routeB.length - 1)) return -1;
-                    // if (routeA.substring(0, routeA.length - 1) > routeB.substring(0, routeB.length - 1)) return 1;
                     return 0;
                 }));
             }
