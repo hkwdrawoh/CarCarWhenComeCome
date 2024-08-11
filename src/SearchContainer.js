@@ -6,10 +6,11 @@ import ctb_route_json from "./json/ctb_route.json"
 import special_route_json from "./json/special_route.json"
 import bus_route_info_json from "./json/bus_route-info.json";
 import {v4 as uuidv4} from 'uuid';
-import {Button, Center, HStack, Icon, Text} from "@chakra-ui/react";
+import {Button, Center, Grid, HStack, Icon, Text} from "@chakra-ui/react";
 import {ChevronLeftIcon, ChevronRightIcon} from "@chakra-ui/icons";
 import {MdBookmark} from "react-icons/md";
 import RouteETA from "./RouteETA";
+import ETADisplay from "./ETADisplay";
 
 
 export default function SearchContainer(props) {
@@ -34,13 +35,17 @@ export default function SearchContainer(props) {
     const [selected_dest, setSelectedDest] = useState([]);
     const [pinned_route, setPinnedRoute] = useState({
         "id": "-2",
+        "stop_id": "",
         "route": "",
         "direction": "",
         "service_type": 0,
         "seq": 0,
         "company": "",
         "style": 0,
-        "joint": null
+        "joint": null,
+        "class": null,
+        "dest": "",
+        "stop_name": ""
     });
 
     useEffect(() => {
@@ -158,19 +163,23 @@ export default function SearchContainer(props) {
             {dir_special_div2}
         </>
     }
-    const pinRoute = (seq, joint) => {
+    const pinRoute = (seq, joint, stop_id, class_name, dest, stop_name) => {
         const routes = structuredClone(selected_dest);
         const service_type = routes[0].service_type || 1;
 
         const pinning_route = {
             "id": routes[3] + routes[0].route + seq,
+            "stop_id": stop_id,
             "route": routes[0].route,
             "direction": routes[2],
             "service_type": service_type,
             "seq": seq,
             "company": routes[3],
             "style": ["kmb", "ctb", "gmb", "cty", "lwb", "jor"].indexOf(routes[4]) + 1,
-            "joint": joint
+            "joint": joint,
+            "class": class_name,
+            "dest": dest,
+            "stop_name": stop_name
         };
 
         console.log(pinning_route);
@@ -181,13 +190,17 @@ export default function SearchContainer(props) {
     const unpinRoute = () => {
         setPinnedRoute({
             "id": "-1",
+            "stop_id": "",
             "route": "",
             "direction": "",
             "service_type": 0,
             "seq": 0,
             "company": "",
             "style": 0,
-            "joint": null
+            "joint": null,
+            "class": null,
+            "dest": "",
+            "stop_name": ""
         })
     }
 
@@ -198,10 +211,17 @@ export default function SearchContainer(props) {
                 <div className="container_top">
                     <Header text="" goPage={props.goPage} />
                     {pinned_route.route !== "" ? <>
-                        <HStack spacing={0} w="100%">
-                            <Button size='xl' height="60%" variant='ghost' colorScheme='white' onClick={unpinRoute}><Icon as={MdBookmark} /></Button>
-                            <RouteETA key={pinned_route.id} route={pinned_route} />
+                        <HStack spacing={2} w="100%">
+                            <Button size='xl' variant='ghost' colorScheme='white' onClick={unpinRoute}><Icon as={MdBookmark} /></Button>
+                            <div className={`button_base ${pinned_route.class}_icon`} style={{margin: 0}}>{pinned_route.route}</div>
+                            <div className={`${pinned_route.class}_text text_left grid-span4`}>
+                                <h2>往: {pinned_route.dest}</h2>
+                                <p>{pinned_route.stop_name}</p>
+                            </div>
                         </HStack>
+                        <div className="grid-3-fixed">
+                            <ETADisplay key={pinned_route.id} route={pinned_route} route_num={pinned_route.route} stop_id={pinned_route.stop_id} joint={pinned_route.joint || null}/>
+                        </div>
                         <hr />
                     </> : <></>}
                     <HStack spacing={2} w="100%">
@@ -226,10 +246,17 @@ export default function SearchContainer(props) {
                 <div className="container_top">
                     <Header text="" goPage={props.goPage} />
                     {pinned_route.route !== "" ? <>
-                        <HStack spacing={0} w="100%">
-                            <Button size='xl' height="60%" variant='ghost' colorScheme='white' onClick={unpinRoute}><Icon as={MdBookmark} /></Button>
-                            <RouteETA key={pinned_route.id} route={pinned_route} />
+                        <HStack spacing={2} w="100%">
+                            <Button size='xl' variant='ghost' colorScheme='white' onClick={unpinRoute}><Icon as={MdBookmark} /></Button>
+                            <div className={`button_base ${pinned_route.class}_icon`} style={{margin: 0}}>{pinned_route.route}</div>
+                            <div className={`${pinned_route.class}_text text_left grid-span4`}>
+                                <h2>往: {pinned_route.dest}</h2>
+                                <p>{pinned_route.stop_name}</p>
+                            </div>
                         </HStack>
+                        <div className="grid-3-fixed">
+                            <ETADisplay key={pinned_route.id} route={pinned_route} route_num={pinned_route.route} stop_id={pinned_route.stop_id} joint={pinned_route.joint || null}/>
+                        </div>
                         <hr />
                     </> : <></>}
                     <div className="grid-6-fixed">

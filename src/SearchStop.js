@@ -117,7 +117,7 @@ export default function SearchStop(props) {
                         <p>{(fares[index] !== 0 && props.company === "kmb" && props.dir.service_type === "1") ? `車費：$${fares[index].toFixed(1)}` : ""}</p>
                     </div>
                     <HStack>
-                        <Button size='xl' height={10} width={10} variant='ghost' colorScheme='white' zIndex={5} onClick={() => props.pinRoute(index+1, joint)}><Icon as={MdBookmarkBorder} /></Button>
+                        <Button size='xl' height={10} width={10} variant='ghost' colorScheme='white' zIndex={5} onClick={() => props.pinRoute(index+1, joint, stop_ids[index], props.style, props.dest, stop_name)}><Icon as={MdBookmarkBorder} /></Button>
                         {(selected_id === index) ? <ChevronUpIcon boxSize={7} /> : <ChevronDownIcon boxSize={7} />}
                     </HStack>
                 </div>
