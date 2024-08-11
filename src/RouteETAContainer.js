@@ -23,6 +23,9 @@ export default function RouteETAContainer(props) {
             case "CWB":
                 setRoutes(routesData.CWB);
                 break;
+            case "SHT":
+                setRoutes(routesData.SHT);
+                break;
             default:
                 setRoutes(routesData.OnTai);
                 break;

@@ -79,7 +79,7 @@ export default function RouteETA(props) {
         </div>
         <div>
             <hr />
-            {Math.floor(props.route.style / 100) === 1 && <hr />}
+            {Math.floor(props.route.style / 100) === 1 && <><hr /><hr /></>}
         </div>
     </>
 }

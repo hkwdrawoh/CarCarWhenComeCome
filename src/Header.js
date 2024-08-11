@@ -97,6 +97,7 @@ export default function Header(props) {
                         <Button size='xl' variant='link' onClick={() => changePage('LaiTakTsuen')}>勵德邨</Button>
                         <Button size='xl' variant='link' onClick={() => changePage('CWB')}>銅鑼灣</Button>
                         <Button size='xl' variant='link' onClick={() => changePage('HomeFrom108')}>108 回家</Button>
+                        <Button size='xl' variant='link' onClick={() => changePage('SHT')}>沙田市中心</Button>
                         <br />
                         <Text fontSize='xl' color='white'>~ 我要揀車! ~</Text>
                         <Button size='xl' variant='link' onClick={() => changePage('Search')}>巴士?</Button>

@@ -82,6 +82,18 @@ export default function App() {
                     <div className="container_bottom"></div>
                 </div>
             </>;
+        case "SHT":
+            return <>
+                <div className="container">
+                    <div className="container_top">
+                        <Header text="沙田市中心" goPage={setPages} />
+                    </div>
+                    <div className="container_mid scroll_bar-1">
+                        <RouteETAContainer key="1" routeset='SHT' />
+                    </div>
+                    <div className="container_bottom"></div>
+                </div>
+            </>;
         case "Search":
             return <>
                 <SearchContainer goPage={setPages} />
@@ -104,6 +116,7 @@ export default function App() {
                             <Button onClick={() => {setPages("LaiTakTsuen")}}>勵德邨</Button>
                             <Button onClick={() => {setPages("CWB")}}>銅鑼灣</Button>
                             <Button onClick={() => {setPages("HomeFrom108")}}>108 回家</Button>
+                            <Button onClick={() => {setPages("SHT")}}>沙田市中心</Button>
                         </Grid>
                         <hr/>
                         <Text fontSize='xl' as='b'>~ 我要揀車! ~</Text>

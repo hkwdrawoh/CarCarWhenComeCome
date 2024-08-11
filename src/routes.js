@@ -312,6 +312,64 @@ export const CWB = [
         "style": 2
     }];
 
+export const SHT = [
+    {
+        "route": "85",
+        "direction": "I",
+        "service_type": 1,
+        "seq": 24,
+        "company": "kmb",
+        "style": 1
+    },
+    {
+        "route": "285",
+        "direction": "O",
+        "service_type": 1,
+        "seq": 6,
+        "company": "kmb",
+        "style": 11
+    },
+    {
+        "route": "48P",
+        "direction": "I",
+        "service_type": 1,
+        "seq": 26,
+        "company": "kmb",
+        "style": 1
+    },
+    {
+        "route": "81K",
+        "direction": "O",
+        "service_type": 1,
+        "seq": 8,
+        "company": "kmb",
+        "style": 1
+    },
+    {
+        "route": "280X",
+        "direction": "I",
+        "service_type": 1,
+        "seq": 11,
+        "company": "kmb",
+        "style": 101
+    },
+    {
+        "route": "81K",
+        "direction": "I",
+        "service_type": 1,
+        "seq": 7,
+        "company": "kmb",
+        "style": 1
+    },
+    {
+        "route": "88",
+        "direction": "I",
+        "service_type": 1,
+        "seq": 6,
+        "company": "kmb",
+        "style": 101
+    }];
+
 
 
 
