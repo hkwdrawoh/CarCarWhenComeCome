@@ -6,7 +6,7 @@ import ctb_route_json from "./json/ctb_route.json"
 import special_route_json from "./json/special_route.json"
 import bus_route_info_json from "./json/bus_route-info.json";
 import {v4 as uuidv4} from 'uuid';
-import {Button, Center, HStack, Icon, Text} from "@chakra-ui/react";
+import {Button, Center, HStack, Text} from "@chakra-ui/react";
 import {ChevronLeftIcon, ChevronRightIcon} from "@chakra-ui/icons";
 import {MdBookmark} from "react-icons/md";
 import ETADisplay from "./ETADisplay";
