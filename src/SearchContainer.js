@@ -208,7 +208,7 @@ export default function SearchContainer(props) {
 
     const pinned_div = <>
         <HStack spacing={2} w="100%">
-            <Button size='xl' height={10} variant='ghost' colorScheme='white' onClick={unpinRoute}><Icon as={MdBookmark} /></Button>
+            <Button size='xl' height={10} variant='ghost' colorScheme='white' onClick={unpinRoute}><MdBookmark /></Button>
             <div className={`button_base ${pinned_route.class}_icon`} style={{margin: 0}}>{pinned_route.route}</div>
             <div className={`${pinned_route.class}_text text_left grid-span4`}>
                 <h3>往: {pinned_route.dest}</h3>
