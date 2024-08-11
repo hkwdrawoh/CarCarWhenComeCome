@@ -330,18 +330,18 @@ export const SHT = [
         "style": 11
     },
     {
-        "route": "48P",
-        "direction": "I",
-        "service_type": 1,
-        "seq": 26,
-        "company": "kmb",
-        "style": 1
-    },
-    {
         "route": "81K",
         "direction": "O",
         "service_type": 1,
         "seq": 8,
+        "company": "kmb",
+        "style": 1
+    },
+    {
+        "route": "48P",
+        "direction": "I",
+        "service_type": 1,
+        "seq": 26,
         "company": "kmb",
         "style": 1
     },
