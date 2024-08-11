@@ -11,7 +11,7 @@ import {
     useDisclosure,
     VStack
 } from "@chakra-ui/react";
-import { HamburgerIcon } from '@chakra-ui/icons'
+import { HamburgerIcon } from '@chakra-ui/icons';
 
 export default function Header(props) {
 
@@ -64,23 +64,23 @@ export default function Header(props) {
     return <>
         <HStack spacing={4} mt={3}>
             <Button size='xxl' onClick={onOpen} variant='ghost'><HamburgerIcon /></Button>
-            <Text fontSize='2xl' as='b' color='cyan.600'>{props.text}</Text>
+            <Grid templateColumns='repeat(3, 1fr)' gap={6} width="100%">
+                <Center>
+                    <VStack spacing={0}>
+                        <Text fontSize='lg' as='b'>{getTimeString(time_now)}</Text>
+                        <Text>現在時間</Text>
+                    </VStack>
+                </Center>
+                <Center>
+                    <VStack spacing={0}>
+                        <Text fontSize='lg' as='b' className={`flash-animation ${animation ? "show" : ""}`}>{getTimeString(time_ref)}</Text>
+                        <Text>更新時間</Text>
+                    </VStack>
+                </Center>
+                <Center><Button w={20} onClick={refreshPage}>更新</Button></Center>
+            </Grid>
         </HStack>
-        <Grid templateColumns='repeat(3, 1fr)' gap={6}>
-            <Center>
-                <VStack spacing={0}>
-                    <Text fontSize='lg' as='b'>{getTimeString(time_now)}</Text>
-                    <Text>現在時間</Text>
-                </VStack>
-            </Center>
-            <Center>
-                <VStack spacing={0}>
-                    <Text fontSize='lg' as='b' className={`flash-animation ${animation ? "show" : ""}`}>{getTimeString(time_ref)}</Text>
-                    <Text>更新時間</Text>
-                </VStack>
-            </Center>
-            <Center><Button w={20} onClick={refreshPage}>更新</Button></Center>
-        </Grid>
+        <Text fontSize='2xl' as='b' color='cyan.600'>{props.text}</Text>
         <hr/>
         <Drawer isOpen={isOpen} onClose={onClose} placement='left'>
             <DrawerOverlay />
@@ -96,7 +96,7 @@ export default function Header(props) {
                         <Button size='xl' variant='link' onClick={() => changePage('Rhythm')}>采頤花園</Button>
                         <Button size='xl' variant='link' onClick={() => changePage('LaiTakTsuen')}>勵德邨</Button>
                         <Button size='xl' variant='link' onClick={() => changePage('CWB')}>銅鑼灣</Button>
-                        <Button size='xl' variant='link' onClick={() => changePage('HomeFrom108')}>108回家</Button>
+                        <Button size='xl' variant='link' onClick={() => changePage('HomeFrom108')}>108 回家</Button>
                         <br />
                         <Text fontSize='xl' color='white'>~ 我要揀車! ~</Text>
                         <Button size='xl' variant='link' onClick={() => changePage('Search')}>巴士?</Button>

@@ -357,6 +357,14 @@ body {
   color: var(--AuxColor1);
 }
 
+.title_text {
+  color: var(--IconColor1);
+}
+
+.darken_text {
+  color: var(--BackColor2b);
+}
+
 .kmb_icon {
   font-size: 1.4rem;
   color: var(--AuxColor1);
@@ -386,7 +394,7 @@ body {
   padding: 0.1rem 0;
 }
 
-.lmb_icon {
+.lwb_icon {
   font-size: 1.4rem;
   color: var(--MainColor4);
   background-color: var(--BackColor2);

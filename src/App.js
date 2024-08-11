@@ -26,7 +26,7 @@ export default function App() {
             return <>
                 <div className="container">
                     <div className="container_top">
-                        <Header text="安泰邨幾時有車？" goPage={setPages} />
+                        <Header text="安泰邨" goPage={setPages} />
                     </div>
                     <div className="container_mid scroll_bar-1">
                         <RouteETAContainer key="1" routeset='OnTai' />
@@ -38,7 +38,7 @@ export default function App() {
             return <>
                 <div className="container">
                     <div className="container_top">
-                        <Header text="108 幾時有車？" goPage={setPages} />
+                        <Header text="108 回家" goPage={setPages} />
                     </div>
                     <div className="container_mid scroll_bar-1">
                         <RouteETAContainer key="1" routeset='HomeFrom108' />
@@ -50,7 +50,7 @@ export default function App() {
             return <>
                 <div className="container">
                     <div className="container_top">
-                        <Header text="勵德邨幾時有車？" goPage={setPages} />
+                        <Header text="勵德邨" goPage={setPages} />
                     </div>
                     <div className="container_mid scroll_bar-1">
                         <RouteETAContainer key="1" routeset='LaiTakTsuen' />
@@ -62,7 +62,7 @@ export default function App() {
             return <>
                 <div className="container">
                     <div className="container_top">
-                        <Header text="采頤花園幾時有車？" goPage={setPages} />
+                        <Header text="采頤花園" goPage={setPages} />
                     </div>
                     <div className="container_mid scroll_bar-1">
                         <RouteETAContainer key="1" routeset='Rhythm' />
@@ -74,7 +74,7 @@ export default function App() {
             return <>
                 <div className="container">
                     <div className="container_top">
-                        <Header text="銅鑼灣幾時有車？" goPage={setPages} />
+                        <Header text="銅鑼灣" goPage={setPages} />
                     </div>
                     <div className="container_mid scroll_bar-1">
                         <RouteETAContainer key="1" routeset='CWB' />
@@ -103,7 +103,7 @@ export default function App() {
                             <Button onClick={() => {setPages("Rhythm")}}>采頤花園</Button>
                             <Button onClick={() => {setPages("LaiTakTsuen")}}>勵德邨</Button>
                             <Button onClick={() => {setPages("CWB")}}>銅鑼灣</Button>
-                            <Button onClick={() => {setPages("HomeFrom108")}}>108回家</Button>
+                            <Button onClick={() => {setPages("HomeFrom108")}}>108 回家</Button>
                         </Grid>
                         <hr/>
                         <Text fontSize='xl' as='b'>~ 我要揀車! ~</Text>

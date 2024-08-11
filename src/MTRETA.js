@@ -87,7 +87,7 @@ export default function MTRETA (props) {
                     <div className="grid-5-fixed">
                         <h2 className={`platform_num color_${props.routeCode[0]}`}>{record[0]}</h2>
                         <div className="grid-span2 text_left">
-                            <h2>往: {mtr_stations.find(sta => JSON.stringify(sta.code) === JSON.stringify(record[1])).name}</h2>
+                            <h2>{mtr_stations.find(sta => JSON.stringify(sta.code) === JSON.stringify(record[1])).name}</h2>
                             <p>{(record[4] === "RAC") ? `\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0途經馬場` : ""}</p>
                         </div>
                         <div className="grid-4_4-minmax grid-span2">
