@@ -27,7 +27,6 @@ export default function SearchContainer(props) {
 
 
     const [routes_list, setRoutesList] = useState([...kmb_route_list, ...ctb_route_list]);
-    const [company, setCompany] = useState('jor');
     const [route_num, setRouteNum] = useState('');
     const [avail_letter, setAvailLetter] = useState([]);
     const [direction, setDirection] = useState([]);
@@ -47,28 +46,6 @@ export default function SearchContainer(props) {
     useEffect(() => {
         updateAvail("").then();
     }, [routes_list]);
-
-    const chooseCompany = (selected_company) => {
-        let selected_routes_list = [];
-        if (selected_company === "kmb") {
-            selected_routes_list = kmb_route_list;
-            updateAvail("").then();
-            setCompany("kmb");
-        } else if (selected_company === "ctb") {
-            selected_routes_list = ctb_route_list;
-            updateAvail("").then();
-            setCompany("ctb");
-        } else if (selected_company === "jor") {
-            selected_routes_list = [...kmb_route_list, ...ctb_route_list];
-            updateAvail("").then();
-            setCompany("jor");
-        } else {
-            selected_routes_list = [];
-            updateAvail("").then();
-            setCompany("");
-        }
-        setRoutesList(() => selected_routes_list);
-    };
 
     const chooseRoute = (selected_letter) => {
         let newRouteNum = route_num;
@@ -93,21 +70,15 @@ export default function SearchContainer(props) {
         setDirection([]);
         setDirectionSpecial([]);
         if (newAvailRoutes.includes(newRouteNum) && newRouteNum !== "") {
-            if (company === "kmb" || "jor") {
-                let dir = kmb_routes.filter(item => item.route === newRouteNum).sort((a, b) => a.service_type - b.service_type);
-                if (dir.length !== 0) {
-                    setDirection(dir.filter(item => item.service_type === "1"));
-                    setDirectionSpecial(dir.filter(item => item.service_type !== "1"));
-                }
+            let dir = kmb_routes.filter(item => item.route === newRouteNum).sort((a, b) => a.service_type - b.service_type);
+            if (dir.length !== 0) {
+                setDirection(dir.filter(item => item.service_type === "1"));
+                setDirectionSpecial(dir.filter(item => item.service_type !== "1"));
             }
-            if (company === "ctb" || (company === "jor" && !joint_routes.includes(newRouteNum))) {
+            if (!joint_routes.includes(newRouteNum)) {
                 let dir = ctb_routes.filter(item => item.route === newRouteNum);
                 if (dir.length !== 0) {
-                    if (company === "jor") {
-                        setDirection(prevDir => [...prevDir, dir[0]]);
-                    } else {
-                        setDirection([dir[0]]);
-                    }
+                    setDirection(prevDir => [...prevDir, dir[0]]);
                     if (!ctb_circular_routes.includes(newRouteNum)) {
                         setDirectionSpecial([dir[0]]);
                     }
@@ -136,56 +107,50 @@ export default function SearchContainer(props) {
     let dir_div2 = null;
     let dir_special_div2 = null;
     if (direction.length !== 0) {
-        if (company === "kmb" || "jor") {
-            let style;
-            if (route_num.at(0) === "A" || route_num.at(0) === "E" || route_num.at(0) === "S" || route_num.slice(0, 2) === "NA") {
-                style = 'lwb';
-            }
-            if (joint_routes.includes(route_num)) {
-                style = 'jor';
-            } else {
-                style = 'kmb';
-            }
-            dir_div1 = direction.filter((item) => item.co === undefined).map((dir) => (<>
-                <div className="grid-6-fixed list_button"  onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style)}}>
-                    <div className={`button_base ${style}_icon`}>{route_num}</div>
-                    <div className={`text_left grid-span4 ${style}_text`}><h2>往: {dir.dest_tc}</h2></div>
-                    <Center><ChevronRightIcon boxSize={7} /></Center>
-                </div>
-            </>));
-            dir_special_div1 = direction_special.filter((item) => item.co === undefined).map((dir) => (<>
-                <div className="grid-6-fixed list_button"  onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style)}}>
-                    <div className={`button_base ${style}_icon`}>{route_num}</div>
-                    <div className={`text_left grid-span4 ${style}_text`}><h2>往: {dir.dest_tc}</h2><h3>(特別班次)</h3></div>
-                    <Center><ChevronRightIcon boxSize={7} /></Center>
-                </div>
-            </>))
+        let style1;
+        if (joint_routes.includes(route_num)) {
+            style1 = 'jor';
+        } else if (route_num.at(0) === "A" || route_num.at(0) === "E" || route_num.at(0) === "S" || route_num.slice(0, 2) === "NA") {
+            style1 = 'lwb';
+        } else {
+            style1 = 'kmb';
         }
-        if (company === "ctb" || "jor") {
-            let style;
-            if (route_num.at(0) === "A" || route_num.slice(0, 2) === "NA") {
-                style = 'cty';
-            }
-            if (joint_routes.includes(route_num)) {
-                style = 'jor';
-            } else {
-                style = 'ctb';
-            } 
-            dir_div2 = direction.filter((item) => item.co !== undefined).map((dir) => (<>
-                <div className="grid-6-fixed list_button"  onClick={() => {selectDest(dir, dir.dest_tc, "O", "ctb", style)}}>
-                    <div className={`button_base ${style}_icon`}>{route_num}</div>
-                    <div className={`text_left grid-span4 ${style}_text`}><h2>往: {dir.dest_tc}</h2></div>
-                    <Center><ChevronRightIcon boxSize={7} /></Center>
-                </div>
-            </>));
-            dir_special_div2 = direction_special.filter((item) => item.co !== undefined).map((dir) => (<>
-                <div className='grid-6-fixed list_button' onClick={() => {selectDest(dir, dir.orig_tc, "I", "ctb", style)}}>
-                    <div className={`button_base ${style}_icon`}>{route_num}</div>
-                    <div className={`text_left grid-span4 ${style}_text`}><h2>往: {dir.orig_tc}</h2></div>
-                    <Center><ChevronRightIcon boxSize={7} /></Center>
-                </div>
-            </>));
+        dir_div1 = direction.filter((item) => item.co === undefined).map((dir) => (<>
+            <div className="grid-6-fixed list_button"  onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style1)}}>
+                <div className={`button_base ${style1}_icon`}>{dir.route}</div>
+                <div className={`text_left grid-span4 ${style1}_text`}><h2>往: {dir.dest_tc}</h2></div>
+                <Center><ChevronRightIcon boxSize={7} /></Center>
+            </div>
+        </>));
+        dir_special_div1 = direction_special.filter((item) => item.co === undefined).map((dir) => (<>
+            <div className="grid-6-fixed list_button"  onClick={() => {selectDest(dir, dir.dest_tc, dir.bound, "kmb", style1)}}>
+                <div className={`button_base ${style1}_icon`}>{dir.route}</div>
+                <div className={`text_left grid-span4 ${style1}_text`}><h2>往: {dir.dest_tc}</h2><h3>(特別班次)</h3></div>
+                <Center><ChevronRightIcon boxSize={7} /></Center>
+            </div>
+        </>))
+        let style2;
+        if (joint_routes.includes(route_num)) {
+            style2 = 'jor';
+        } else if (route_num.at(0) === "A" || route_num.slice(0, 2) === "NA") {
+            style2 = 'cty';
+        } else {
+            style2 = 'ctb';
         }
+        dir_div2 = direction.filter((item) => item.co !== undefined).map((dir) => (<>
+            <div className="grid-6-fixed list_button"  onClick={() => {selectDest(dir, dir.dest_tc, "O", "ctb", style2)}}>
+                <div className={`button_base ${style2}_icon`}>{dir.route}</div>
+                <div className={`text_left grid-span4 ${style2}_text`}><h2>往: {dir.dest_tc}</h2></div>
+                <Center><ChevronRightIcon boxSize={7} /></Center>
+            </div>
+        </>));
+        dir_special_div2 = direction_special.filter((item) => item.co !== undefined).map((dir) => (<>
+            <div className='grid-6-fixed list_button' onClick={() => {selectDest(dir, dir.orig_tc, "I", "ctb", style2)}}>
+                <div className={`button_base ${style2}_icon`}>{dir.route}</div>
+                <div className={`text_left grid-span4 ${style2}_text`}><h2>往: {dir.orig_tc}</h2></div>
+                <Center><ChevronRightIcon boxSize={7} /></Center>
+            </div>
+        </>));
         select_dir_div = <>
             {dir_div1}
             {dir_special_div1}
@@ -231,7 +196,7 @@ export default function SearchContainer(props) {
         return <>
             <div className="container">
                 <div className="container_top">
-                    <Header text={route_num + " 號巴士幾時有車？"} goPage={props.goPage} />
+                    <Header text="" goPage={props.goPage} />
                     {pinned_route.route !== "" ? <>
                         <HStack spacing={0} w="100%">
                             <Button size='xl' height="60%" variant='ghost' colorScheme='white' onClick={unpinRoute}><Icon as={MdBookmark} /></Button>
@@ -259,7 +224,7 @@ export default function SearchContainer(props) {
         return <>
             <div className="container">
                 <div className="container_top">
-                    <Header text="你搭邊架車車？" goPage={props.goPage} />
+                    <Header text="" goPage={props.goPage} />
                     {pinned_route.route !== "" ? <>
                         <HStack spacing={0} w="100%">
                             <Button size='xl' height="60%" variant='ghost' colorScheme='white' onClick={unpinRoute}><Icon as={MdBookmark} /></Button>
@@ -267,14 +232,9 @@ export default function SearchContainer(props) {
                         </HStack>
                         <hr />
                     </> : <></>}
-                    <div className="grid-3-fixed">
-                        <button onClick={() => {chooseCompany("jor")}} className={`button_base ${company === "jor" ? "jor_icon" : ""}`}>全部</button>
-                        <button onClick={() => {chooseCompany("kmb")}} className={`button_base ${company === "kmb" ? "kmb_icon" : ""}`}>九巴</button>
-                        <button onClick={() => {chooseCompany("ctb")}} className={`button_base ${company === "ctb" ? "ctb_icon" : ""}`}>城巴</button>
-                    </div>
                     <div className="grid-6-fixed">
                         <h2 className="text_right grid-span2">路線：</h2>
-                        <div className="button_base route_area grid-span4"><Text fontSize='xl'>{route_num || `\u00A0`}</Text></div>
+                        <div className="button_base route_area grid-span4"><Text fontSize='xl' className={route_num ? "title_text" : "darken_text"}>{route_num || "輸入路線"}</Text></div>
                     </div>
                     <hr />
                 </div>
