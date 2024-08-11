@@ -158,11 +158,19 @@ export async function FetchETA(route, direction, service_type, seq, stop_id, com
     } else {
         for (let i = 0; i < data.data.length; i++) {
             let record = data.data[i];
-            if (record.seq == seq && record.dir === direction || record.co === "CTB") {
+            if ((record.seq == seq && record.dir === direction) || record.co === "CTB") {
                 output.push(record);
             }
         }
     }
     // console.log(output);
+    let seq_set = new Set(output.map(item => item.seq));
+    if (seq_set.size > 1) {
+        if (seq < 5) {
+            output = output.filter(item => item.seq == 1);
+        } else {
+            output = output.filter(item => item.seq != 1);
+        }
+    }
     return output;
 }
