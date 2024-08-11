@@ -21,7 +21,7 @@ export default function SearchContainer(props) {
     const ctb_routes = ctb_route_json.data;
     const joint_routes = special_route_json.data.joint_routes;
     const ctb_circular_routes = special_route_json.data.ctb_circular_routes;
-    const bus_route_ids = bus_route_info_json.data.routes
+    const bus_route_ids = bus_route_info_json.data.routes;
     const kmb_route_list = [...new Set(kmb_routes.map(item => item.route))];
     const ctb_route_list = [...new Set(ctb_routes.map(item => item.route))];
 
