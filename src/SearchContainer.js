@@ -30,7 +30,6 @@ export default function SearchContainer(props) {
     const [route_num, setRouteNum] = useState('');
     const [avail_letter, setAvailLetter] = useState([]);
     const [direction, setDirection] = useState([]);
-    const [direction_special, setDirectionSpecial] = useState([]);
     const [selected_dest, setSelectedDest] = useState([]);
     const [pinned_route, setPinnedRoute] = useState({
         "stop_id": "",
@@ -70,7 +69,6 @@ export default function SearchContainer(props) {
         setRouteNum(newRouteNum);
         setAvailLetter(newAvailLetter);
         setDirection([]);
-        setDirectionSpecial([]);
         if (newRouteNum !== "") {
             let dir1 = kmb_routes.filter(item => item.route.startsWith(newRouteNum));
             if (dir1.length) {
