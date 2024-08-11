@@ -212,7 +212,7 @@ export default function SearchContainer(props) {
                     <Header text="" goPage={props.goPage} />
                     {pinned_route.route !== "" ? <>
                         <HStack spacing={2} w="100%">
-                            <Button size='xl' variant='ghost' colorScheme='white' onClick={unpinRoute}><Icon as={MdBookmark} /></Button>
+                            <Button size='xl' height={10} variant='ghost' colorScheme='white' onClick={unpinRoute}><Icon as={MdBookmark} /></Button>
                             <div className={`button_base ${pinned_route.class}_icon`} style={{margin: 0}}>{pinned_route.route}</div>
                             <div className={`${pinned_route.class}_text text_left grid-span4`}>
                                 <h2>往: {pinned_route.dest}</h2>
@@ -247,7 +247,7 @@ export default function SearchContainer(props) {
                     <Header text="" goPage={props.goPage} />
                     {pinned_route.route !== "" ? <>
                         <HStack spacing={2} w="100%">
-                            <Button size='xl' variant='ghost' colorScheme='white' onClick={unpinRoute}><Icon as={MdBookmark} /></Button>
+                            <Button size='xl' height={10} variant='ghost' colorScheme='white' onClick={unpinRoute}><Icon as={MdBookmark} /></Button>
                             <div className={`button_base ${pinned_route.class}_icon`} style={{margin: 0}}>{pinned_route.route}</div>
                             <div className={`${pinned_route.class}_text text_left grid-span4`}>
                                 <h2>往: {pinned_route.dest}</h2>
