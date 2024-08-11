@@ -12,7 +12,7 @@ export function compareTime(eta) {
         curr_time.setHours(curr_time.getHours() - 12);
         eta_time.setHours(eta_time.getHours() + 12);
     }
-    let MinuteDiff = Math.floor(Math.abs(eta_time - curr_time + 20000) / (1000 * 60));
+    let MinuteDiff = Math.floor(Math.abs(eta_time - curr_time + 25000) / (1000 * 60));
     if (curr_time > eta_time) {return 0}
     else if (MinuteDiff === 0) {return "<1"}
     else {return MinuteDiff}
