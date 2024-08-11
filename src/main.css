@@ -30,6 +30,7 @@ body {
   background: var(--BackColor1);
   font-family: "Nunito", sans-serif;
   font-size: 0.9rem;
+  overflow: hidden;
 }
 
 .container {
