@@ -1,6 +1,6 @@
 import kmb_stops from "./json/kmb_stop.json"
 
-const api_kmb = "https://thingproxy.freeboard.io/fetch/https://data.etabus.gov.hk/v1/transport/kmb"
+const api_kmb = "https://data.etabus.gov.hk/v1/transport/kmb"
 const api_ctb = "https://rt.data.gov.hk/v2/transport/citybus"
 const api_gmb = "https://data.etagmb.gov.hk"
 
