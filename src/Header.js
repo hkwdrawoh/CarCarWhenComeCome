@@ -3,7 +3,7 @@ import {eventEmitter} from "./App";
 import {
     Button,
     Center,
-    Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader,
+    Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader,
     DrawerOverlay,
     Grid,
     HStack,
@@ -12,11 +12,13 @@ import {
     VStack
 } from "@chakra-ui/react";
 import { HamburgerIcon } from '@chakra-ui/icons';
+import {FetchLocalJSON} from "./fetchBusAPI";
 
 export default function Header(props) {
 
     const [time_now, setTimeNow] = useState(new Date());
     const [time_ref, setTimeRef] = useState(new Date());
+    const [json_time, setJson_time] = useState(new Date(1704038400000));
     const [animation, setAnimation] = useState(false);
     const { isOpen, onOpen, onClose} = useDisclosure();
 
@@ -26,6 +28,8 @@ export default function Header(props) {
     useEffect(() => {
         intervalID1 = setInterval(refreshTimeNow, 1000);
         intervalID2 = setInterval(refreshPage, 30000);
+
+        refreshDataTimestamp();
 
         return () => {
             clearInterval(intervalID1);
@@ -46,6 +50,21 @@ export default function Header(props) {
         eventEmitter.emit('refreshETA');
     };
 
+    const refreshDataTimestamp = () => {
+        let retrieve_json = JSON.parse(localStorage.getItem('carcar:kmb_routes'));
+        if (retrieve_json !== null) {
+            setJson_time(new Date(retrieve_json.generated_timestamp));
+        }
+    }
+
+    const refreshJSONData = async () => {
+        localStorage.removeItem("carcar:kmb_routes");
+        setTimeout(async () => {
+            let new_json = await FetchLocalJSON("kmb_routes");
+            refreshDataTimestamp();
+        }, 500);
+    }
+
     const getTimeString = (time) => {
         const options = {
             hour: '2-digit',
@@ -54,6 +73,15 @@ export default function Header(props) {
             hour12: false,
         };
         return time.toLocaleTimeString(undefined, options);
+    };
+
+    const getDateTimeString = (time) => {
+        const options = {
+            dateStyle: 'short',
+            timeStyle: 'short',
+            hour12: false,
+        };
+        return time.toLocaleString(undefined, options);
     };
 
     const changePage = (page) => {
@@ -104,6 +132,15 @@ export default function Header(props) {
                         <Button size='xl' variant='link' onClick={() => changePage('MTR')}>港鐵!</Button>
                     </VStack>
                 </DrawerBody>
+                <DrawerFooter>
+                    <VStack spacing={1} alignItems="flex-end">
+                        <Text color='white'>資料更新時間: {getDateTimeString(json_time)}</Text>
+                        <HStack>
+                            <Text color='white'>CarCar v2.2.0</Text>
+                            <Button size='sm' variant='link' onClick={refreshJSONData}>更新資料</Button>
+                        </HStack>
+                    </VStack>
+                </DrawerFooter>
             </DrawerContent>
         </Drawer>
     </>
