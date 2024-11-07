@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from "./Header";
 import SearchStop from "./SearchStop";
-import kmb_route_json from "./json/kmb_route.json"
-import ctb_route_json from "./json/ctb_route.json"
 import special_route_json from "./json/special_route.json"
 import bus_route_info_json from "./json/bus_route-info.json";
 import {v4 as uuidv4} from 'uuid';
@@ -10,6 +8,16 @@ import {Button, Center, HStack, Text} from "@chakra-ui/react";
 import {ChevronLeftIcon, ChevronRightIcon} from "@chakra-ui/icons";
 import {MdBookmark} from "react-icons/md";
 import ETADisplay from "./ETADisplay";
+import {FetchLocalJSON} from "./fetchBusAPI";
+
+let kmb_routes = [];
+let ctb_routes = [];
+const joint_routes = special_route_json.data.joint_routes;
+const ctb_circular_routes = special_route_json.data.ctb_circular_routes;
+const bus_route_ids = bus_route_info_json.data.routes;
+let kmb_route_list = [];
+let ctb_route_list = [];
+let routes_list = [];
 
 
 export default function SearchContainer(props) {
@@ -17,16 +25,7 @@ export default function SearchContainer(props) {
     // KMB Route List API URL: https://data.etabus.gov.hk/v1/transport/kmb/route
     // KMB Stop List API URL: https://data.etabus.gov.hk/v1/transport/kmb/stop
     // CTB Route List API URL: https://rt.data.gov.hk/v2/transport/citybus/route/CTB
-    const kmb_routes = kmb_route_json.data;
-    const ctb_routes = ctb_route_json.data;
-    const joint_routes = special_route_json.data.joint_routes;
-    const ctb_circular_routes = special_route_json.data.ctb_circular_routes;
-    const bus_route_ids = bus_route_info_json.data.routes;
-    const kmb_route_list = [...new Set(kmb_routes.map(item => item.route))];
-    const ctb_route_list = [...new Set(ctb_routes.map(item => item.route))];
 
-
-    const [routes_list, setRoutesList] = useState([...kmb_route_list, ...ctb_route_list]);
     const [route_num, setRouteNum] = useState('');
     const [avail_letter, setAvailLetter] = useState([]);
     const [direction, setDirection] = useState([]);
@@ -45,8 +44,19 @@ export default function SearchContainer(props) {
     });
 
     useEffect(() => {
-        updateAvail("").then();
-    }, [routes_list]);
+        fetchData().then();
+    }, [])
+
+    const fetchData = async () => {
+        let kmb_route_json = await FetchLocalJSON("kmb_routes");
+        let ctb_route_json = await FetchLocalJSON("ctb_routes");
+        kmb_routes = kmb_route_json.data;
+        ctb_routes = ctb_route_json.data;
+        kmb_route_list = [...new Set(kmb_routes.map(item => item.route))];
+        ctb_route_list = [...new Set(ctb_routes.map(item => item.route))];
+        routes_list = [...kmb_route_list, ...ctb_route_list];
+        updateAvail("");
+    }
 
     const chooseRoute = (selected_letter) => {
         let newRouteNum = route_num;
@@ -60,10 +70,10 @@ export default function SearchContainer(props) {
             default:
                 newRouteNum = route_num + String(selected_letter);
         }
-        updateAvail(newRouteNum).then();
+        updateAvail(newRouteNum);
     }
 
-    const updateAvail = async (newRouteNum) => {
+    const updateAvail = (newRouteNum) => {
         let newAvailRoutes = routes_list.filter(item => item.startsWith(newRouteNum));
         let newAvailLetter = [...new Set(newAvailRoutes.map(item => item.charAt(newRouteNum.length)))].sort().filter(item => item !== '');
         setRouteNum(newRouteNum);

@@ -1,7 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
-import kmb_stop_json from "./json/kmb_stop.json";
 import special_route_json from "./json/special_route.json";
-import {FetchRouteStop, FetchStop} from "./fetchBusAPI";
+import {FetchLocalJSON, FetchRouteStop, FetchStop} from "./fetchBusAPI";
 import ETADisplay from "./ETADisplay";
 import {v4 as uuidv4} from 'uuid';
 import bus_fares_json from "./json/bus_fare.json";
@@ -45,8 +44,9 @@ export default function SearchStop(props) {
         }
         let names = [];
         if (props.company === "kmb") {
+            const retrieved_json = await FetchLocalJSON("kmb_stops");
             names = ids.map(id => {
-                const matchedItem = kmb_stop_json.data.find(item => item.stop === id);
+                const matchedItem = retrieved_json.data.find(item => item.stop === id);
                 return matchedItem ? matchedItem.name_tc : '';
             });
         } else if (props.company === "ctb") {

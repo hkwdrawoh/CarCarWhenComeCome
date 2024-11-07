@@ -1,5 +1,3 @@
-import kmb_stops from "./json/kmb_stop.json"
-
 const api_kmb = "https://data.etabus.gov.hk/v1/transport/kmb"
 const api_ctb = "https://rt.data.gov.hk/v2/transport/citybus"
 const api_gmb = "https://data.etagmb.gov.hk"
@@ -24,6 +22,25 @@ export async function GetJSON(url) {
     const response = await fetch(url);
     json_data = await response.json();
     return json_data;
+}
+
+export async function FetchLocalJSON(item) {
+    const api_urls = ["https://data.etabus.gov.hk/v1/transport/kmb/route", "https://data.etabus.gov.hk/v1/transport/kmb/stop", "https://rt.data.gov.hk/v2/transport/citybus/route/CTB"];
+    const item_ids = ["kmb_routes", "kmb_stops", "ctb_routes"];
+    const index = item_ids.indexOf(item);
+    const sevenDays = 7 * 24 * 60 * 60 * 1000;
+    let now = new Date();
+    if (localStorage.getItem("carcar:" + item_ids[index]) !== null) {
+        let retrieved_json = JSON.parse(localStorage.getItem("carcar:" + item_ids[index]))
+        if (now - new Date(retrieved_json.generated_timestamp) < sevenDays) {
+            return retrieved_json
+        }
+    }
+    for (let i = 0; i < item_ids.length; i++) {
+        let data = await GetJSON(api_urls[i]);
+        localStorage.setItem("carcar:" + item_ids[i], JSON.stringify(data));
+    }
+    return JSON.parse(localStorage.getItem("carcar:" + item_ids[index]));
 }
 
 export async function FetchRoute(route, direction, service_type, company) {
@@ -113,7 +130,7 @@ export async function FetchStop(stop_id, company) {
     let api_url;
     let data;
     if (company === "kmb") {
-        data = kmb_stops;
+        data = await FetchLocalJSON("kmb_stops");
     } else if (company === "ctb") {
         api_url = api_ctb + "/stop/" + stop_id;
         data = await GetJSON(api_url);
