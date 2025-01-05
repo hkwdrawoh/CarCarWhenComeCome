@@ -20,6 +20,27 @@ let ctb_route_list = [];
 let routes_list = [];
 
 
+
+const PinnedDiv = React.memo(({pinned_route, unpinRoute}) => {
+    return (
+        <>
+            <HStack spacing={2} w="100%">
+                <Button size='xl' height={10} variant='ghost' colorScheme='white' onClick={unpinRoute}><MdBookmark /></Button>
+                <div className={`button_base ${pinned_route.class}_icon`} style={{margin: 0}}>{pinned_route.route}</div>
+                <div className={`${pinned_route.class}_text text_left grid-span4`}>
+                    <h3>往: {pinned_route.dest}</h3>
+                    <p>{pinned_route.stop_name}</p>
+                </div>
+            </HStack>
+            <div className="grid-3-fixed">
+                <ETADisplay key={uuidv4()} route={pinned_route} route_num={pinned_route.route} stop_id={pinned_route.stop_id} joint={pinned_route.joint || null}/>
+            </div>
+            <hr />
+        </>
+    )
+});
+
+
 export default function SearchContainer(props) {
 
     // KMB Route List API URL: https://data.etabus.gov.hk/v1/transport/kmb/route
@@ -214,21 +235,7 @@ export default function SearchContainer(props) {
         })
     }
 
-    const pinned_div = <>
-        <HStack spacing={2} w="100%">
-            <Button size='xl' height={10} variant='ghost' colorScheme='white' onClick={unpinRoute}><MdBookmark /></Button>
-            <div className={`button_base ${pinned_route.class}_icon`} style={{margin: 0}}>{pinned_route.route}</div>
-            <div className={`${pinned_route.class}_text text_left grid-span4`}>
-                <h3>往: {pinned_route.dest}</h3>
-                <p>{pinned_route.stop_name}</p>
-            </div>
-        </HStack>
-        <div className="grid-3-fixed">
-            <ETADisplay key={uuidv4()} route={pinned_route} route_num={pinned_route.route} stop_id={pinned_route.stop_id} joint={pinned_route.joint || null}/>
-        </div>
-        <hr />
-        </>;
-
+    const pinned_div = pinned_route.route !== "" && <PinnedDiv pinned_route={pinned_route} unpinRoute={unpinRoute} />;
 
     if (JSON.stringify(selected_dest) !== JSON.stringify([])) {
         return <>
