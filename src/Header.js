@@ -51,7 +51,8 @@ export default function Header(props) {
     };
 
     const refreshDataTimestamp = () => {
-        let retrieve_json = JSON.parse(localStorage.getItem('carcar:kmb_routes'));
+        let retrieve_json = JSON.parse(localStorage.getItem("carcar:kmb_routes"));
+        console.log(retrieve_json);
         if (retrieve_json !== null) {
             setJson_time(new Date(retrieve_json.generated_timestamp));
         }
@@ -59,10 +60,8 @@ export default function Header(props) {
 
     const refreshJSONData = async () => {
         localStorage.removeItem("carcar:kmb_routes");
-        setTimeout(async () => {
-            let new_json = await FetchLocalJSON("kmb_routes");
-            refreshDataTimestamp();
-        }, 500);
+        let new_json = await FetchLocalJSON("kmb_routes");
+        refreshDataTimestamp();
     }
 
     const getTimeString = (time) => {
@@ -136,7 +135,7 @@ export default function Header(props) {
                     <VStack spacing={1} alignItems="flex-end">
                         <Text color='white'>資料更新時間: {getDateTimeString(json_time)}</Text>
                         <HStack>
-                            <Text color='white'>CarCar v2.2.0</Text>
+                            <Text color='white'>CarCar v2.3.0</Text>
                             <Button size='sm' variant='link' onClick={refreshJSONData}>更新資料</Button>
                         </HStack>
                     </VStack>
