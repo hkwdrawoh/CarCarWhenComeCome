@@ -65,19 +65,19 @@ export default function SearchContainer(props) {
     });
 
     useEffect(() => {
-        fetchData().then();
-    }, [])
+        async function runEffect() {
+            let kmb_route_json = await FetchLocalJSON("kmb_routes");
+            let ctb_route_json = await FetchLocalJSON("ctb_routes");
+            kmb_routes = kmb_route_json.data;
+            ctb_routes = ctb_route_json.data;
+            kmb_route_list = [...new Set(kmb_routes.map(item => item.route))];
+            ctb_route_list = [...new Set(ctb_routes.map(item => item.route))];
+            routes_list = [...kmb_route_list, ...ctb_route_list];
+            updateAvail("");
+        }
 
-    const fetchData = async () => {
-        let kmb_route_json = await FetchLocalJSON("kmb_routes");
-        let ctb_route_json = await FetchLocalJSON("ctb_routes");
-        kmb_routes = kmb_route_json.data;
-        ctb_routes = ctb_route_json.data;
-        kmb_route_list = [...new Set(kmb_routes.map(item => item.route))];
-        ctb_route_list = [...new Set(ctb_routes.map(item => item.route))];
-        routes_list = [...kmb_route_list, ...ctb_route_list];
-        updateAvail("");
-    }
+        runEffect();
+    }, [])
 
     const chooseRoute = (selected_letter) => {
         let newRouteNum = route_num;
