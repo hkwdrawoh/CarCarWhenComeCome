@@ -135,7 +135,7 @@ export default function Header(props) {
                     <VStack spacing={1} alignItems="flex-end">
                         <Text color='white'>資料更新時間: {getDateTimeString(json_time)}</Text>
                         <HStack>
-                            <Text color='white'>CarCar v2.3.0</Text>
+                            <Text color='white'>CarCar v2.3.1</Text>
                             <Button size='sm' variant='link' onClick={refreshJSONData}>更新資料</Button>
                         </HStack>
                     </VStack>
