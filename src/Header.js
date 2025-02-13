@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {eventEmitter} from "./App";
 import {
     Button,
@@ -22,37 +22,51 @@ export default function Header(props) {
     const [animation, setAnimation] = useState(false);
     const { isOpen, onOpen, onClose} = useDisclosure();
 
-    let intervalID1 = null;
+    let intervalID1 = useRef(null);
+    intervalID1.current = useRef(null);
     let intervalID2 = null;
 
     useEffect(() => {
-        intervalID1 = setInterval(refreshTimeNow, 1000);
-        intervalID2 = setInterval(refreshPage, 30000);
+        intervalID1.current = setInterval(() => {
+            setTimeNow(new Date());
+        }, 1000);
 
         refreshDataTimestamp();
 
         return () => {
-            clearInterval(intervalID1);
+            clearInterval(intervalID1.current);
+        }
+    }, [])
+
+    useEffect(() => {
+        intervalID2 = setInterval(() => {
+            checkRefreshPage();
+        }, 3000);
+
+        return () => {
             clearInterval(intervalID2);
         }
-    }, []);
+    }, [time_ref]);
 
-    const refreshTimeNow = () => {
-        setTimeNow(new Date())
+    const checkRefreshPage = () => {
+        let currentTime = new Date();
+        if ((currentTime - time_ref) >= 30000) {
+            refreshPage();
+        }
     };
 
     const refreshPage = () => {
-        setTimeRef(new Date())
+        setTimeRef(new Date());
         setAnimation(true);
         setTimeout(() => {
             setAnimation(false);
         }, 1000);
         eventEmitter.emit('refreshETA');
+        refreshDataTimestamp();
     };
 
     const refreshDataTimestamp = () => {
         let retrieve_json = JSON.parse(localStorage.getItem("carcar:kmb_routes"));
-        console.log(retrieve_json);
         if (retrieve_json !== null) {
             setJson_time(new Date(retrieve_json.generated_timestamp));
         }
@@ -135,7 +149,7 @@ export default function Header(props) {
                     <VStack spacing={1} alignItems="flex-end">
                         <Text color='white'>資料更新時間: {getDateTimeString(json_time)}</Text>
                         <HStack>
-                            <Text color='white'>CarCar v2.3.1</Text>
+                            <Text color='white'>CarCar v2.3.2</Text>
                             <Button size='sm' variant='link' onClick={refreshJSONData}>更新資料</Button>
                         </HStack>
                     </VStack>
