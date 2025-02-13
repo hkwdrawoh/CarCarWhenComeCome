@@ -196,6 +196,14 @@ export const Rhythm = [
         "style": 11
     },
     {
+        "route": "28",
+        "direction": "I",
+        "service_type": 1,
+        "seq": 15,
+        "company": "kmb",
+        "style": 1
+    },
+    {
         "route": "29M",
         "direction": "O",
         "service_type": 1,
