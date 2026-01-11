@@ -33480,6 +33480,96 @@
 				"route_seq": 1,
 				"price": 16.9,
 				"starting_seq": 1
+			},
+			{
+				"route_id": 10000019,
+				"route_seq": 1,
+				"price": 5.2,
+				"starting_seq": 1
+			},
+			{
+				"route_id": 10000019,
+				"route_seq": 1,
+				"price": 5.1,
+				"starting_seq": 5
+			},
+			{
+				"route_id": 10000019,
+				"route_seq": 1,
+				"price": 3.3,
+				"starting_seq": 6
+			},
+			{
+				"route_id": 10000019,
+				"route_seq": 2,
+				"price": 5.2,
+				"starting_seq": 1
+			},
+			{
+				"route_id": 10000019,
+				"route_seq": 2,
+				"price": 5.1,
+				"starting_seq": 2
+			},
+			{
+				"route_id": 10000019,
+				"route_seq": 2,
+				"price": 3.3,
+				"starting_seq": 5
+			},
+			{
+				"route_id": 10000600,
+				"route_seq": 1,
+				"price": 12.6,
+				"starting_seq": 1
+			},
+			{
+				"route_id": 10000600,
+				"route_seq": 1,
+				"price": 12.0,
+				"starting_seq": 7
+			},
+			{
+				"route_id": 10000600,
+				"route_seq": 1,
+				"price": 6.7,
+				"starting_seq": 11
+			},
+			{
+				"route_id": 10000600,
+				"route_seq": 1,
+				"price": 4.7,
+				"starting_seq": 17
+			},
+			{
+				"route_id": 10000600,
+				"route_seq": 2,
+				"price": 12.6,
+				"starting_seq": 1
+			},
+			{
+				"route_id": 10000600,
+				"route_seq": 2,
+				"price": 11.4,
+				"starting_seq": 17
+			},
+			{
+				"route_id": 10000600,
+				"route_seq": 2,
+				"price": 6.7,
+				"starting_seq": 18
+			},
+			{
+				"route_id": 10000600,
+				"route_seq": 2,
+				"price": 5.1,
+				"starting_seq": 19
+			},
+			{
+				"route_id": 10000600,
+				"route_seq": 2,
+				"price": 3.3,
+				"starting_seq": 22
 			}
 		]
 	}

@@ -50,8 +50,10 @@ export default function Header(props) {
 
     const checkRefreshPage = () => {
         let currentTime = new Date();
-        if ((currentTime - time_ref) >= 30000) {
-            refreshPage();
+        if ((currentTime - time_ref) >= 26000) {
+            setTimeout(() => {
+                refreshPage();
+            }, 3000);
         }
     };
 
@@ -62,7 +64,14 @@ export default function Header(props) {
             setAnimation(false);
         }, 1000);
         eventEmitter.emit('refreshETA');
-        refreshDataTimestamp();
+        let now = new Date();
+        const sevenDays = 7 * 24 * 60 * 60 * 1000;
+        let retrieve_json = JSON.parse(localStorage.getItem("carcar:kmb_routes"));
+        if (now - new Date(retrieve_json.generated_timestamp) < sevenDays) {
+            refreshDataTimestamp();
+        } else {
+            refreshJSONData().then();
+        }
     };
 
     const refreshDataTimestamp = () => {
@@ -74,7 +83,9 @@ export default function Header(props) {
 
     const refreshJSONData = async () => {
         localStorage.removeItem("carcar:kmb_routes");
+        localStorage.removeItem("carcar:ctb_routes");
         let new_json = await FetchLocalJSON("kmb_routes");
+        let new_json2 = await FetchLocalJSON("ctb_routes");
         refreshDataTimestamp();
     }
 
@@ -149,7 +160,7 @@ export default function Header(props) {
                     <VStack spacing={1} alignItems="flex-end">
                         <Text color='white'>資料更新時間: {getDateTimeString(json_time)}</Text>
                         <HStack>
-                            <Text color='white'>CarCar v2.3.3</Text>
+                            <Text color='white'>CarCar v2.4.3</Text>
                             <Button size='sm' variant='link' onClick={refreshJSONData}>更新資料</Button>
                         </HStack>
                     </VStack>

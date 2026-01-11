@@ -23355,6 +23355,36 @@
 				"hyperlink": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=270B&lang=zh-hk",
 				"full_price": 16.9,
 				"LAST_UPDATE_DATE": "2025-01-27T00:00:00"
+			},
+			{
+				"route_id": 10000019,
+				"company": "KMB",
+				"route": "19",
+				"service_mode": "R",
+				"service_type": 0,
+				"journey_time": 20,
+				"orig_tc": "安達臣",
+				"orig_en": "ANDERSON",
+				"dest_tc": "鑽石山(循環線)",
+				"dest_en": "DIAMOND HILL (CIRCULAR)",
+				"hyperlink": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=19&lang=zh-hk",
+				"full_price": 5.2,
+				"LAST_UPDATE_DATE": "2025-03-27T00:00:00"
+			},
+			{
+				"route_id": 10000600,
+				"company": "KMB",
+				"route": "600",
+				"service_mode": "R",
+				"service_type": 0,
+				"journey_time": 80,
+				"orig_tc": "安達臣",
+				"orig_en": "ANDERSON",
+				"dest_tc": "中環(林士街)",
+				"dest_en": "CENTRAL (RUNSEY STREET)",
+				"hyperlink": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=600&lang=zh-hk",
+				"full_price": 12.6,
+				"LAST_UPDATE_DATE": "2025-03-27T00:00:00"
 			}
 		]
 	}

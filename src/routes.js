@@ -8,6 +8,14 @@ export const OnTai = [
         "style": 1
     },
     {
+        "route": "19",
+        "direction": "O",
+        "service_type": 1,
+        "seq": 5,
+        "company": "kmb",
+        "style": 1
+    },
+    {
         "route": "213D",
         "direction": "O",
         "service_type": 1,
@@ -48,6 +56,14 @@ export const OnTai = [
         "style": 101
     },
     {
+        "route": "11X",
+        "direction": "O",
+        "service_type": 1,
+        "seq": 1,
+        "company": "kmb",
+        "style": 101
+    },
+    {
         "route": "613",
         "direction": "O",
         "service_type": 1,
@@ -56,10 +72,10 @@ export const OnTai = [
         "style": 101
     },
     {
-        "route": "11X",
+        "route": "600",
         "direction": "O",
         "service_type": 1,
-        "seq": 1,
+        "seq": 4,
         "company": "kmb",
         "style": 101
     },
@@ -170,6 +186,14 @@ export const Rhythm = [
         "seq": 30,
         "company": "kmb",
         "style": 111
+    },
+    {
+        "route": "19",
+        "direction": "I",
+        "service_type": 1,
+        "seq": 1,
+        "company": "kmb",
+        "style": 101
     },
     {
         "route": "26",
@@ -362,10 +386,26 @@ export const SHT = [
         "style": 101
     },
     {
+        "route": "88X",
+        "direction": "I",
+        "service_type": 1,
+        "seq": 22,
+        "company": "kmb",
+        "style": 101
+    },
+    {
         "route": "81K",
         "direction": "I",
         "service_type": 1,
         "seq": 7,
+        "company": "kmb",
+        "style": 1
+    },
+    {
+        "route": "88X",
+        "direction": "O",
+        "service_type": 1,
+        "seq": 8,
         "company": "kmb",
         "style": 1
     },

@@ -28,13 +28,8 @@ export async function FetchLocalJSON(item) {
     const api_urls = ["https://data.etabus.gov.hk/v1/transport/kmb/route", "https://data.etabus.gov.hk/v1/transport/kmb/stop", "https://rt.data.gov.hk/v2/transport/citybus/route/CTB"];
     const item_ids = ["kmb_routes", "kmb_stops", "ctb_routes"];
     const index = item_ids.indexOf(item);
-    const sevenDays = 7 * 24 * 60 * 60 * 1000;
-    let now = new Date();
     if (localStorage.getItem("carcar:" + item_ids[index]) !== null) {
-        let retrieved_json = JSON.parse(localStorage.getItem("carcar:" + item_ids[index]))
-        if (now - new Date(retrieved_json.generated_timestamp) < sevenDays) {
-            return retrieved_json
-        }
+        return JSON.parse(localStorage.getItem("carcar:" + item_ids[index]))
     }
     for (let i = 0; i < item_ids.length; i++) {
         let data = await GetJSON(api_urls[i]);
