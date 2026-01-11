@@ -145,8 +145,9 @@ export async function FetchStop(stop_id, company) {
 
 export async function FetchETA(route, direction, service_type, seq, stop_id, company) {
     let api_url;
+    const curr_time = new Date();
     if (company === "kmb") {
-        api_url = api_kmb + "/eta/" + stop_id + "/" + route + "/" + service_type;
+        api_url = api_kmb + "/eta/" + stop_id + "/" + route + "/" + service_type + "?t=" + curr_time.getMinutes();
     } else if (company === "ctb") {
         api_url = api_ctb + "/eta/CTB/" + stop_id + "/" + route;
     } else if (company.substring(0, 3) === "gmb") {
