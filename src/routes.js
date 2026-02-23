@@ -11,7 +11,7 @@ export const OnTai = [
         "route": "19",
         "direction": "O",
         "service_type": 1,
-        "seq": 5,
+        "seq": 6,
         "company": "kmb",
         "style": 1
     },
@@ -75,7 +75,7 @@ export const OnTai = [
         "route": "600",
         "direction": "O",
         "service_type": 1,
-        "seq": 4,
+        "seq": 5,
         "company": "kmb",
         "style": 101
     },
@@ -105,6 +105,14 @@ export const OnTai = [
     }];
 
 export const HomeFrom108 = [
+    {
+        "route": "600",
+        "direction": "I",
+        "service_type": 1,
+        "seq": 10,
+        "company": "kmb",
+        "style": 101
+    },
     {
         "route": "108",
         "direction": "I",

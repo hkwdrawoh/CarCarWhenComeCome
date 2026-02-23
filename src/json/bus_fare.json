@@ -33491,13 +33491,13 @@
 				"route_id": 10000019,
 				"route_seq": 1,
 				"price": 5.1,
-				"starting_seq": 5
+				"starting_seq": 7
 			},
 			{
 				"route_id": 10000019,
 				"route_seq": 1,
 				"price": 3.3,
-				"starting_seq": 6
+				"starting_seq": 8
 			},
 			{
 				"route_id": 10000019,
@@ -33527,19 +33527,19 @@
 				"route_id": 10000600,
 				"route_seq": 1,
 				"price": 12.0,
-				"starting_seq": 7
+				"starting_seq": 8
 			},
 			{
 				"route_id": 10000600,
 				"route_seq": 1,
 				"price": 6.7,
-				"starting_seq": 11
+				"starting_seq": 12
 			},
 			{
 				"route_id": 10000600,
 				"route_seq": 1,
 				"price": 4.7,
-				"starting_seq": 17
+				"starting_seq": 18
 			},
 			{
 				"route_id": 10000600,

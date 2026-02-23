@@ -65,9 +65,9 @@ export default function Header(props) {
         }, 1000);
         eventEmitter.emit('refreshETA');
         let now = new Date();
-        const sevenDays = 7 * 24 * 60 * 60 * 1000;
+        const threeWeeks = 21 * 24 * 60 * 60 * 1000;
         let retrieve_json = JSON.parse(localStorage.getItem("carcar:kmb_routes"));
-        if (now - new Date(retrieve_json.generated_timestamp) < sevenDays) {
+        if (now - new Date(retrieve_json.generated_timestamp) < threeWeeks) {
             refreshDataTimestamp();
         } else {
             refreshJSONData().then();
@@ -160,7 +160,7 @@ export default function Header(props) {
                     <VStack spacing={1} alignItems="flex-end">
                         <Text color='white'>資料更新時間: {getDateTimeString(json_time)}</Text>
                         <HStack>
-                            <Text color='white'>CarCar v2.4.3</Text>
+                            <Text color='white'>CarCar v2.4.4</Text>
                             <Button size='sm' variant='link' onClick={refreshJSONData}>更新資料</Button>
                         </HStack>
                     </VStack>
